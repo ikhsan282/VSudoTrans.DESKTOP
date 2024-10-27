@@ -940,6 +940,18 @@
     <Compile Include="Master\Shared\frmUnitMeasureLV.Designer.cs">
       <DependentUpon>frmUnitMeasureLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\Travel\frmPassengerDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmPassengerDV.Designer.cs">
+      <DependentUpon>frmPassengerDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmPassengerLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmPassengerLV.Designer.cs">
+      <DependentUpon>frmPassengerLV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Attendance\frmAbsenceSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2596,6 +2608,12 @@
     <EmbeddedResource Include="Master\Shared\frmUnitMeasureLV.resx">
       <DependentUpon>frmUnitMeasureLV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmPassengerDV.resx">
+      <DependentUpon>frmPassengerDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmPassengerLV.resx">
+      <DependentUpon>frmPassengerLV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Attendance\frmAbsenceSV.resx">
       <DependentUpon>frmAbsenceSV.cs</DependentUpon>
     </EmbeddedResource>
@@ -2714,10 +2732,7 @@
       <DependentUpon>frmKreditLV.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Master\Travel\" />
-    <Folder Include="Master\Vehicle\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="logo panca.ico" />
     <Content Include="Logo-VsudoTech.ico" />
