@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AE0E32F-19AE-44C0-8136-6316E14E4DEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VSTS.GAC</RootNamespace>
+    <AssemblyName>VSTS.GAC</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Core">
+      <Version>1.37.0</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Charts">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Charts.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.CodeParser">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Data">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Data.Desktop">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.DataAccess">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.DataVisualization.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Document.Processor">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Drawing">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.ExpressApp">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Gauges.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Images">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Office.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Pdf.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Pdf.Drawing">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Persistent.Base">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.PivotGrid.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Printing.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Reporting.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.RichEdit.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.RichEdit.Export">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Snap.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Sparkline.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Spreadsheet.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.TreeMap">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.TreeMap.Core">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Utils">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.Xpo">
+      <Version>23.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client">
+      <Version>5.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces">
+      <Version>8.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.ObjectPool">
+      <Version>7.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Options">
+      <Version>7.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Primitives">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Graph">
+      <Version>5.13.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Graph.Core">
+      <Version>3.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Client">
+      <Version>4.54.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Client.Extensions.Msal">
+      <Version>2.31.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Abstractions">
+      <Version>7.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <Version>7.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Logging">
+      <Version>7.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Protocols">
+      <Version>6.31.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect">
+      <Version>6.31.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens">
+      <Version>7.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Kiota.Abstractions">
+      <Version>1.7.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Kiota.Authentication.Azure">
+      <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Kiota.Http.HttpClientLibrary">
+      <Version>1.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Kiota.Serialization.Form">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Kiota.Serialization.Json">
+      <Version>1.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Kiota.Serialization.Text">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Net.Http.Headers">
+      <Version>2.2.8</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.Platforms">
+      <Version>7.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.OData.Client">
+      <Version>7.20.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.OData.Core">
+      <Version>7.20.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.OData.Edm">
+      <Version>7.20.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Spatial">
+      <Version>7.20.0</Version>
+    </PackageReference>
+    <PackageReference Include="NETStandard.Library">
+      <Version>2.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="NewId">
+      <Version>4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="ODataHttpClient">
+      <Version>2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="RestSharp">
+      <Version>110.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Std.UriTemplate">
+      <Version>0.0.46</Version>
+    </PackageReference>
+    <PackageReference Include="System.Buffers">
+      <Version>4.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.DiagnosticSource">
+      <Version>7.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>7.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.IO">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.IO.Pipelines">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory">
+      <Version>4.5.5</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory.Data">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http.WinHttpHandler">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Numerics.Vectors">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Claims">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Algorithms">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Encoding">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Primitives">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.X509Certificates">
+      <Version>4.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Spatial">
+      <Version>5.8.5</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encodings.Web">
+      <Version>8.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>8.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.5.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="Tavis.UriTemplates">
+      <Version>2.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VSUDO V LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo VsudoTech.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

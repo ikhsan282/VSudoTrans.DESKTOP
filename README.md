@@ -1,1 +1,1 @@
-# VSudoTrans.DESKTOP
+# VSTS.DESKTOP

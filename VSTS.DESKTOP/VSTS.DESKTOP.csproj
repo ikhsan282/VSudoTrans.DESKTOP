@@ -1,0 +1,3317 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D88C3787-C7DD-4A5A-9DE7-6F4B27E6BDC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VSTS.DESKTOP</RootNamespace>
+    <AssemblyName>VSTS.DESKTOP</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>D:\Publish SKP DESKTOP\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>https://pnc.vsudotech.com/DESKTOP/</UpdateUrl>
+    <SupportUrl>https://pnc.vsudotech.com/#contact-section</SupportUrl>
+    <PublisherName>Vsudo Technology</PublisherName>
+    <SuiteName>Sistem Keuangan Pancakarya</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>Install.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <DisallowUrlActivation>true</DisallowUrlActivation>
+    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DEV|AnyCPU' ">
+    <AssemblyName>VsudoTechnologySchoolDEV</AssemblyName>
+    <InstallUrl>https://vsts.vsudotech.com/</InstallUrl>
+    <ProductName>Vsudo Technology School %28QAS%29</ProductName>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QAS VSTS|AnyCPU' ">
+    <AssemblyName>VsudoTechnologySchoolQAS</AssemblyName>
+    <InstallUrl>https://vsts.vsudotech.com/</InstallUrl>
+    <ProductName>Vsudo Technology School %28QAS%29</ProductName>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PRD VSTS|AnyCPU' ">
+    <AssemblyName>VsudoTechnologySchool</AssemblyName>
+    <InstallUrl>https://vsts.vsudotech.com/</InstallUrl>
+    <ProductName>Vsudo Technology School</ProductName>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QAS SKP|AnyCPU' ">
+    <AssemblyName>SistemKeuanganPancakaryaQAS</AssemblyName>
+    <InstallUrl>https://pnc.vsudotech.com/</InstallUrl>
+    <ProductName>Sistem Keuangan Pancakarya %28QAS%29</ProductName>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PRD SKP|AnyCPU' ">
+    <AssemblyName>SistemKeuanganPancakarya</AssemblyName>
+    <InstallUrl>https://pnc.vsudotech.com/</InstallUrl>
+    <ProductName>Sistem Keuangan Pancakarya</ProductName>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5E7247D69486CA0BB7175B78FB852CAD43F59DB0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ikhsancert.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>logo panca.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Azure.Core, Version=1.32.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Core.1.32.0\lib\net461\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Brotli.Core, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Brotli.NET.2.1.1\lib\net45\Brotli.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v23.2" />
+    <Reference Include="DevExpress.Charts.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v23.2.Win, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2" />
+    <Reference Include="DevExpress.Data.v23.2" />
+    <Reference Include="DevExpress.DataAccess.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataVisualization.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Docs.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v23.2.Drawing, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.SpellChecker.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.2" />
+    <Reference Include="DevExpress.Sparkline.v23.2.Core" />
+    <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.Extensions, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.Wizard, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.2" />
+    <Reference Include="DevExpress.Printing.v23.2.Core" />
+    <Reference Include="DevExpress.Drawing.v23.2" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Presets, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Win, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v23.2.CodeCompletion, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v23.2.Extensions, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core.Desktop, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Extensions, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=7.0.7.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.ObjectPool.7.0.7\lib\net462\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.7.0.1\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.7.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph, Version=5.14.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Graph.5.14.0\lib\netstandard2.0\Microsoft.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph.Core, Version=3.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Graph.Core.3.0.7\lib\net462\Microsoft.Graph.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.54.1.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.4.54.1\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=2.31.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.Extensions.Msal.2.31.0\lib\net45\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.31.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.6.31.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.31.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.31.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.31.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.31.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=6.31.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.6.31.0\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=6.31.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.6.31.0\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.31.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.31.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kiota.Abstractions, Version=1.1.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Kiota.Abstractions.1.1.3\lib\netstandard2.0\Microsoft.Kiota.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kiota.Authentication.Azure, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Kiota.Authentication.Azure.1.0.2\lib\netstandard2.0\Microsoft.Kiota.Authentication.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kiota.Http.HttpClientLibrary, Version=1.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Kiota.Http.HttpClientLibrary.1.0.4\lib\netstandard2.0\Microsoft.Kiota.Http.HttpClientLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kiota.Serialization.Form, Version=1.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Kiota.Serialization.Form.1.0.1\lib\netstandard2.0\Microsoft.Kiota.Serialization.Form.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kiota.Serialization.Json, Version=1.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Kiota.Serialization.Json.1.0.6\lib\netstandard2.0\Microsoft.Kiota.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kiota.Serialization.Text, Version=1.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Kiota.Serialization.Text.1.0.1\lib\netstandard2.0\Microsoft.Kiota.Serialization.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.8\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Client, Version=7.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Client.7.16.0\lib\net45\Microsoft.OData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core, Version=7.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Core.7.16.0\lib\net45\Microsoft.OData.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=7.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.7.16.0\lib\net45\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=7.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.7.16.0\lib\net45\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="NewId, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewId.4.0.1\lib\netstandard2.0\NewId.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ODataHttpClient, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ODataHttpClient.2.0.0\lib\netstandard2.0\ODataHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.31.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.31.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.7.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.Data.7.0.0\lib\net462\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WinHttpHandler, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.WinHttpHandler.7.0.0\lib\net462\System.Net.Http.WinHttpHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Claims, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Claims.4.3.0\lib\net46\System.Security.Claims.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.5\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tavis.UriTemplates, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5be2d48fa8a60581, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavis.UriTemplates.2.0.0\lib\netstandard2.0\Tavis.UriTemplates.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm\frmBaseFilterDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseFilterDVV.Designer.cs">
+      <DependentUpon>frmBaseFilterDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseDVV.Designer.cs">
+      <DependentUpon>frmBaseDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseFilterTLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseFilterTLV.Designer.cs">
+      <DependentUpon>frmBaseFilterTLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseImportWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseImportWV.Designer.cs">
+      <DependentUpon>frmBaseImportWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseTLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseTLV.Designer.cs">
+      <DependentUpon>frmBaseTLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseSV.Designer.cs">
+      <DependentUpon>frmBaseSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBasePV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBasePV.Designer.cs">
+      <DependentUpon>frmBasePV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseFilterLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseFilterLV.Designer.cs">
+      <DependentUpon>frmBaseFilterLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\AnnotationHelper.cs" />
+    <Compile Include="Contract\Attendance\AttendanceCodeDto.cs" />
+    <Compile Include="Contract\Attendance\RosterDto.cs" />
+    <Compile Include="Contract\EducationPayment\EducationComponentDto.cs" />
+    <Compile Include="Contract\EducationPayment\StudentEducationPaymentComponentDto.cs" />
+    <Compile Include="Contract\EducationPayment\StudentEducationPaymentDto.cs" />
+    <Compile Include="Contract\EducationResource\ClassDto.cs" />
+    <Compile Include="Contract\EducationResource\ForceYearDto.cs" />
+    <Compile Include="Contract\EducationResource\MajorDto.cs" />
+    <Compile Include="Contract\EducationResource\RombelDto.cs" />
+    <Compile Include="Contract\EducationResource\StudentDto.cs" />
+    <Compile Include="Contract\Finance\BudgetTransactionDto.cs" />
+    <Compile Include="Contract\HumanResource\EmployeeDto.cs" />
+    <Compile Include="Contract\HumanResource\JobGradeDto.cs" />
+    <Compile Include="Contract\HumanResource\JobPositionDto.cs" />
+    <Compile Include="Contract\HumanResource\JobTitleDto.cs" />
+    <Compile Include="Contract\Organization\CompanyDto.cs" />
+    <Compile Include="Contract\Organization\GroupDto.cs" />
+    <Compile Include="Contract\Organization\OrganizationStructureDto.cs" />
+    <Compile Include="Contract\Shared\UnitMeasureDto.cs" />
+    <Compile Include="Descendant\PopupContainerEditOwn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Domain\Entities\Demography\City.cs" />
+    <Compile Include="Domain\Entities\Demography\Country.cs" />
+    <Compile Include="Domain\Entities\Demography\District.cs" />
+    <Compile Include="Domain\Entities\Demography\Province.cs" />
+    <Compile Include="Domain\Entities\Demography\Village.cs" />
+    <Compile Include="Domain\Entities\EducationPayment\EducationComponent.cs" />
+    <Compile Include="Domain\Entities\EducationPayment\EducationComponentRegulation.cs" />
+    <Compile Include="Domain\Entities\EducationPayment\EducationComponentRegulationDetail.cs" />
+    <Compile Include="Domain\Entities\EducationPayment\StudentEducationPayment.cs" />
+    <Compile Include="Domain\Entities\EducationPayment\StudentEducationPaymentComponent.cs" />
+    <Compile Include="Domain\Entities\EducationPayment\StudentEducationPaymentHistory.cs" />
+    <Compile Include="Domain\Entities\EducationPayment\StudentEducationPaymentHistoryDetail.cs" />
+    <Compile Include="Domain\Entities\EducationResource\Class.cs" />
+    <Compile Include="Domain\Entities\EducationResource\ForceYear.cs" />
+    <Compile Include="Domain\Entities\EducationResource\Major.cs" />
+    <Compile Include="Domain\Entities\EducationResource\Rombel.cs" />
+    <Compile Include="Domain\Entities\EducationResource\Student.cs" />
+    <Compile Include="Domain\Entities\EducationResource\StudentPersonalData.cs" />
+    <Compile Include="Domain\Entities\Finance\BudgetRegulation.cs" />
+    <Compile Include="Domain\Entities\Finance\BudgetRegulationDetail.cs" />
+    <Compile Include="Domain\Entities\Finance\BudgetTransaction.cs" />
+    <Compile Include="Domain\Entities\Finance\Category.cs" />
+    <Compile Include="Domain\Entities\HumanResource\EmployeePersonalData.cs" />
+    <Compile Include="Domain\Entities\HumanResource\JobGrade.cs" />
+    <Compile Include="Domain\Entities\HumanResource\JobPosition.cs" />
+    <Compile Include="Domain\Entities\Organization\OrganizationStructure.cs" />
+    <Compile Include="Domain\Entities\Shared\UnitMeasure.cs" />
+    <Compile Include="Domain\Entities\SQLProc\BudgetTransactionResult.cs" />
+    <Compile Include="Domain\Entities\SQLProc\ComparationBudgetRealizationResult.cs" />
+    <Compile Include="Domain\Entities\SQLView\Attendance\AttendanceHistoryView.cs" />
+    <Compile Include="Domain\Entities\SQLView\EducationPayment\StudentPaymentControlBookComponentView.cs" />
+    <Compile Include="Domain\Entities\SQLView\EducationPayment\StudentPaymentSummaryView.cs" />
+    <Compile Include="Domain\Entities\SQLView\EducationPayment\StudentPaymentControlBookView.cs" />
+    <Compile Include="Domain\Entities\SQLView\EducationPayment\ArrearStudentEducationPaymentView.cs" />
+    <Compile Include="Domain\Entities\SQLView\Finance\BudgetTransactionView.cs" />
+    <Compile Include="Domain\Entities\SQLView\HumanResource\EmployeeRecognitionView.cs" />
+    <Compile Include="Domain\Entities\Travel\Passenger.cs" />
+    <Compile Include="Domain\Entities\Travel\Rute.cs" />
+    <Compile Include="Domain\Entities\Travel\Schedule.cs" />
+    <Compile Include="Domain\Entities\Travel\TravelTicketBooking.cs" />
+    <Compile Include="Domain\Entities\Travel\TripSchedule.cs" />
+    <Compile Include="Domain\Entities\Vehicle\BrandVehicle.cs" />
+    <Compile Include="Domain\Entities\Vehicle\ModelUnit.cs" />
+    <Compile Include="Domain\Entities\Vehicle\TypeEngine.cs" />
+    <Compile Include="Domain\Entities\Vehicle\Vehicles.cs" />
+    <Compile Include="Master\Attendance\frmAttendanceCodeDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmAttendanceCodeDV.Designer.cs">
+      <DependentUpon>frmAttendanceCodeDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmAttendanceCodeLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmAttendanceCodeLV.Designer.cs">
+      <DependentUpon>frmAttendanceCodeLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseWaitForm.Designer.cs">
+      <DependentUpon>frmBaseWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseDV.Designer.cs">
+      <DependentUpon>frmBaseDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseLV.Designer.cs">
+      <DependentUpon>frmBaseLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseWV.Designer.cs">
+      <DependentUpon>frmBaseWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Base\EntityDto.cs" />
+    <Compile Include="Domain\Base\BaseCodeName.cs" />
+    <Compile Include="Domain\Base\IAuditable.cs" />
+    <Compile Include="Domain\Base\IAudited.cs" />
+    <Compile Include="Domain\Entities\Attendance\AttendanceCode.cs" />
+    <Compile Include="Domain\Entities\Attendance\AttendanceHistory.cs" />
+    <Compile Include="Domain\Entities\Attendance\AttendanceSettingRange.cs" />
+    <Compile Include="Domain\Entities\Attendance\Machine.cs" />
+    <Compile Include="Domain\Entities\Attendance\Roster.cs" />
+    <Compile Include="Domain\Entities\Attendance\Shift.cs" />
+    <Compile Include="Domain\Entities\Attendance\WorkingCalendar.cs" />
+    <Compile Include="Domain\Entities\Attendance\WorkingPattern.cs" />
+    <Compile Include="Domain\Entities\Attendance\WorkingPatternDetail.cs" />
+    <Compile Include="Domain\Entities\HumanResource\JobTitle.cs" />
+    <Compile Include="Domain\Entities\HumanResource\Employee.cs" />
+    <Compile Include="Domain\Entities\HumanResource\EmployeeRecognition.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationController.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationRole.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationRoleClaim.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationUser.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationUserClaim.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationUserInfo.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationUserLogin.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationUserRole.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationUserSchool.cs" />
+    <Compile Include="Domain\Entities\Identity\ApplicationUserToken.cs" />
+    <Compile Include="Domain\Entities\Identity\Navigation.cs" />
+    <Compile Include="Domain\Entities\Identity\NavigationRole.cs" />
+    <Compile Include="Domain\Entities\Organization\Group.cs" />
+    <Compile Include="Domain\Entities\Organization\Company.cs" />
+    <Compile Include="Domain\Entities\Shared\AuditEntry.cs" />
+    <Compile Include="Domain\Entities\Shared\AuditTrail.cs" />
+    <Compile Include="Domain\Entities\Shared\Sequence.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogOff.Designer.cs">
+      <DependentUpon>frmLogOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMDI.designer.cs">
+      <DependentUpon>frmMainMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgotPassword.cs">
+      <SubType>frmForgotPassword</SubType>
+    </Compile>
+    <Compile Include="frmForgotPassword.Designer.cs">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>frmChangePassword</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerificationCode.cs">
+      <SubType>frmVerificationCode</SubType>
+    </Compile>
+    <Compile Include="frmVerificationCode.Designer.cs">
+      <DependentUpon>frmVerificationCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmAttendanceSettingRangeDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmAttendanceSettingRangeDV.Designer.cs">
+      <DependentUpon>frmAttendanceSettingRangeDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmAttendanceSettingRangeLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmAttendanceSettingRangeLV.Designer.cs">
+      <DependentUpon>frmAttendanceSettingRangeLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmImportAttendanceCodeWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmImportAttendanceCodeWV.Designer.cs">
+      <DependentUpon>frmImportAttendanceCodeWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmMachineDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmMachineDV.Designer.cs">
+      <DependentUpon>frmMachineDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmMachineLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmMachineLV.Designer.cs">
+      <DependentUpon>frmMachineLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmShiftDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmShiftDV.Designer.cs">
+      <DependentUpon>frmShiftDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmShiftLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmShiftLV.Designer.cs">
+      <DependentUpon>frmShiftLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmWorkingPatternDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmWorkingPatternDV.Designer.cs">
+      <DependentUpon>frmWorkingPatternDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Attendance\frmWorkingPatternLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Attendance\frmWorkingPatternLV.Designer.cs">
+      <DependentUpon>frmWorkingPatternLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmCityDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmCityDV.Designer.cs">
+      <DependentUpon>frmCityDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmCityLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmCityLV.Designer.cs">
+      <DependentUpon>frmCityLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmCountryLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmCountryLV.Designer.cs">
+      <DependentUpon>frmCountryLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmDistrictDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmDistrictDV.Designer.cs">
+      <DependentUpon>frmDistrictDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmDistrictLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmDistrictLV.Designer.cs">
+      <DependentUpon>frmDistrictLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmProvinceDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmProvinceDV.Designer.cs">
+      <DependentUpon>frmProvinceDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmProvinceLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmProvinceLV.Designer.cs">
+      <DependentUpon>frmProvinceLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmVillageDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmVillageDV.Designer.cs">
+      <DependentUpon>frmVillageDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmVillageLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmVillageLV.Designer.cs">
+      <DependentUpon>frmVillageLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmEducationComponentDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmEducationComponentDV.Designer.cs">
+      <DependentUpon>frmEducationComponentDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmEducationComponentLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmEducationComponentLV.Designer.cs">
+      <DependentUpon>frmEducationComponentLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmEducationComponentRegulationDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmEducationComponentRegulationDV.Designer.cs">
+      <DependentUpon>frmEducationComponentRegulationDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmEducationComponentRegulationLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmEducationComponentRegulationLV.Designer.cs">
+      <DependentUpon>frmEducationComponentRegulationLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmImportEducationComponentWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationPayment\frmImportEducationComponentWV.Designer.cs">
+      <DependentUpon>frmImportEducationComponentWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmClassDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmClassDV.Designer.cs">
+      <DependentUpon>frmClassDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmClassLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmClassLV.Designer.cs">
+      <DependentUpon>frmClassLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportRombelWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportRombelWV.Designer.cs">
+      <DependentUpon>frmImportRombelWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmRombelDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmRombelDV.Designer.cs">
+      <DependentUpon>frmRombelDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmForceYearDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmForceYearDV.Designer.cs">
+      <DependentUpon>frmForceYearDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmRombelLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmRombelLV.Designer.cs">
+      <DependentUpon>frmRombelLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmForceYearLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmForceYearLV.Designer.cs">
+      <DependentUpon>frmForceYearLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportStudentWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportStudentWV.Designer.cs">
+      <DependentUpon>frmImportStudentWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportForceWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportForceWV.Designer.cs">
+      <DependentUpon>frmImportForceWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportMajorWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportMajorWV.Designer.cs">
+      <DependentUpon>frmImportMajorWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportClassWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmImportClassWV.Designer.cs">
+      <DependentUpon>frmImportClassWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmMajorDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmMajorDV.Designer.cs">
+      <DependentUpon>frmMajorDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmMajorLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmMajorLV.Designer.cs">
+      <DependentUpon>frmMajorLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmStudentDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmStudentDV.Designer.cs">
+      <DependentUpon>frmStudentDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmStudentLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\EducationResource\frmStudentLV.Designer.cs">
+      <DependentUpon>frmStudentLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Finance\frmCategoryDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Finance\frmCategoryDV.Designer.cs">
+      <DependentUpon>frmCategoryDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Finance\frmCategoryLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Finance\frmCategoryLV.Designer.cs">
+      <DependentUpon>frmCategoryLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmImportJobGradeWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmImportJobGradeWV.Designer.cs">
+      <DependentUpon>frmImportJobGradeWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmImportEmployeeWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmImportEmployeeWV.Designer.cs">
+      <DependentUpon>frmImportEmployeeWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmImportJobTitleWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmImportJobTitleWV.Designer.cs">
+      <DependentUpon>frmImportJobTitleWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmImportJobPositionWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmImportJobPositionWV.Designer.cs">
+      <DependentUpon>frmImportJobPositionWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobGradeDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobGradeDV.Designer.cs">
+      <DependentUpon>frmJobGradeDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobGradeLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobGradeLV.Designer.cs">
+      <DependentUpon>frmJobGradeLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobPositionDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobPositionDV.Designer.cs">
+      <DependentUpon>frmJobPositionDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobPositionTLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobPositionTLV.Designer.cs">
+      <DependentUpon>frmJobPositionTLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobTitleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobTitleLV.Designer.cs">
+      <DependentUpon>frmJobTitleLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmEmployeeDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmEmployeeDV.Designer.cs">
+      <DependentUpon>frmEmployeeDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmEmployeeLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmEmployeeLV.Designer.cs">
+      <DependentUpon>frmEmployeeLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Demography\frmCountryDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Demography\frmCountryDV.Designer.cs">
+      <DependentUpon>frmCountryDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Identity\frmUserStudentDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Identity\frmUserStudentDV.Designer.cs">
+      <DependentUpon>frmUserStudentDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Identity\frmUserDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Identity\frmUserDV.Designer.cs">
+      <DependentUpon>frmUserDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Identity\frmUserStudentLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Identity\frmUserStudentLV.Designer.cs">
+      <DependentUpon>frmUserStudentLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Identity\frmUserLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Identity\frmUserLV.Designer.cs">
+      <DependentUpon>frmUserLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Organization\frmGroupDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Organization\frmGroupDV.Designer.cs">
+      <DependentUpon>frmGroupDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Organization\frmGroupLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Organization\frmGroupLV.Designer.cs">
+      <DependentUpon>frmGroupLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Organization\frmCompanyDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Organization\frmCompanyDV.Designer.cs">
+      <DependentUpon>frmCompanyDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Organization\frmCompanyLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Organization\frmCompanyLV.Designer.cs">
+      <DependentUpon>frmCompanyLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobTitleDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmJobTitleDV.Designer.cs">
+      <DependentUpon>frmJobTitleDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Identity\frmRoleDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Identity\frmRoleDV.Designer.cs">
+      <DependentUpon>frmRoleDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Identity\frmRoleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Identity\frmRoleLV.Designer.cs">
+      <DependentUpon>frmRoleLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Organization\frmImportGroupWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Organization\frmImportGroupWV.Designer.cs">
+      <DependentUpon>frmImportGroupWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Organization\frmImportCompanyWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Organization\frmImportCompanyWV.Designer.cs">
+      <DependentUpon>frmImportCompanyWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Organization\frmImportOrganizationStructureWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Organization\frmImportOrganizationStructureWV.Designer.cs">
+      <DependentUpon>frmImportOrganizationStructureWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Organization\frmOrganizationStructureDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Organization\frmOrganizationStructureDV.Designer.cs">
+      <DependentUpon>frmOrganizationStructureDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Organization\frmOrganizationStructureTLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Organization\frmOrganizationStructureTLV.Designer.cs">
+      <DependentUpon>frmOrganizationStructureTLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Shared\frmImportUnitMeasureWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Shared\frmImportUnitMeasureWV.Designer.cs">
+      <DependentUpon>frmImportUnitMeasureWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Shared\frmUnitMeasureDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Shared\frmUnitMeasureDV.Designer.cs">
+      <DependentUpon>frmUnitMeasureDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Shared\frmUnitMeasureLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Shared\frmUnitMeasureLV.Designer.cs">
+      <DependentUpon>frmUnitMeasureLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmPassengerDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmPassengerDV.Designer.cs">
+      <DependentUpon>frmPassengerDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmPassengerLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmPassengerLV.Designer.cs">
+      <DependentUpon>frmPassengerLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmRuteDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmRuteDV.Designer.cs">
+      <DependentUpon>frmRuteDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmRuteLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmRuteLV.Designer.cs">
+      <DependentUpon>frmRuteLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmScheduleDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmScheduleDV.Designer.cs">
+      <DependentUpon>frmScheduleDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmScheduleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmScheduleLV.Designer.cs">
+      <DependentUpon>frmScheduleLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmTravelTicketBookingDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmTravelTicketBookingDV.Designer.cs">
+      <DependentUpon>frmTravelTicketBookingDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmTravelTicketBookingLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmTravelTicketBookingLV.Designer.cs">
+      <DependentUpon>frmTravelTicketBookingLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmTripScheduleDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmTripScheduleDV.Designer.cs">
+      <DependentUpon>frmTripScheduleDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmTripScheduleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmTripScheduleLV.Designer.cs">
+      <DependentUpon>frmTripScheduleLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmBrandDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmBrandDV.Designer.cs">
+      <DependentUpon>frmBrandDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmBrandLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmBrandLV.Designer.cs">
+      <DependentUpon>frmBrandLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmModelUnitDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmModelUnitDV.Designer.cs">
+      <DependentUpon>frmModelUnitDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmModelUnitLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmModelUnitLV.Designer.cs">
+      <DependentUpon>frmModelUnitLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmTypeEngineDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmTypeEngineDV.Designer.cs">
+      <DependentUpon>frmTypeEngineDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmTypeEngineLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmTypeEngineLV.Designer.cs">
+      <DependentUpon>frmTypeEngineLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmVehicleDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmVehicleDV.Designer.cs">
+      <DependentUpon>frmVehicleDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmVehicleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmVehicleLV.Designer.cs">
+      <DependentUpon>frmVehicleLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Attendance\frmAbsenceSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Attendance\frmAbsenceSV.Designer.cs">
+      <DependentUpon>frmAbsenceSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Attendance\frmAttendanceHistoryEmployeeLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Attendance\frmAttendanceHistoryEmployeeLV.Designer.cs">
+      <DependentUpon>frmAttendanceHistoryEmployeeLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Attendance\frmEmployeeRecognitionPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Attendance\frmEmployeeRecognitionPV.Designer.cs">
+      <DependentUpon>frmEmployeeRecognitionPV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmEArrearPaymentBookDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmEArrearPaymentBookDVV.Designer.cs">
+      <DependentUpon>frmEArrearPaymentBookDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentPaymentBookDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentPaymentBookDVV.Designer.cs">
+      <DependentUpon>frmStudentPaymentBookDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmEPaymentBookDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmEPaymentBookDVV.Designer.cs">
+      <DependentUpon>frmEPaymentBookDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookComponentDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookComponentDVV.Designer.cs">
+      <DependentUpon>frmStudentPaymentControlBookComponentDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentArrearControlBookDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentArrearControlBookDVV.Designer.cs">
+      <DependentUpon>frmStudentArrearControlBookDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookDVV.Designer.cs">
+      <DependentUpon>frmStudentPaymentControlBookDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookPV.Designer.cs">
+      <DependentUpon>frmStudentPaymentControlBookPV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmEPaymentInvoiceDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\frmEPaymentInvoiceDVV.Designer.cs">
+      <DependentUpon>frmEPaymentInvoiceDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptEPaymentBook.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptEPaymentBook.Designer.cs">
+      <DependentUpon>rptEPaymentBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptArrearControlBook.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptArrearControlBook.Designer.cs">
+      <DependentUpon>rptArrearControlBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptPaymentControlBookComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptPaymentControlBookComponent.Designer.cs">
+      <DependentUpon>rptPaymentControlBookComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptPaymentControlBook.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptPaymentControlBook.Designer.cs">
+      <DependentUpon>rptPaymentControlBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptEPaymentInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\EducationPayment\rptEPaymentInvoice.Designer.cs">
+      <DependentUpon>rptEPaymentInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetTransactionEducationComponentDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetTransactionEducationComponentDVV.Designer.cs">
+      <DependentUpon>frmBudgetTransactionEducationComponentDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetBalanceLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetBalanceLV.Designer.cs">
+      <DependentUpon>frmBudgetBalanceLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetTransactionPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetTransactionPV.Designer.cs">
+      <DependentUpon>frmBudgetTransactionPV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetTransactionDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetTransactionDVV.Designer.cs">
+      <DependentUpon>frmBudgetTransactionDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetBalanceDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetBalanceDVV.Designer.cs">
+      <DependentUpon>frmBudgetBalanceDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\frmComparationBudgetRealizationBalanceDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmComparationBudgetRealizationBalanceDVV.Designer.cs">
+      <DependentUpon>frmComparationBudgetRealizationBalanceDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\frmComparationBudgetRealizationDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmComparationBudgetRealizationDVV.Designer.cs">
+      <DependentUpon>frmComparationBudgetRealizationDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\rptBudgetTransactionEducationComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\rptBudgetTransactionEducationComponent.Designer.cs">
+      <DependentUpon>rptBudgetTransactionEducationComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\rptBudgetTransaction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\rptBudgetTransaction.Designer.cs">
+      <DependentUpon>rptBudgetTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\rptBudgetBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\rptBudgetBalance.Designer.cs">
+      <DependentUpon>rptBudgetBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\rptComparationBudgetRealizationBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\rptComparationBudgetRealizationBalance.Designer.cs">
+      <DependentUpon>rptComparationBudgetRealizationBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\rptComparationBudgetRealization.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\rptComparationBudgetRealization.Designer.cs">
+      <DependentUpon>rptComparationBudgetRealization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Travel\frmESPJTripScheduleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Travel\frmESPJTripScheduleLV.Designer.cs">
+      <DependentUpon>frmESPJTripScheduleLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Travel\frmETicketTravelTicketBookingLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Travel\frmETicketTravelTicketBookingLV.Designer.cs">
+      <DependentUpon>frmETicketTravelTicketBookingLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Travel\frmTravelTicketBookingPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Travel\frmTravelTicketBookingPV.Designer.cs">
+      <DependentUpon>frmTravelTicketBookingPV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Travel\frmTripSchedulePV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Travel\frmTripSchedulePV.Designer.cs">
+      <DependentUpon>frmTripSchedulePV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Travel\rptESPJTripSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Travel\rptESPJTripSchedule.Designer.cs">
+      <DependentUpon>rptESPJTripSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Travel\rptETicketTravelTicketBooking.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Travel\rptETicketTravelTicketBooking.Designer.cs">
+      <DependentUpon>rptETicketTravelTicketBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmChangeShiftWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmChangeShiftWV.Designer.cs">
+      <DependentUpon>frmChangeShiftWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmDeleteAttendanceTransactionWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmDeleteAttendanceTransactionWV.Designer.cs">
+      <DependentUpon>frmDeleteAttendanceTransactionWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmDeleteFingerprintWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmDeleteFingerprintWV.Designer.cs">
+      <DependentUpon>frmDeleteFingerprintWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmDownloadAttendanceTransactionWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmDownloadAttendanceTransactionWV.Designer.cs">
+      <DependentUpon>frmDownloadAttendanceTransactionWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmDownloadFingerprintWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmDownloadFingerprintWV.Designer.cs">
+      <DependentUpon>frmDownloadFingerprintWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmRosterAddWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmRosterAddWV.Designer.cs">
+      <DependentUpon>frmRosterAddWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmRosterDetailDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmRosterDetailDV.Designer.cs">
+      <DependentUpon>frmRosterDetailDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmRosterLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmRosterLV.Designer.cs">
+      <DependentUpon>frmRosterLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmUploadFingerprintWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\frmUploadFingerprintWV.Designer.cs">
+      <DependentUpon>frmUploadFingerprintWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmImportStudentEducationPaymentWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmImportStudentEducationPaymentWV.Designer.cs">
+      <DependentUpon>frmImportStudentEducationPaymentWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationDeletePaymentWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationDeletePaymentWV.Designer.cs">
+      <DependentUpon>frmStudentEducationDeletePaymentWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentDV.Designer.cs">
+      <DependentUpon>frmStudentEducationPaymentDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationDeleteWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationDeleteWV.Designer.cs">
+      <DependentUpon>frmStudentEducationDeleteWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentLV.Designer.cs">
+      <DependentUpon>frmStudentEducationPaymentLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentInvoiceWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentInvoiceWV.Designer.cs">
+      <DependentUpon>frmStudentEducationPaymentInvoiceWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentWV.Designer.cs">
+      <DependentUpon>frmStudentEducationPaymentWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmBudgetRegulationLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmBudgetRegulationLV.Designer.cs">
+      <DependentUpon>frmBudgetRegulationLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmBudgetRegulationDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmBudgetRegulationDV.Designer.cs">
+      <DependentUpon>frmBudgetRegulationDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmDebitDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmDebitDV.Designer.cs">
+      <DependentUpon>frmDebitDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmImportBudgetTransactionWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmImportBudgetTransactionWV.Designer.cs">
+      <DependentUpon>frmImportBudgetTransactionWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmKreditDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmKreditDV.Designer.cs">
+      <DependentUpon>frmKreditDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmDebitLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmDebitLV.Designer.cs">
+      <DependentUpon>frmDebitLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmKreditLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Finance\frmKreditLV.Designer.cs">
+      <DependentUpon>frmKreditLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\AssemblyHelper.cs" />
+    <Compile Include="Utils\ExceptionMiddlewareHelper.cs" />
+    <Compile Include="Utils\HelperHttpClient.cs" />
+    <Compile Include="Utils\GridHelper.cs" />
+    <Compile Include="Utils\Helper.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="EnumCollections.cs" />
+    <Compile Include="Utils\Helper.cs" />
+    <Compile Include="Utils\HelperRestSharp.cs" />
+    <Compile Include="Utils\MessageHelper.cs" />
+    <Compile Include="Utils\MyValidationHelper.cs" />
+    <Compile Include="Utils\OverlayHelper.cs" />
+    <Compile Include="Utils\PopupEditHelper.cs" />
+    <Compile Include="Utils\SilentUpdater.cs" />
+    <Compile Include="Utils\SLUHelper.cs" />
+    <Compile Include="Utils\SoapHelper.cs" />
+    <Compile Include="Utils\TrackError.cs" />
+    <Compile Include="Utils\UpdateProgressChangedEventArgs.cs" />
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Contract.EducationPayment.ImportEducationComponentModel.datasource" />
+    <None Include="Properties\DataSources\Contract.EducationPayment.ImportStudentEducationPaymentModel.datasource" />
+    <None Include="Properties\DataSources\Contract.EducationResource.ImportClassModel.datasource" />
+    <None Include="Properties\DataSources\Contract.EducationResource.ImportForceModel.datasource" />
+    <None Include="Properties\DataSources\Contract.EducationResource.ImportMajorModel.datasource" />
+    <None Include="Properties\DataSources\Contract.EducationResource.ImportStudentModel.datasource" />
+    <None Include="Properties\DataSources\Contract.Organization.ImportGroupModel.datasource" />
+    <None Include="Properties\DataSources\Contract.Shared.ImportUnitMeasureModel.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Attendance.AttendanceCode.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Attendance.AttendanceHistory.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Attendance.AttendanceSettingRange.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Attendance.Machine.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Attendance.Roster.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Attendance.Shift.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Attendance.WorkingCalendar.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Attendance.WorkingPattern.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Attendance.WorkingPatternDetail.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Demography.City.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Demography.Country.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Demography.District.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Demography.Province.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Demography.Village.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.EducationComponent.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.EducationComponentRegulation.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.EducationComponentRegulationDetail.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.StudentEducationPayment.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.StudentEducationPaymentComponent.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.StudentEducationPaymentHistory.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationResource.Class.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationResource.ForceYear.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationResource.Major.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationResource.Student.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationResource.StudentPersonalData.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Finance.BudgetRegulation.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Finance.BudgetRegulationDetail.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Finance.BudgetTransaction.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Finance.Category.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.HumanResource.Employee.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.HumanResource.EmployeePersonalData.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.HumanResource.JobGrade.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.HumanResource.JobPosition.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.HumanResource.JobTitle.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.HumanResource.TeacherJobTitle.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.HumanResource.TeacherRecognition.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationController.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationControllerMethod.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationRole.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationRoleClaim.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationUser.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationUserClaim.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationUserInfo.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationUserLogin.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationUserRole.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationUserSchool.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.ApplicationUserToken.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.Navigation.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Identity.NavigationRole.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Organization.Company.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Organization.Foundation.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Organization.Group.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Organization.OrganizationStructure.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Organization.School.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Shared.AuditEntry.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Shared.AuditTrail.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Shared.Sequence.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Shared.UnitMeasure.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.SQLProc.BudgetTransactionResult.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.SQLView.Attendance.AttendanceHistoryView.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.SQLView.EducationPayment.ArrearStudentEducationPaymentView.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.SQLView.EducationPayment.StudentPaymentControlBookComponentView.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.SQLView.EducationPayment.StudentPaymentControlBookView.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.SQLView.EducationPayment.StudentPaymentSummaryView.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.SQLView.Finance.BudgetTransactionView.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.SQLView.HumanResource.EmployeeRecognitionView.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.DeliveryPointDistrict.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.Passenger.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.PickupPointDistrict.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.Rute.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.RuteSchedule.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.Schedule.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.TravelPrice.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.TravelTicketBooking.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.TravelTicketBookingDetail.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.TripSchedule.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Travel.TripScheduleDetail.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Vehicle.BrandVehicle.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Vehicle.ModelUnit.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Vehicle.TypeEngine.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Vehicle.Vehicles.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Brotli.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.BonusSkins.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Charts.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.CodeParser.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Dashboard.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Dashboard.v23.2.Win">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.Desktop.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v23.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataVisualization.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Diagram.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Dialogs.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Docs.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Drawing.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.ExpressApp.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Images.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Map.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v23.2.Drawing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Persistent.Base.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v23.2.Export">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Snap.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.SpellChecker.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Spreadsheet.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.TreeMap.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v23.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpo.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v23.2.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v23.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v23.2.Wizard">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraDiagram.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraDialogs.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v23.2.Presets">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v23.2.Win">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraMap.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v23.2.CodeCompletion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v23.2.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v23.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v23.2.Core.Desktop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v23.2.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraSpellChecker.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraSpreadsheet.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeMap.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeMap.v23.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraWizard.v23.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="de\Microsoft.Data.Edm.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\Microsoft.Data.OData.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\System.Spatial.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\Microsoft.Data.Edm.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\Microsoft.Data.OData.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\System.Spatial.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\Microsoft.Data.Edm.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\Microsoft.Data.OData.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\System.Spatial.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\Microsoft.Data.Edm.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\Microsoft.Data.OData.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\System.Spatial.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\Microsoft.Data.Edm.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\Microsoft.Data.OData.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\System.Spatial.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ko\Microsoft.Data.Edm.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ko\Microsoft.Data.OData.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ko\System.Spatial.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Graph">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Graph.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Identity.Client">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Identity.Client.Extensions.Msal">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.IdentityModel.Abstractions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.IdentityModel.JsonWebTokens">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.IdentityModel.Logging">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.IdentityModel.Protocols">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.IdentityModel.Protocols.OpenIdConnect">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.IdentityModel.Tokens">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="NewId">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Newtonsoft.Json">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="RestSharp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="runtimes\win\native\brolib_x64.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="runtimes\win\native\brolib_x86.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\Microsoft.Data.Edm.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\Microsoft.Data.OData.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\System.Spatial.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hans\Microsoft.Data.Edm.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hans\Microsoft.Data.OData.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hans\System.Spatial.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hant\Microsoft.Data.Edm.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hant\Microsoft.Data.OData.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hant\System.Spatial.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForm\frmBaseDV.resx">
+      <DependentUpon>frmBaseDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseFilterDVV.resx">
+      <DependentUpon>frmBaseFilterDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseDVV.resx">
+      <DependentUpon>frmBaseDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseFilterTLV.resx">
+      <DependentUpon>frmBaseFilterTLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseImportWV.resx">
+      <DependentUpon>frmBaseImportWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseTLV.resx">
+      <DependentUpon>frmBaseTLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseSV.resx">
+      <DependentUpon>frmBaseSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBasePV.resx">
+      <DependentUpon>frmBasePV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseFilterLV.resx">
+      <DependentUpon>frmBaseFilterLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseLV.resx">
+      <DependentUpon>frmBaseLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseWaitForm.resx">
+      <DependentUpon>frmBaseWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseWV.resx">
+      <DependentUpon>frmBaseWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPassword.resx">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogOff.resx">
+      <DependentUpon>frmLogOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMDI.resx">
+      <DependentUpon>frmMainMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerificationCode.resx">
+      <DependentUpon>frmVerificationCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmAttendanceCodeDV.resx">
+      <DependentUpon>frmAttendanceCodeDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmAttendanceCodeLV.resx">
+      <DependentUpon>frmAttendanceCodeLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmAttendanceSettingRangeDV.resx">
+      <DependentUpon>frmAttendanceSettingRangeDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmAttendanceSettingRangeLV.resx">
+      <DependentUpon>frmAttendanceSettingRangeLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmImportAttendanceCodeWV.resx">
+      <DependentUpon>frmImportAttendanceCodeWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmMachineDV.resx">
+      <DependentUpon>frmMachineDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmMachineLV.resx">
+      <DependentUpon>frmMachineLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmShiftDV.resx">
+      <DependentUpon>frmShiftDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmShiftLV.resx">
+      <DependentUpon>frmShiftLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmWorkingPatternDV.resx">
+      <DependentUpon>frmWorkingPatternDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Attendance\frmWorkingPatternLV.resx">
+      <DependentUpon>frmWorkingPatternLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmCityDV.resx">
+      <DependentUpon>frmCityDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmCityLV.resx">
+      <DependentUpon>frmCityLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmCountryLV.resx">
+      <DependentUpon>frmCountryLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmDistrictDV.resx">
+      <DependentUpon>frmDistrictDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmDistrictLV.resx">
+      <DependentUpon>frmDistrictLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmProvinceDV.resx">
+      <DependentUpon>frmProvinceDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmProvinceLV.resx">
+      <DependentUpon>frmProvinceLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmVillageDV.resx">
+      <DependentUpon>frmVillageDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmVillageLV.resx">
+      <DependentUpon>frmVillageLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationPayment\frmEducationComponentDV.resx">
+      <DependentUpon>frmEducationComponentDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationPayment\frmEducationComponentLV.resx">
+      <DependentUpon>frmEducationComponentLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationPayment\frmEducationComponentRegulationDV.resx">
+      <DependentUpon>frmEducationComponentRegulationDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationPayment\frmEducationComponentRegulationLV.resx">
+      <DependentUpon>frmEducationComponentRegulationLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationPayment\frmImportEducationComponentWV.resx">
+      <DependentUpon>frmImportEducationComponentWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmClassDV.resx">
+      <DependentUpon>frmClassDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmClassLV.resx">
+      <DependentUpon>frmClassLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmImportRombelWV.resx">
+      <DependentUpon>frmImportRombelWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmRombelDV.resx">
+      <DependentUpon>frmRombelDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmForceYearDV.resx">
+      <DependentUpon>frmForceYearDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmRombelLV.resx">
+      <DependentUpon>frmRombelLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmForceYearLV.resx">
+      <DependentUpon>frmForceYearLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmImportStudentWV.resx">
+      <DependentUpon>frmImportStudentWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmImportForceWV.resx">
+      <DependentUpon>frmImportForceWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmImportMajorWV.resx">
+      <DependentUpon>frmImportMajorWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmImportClassWV.resx">
+      <DependentUpon>frmImportClassWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmMajorDV.resx">
+      <DependentUpon>frmMajorDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmMajorLV.resx">
+      <DependentUpon>frmMajorLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmStudentDV.resx">
+      <DependentUpon>frmStudentDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\EducationResource\frmStudentLV.resx">
+      <DependentUpon>frmStudentLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Finance\frmCategoryDV.resx">
+      <DependentUpon>frmCategoryDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Finance\frmCategoryLV.resx">
+      <DependentUpon>frmCategoryLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmImportJobGradeWV.resx">
+      <DependentUpon>frmImportJobGradeWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmImportEmployeeWV.resx">
+      <DependentUpon>frmImportEmployeeWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmImportJobTitleWV.resx">
+      <DependentUpon>frmImportJobTitleWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmImportJobPositionWV.resx">
+      <DependentUpon>frmImportJobPositionWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmJobGradeDV.resx">
+      <DependentUpon>frmJobGradeDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmJobGradeLV.resx">
+      <DependentUpon>frmJobGradeLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmJobPositionDV.resx">
+      <DependentUpon>frmJobPositionDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmJobPositionTLV.resx">
+      <DependentUpon>frmJobPositionTLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmJobTitleLV.resx">
+      <DependentUpon>frmJobTitleLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmEmployeeDV.resx">
+      <DependentUpon>frmEmployeeDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmEmployeeLV.resx">
+      <DependentUpon>frmEmployeeLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Demography\frmCountryDV.resx">
+      <DependentUpon>frmCountryDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Identity\frmUserStudentDV.resx">
+      <DependentUpon>frmUserStudentDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Identity\frmUserDV.resx">
+      <DependentUpon>frmUserDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Identity\frmUserStudentLV.resx">
+      <DependentUpon>frmUserStudentLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Identity\frmUserLV.resx">
+      <DependentUpon>frmUserLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Organization\frmGroupDV.resx">
+      <DependentUpon>frmGroupDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Organization\frmGroupLV.resx">
+      <DependentUpon>frmGroupLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Organization\frmCompanyDV.resx">
+      <DependentUpon>frmCompanyDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Organization\frmCompanyLV.resx">
+      <DependentUpon>frmCompanyLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmJobTitleDV.resx">
+      <DependentUpon>frmJobTitleDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Identity\frmRoleDV.resx">
+      <DependentUpon>frmRoleDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Identity\frmRoleLV.resx">
+      <DependentUpon>frmRoleLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Organization\frmImportGroupWV.resx">
+      <DependentUpon>frmImportGroupWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Organization\frmImportCompanyWV.resx">
+      <DependentUpon>frmImportCompanyWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Organization\frmImportOrganizationStructureWV.resx">
+      <DependentUpon>frmImportOrganizationStructureWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Organization\frmOrganizationStructureDV.resx">
+      <DependentUpon>frmOrganizationStructureDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Organization\frmOrganizationStructureTLV.resx">
+      <DependentUpon>frmOrganizationStructureTLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Shared\frmImportUnitMeasureWV.resx">
+      <DependentUpon>frmImportUnitMeasureWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Shared\frmUnitMeasureDV.resx">
+      <DependentUpon>frmUnitMeasureDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Shared\frmUnitMeasureLV.resx">
+      <DependentUpon>frmUnitMeasureLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmPassengerDV.resx">
+      <DependentUpon>frmPassengerDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmPassengerLV.resx">
+      <DependentUpon>frmPassengerLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmRuteDV.resx">
+      <DependentUpon>frmRuteDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmRuteLV.resx">
+      <DependentUpon>frmRuteLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmScheduleDV.resx">
+      <DependentUpon>frmScheduleDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmScheduleLV.resx">
+      <DependentUpon>frmScheduleLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmTravelTicketBookingDV.resx">
+      <DependentUpon>frmTravelTicketBookingDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmTravelTicketBookingLV.resx">
+      <DependentUpon>frmTravelTicketBookingLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmTripScheduleDV.resx">
+      <DependentUpon>frmTripScheduleDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmTripScheduleLV.resx">
+      <DependentUpon>frmTripScheduleLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmBrandDV.resx">
+      <DependentUpon>frmBrandDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmBrandLV.resx">
+      <DependentUpon>frmBrandLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmModelUnitDV.resx">
+      <DependentUpon>frmModelUnitDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmModelUnitLV.resx">
+      <DependentUpon>frmModelUnitLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmTypeEngineDV.resx">
+      <DependentUpon>frmTypeEngineDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmTypeEngineLV.resx">
+      <DependentUpon>frmTypeEngineLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmVehicleDV.resx">
+      <DependentUpon>frmVehicleDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmVehicleLV.resx">
+      <DependentUpon>frmVehicleLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Attendance\frmAbsenceSV.resx">
+      <DependentUpon>frmAbsenceSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Attendance\frmAttendanceHistoryEmployeeLV.resx">
+      <DependentUpon>frmAttendanceHistoryEmployeeLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Attendance\frmEmployeeRecognitionPV.resx">
+      <DependentUpon>frmEmployeeRecognitionPV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\frmEArrearPaymentBookDVV.resx">
+      <DependentUpon>frmEArrearPaymentBookDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\frmStudentPaymentBookDVV.resx">
+      <DependentUpon>frmStudentPaymentBookDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\frmEPaymentBookDVV.resx">
+      <DependentUpon>frmEPaymentBookDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\frmStudentPaymentControlBookComponentDVV.resx">
+      <DependentUpon>frmStudentPaymentControlBookComponentDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\frmStudentArrearControlBookDVV.resx">
+      <DependentUpon>frmStudentArrearControlBookDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\frmStudentPaymentControlBookDVV.resx">
+      <DependentUpon>frmStudentPaymentControlBookDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\frmStudentPaymentControlBookPV.resx">
+      <DependentUpon>frmStudentPaymentControlBookPV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\frmEPaymentInvoiceDVV.resx">
+      <DependentUpon>frmEPaymentInvoiceDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\rptEPaymentBook.resx">
+      <DependentUpon>rptEPaymentBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\rptArrearControlBook.resx">
+      <DependentUpon>rptArrearControlBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\rptPaymentControlBookComponent.resx">
+      <DependentUpon>rptPaymentControlBookComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\rptPaymentControlBook.resx">
+      <DependentUpon>rptPaymentControlBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EducationPayment\rptEPaymentInvoice.resx">
+      <DependentUpon>rptEPaymentInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmBudgetTransactionEducationComponentDVV.resx">
+      <DependentUpon>frmBudgetTransactionEducationComponentDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmBudgetBalanceLV.resx">
+      <DependentUpon>frmBudgetBalanceLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmBudgetTransactionPV.resx">
+      <DependentUpon>frmBudgetTransactionPV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmBudgetTransactionDVV.resx">
+      <DependentUpon>frmBudgetTransactionDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmBudgetBalanceDVV.resx">
+      <DependentUpon>frmBudgetBalanceDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmComparationBudgetRealizationBalanceDVV.resx">
+      <DependentUpon>frmComparationBudgetRealizationBalanceDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmComparationBudgetRealizationDVV.resx">
+      <DependentUpon>frmComparationBudgetRealizationDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\rptBudgetTransactionEducationComponent.resx">
+      <DependentUpon>rptBudgetTransactionEducationComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\rptBudgetTransaction.resx">
+      <DependentUpon>rptBudgetTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\rptBudgetBalance.resx">
+      <DependentUpon>rptBudgetBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\rptComparationBudgetRealizationBalance.resx">
+      <DependentUpon>rptComparationBudgetRealizationBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\rptComparationBudgetRealization.resx">
+      <DependentUpon>rptComparationBudgetRealization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Travel\frmESPJTripScheduleLV.resx">
+      <DependentUpon>frmESPJTripScheduleLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Travel\frmETicketTravelTicketBookingLV.resx">
+      <DependentUpon>frmETicketTravelTicketBookingLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Travel\frmTravelTicketBookingPV.resx">
+      <DependentUpon>frmTravelTicketBookingPV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Travel\frmTripSchedulePV.resx">
+      <DependentUpon>frmTripSchedulePV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Travel\rptESPJTripSchedule.resx">
+      <DependentUpon>rptESPJTripSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Travel\rptETicketTravelTicketBooking.resx">
+      <DependentUpon>rptETicketTravelTicketBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\frmChangeShiftWV.resx">
+      <DependentUpon>frmChangeShiftWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\frmDeleteAttendanceTransactionWV.resx">
+      <DependentUpon>frmDeleteAttendanceTransactionWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\frmDeleteFingerprintWV.resx">
+      <DependentUpon>frmDeleteFingerprintWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\frmDownloadAttendanceTransactionWV.resx">
+      <DependentUpon>frmDownloadAttendanceTransactionWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\frmDownloadFingerprintWV.resx">
+      <DependentUpon>frmDownloadFingerprintWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\frmRosterAddWV.resx">
+      <DependentUpon>frmRosterAddWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\frmRosterDetailDV.resx">
+      <DependentUpon>frmRosterDetailDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\frmRosterLV.resx">
+      <DependentUpon>frmRosterLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\frmUploadFingerprintWV.resx">
+      <DependentUpon>frmUploadFingerprintWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\EducationPayment\frmImportStudentEducationPaymentWV.resx">
+      <DependentUpon>frmImportStudentEducationPaymentWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationDeletePaymentWV.resx">
+      <DependentUpon>frmStudentEducationDeletePaymentWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationPaymentDV.resx">
+      <DependentUpon>frmStudentEducationPaymentDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationDeleteWV.resx">
+      <DependentUpon>frmStudentEducationDeleteWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationPaymentLV.resx">
+      <DependentUpon>frmStudentEducationPaymentLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationPaymentInvoiceWV.resx">
+      <DependentUpon>frmStudentEducationPaymentInvoiceWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationPaymentWV.resx">
+      <DependentUpon>frmStudentEducationPaymentWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Finance\frmBudgetRegulationLV.resx">
+      <DependentUpon>frmBudgetRegulationLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Finance\frmBudgetRegulationDV.resx">
+      <DependentUpon>frmBudgetRegulationDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Finance\frmDebitDV.resx">
+      <DependentUpon>frmDebitDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Finance\frmImportBudgetTransactionWV.resx">
+      <DependentUpon>frmImportBudgetTransactionWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Finance\frmKreditDV.resx">
+      <DependentUpon>frmKreditDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Finance\frmDebitLV.resx">
+      <DependentUpon>frmDebitLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Finance\frmKreditLV.resx">
+      <DependentUpon>frmKreditLV.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="logo panca.ico" />
+    <Content Include="Logo-VsudoTech.ico" />
+    <None Include="Resources\Logo VsudoTech.png" />
+    <None Include="Resources\Logo VsudoTech Putih.png" />
+    <None Include="Resources\Logo-VsudoTech Ico.ico" />
+    <None Include="Resources\Logo-VsudoTech-Putih Ico.ico" />
+    <None Include="Resources\logo panca.ico" />
+    <Content Include="runtimes\win\native\brolib_x64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="runtimes\win\native\brolib_x86.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+    <Error Condition="!Exists('..\packages\Brotli.NET.2.1.1\build\Brotli.NET.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Brotli.NET.2.1.1\build\Brotli.NET.targets'))" />
+  </Target>
+  <Import Project="..\packages\Brotli.NET.2.1.1\build\Brotli.NET.targets" Condition="Exists('..\packages\Brotli.NET.2.1.1\build\Brotli.NET.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="23.2.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
