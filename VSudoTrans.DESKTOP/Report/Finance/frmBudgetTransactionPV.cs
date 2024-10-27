@@ -6,7 +6,6 @@ using System;
 using Domain.Entities.SQLView.Finance;
 using Domain;
 using Domain.Entities.Finance;
-using Domain.Entities.EducationPayment;
 
 namespace VSudoTrans.DESKTOP.Report.Finance
 {
@@ -51,7 +50,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             _LayoutControlItemFilter7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 
             _LayoutControlItemFilter3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter3.Text = "Sekolah";
+            _LayoutControlItemFilter3.Text = "Perusahaan";
             PopupEditHelper.Company(FilterPopUp3);
 
             _LayoutControlItemFilter4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
@@ -59,8 +58,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             SLUHelper.SetEnumDataSource<EnumTransactionIndicator>(FilterPopUp4, EnumHelper.EnumTransactionIndicatorToString);
 
             _LayoutControlItemFilter5.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter5.Text = "Mata Anggaran";
-            PopupEditHelper.General<EducationComponent>(fEndPoint: "/EducationComponents", fTitle: "Mata Anggaran", fControl: FilterPopUp5, fCascade: FilterPopUp3, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "250;100;400", fDisplayText: "Code;Name");
+            _LayoutControlItemFilter5.Text = "Kategori";
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fTitle: "Kategori", fControl: FilterPopUp5, fCascade: FilterPopUp3, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "250;100;400", fDisplayText: "Code;Name");
 
             _LayoutControlItemFilter8.Text = "Tahun";
             _LayoutControlItemFilter9.Text = "Bulan";
@@ -78,7 +77,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                 OdataFilter += $"and Indicator eq '{FilterPopUp4.EditValue}' ";
 
             if (FilterPopUp5.EditValue != null)
-                OdataFilter += $"and EducationComponentId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp5.EditValue, "Id"))} ";
+                OdataFilter += $"and CategoryId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp5.EditValue, "Id"))} ";
 
             if (YearTextEdit.EditValue != null)
                 OdataFilter += $"and Year eq {HelperConvert.Date(YearTextEdit.EditValue).Year} ";

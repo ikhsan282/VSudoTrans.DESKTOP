@@ -247,7 +247,7 @@ namespace VSudoTrans.DESKTOP.Master.Identity
             this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
             this.layoutControlGroup5.Size = new System.Drawing.Size(1175, 336);
-            this.layoutControlGroup5.Text = "Otorisasi Sekolah";
+            this.layoutControlGroup5.Text = "Otorisasi Perusahaan";
             // 
             // layoutControlItem3
             // 
@@ -623,7 +623,7 @@ namespace VSudoTrans.DESKTOP.Master.Identity
             this.ItemForCompany.Location = new System.Drawing.Point(0, 152);
             this.ItemForCompany.Name = "ItemForCompany";
             this.ItemForCompany.Size = new System.Drawing.Size(1175, 38);
-            this.ItemForCompany.Text = "Sekolah";
+            this.ItemForCompany.Text = "Perusahaan";
             this.ItemForCompany.TextSize = new System.Drawing.Size(116, 21);
             // 
             // CompanyPopUp

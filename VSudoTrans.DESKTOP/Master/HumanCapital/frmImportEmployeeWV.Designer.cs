@@ -33,7 +33,7 @@
             this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFailureDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatusImport = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSchoolCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCompanyCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOrganizationStructureCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colJobPositionCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colJobGradeCode = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,7 +85,7 @@
             // 
             this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colStatusImport,
-            this.colSchoolCode,
+            this.colCompanyCode,
             this.colCode,
             this.colName,
             this.colOrganizationStructureCode,
@@ -166,15 +166,15 @@
             this.colStatusImport.VisibleIndex = 0;
             this.colStatusImport.Width = 97;
             // 
-            // colSchoolCode
+            // colCompanyCode
             // 
-            this.colSchoolCode.Caption = "Kode Sekolah";
-            this.colSchoolCode.FieldName = "SchoolCode";
-            this.colSchoolCode.MinWidth = 30;
-            this.colSchoolCode.Name = "colSchoolCode";
-            this.colSchoolCode.Visible = true;
-            this.colSchoolCode.VisibleIndex = 1;
-            this.colSchoolCode.Width = 112;
+            this.colCompanyCode.Caption = "Kode Perusahaan";
+            this.colCompanyCode.FieldName = "CompanyCode";
+            this.colCompanyCode.MinWidth = 30;
+            this.colCompanyCode.Name = "colCompanyCode";
+            this.colCompanyCode.Visible = true;
+            this.colCompanyCode.VisibleIndex = 1;
+            this.colCompanyCode.Width = 112;
             // 
             // colOrganizationStructureCode
             // 
@@ -307,7 +307,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colNote;
         private DevExpress.XtraGrid.Columns.GridColumn colFailureDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn colSchoolCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colCompanyCode;
         private DevExpress.XtraGrid.Columns.GridColumn colOrganizationStructureCode;
         private DevExpress.XtraGrid.Columns.GridColumn colJobPositionCode;
         private DevExpress.XtraGrid.Columns.GridColumn colJobGradeCode;

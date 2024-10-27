@@ -90,8 +90,8 @@ namespace VSudoTrans.DESKTOP.Master.Organization
 
         private void BbiTemplateImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fileExcel = HelperRestSharp.DownloadFile("VSudoTrans", "import/Import Foundation.xlsx");
-            HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import Foundation");
+            var fileExcel = HelperRestSharp.DownloadFile("VSudoTrans", "import/Import Group.xlsx");
+            HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import Group");
         }
 
         private void BbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

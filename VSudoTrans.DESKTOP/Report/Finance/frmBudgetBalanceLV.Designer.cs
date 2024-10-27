@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBudgetBalanceLV));
             this.colTransactionDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEducationComponent = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCategory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPengeluaran = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPenerimaan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSaldo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -149,7 +149,7 @@
             // 
             this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colTransactionDate,
-            this.colEducationComponent,
+            this.colCategory,
             this.colPenerimaan,
             this.colPengeluaran,
             this.colSaldo});
@@ -234,15 +234,15 @@
             this.colTransactionDate.VisibleIndex = 0;
             this.colTransactionDate.Width = 162;
             // 
-            // colEducationComponent
+            // colCategory
             // 
-            this.colEducationComponent.Caption = "Keterangan";
-            this.colEducationComponent.FieldName = "EducationComponent";
-            this.colEducationComponent.MinWidth = 30;
-            this.colEducationComponent.Name = "colEducationComponent";
-            this.colEducationComponent.Visible = true;
-            this.colEducationComponent.VisibleIndex = 1;
-            this.colEducationComponent.Width = 528;
+            this.colCategory.Caption = "Keterangan";
+            this.colCategory.FieldName = "Category";
+            this.colCategory.MinWidth = 30;
+            this.colCategory.Name = "colCategory";
+            this.colCategory.Visible = true;
+            this.colCategory.VisibleIndex = 1;
+            this.colCategory.Width = 528;
             // 
             // colPengeluaran
             // 
@@ -313,7 +313,7 @@
         #endregion
 
         private DevExpress.XtraGrid.Columns.GridColumn colTransactionDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colEducationComponent;
+        private DevExpress.XtraGrid.Columns.GridColumn colCategory;
         private DevExpress.XtraGrid.Columns.GridColumn colPengeluaran;
         private DevExpress.XtraGrid.Columns.GridColumn colPenerimaan;
         private DevExpress.XtraGrid.Columns.GridColumn colSaldo;

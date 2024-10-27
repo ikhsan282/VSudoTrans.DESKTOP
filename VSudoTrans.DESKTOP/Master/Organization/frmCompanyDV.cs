@@ -2,12 +2,11 @@
 using Domain.Entities.Organization;
 using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
-using Domain.Entities.Demography;
 using System.Collections.Generic;
 using PopUpUtils;
 using System.IO;
 using System;
-using DevExpress.XtraDiagram.Bars;
+using Domain;
 
 namespace VSudoTrans.DESKTOP.Master.Organization
 {

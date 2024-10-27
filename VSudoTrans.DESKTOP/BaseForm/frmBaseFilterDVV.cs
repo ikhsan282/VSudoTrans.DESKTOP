@@ -131,7 +131,7 @@ namespace VSudoTrans.DESKTOP.BaseForm
             _LayoutControlItemFilter1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             _LayoutControlItemFilter2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 
-            _LayoutControlItemFilter3.Text = "Sekolah";
+            _LayoutControlItemFilter3.Text = "Perusahaan";
             PopupEditHelper.Company(FilterPopUp3);
         }
     }

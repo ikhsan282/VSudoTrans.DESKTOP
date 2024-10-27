@@ -171,7 +171,7 @@
             // 
             // colCompany
             // 
-            this.colCompany.Caption = "Sekolah";
+            this.colCompany.Caption = "Perusahaan";
             this.colCompany.FieldName = "Company.Name";
             this.colCompany.Name = "colCompany";
             this.colCompany.Visible = true;

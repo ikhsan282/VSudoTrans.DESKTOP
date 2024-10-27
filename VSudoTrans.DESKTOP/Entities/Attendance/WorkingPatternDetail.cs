@@ -9,8 +9,8 @@ namespace Domain.Entities.Attendance
     [DisplayName("Detail Pola Kerja")]
     public class WorkingPatternDetail : BaseDomainDetail
     {
-        public int SchoolId { get; set; }
-        public School? School { get; set; }
+        public int CompanyId { get; set; }
+        public Company? Company { get; set; }
         public int CycleNo { get; set; }
 
         public int WorkingPatternId { get; set; }

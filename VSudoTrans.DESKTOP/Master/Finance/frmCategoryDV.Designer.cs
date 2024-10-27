@@ -187,7 +187,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             this.ItemForCompanyId.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompanyId.Name = "ItemForCompanyId";
             this.ItemForCompanyId.Size = new System.Drawing.Size(1244, 40);
-            this.ItemForCompanyId.Text = "Sekolah";
+            this.ItemForCompanyId.Text = "Perusahaan";
             this.ItemForCompanyId.TextSize = new System.Drawing.Size(98, 21);
             // 
             // CompanyPopUp

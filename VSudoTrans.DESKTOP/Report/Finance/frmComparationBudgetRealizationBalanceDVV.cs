@@ -1,16 +1,11 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
-using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraReports.UI;
 using Domain;
-using Domain.Entities.EducationPayment;
-using Domain.Entities.EducationResource;
 using Domain.Entities.Organization;
 using Domain.Entities.SQLProc;
 using Domain.Entities.SQLView.EducationPayment;
-using Microsoft.Graph.Models;
 using PopUpUtils;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using VSudoTrans.DESKTOP.BaseForm;
@@ -49,7 +44,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             HelperConvert.FormatDateEdit(FilterDate2);
 
             _LayoutControlItemFilter3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter3.Text = "Sekolah";
+            _LayoutControlItemFilter3.Text = "Perusahaan";
             PopupEditHelper.Company(FilterPopUp3);
         }
 
@@ -84,15 +79,15 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     DataTable dt = new DataTable();
                     dt.TableName = "Table1";
                     dt.Columns.Add("DetailNo", typeof(string));
-                    dt.Columns.Add("DetailEducationComponentCodePenerimaan", typeof(string));
-                    dt.Columns.Add("DetailEducationComponentNamePenerimaan", typeof(string));
+                    dt.Columns.Add("DetailCategoryCodePenerimaan", typeof(string));
+                    dt.Columns.Add("DetailCategoryNamePenerimaan", typeof(string));
                     dt.Columns.Add("DetailTotalBudgetAmountPenerimaan", typeof(decimal));
                     dt.Columns.Add("DetailTotalRealizedAmountPenerimaan", typeof(decimal));
                     dt.Columns.Add("DetailAmountVariancePenerimaan", typeof(decimal));
                     dt.Columns.Add("DetailRealizationPercentagePenerimaan", typeof(decimal));
 
-                    dt.Columns.Add("DetailEducationComponentCodePengeluaran", typeof(string));
-                    dt.Columns.Add("DetailEducationComponentNamePengeluaran", typeof(string));
+                    dt.Columns.Add("DetailCategoryCodePengeluaran", typeof(string));
+                    dt.Columns.Add("DetailCategoryNamePengeluaran", typeof(string));
                     dt.Columns.Add("DetailTotalBudgetAmountPengeluaran", typeof(decimal));
                     dt.Columns.Add("DetailTotalRealizedAmountPengeluaran", typeof(decimal));
                     dt.Columns.Add("DetailAmountVariancePengeluaran", typeof(decimal));
@@ -110,8 +105,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
 
                         if (comparationBudgetRealizationPenerimaan != null)
                         {
-                            r["DetailEducationComponentCodePenerimaan"] = comparationBudgetRealizationPenerimaan.EducationComponentCode;
-                            r["DetailEducationComponentNamePenerimaan"] = comparationBudgetRealizationPenerimaan.EducationComponentName;
+                            r["DetailCategoryCodePenerimaan"] = comparationBudgetRealizationPenerimaan.CategoryCode;
+                            r["DetailCategoryNamePenerimaan"] = comparationBudgetRealizationPenerimaan.CategoryName;
 
                             r["DetailTotalBudgetAmountPenerimaan"] = comparationBudgetRealizationPenerimaan.TotalBudgetAmount;
                             r["DetailTotalRealizedAmountPenerimaan"] = comparationBudgetRealizationPenerimaan.TotalRealizedAmount;
@@ -119,12 +114,12 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                             r["DetailRealizationPercentagePenerimaan"] = comparationBudgetRealizationPenerimaan.RealizationPercentage;
                         }
 
-                        var comparationBudgetRealizationPengeluaran = comparationBudgetRealizationPengeluarans.Where(s => s.EducationComponentCode.Substring(1, 2) == comparationBudgetRealizationPenerimaan.EducationComponentCode.Substring(1, 2)).FirstOrDefault();
+                        var comparationBudgetRealizationPengeluaran = comparationBudgetRealizationPengeluarans.Where(s => s.CategoryCode.Substring(1, 2) == comparationBudgetRealizationPenerimaan.CategoryCode.Substring(1, 2)).FirstOrDefault();
 
                         if (comparationBudgetRealizationPenerimaan != null && comparationBudgetRealizationPengeluaran != null)
                         {
-                            r["DetailEducationComponentCodePengeluaran"] = comparationBudgetRealizationPengeluaran.EducationComponentCode;
-                            r["DetailEducationComponentNamePengeluaran"] = comparationBudgetRealizationPengeluaran.EducationComponentName;
+                            r["DetailCategoryCodePengeluaran"] = comparationBudgetRealizationPengeluaran.CategoryCode;
+                            r["DetailCategoryNamePengeluaran"] = comparationBudgetRealizationPengeluaran.CategoryName;
 
                             r["DetailTotalBudgetAmountPengeluaran"] = comparationBudgetRealizationPengeluaran.TotalBudgetAmount;
                             r["DetailTotalRealizedAmountPengeluaran"] = comparationBudgetRealizationPengeluaran.TotalRealizedAmount;
@@ -158,8 +153,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
 
                     //    if (comparationBudgetRealizationPenerimaan != null)
                     //    {
-                    //        r["DetailEducationComponentCodePenerimaan"] = comparationBudgetRealizationPenerimaan.EducationComponentCode;
-                    //        r["DetailEducationComponentNamePenerimaan"] = comparationBudgetRealizationPenerimaan.EducationComponentName;
+                    //        r["DetailCategoryCodePenerimaan"] = comparationBudgetRealizationPenerimaan.CategoryCode;
+                    //        r["DetailCategoryNamePenerimaan"] = comparationBudgetRealizationPenerimaan.CategoryName;
 
                     //        r["DetailTotalBudgetAmountPenerimaan"] = comparationBudgetRealizationPenerimaan.TotalBudgetAmount;
                     //        r["DetailTotalRealizedAmountPenerimaan"] = comparationBudgetRealizationPenerimaan.TotalRealizedAmount;
@@ -171,10 +166,10 @@ namespace VSudoTrans.DESKTOP.Report.Finance
 
                     //    if (comparationBudgetRealizationPenerimaan != null && comparationBudgetRealizationPengeluaran != null)
                     //    {
-                    //        if (comparationBudgetRealizationPenerimaan.EducationComponentCode.Substring(1, 2) == comparationBudgetRealizationPengeluaran.EducationComponentCode.Substring(1, 2))
+                    //        if (comparationBudgetRealizationPenerimaan.CategoryCode.Substring(1, 2) == comparationBudgetRealizationPengeluaran.CategoryCode.Substring(1, 2))
                     //        {
-                    //            r["DetailEducationComponentCodePengeluaran"] = comparationBudgetRealizationPengeluaran.EducationComponentCode;
-                    //            r["DetailEducationComponentNamePengeluaran"] = comparationBudgetRealizationPengeluaran.EducationComponentName;
+                    //            r["DetailCategoryCodePengeluaran"] = comparationBudgetRealizationPengeluaran.CategoryCode;
+                    //            r["DetailCategoryNamePengeluaran"] = comparationBudgetRealizationPengeluaran.CategoryName;
 
                     //            r["DetailTotalBudgetAmountPengeluaran"] = comparationBudgetRealizationPengeluaran.TotalBudgetAmount;
                     //            r["DetailTotalRealizedAmountPengeluaran"] = comparationBudgetRealizationPengeluaran.TotalRealizedAmount;
@@ -185,7 +180,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
 
                     //    if (comparationBudgetRealizationPenerimaan != null && comparationBudgetRealizationPengeluaran != null)
                     //    {
-                    //        if (comparationBudgetRealizationPenerimaan.EducationComponentCode.Substring(1, 2) == comparationBudgetRealizationPengeluaran.EducationComponentCode.Substring(1, 2))
+                    //        if (comparationBudgetRealizationPenerimaan.CategoryCode.Substring(1, 2) == comparationBudgetRealizationPengeluaran.CategoryCode.Substring(1, 2))
                     //            r["DetailBalance"] = comparationBudgetRealizationPenerimaan.TotalRealizedAmount - comparationBudgetRealizationPengeluaran.TotalRealizedAmount;
                     //    }
                     //    else if (comparationBudgetRealizationPenerimaan != null && comparationBudgetRealizationPengeluaran == null)
@@ -203,16 +198,16 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     report.DataSource = dt;
 
                     //Detail
-                    report.xrEducationComponentCodePenerimaan.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailEducationComponentCodePenerimaan]"));
-                    report.xrEducationComponentNamePenerimaan.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailEducationComponentNamePenerimaan]"));
+                    report.xrCategoryCodePenerimaan.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryCodePenerimaan]"));
+                    report.xrCategoryNamePenerimaan.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryNamePenerimaan]"));
 
                     report.xrTotalBudgetAmountPenerimaan.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTotalBudgetAmountPenerimaan]"));
                     report.xrTotalRealizedAmountPenerimaan.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTotalRealizedAmountPenerimaan]"));
                     report.xrAmountVariancePenerimaan.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailAmountVariancePenerimaan]"));
                     report.xrRealizationPercentagePenerimaan.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailRealizationPercentagePenerimaan]"));
                     
-                    report.xrEducationComponentCodePengeluaran.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailEducationComponentCodePengeluaran]"));
-                    report.xrEducationComponentNamePengeluaran.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailEducationComponentNamePengeluaran]"));
+                    report.xrCategoryCodePengeluaran.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryCodePengeluaran]"));
+                    report.xrCategoryNamePengeluaran.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryNamePengeluaran]"));
 
                     report.xrTotalBudgetAmountPengeluaran.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTotalBudgetAmountPengeluaran]"));
                     report.xrTotalRealizedAmountPengeluaran.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTotalRealizedAmountPengeluaran]"));

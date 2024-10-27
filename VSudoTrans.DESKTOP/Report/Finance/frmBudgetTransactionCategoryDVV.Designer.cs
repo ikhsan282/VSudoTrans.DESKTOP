@@ -1,6 +1,6 @@
 ﻿namespace VSudoTrans.DESKTOP.Report.Finance
 {
-    partial class frmBudgetTransactionEducationComponentDVV
+    partial class frmBudgetTransactionCategoryDVV
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBudgetTransactionEducationComponentDVV));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBudgetTransactionCategoryDVV));
             this.IndicatorSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this._LayoutControlItemFilter4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -284,13 +284,13 @@
             this._LayoutControlItemFilter5.TextLocation = DevExpress.Utils.Locations.Top;
             this._LayoutControlItemFilter5.TextSize = new System.Drawing.Size(181, 21);
             // 
-            // frmBudgetTransactionEducationComponentDVV
+            // frmBudgetTransactionCategoryDVV
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 656);
-            this.Name = "frmBudgetTransactionEducationComponentDVV";
+            this.Name = "frmBudgetTransactionCategoryDVV";
             this.Text = "frmComparationBudgetRealizationDVV";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();

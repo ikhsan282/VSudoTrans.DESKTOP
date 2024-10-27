@@ -193,7 +193,7 @@ namespace VSudoTrans.DESKTOP.Master.Organization
             this.ItemForCompany.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompany.Name = "ItemForCompany";
             this.ItemForCompany.Size = new System.Drawing.Size(1107, 38);
-            this.ItemForCompany.Text = "Sekolah";
+            this.ItemForCompany.Text = "Perusahaan";
             this.ItemForCompany.TextSize = new System.Drawing.Size(117, 21);
             // 
             // CompanyPopUp

@@ -70,7 +70,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             HelperConvert.FormatDateEdit(FilterDate2);
 
             _LayoutControlItemFilter3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter3.Text = "Sekolah";
+            _LayoutControlItemFilter3.Text = "Perusahaan";
             PopupEditHelper.Company(FilterPopUp3);
         }
 

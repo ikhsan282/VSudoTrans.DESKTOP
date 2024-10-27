@@ -1,6 +1,4 @@
-﻿using Domain.Base;
-using Domain.Entities.EducationResource;
-using Domain.Entities.HumanResource;
+﻿using Domain.Entities.HumanResource;
 using Domain.Entities.Organization;
 using System;
 using System.Collections.Generic;
@@ -17,13 +15,10 @@ namespace Domain.Entities.Identity
         public string FirstName { get; set; }
         [MaxLength(125)]
         public string LastName { get; set; }
-        public EnumUserType UserType { get; set; }
         public int? CompanyId { get; set; }
         public virtual Company Company { get; set; }
         public int? EmployeeId { get; set; }
         public virtual Employee Employee { get; set; }
-        public int? StudentId { get; set; }
-        public virtual Student Student { get; set; }
         public byte[] ProfilePicture { get; set; }
         public bool IsActive { get; set; } = true;
         [MaxLength(255)]

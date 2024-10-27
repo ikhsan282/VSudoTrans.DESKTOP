@@ -9,8 +9,8 @@ namespace Domain.Entities.Attendance
     [DisplayName("Pengaturan Jangkauan Absensi")]
     public class AttendanceSettingRange : BaseDomainDetail
     {
-        public int SchoolId { get; set; }
-        public School? School { get; set; }
+        public int CompanyId { get; set; }
+        public Company? Company { get; set; }
         public int BeforeIn { get; set; }
         public int AfterIn { get; set; }
         public int BeforeOut { get; set; }

@@ -146,7 +146,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Attendance
             this.wizardPage1.DescriptionText = "Pilih kolom filter dibawah";
             this.wizardPage1.Name = "wizardPage1";
             this.wizardPage1.Size = new System.Drawing.Size(1050, 501);
-            this.wizardPage1.Text = "Langkah Pertama - Tentukan Sekolah";
+            this.wizardPage1.Text = "Langkah Pertama - Tentukan Perusahaan";
             // 
             // dlcPage1
             // 
@@ -175,7 +175,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Attendance
             this.ItemForCompanyId.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompanyId.Name = "ItemForCompanyId";
             this.ItemForCompanyId.Size = new System.Drawing.Size(1032, 483);
-            this.ItemForCompanyId.Text = "Sekolah";
+            this.ItemForCompanyId.Text = "Perusahaan";
             this.ItemForCompanyId.TextSize = new System.Drawing.Size(81, 21);
             // 
             // completionWizardPage1
@@ -252,7 +252,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Attendance
             // 
             // colCompanyNameEmployee
             // 
-            this.colCompanyNameEmployee.Caption = "Sekolah";
+            this.colCompanyNameEmployee.Caption = "Perusahaan";
             this.colCompanyNameEmployee.FieldName = "Company.Name";
             this.colCompanyNameEmployee.MinWidth = 30;
             this.colCompanyNameEmployee.Name = "colCompanyNameEmployee";
@@ -363,7 +363,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Attendance
             // 
             // colCompanyName
             // 
-            this.colCompanyName.Caption = "Sekolah";
+            this.colCompanyName.Caption = "Perusahaan";
             this.colCompanyName.FieldName = "Company.Name";
             this.colCompanyName.MinWidth = 30;
             this.colCompanyName.Name = "colCompanyName";

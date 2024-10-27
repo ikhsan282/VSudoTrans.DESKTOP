@@ -9,7 +9,7 @@ namespace Domain.Entities.HumanResource
     [DisplayName("Jabatan")]
     public class JobTitle : BaseCodeName
     {
-        public int SchoolId { get; set; }
-        public School? School { get; set; }
+        public int CompanyId { get; set; }
+        public Company? Company { get; set; }
     }
 }

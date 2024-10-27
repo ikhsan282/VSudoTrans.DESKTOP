@@ -19,7 +19,7 @@ namespace Contract.Organization
     public class ImportOrganizationStructureModel
     {
         public int Id { get; set; }
-        public string SchoolCode { get; set; }
+        public string CompanyCode { get; set; }
         public string ParentCode { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
@@ -39,8 +39,8 @@ namespace Contract.Organization
 
     public class ImportOrganizationStructureExcelModel
     {
-        [JsonProperty("School Code")]
-        public string SchoolCode { get; set; }
+        [JsonProperty("Company Code")]
+        public string CompanyCode { get; set; }
         [JsonProperty("Parent Organization Structure Code")]
         public string ParentCode { get; set; }
         [JsonProperty("Organization Structure Code")]

@@ -35,7 +35,7 @@ namespace Contract.HumanResource
     public class ImportEmployeeModel
     {
         public int Id { get; set; }
-        public string SchoolCode { get; set; }
+        public string CompanyCode { get; set; }
         public string OrganizationStructureCode { get; set; }
         public string JobPositionCode { get; set; }
         public string JobGradeCode { get; set; }
@@ -65,8 +65,8 @@ namespace Contract.HumanResource
 
     public class ImportEmployeeExcelModel
     {
-        [JsonProperty("School Code")]
-        public string SchoolCode { get; set; }
+        [JsonProperty("Company Code")]
+        public string CompanyCode { get; set; }
         [JsonProperty("Organization Structure Code")]
         public string OrganizationStructureCode { get; set; }
         [JsonProperty("Job Position Code")]

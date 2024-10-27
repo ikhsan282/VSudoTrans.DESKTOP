@@ -42,14 +42,14 @@
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrNo = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrEducationComponentCodePenerimaan = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrEducationComponentNamePenerimaan = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCategoryCodePenerimaan = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCategoryNamePenerimaan = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTotalBudgetAmountPenerimaan = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTotalRealizedAmountPenerimaan = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrAmountVariancePenerimaan = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrRealizationPercentagePenerimaan = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrEducationComponentCodePengeluaran = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrEducationComponentNamePengeluaran = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCategoryCodePengeluaran = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCategoryNamePengeluaran = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTotalBudgetAmountPengeluaran = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTotalRealizedAmountPengeluaran = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrAmountVariancePengeluaran = new DevExpress.XtraReports.UI.XRTableCell();
@@ -137,14 +137,14 @@
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrNo,
-            this.xrEducationComponentCodePenerimaan,
-            this.xrEducationComponentNamePenerimaan,
+            this.xrCategoryCodePenerimaan,
+            this.xrCategoryNamePenerimaan,
             this.xrTotalBudgetAmountPenerimaan,
             this.xrTotalRealizedAmountPenerimaan,
             this.xrAmountVariancePenerimaan,
             this.xrRealizationPercentagePenerimaan,
-            this.xrEducationComponentCodePengeluaran,
-            this.xrEducationComponentNamePengeluaran,
+            this.xrCategoryCodePengeluaran,
+            this.xrCategoryNamePengeluaran,
             this.xrTotalBudgetAmountPengeluaran,
             this.xrTotalRealizedAmountPengeluaran,
             this.xrAmountVariancePengeluaran,
@@ -162,23 +162,23 @@
             this.xrNo.Text = "xrNo";
             this.xrNo.Weight = 0.501271854877208D;
             // 
-            // xrEducationComponentCodePenerimaan
+            // xrCategoryCodePenerimaan
             // 
-            this.xrEducationComponentCodePenerimaan.Multiline = true;
-            this.xrEducationComponentCodePenerimaan.Name = "xrEducationComponentCodePenerimaan";
-            this.xrEducationComponentCodePenerimaan.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponentCodePenerimaan.Text = "xrEducationComponentCodePenerimaan";
-            this.xrEducationComponentCodePenerimaan.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrEducationComponentCodePenerimaan.Weight = 1.5182783209180937D;
+            this.xrCategoryCodePenerimaan.Multiline = true;
+            this.xrCategoryCodePenerimaan.Name = "xrCategoryCodePenerimaan";
+            this.xrCategoryCodePenerimaan.StylePriority.UseTextAlignment = false;
+            this.xrCategoryCodePenerimaan.Text = "xrCategoryCodePenerimaan";
+            this.xrCategoryCodePenerimaan.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrCategoryCodePenerimaan.Weight = 1.5182783209180937D;
             // 
-            // xrEducationComponentNamePenerimaan
+            // xrCategoryNamePenerimaan
             // 
-            this.xrEducationComponentNamePenerimaan.Multiline = true;
-            this.xrEducationComponentNamePenerimaan.Name = "xrEducationComponentNamePenerimaan";
-            this.xrEducationComponentNamePenerimaan.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponentNamePenerimaan.Text = "xrEducationComponentNamePenerimaan";
-            this.xrEducationComponentNamePenerimaan.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrEducationComponentNamePenerimaan.Weight = 2.7250762856869457D;
+            this.xrCategoryNamePenerimaan.Multiline = true;
+            this.xrCategoryNamePenerimaan.Name = "xrCategoryNamePenerimaan";
+            this.xrCategoryNamePenerimaan.StylePriority.UseTextAlignment = false;
+            this.xrCategoryNamePenerimaan.Text = "xrCategoryNamePenerimaan";
+            this.xrCategoryNamePenerimaan.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrCategoryNamePenerimaan.Weight = 2.7250762856869457D;
             // 
             // xrTotalBudgetAmountPenerimaan
             // 
@@ -222,25 +222,25 @@
             this.xrRealizationPercentagePenerimaan.TextFormatString = "{0:N2}%";
             this.xrRealizationPercentagePenerimaan.Weight = 1.9818754693722704D;
             // 
-            // xrEducationComponentCodePengeluaran
+            // xrCategoryCodePengeluaran
             // 
-            this.xrEducationComponentCodePengeluaran.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrEducationComponentCodePengeluaran.Multiline = true;
-            this.xrEducationComponentCodePengeluaran.Name = "xrEducationComponentCodePengeluaran";
-            this.xrEducationComponentCodePengeluaran.StylePriority.UseBorders = false;
-            this.xrEducationComponentCodePengeluaran.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponentCodePengeluaran.Text = "xrEducationComponentCodePengeluaran";
-            this.xrEducationComponentCodePengeluaran.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrEducationComponentCodePengeluaran.Weight = 1.4864029401845333D;
+            this.xrCategoryCodePengeluaran.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.xrCategoryCodePengeluaran.Multiline = true;
+            this.xrCategoryCodePengeluaran.Name = "xrCategoryCodePengeluaran";
+            this.xrCategoryCodePengeluaran.StylePriority.UseBorders = false;
+            this.xrCategoryCodePengeluaran.StylePriority.UseTextAlignment = false;
+            this.xrCategoryCodePengeluaran.Text = "xrCategoryCodePengeluaran";
+            this.xrCategoryCodePengeluaran.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrCategoryCodePengeluaran.Weight = 1.4864029401845333D;
             // 
-            // xrEducationComponentNamePengeluaran
+            // xrCategoryNamePengeluaran
             // 
-            this.xrEducationComponentNamePengeluaran.Multiline = true;
-            this.xrEducationComponentNamePengeluaran.Name = "xrEducationComponentNamePengeluaran";
-            this.xrEducationComponentNamePengeluaran.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponentNamePengeluaran.Text = "xrEducationComponentNamePengeluaran";
-            this.xrEducationComponentNamePengeluaran.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrEducationComponentNamePengeluaran.Weight = 2.7250774307135424D;
+            this.xrCategoryNamePengeluaran.Multiline = true;
+            this.xrCategoryNamePengeluaran.Name = "xrCategoryNamePengeluaran";
+            this.xrCategoryNamePengeluaran.StylePriority.UseTextAlignment = false;
+            this.xrCategoryNamePengeluaran.Text = "xrCategoryNamePengeluaran";
+            this.xrCategoryNamePengeluaran.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrCategoryNamePengeluaran.Weight = 2.7250774307135424D;
             // 
             // xrTotalBudgetAmountPengeluaran
             // 
@@ -1015,7 +1015,7 @@
         public DevExpress.XtraReports.UI.XRTable xrTable1;
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         public DevExpress.XtraReports.UI.XRTableCell xrNo;
-        public DevExpress.XtraReports.UI.XRTableCell xrEducationComponentNamePenerimaan;
+        public DevExpress.XtraReports.UI.XRTableCell xrCategoryNamePenerimaan;
         public DevExpress.XtraReports.UI.XRTableCell xrRealizationPercentagePenerimaan;
         public DevExpress.XtraReports.UI.XRTable xrTable2;
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
@@ -1034,7 +1034,7 @@
         public DevExpress.XtraReports.UI.XRLabel xrLabel12;
         public DevExpress.XtraReports.UI.XRLabel xrLabel11;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
-        public DevExpress.XtraReports.UI.XRTableCell xrEducationComponentCodePenerimaan;
+        public DevExpress.XtraReports.UI.XRTableCell xrCategoryCodePenerimaan;
         public DevExpress.XtraReports.UI.XRTableCell xrAmountVariancePenerimaan;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
@@ -1054,8 +1054,8 @@
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell13;
-        public DevExpress.XtraReports.UI.XRTableCell xrEducationComponentCodePengeluaran;
-        public DevExpress.XtraReports.UI.XRTableCell xrEducationComponentNamePengeluaran;
+        public DevExpress.XtraReports.UI.XRTableCell xrCategoryCodePengeluaran;
+        public DevExpress.XtraReports.UI.XRTableCell xrCategoryNamePengeluaran;
         public DevExpress.XtraReports.UI.XRTableCell Saldo;
         public DevExpress.XtraReports.UI.XRTableCell xrTotalBudgetAmountPengeluaran;
         public DevExpress.XtraReports.UI.XRTableCell xrTotalRealizedAmountPengeluaran;

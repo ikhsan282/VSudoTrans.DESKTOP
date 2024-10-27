@@ -1,7 +1,6 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.XtraGrid.Views.Grid;
 using Domain;
-using Domain.Entities.EducationPayment;
 using Domain.Entities.Finance;
 using PopUpUtils;
 using System;
@@ -67,7 +66,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
 
             // update dulu id yang bersesuian
             if (!(e.Row is BudgetRegulationDetail row)) return;
-            row.EducationComponentId = HelperConvert.Int(AssemblyHelper.GetValueProperty(row.EducationComponent, "Id"));
+            row.CategoryId = HelperConvert.Int(AssemblyHelper.GetValueProperty(row.Category, "Id"));
             row.BudgetRegulationId = _BudgetRegulation.Id;
         }
 
@@ -83,10 +82,10 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             {
                 if (i != view.GetDataSourceRowIndex(view.FocusedRowHandle))
                 {
-                    var tempVal = HelperConvert.Int(view.GetRowCellValue(i, "EducationComponentId"));
-                    if (row.EducationComponentId > 0)
+                    var tempVal = HelperConvert.Int(view.GetRowCellValue(i, "CategoryId"));
+                    if (row.CategoryId > 0)
                     {
-                        if (tempVal == row.EducationComponentId)
+                        if (tempVal == row.CategoryId)
                         {
                             view.DeleteRow(e.RowHandle);
                             return;
@@ -102,11 +101,11 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
 
             if (!(gridView.GetFocusedRow() is BudgetRegulationDetail result)) return;
 
-            var EducationComponent = result.EducationComponent;
+            var Category = result.Category;
 
-            if (EducationComponent == null)
+            if (Category == null)
             {
-                gridView.SetColumnError(colEducationComponent, $"Mata Anggaran tidak boleh kosong");
+                gridView.SetColumnError(colCategory, $"Mata Anggaran tidak boleh kosong");
                 e.Valid = false;
                 return;
             }
@@ -130,10 +129,10 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             {
                 if (i != gridView.GetDataSourceRowIndex(gridView.FocusedRowHandle))
                 {
-                    var tempVal = HelperConvert.Int(gridView.GetRowCellValue(i, "EducationComponentId"));
-                    if (tempVal == EducationComponent.Id)
+                    var tempVal = HelperConvert.Int(gridView.GetRowCellValue(i, "CategoryId"));
+                    if (tempVal == Category.Id)
                     {
-                        gridView.SetColumnError(colEducationComponent, "Adanya duplikasi data Mata Anggaran");
+                        gridView.SetColumnError(colCategory, "Adanya duplikasi data Mata Anggaran");
                         e.Valid = false;
                         return;
                     }
@@ -167,7 +166,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
         protected override void InitializeSearchLookup()
         {
             PopupEditHelper.Company(CompanyPopUp);
-            PopupEditHelper.General<EducationComponent>(fEndPoint: "/EducationComponents", fTitle: "Mata Anggaran", fControl: EducationComponentPopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fTitle: "Mata Anggaran", fControl: CategoryPopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
         }
 
         private void BbiSaveAndNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

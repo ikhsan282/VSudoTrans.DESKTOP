@@ -512,7 +512,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             this.ItemForCompany.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompany.Name = "ItemForCompany";
             this.ItemForCompany.Size = new System.Drawing.Size(842, 38);
-            this.ItemForCompany.Text = "Sekolah";
+            this.ItemForCompany.Text = "Perusahaan";
             this.ItemForCompany.TextSize = new System.Drawing.Size(211, 21);
             // 
             // CompanyPopUp

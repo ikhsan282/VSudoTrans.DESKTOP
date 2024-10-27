@@ -12,8 +12,8 @@ namespace Domain.Entities.Attendance
     [DisplayName("Daftar Kehadiran")]
     public class Roster : BaseDomainDetail
     {
-        public int SchoolId { get; set; }
-        public School? School { get; set; }
+        public int CompanyId { get; set; }
+        public Company? Company { get; set; }
         public int TeacherId { get; set; }
         public virtual Teacher? Teacher { get; set; }
         public int ShiftId { get; set; }

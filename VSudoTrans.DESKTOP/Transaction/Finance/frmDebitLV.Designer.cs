@@ -38,7 +38,7 @@
             this.FilterPopUp7 = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
             this._LayoutControlItemFilter7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEducationComponent = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCategory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTransactionDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUnitMeasure = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -180,7 +180,7 @@
             // 
             this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCompanyName,
-            this.colEducationComponent,
+            this.colCategory,
             this.colUnitMeasure,
             this.colQuantity,
             this.colAmount,
@@ -499,7 +499,7 @@
             // 
             // colCompanyName
             // 
-            this.colCompanyName.Caption = "Sekolah";
+            this.colCompanyName.Caption = "Perusahaan";
             this.colCompanyName.FieldName = "Company.Name";
             this.colCompanyName.MinWidth = 45;
             this.colCompanyName.Name = "colCompanyName";
@@ -507,15 +507,15 @@
             this.colCompanyName.VisibleIndex = 0;
             this.colCompanyName.Width = 206;
             // 
-            // colEducationComponent
+            // colCategory
             // 
-            this.colEducationComponent.Caption = "Mata Anggaran";
-            this.colEducationComponent.FieldName = "EducationComponent.Name";
-            this.colEducationComponent.MinWidth = 45;
-            this.colEducationComponent.Name = "colEducationComponent";
-            this.colEducationComponent.Visible = true;
-            this.colEducationComponent.VisibleIndex = 1;
-            this.colEducationComponent.Width = 206;
+            this.colCategory.Caption = "Mata Anggaran";
+            this.colCategory.FieldName = "Category.Name";
+            this.colCategory.MinWidth = 45;
+            this.colCategory.Name = "colCategory";
+            this.colCategory.Visible = true;
+            this.colCategory.VisibleIndex = 1;
+            this.colCategory.Width = 206;
             // 
             // colTransactionDate
             // 
@@ -627,7 +627,7 @@
         private Descendant.PopupContainerEditOwn FilterPopUp7;
         private DevExpress.XtraLayout.LayoutControlItem _LayoutControlItemFilter7;
         private DevExpress.XtraGrid.Columns.GridColumn colCompanyName;
-        private DevExpress.XtraGrid.Columns.GridColumn colEducationComponent;
+        private DevExpress.XtraGrid.Columns.GridColumn colCategory;
         private DevExpress.XtraGrid.Columns.GridColumn colTransactionDate;
         private DevExpress.XtraGrid.Columns.GridColumn colUnitMeasure;
         private DevExpress.XtraGrid.Columns.GridColumn colQuantity;

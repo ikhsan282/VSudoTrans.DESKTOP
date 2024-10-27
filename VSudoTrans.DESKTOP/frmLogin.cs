@@ -34,7 +34,7 @@ namespace VSudoTrans.DESKTOP
             PasswordButtonEdit.Properties.UseSystemPasswordChar = true;
             lblForgotPassword.Click += LblForgotPassword_Click;
 
-            UsernameTextEdit.EditValue = "heru@vsudotech.com";
+            UsernameTextEdit.EditValue = "ikhsan@vsudotech.com";
             PasswordButtonEdit.EditValue = "P@ssw0rd";
 
             PasswordButtonEdit.ButtonClick += PasswordButtonEdit_ButtonClick;

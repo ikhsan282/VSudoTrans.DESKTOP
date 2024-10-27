@@ -127,20 +127,20 @@ namespace VSudoTrans.DESKTOP
             {
                 if (ApplicationSettings.Instance.UserCompanys.Count == 0)
                 {
-                    bsiCompany.Caption = "Tidak ada akses Sekolah ";
+                    bsiCompany.Caption = "Tidak ada akses Perusahaan ";
                 }
                 else
                 {
                     if (ApplicationSettings.Instance.UserCompanys.Count == 1)
                     {
-                        bsiCompany.Caption = $"Akses Sekolah : {ApplicationSettings.Instance.UserCompanys[0].Code} - {ApplicationSettings.Instance.UserCompanys[0].Name} ";
+                        bsiCompany.Caption = $"Akses Perusahaan : {ApplicationSettings.Instance.UserCompanys[0].Code} - {ApplicationSettings.Instance.UserCompanys[0].Name} ";
                     }
                     else
                     {
-                        bsiCompany.Caption = "Ditugaskan Beberapa Sekolah";
+                        bsiCompany.Caption = "Ditugaskan Beberapa Perusahaan";
                         SuperToolTip superTipCompany = new SuperToolTip();
                         SuperToolTipSetupArgs argsCompany = new SuperToolTipSetupArgs();
-                        argsCompany.Title.Text = "Akses Beberapa Sekolah";
+                        argsCompany.Title.Text = "Akses Beberapa Perusahaan";
                         foreach (var Company in ApplicationSettings.Instance.UserCompanys)
                         {
                             argsCompany.Contents.Text += $"{Company.Code} - {Company.Name} <br>";

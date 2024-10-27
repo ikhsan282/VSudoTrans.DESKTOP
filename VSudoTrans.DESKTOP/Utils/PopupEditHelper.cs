@@ -261,7 +261,7 @@ namespace PopUpUtils
 
         public static void Company(PopupContainerEditOwn fControl, PopupContainerEditOwn fChild = null)
         {
-            //PopupEditHelper.General<Company>(fEndPoint: "/Companys", fTitle: "Sekolah", fControl: fControl, fChild: fChild, fDisplaycolumn: "Code;Name;PhoneNumber", fCaptionColumn: "Kode;Nama;Nomor Telepon", fWidthColumn: "100;400;300");
+            //PopupEditHelper.General<Company>(fEndPoint: "/Companys", fTitle: "Perusahaan", fControl: fControl, fChild: fChild, fDisplaycolumn: "Code;Name;PhoneNumber", fCaptionColumn: "Kode;Nama;Nomor Telepon", fWidthColumn: "100;400;300");
 
             RepositoryItemPopupContainerEditOwn repo = GetRepoPopUp(fControl);
             //repo.OptionsDataType = EnumDataSource.Offline;
@@ -280,7 +280,7 @@ namespace PopUpUtils
 
             repo.OptionsChildControl = fChild;
             repo.OptionsCascadeControl = null;
-            repo.OptionsDisplayCaption = "Kode Sekolah;Nama Sekolah";
+            repo.OptionsDisplayCaption = "Kode Perusahaan;Nama Perusahaan";
             repo.OptionsDisplayText = "Code;Name";
             repo.OptionsDisplayColumns = "Code;Name;PhoneNumber";
             repo.OptionsDisplayCaption = "Kode;Nama;Nomor Telepon";

@@ -37,8 +37,8 @@
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrNo = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrEducationComponentCode = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrEducationComponentName = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCategoryCode = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCategoryName = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTotalBudgetAmount = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTotalRealizedAmount = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrAmountVariance = new DevExpress.XtraReports.UI.XRTableCell();
@@ -112,8 +112,8 @@
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrNo,
-            this.xrEducationComponentCode,
-            this.xrEducationComponentName,
+            this.xrCategoryCode,
+            this.xrCategoryName,
             this.xrTotalBudgetAmount,
             this.xrTotalRealizedAmount,
             this.xrAmountVariance,
@@ -130,23 +130,23 @@
             this.xrNo.Text = "xrNo";
             this.xrNo.Weight = 0.65147136989148524D;
             // 
-            // xrEducationComponentCode
+            // xrCategoryCode
             // 
-            this.xrEducationComponentCode.Multiline = true;
-            this.xrEducationComponentCode.Name = "xrEducationComponentCode";
-            this.xrEducationComponentCode.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponentCode.Text = "xrEducationComponentCode";
-            this.xrEducationComponentCode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrEducationComponentCode.Weight = 1.8797694758306061D;
+            this.xrCategoryCode.Multiline = true;
+            this.xrCategoryCode.Name = "xrCategoryCode";
+            this.xrCategoryCode.StylePriority.UseTextAlignment = false;
+            this.xrCategoryCode.Text = "xrCategoryCode";
+            this.xrCategoryCode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrCategoryCode.Weight = 1.8797694758306061D;
             // 
-            // xrEducationComponentName
+            // xrCategoryName
             // 
-            this.xrEducationComponentName.Multiline = true;
-            this.xrEducationComponentName.Name = "xrEducationComponentName";
-            this.xrEducationComponentName.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponentName.Text = "xrEducationComponentName";
-            this.xrEducationComponentName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrEducationComponentName.Weight = 6.2584957826730987D;
+            this.xrCategoryName.Multiline = true;
+            this.xrCategoryName.Name = "xrCategoryName";
+            this.xrCategoryName.StylePriority.UseTextAlignment = false;
+            this.xrCategoryName.Text = "xrCategoryName";
+            this.xrCategoryName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrCategoryName.Weight = 6.2584957826730987D;
             // 
             // xrTotalBudgetAmount
             // 
@@ -743,7 +743,7 @@
         public DevExpress.XtraReports.UI.XRTable xrTable1;
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         public DevExpress.XtraReports.UI.XRTableCell xrNo;
-        public DevExpress.XtraReports.UI.XRTableCell xrEducationComponentName;
+        public DevExpress.XtraReports.UI.XRTableCell xrCategoryName;
         public DevExpress.XtraReports.UI.XRTableCell xrRealizationPercentage;
         public DevExpress.XtraReports.UI.XRTable xrTable2;
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
@@ -762,7 +762,7 @@
         public DevExpress.XtraReports.UI.XRLabel xrLabel12;
         public DevExpress.XtraReports.UI.XRLabel xrLabel11;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
-        public DevExpress.XtraReports.UI.XRTableCell xrEducationComponentCode;
+        public DevExpress.XtraReports.UI.XRTableCell xrCategoryCode;
         public DevExpress.XtraReports.UI.XRTableCell xrAmountVariance;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell10;

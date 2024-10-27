@@ -8,7 +8,7 @@ namespace Contract.Finance
     public class BudgetTransactionDto
     {
         public int CompanyId { get; set; }
-        public int EducationComponentId { get; set; }
+        public int CategoryId { get; set; }
         public int UnitMeasureId { get; set; }
         public EnumTransactionIndicator Indicator { get; set; }
         public int Quantity { get; set; }
@@ -24,9 +24,9 @@ namespace Contract.Finance
     public class ImportBudgetTransactionModel
     {
         public int Id { get; set; }
-        public string SchoolCode { get; set; }
+        public string CompanyCode { get; set; }
         public string UnitMeasureCode { get; set; }
-        public string EducationComponentCode { get; set; }
+        public string CategoryCode { get; set; }
         public string DocumentNumber { get; set; }
         public string Indicator { get; set; }
         public string Quantity { get; set; }
@@ -48,12 +48,12 @@ namespace Contract.Finance
 
     public class ImportBudgetTransactionExcelModel
     {
-        [JsonProperty("School Code")]
-        public string SchoolCode { get; set; }
+        [JsonProperty("Company Code")]
+        public string CompanyCode { get; set; }
         [JsonProperty("Unit Measure Code")]
         public string UnitMeasureCode { get; set; }
         [JsonProperty("Education Component Code")]
-        public string EducationComponentCode { get; set; }
+        public string CategoryCode { get; set; }
         [JsonProperty("Document Number")]
         public string DocumentNumber { get; set; }
         [JsonProperty("Indicator")]

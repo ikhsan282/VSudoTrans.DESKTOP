@@ -34,7 +34,7 @@
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrNo = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTransactionDate = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrEducationComponent = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCategory = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrPenerimaan = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrPengeluaran = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrSaldo = new DevExpress.XtraReports.UI.XRTableCell();
@@ -99,7 +99,7 @@
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrNo,
             this.xrTransactionDate,
-            this.xrEducationComponent,
+            this.xrCategory,
             this.xrPenerimaan,
             this.xrPengeluaran,
             this.xrSaldo});
@@ -124,14 +124,14 @@
             this.xrTransactionDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTransactionDate.Weight = 1.8797694758306061D;
             // 
-            // xrEducationComponent
+            // xrCategory
             // 
-            this.xrEducationComponent.Multiline = true;
-            this.xrEducationComponent.Name = "xrEducationComponent";
-            this.xrEducationComponent.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponent.Text = "xrEducationComponent";
-            this.xrEducationComponent.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrEducationComponent.Weight = 6.2584957826730987D;
+            this.xrCategory.Multiline = true;
+            this.xrCategory.Name = "xrCategory";
+            this.xrCategory.StylePriority.UseTextAlignment = false;
+            this.xrCategory.Text = "xrCategory";
+            this.xrCategory.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrCategory.Weight = 6.2584957826730987D;
             // 
             // xrPenerimaan
             // 
@@ -614,7 +614,7 @@
         public DevExpress.XtraReports.UI.XRTable xrTable1;
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         public DevExpress.XtraReports.UI.XRTableCell xrNo;
-        public DevExpress.XtraReports.UI.XRTableCell xrEducationComponent;
+        public DevExpress.XtraReports.UI.XRTableCell xrCategory;
         public DevExpress.XtraReports.UI.XRTable xrTable2;
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
         public DevExpress.XtraReports.UI.XRTableCell xrCaptionNo;

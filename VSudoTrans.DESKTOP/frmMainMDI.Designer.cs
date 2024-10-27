@@ -156,7 +156,7 @@
             // bsiCompany
             // 
             this.bsiCompany.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.bsiCompany.Caption = "Sekolah :";
+            this.bsiCompany.Caption = "Perusahaan :";
             this.bsiCompany.Id = 14;
             this.bsiCompany.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bsiCompany.ImageOptions.SvgImage")));
             this.bsiCompany.Name = "bsiCompany";

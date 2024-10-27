@@ -263,7 +263,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Attendance
             this.ItemForCompany.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompany.Name = "ItemForCompany";
             this.ItemForCompany.Size = new System.Drawing.Size(1309, 38);
-            this.ItemForCompany.Text = "Sekolah";
+            this.ItemForCompany.Text = "Perusahaan";
             this.ItemForCompany.TextSize = new System.Drawing.Size(55, 21);
             // 
             // completionWizardPage1

@@ -1,16 +1,11 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
-using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraReports.UI;
 using Domain;
-using Domain.Entities.EducationPayment;
-using Domain.Entities.EducationResource;
 using Domain.Entities.Organization;
 using Domain.Entities.SQLProc;
 using Domain.Entities.SQLView.EducationPayment;
-using Microsoft.Graph.Models;
 using PopUpUtils;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using VSudoTrans.DESKTOP.BaseForm;
@@ -51,7 +46,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             HelperConvert.FormatDateEdit(FilterDate2);
 
             _LayoutControlItemFilter3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter3.Text = "Sekolah";
+            _LayoutControlItemFilter3.Text = "Perusahaan";
             PopupEditHelper.Company(FilterPopUp3);
 
             _LayoutControlItemFilter4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
@@ -89,8 +84,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     DataTable dt = new DataTable();
                     dt.TableName = "Table1";
                     dt.Columns.Add("DetailNo", typeof(string));
-                    dt.Columns.Add("DetailEducationComponentCode", typeof(string));
-                    dt.Columns.Add("DetailEducationComponentName", typeof(string));
+                    dt.Columns.Add("DetailCategoryCode", typeof(string));
+                    dt.Columns.Add("DetailCategoryName", typeof(string));
                     dt.Columns.Add("DetailTotalBudgetAmount", typeof(decimal));
                     dt.Columns.Add("DetailTotalRealizedAmount", typeof(decimal));
                     dt.Columns.Add("DetailAmountVariance", typeof(decimal));
@@ -103,8 +98,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                         loop++;
                         //var totalAmountPaid = studentEducationPayments.Sum(s => s.TotalAmountPaid);
                         r["DetailNo"] = $"{loop}.";
-                        r["DetailEducationComponentCode"] = comparationBudgetRealization.EducationComponentCode;
-                        r["DetailEducationComponentName"] = comparationBudgetRealization.EducationComponentName;
+                        r["DetailCategoryCode"] = comparationBudgetRealization.CategoryCode;
+                        r["DetailCategoryName"] = comparationBudgetRealization.CategoryName;
 
                         r["DetailTotalBudgetAmount"] = comparationBudgetRealization.TotalBudgetAmount;
                         r["DetailTotalRealizedAmount"] = comparationBudgetRealization.TotalRealizedAmount;
@@ -117,8 +112,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     report.DataSource = dt;
 
                     //Detail
-                    report.xrEducationComponentCode.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailEducationComponentCode]"));
-                    report.xrEducationComponentName.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailEducationComponentName]"));
+                    report.xrCategoryCode.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryCode]"));
+                    report.xrCategoryName.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryName]"));
 
                     report.xrTotalBudgetAmount.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTotalBudgetAmount]"));
                     report.xrTotalRealizedAmount.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTotalRealizedAmount]"));

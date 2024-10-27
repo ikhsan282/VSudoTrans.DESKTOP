@@ -8,7 +8,7 @@ namespace VSudoTrans.DESKTOP.Master.Organization
         {
             InitializeComponent();
 
-            this.Text = "Import Sekolah";
+            this.Text = "Import Perusahaan";
             _GridView.ExpandAllGroups();
             colStatusImport.Group();
         }

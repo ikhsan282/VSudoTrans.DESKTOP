@@ -316,7 +316,7 @@ namespace VSudoTrans.DESKTOP.Master.Attendance
             this.ItemForCompanyId.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompanyId.Name = "ItemForCompanyId";
             this.ItemForCompanyId.Size = new System.Drawing.Size(1231, 38);
-            this.ItemForCompanyId.Text = "Sekolah";
+            this.ItemForCompanyId.Text = "Perusahaan";
             this.ItemForCompanyId.TextSize = new System.Drawing.Size(238, 21);
             // 
             // CompanyPopUp

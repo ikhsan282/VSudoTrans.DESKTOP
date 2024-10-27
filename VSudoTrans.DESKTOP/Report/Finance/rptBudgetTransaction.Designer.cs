@@ -69,7 +69,7 @@
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrNo = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrIndicator = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrEducationComponentName = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCategoryName = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrYear = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrMonth = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTransactionDate = new DevExpress.XtraReports.UI.XRTableCell();
@@ -623,7 +623,7 @@
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrNo,
             this.xrIndicator,
-            this.xrEducationComponentName,
+            this.xrCategoryName,
             this.xrYear,
             this.xrMonth,
             this.xrTransactionDate,
@@ -647,12 +647,12 @@
             this.xrIndicator.Text = "Penerimaan";
             this.xrIndicator.Weight = 0.65996354912806443D;
             // 
-            // xrEducationComponentName
+            // xrCategoryName
             // 
-            this.xrEducationComponentName.Multiline = true;
-            this.xrEducationComponentName.Name = "xrEducationComponentName";
-            this.xrEducationComponentName.Text = "Alat Tulis";
-            this.xrEducationComponentName.Weight = 6.0420320840592083D;
+            this.xrCategoryName.Multiline = true;
+            this.xrCategoryName.Name = "xrCategoryName";
+            this.xrCategoryName.Text = "Alat Tulis";
+            this.xrCategoryName.Weight = 6.0420320840592083D;
             // 
             // xrYear
             // 
@@ -733,7 +733,7 @@
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
         public DevExpress.XtraReports.UI.XRTableCell xrNo;
         public DevExpress.XtraReports.UI.XRTableCell xrIndicator;
-        public DevExpress.XtraReports.UI.XRTableCell xrEducationComponentName;
+        public DevExpress.XtraReports.UI.XRTableCell xrCategoryName;
         public DevExpress.XtraReports.UI.XRTableCell xrYear;
         public DevExpress.XtraReports.UI.XRTableCell xrCaptionMonth;
         public DevExpress.XtraReports.UI.XRTableCell xrCaptionTransactionDate;

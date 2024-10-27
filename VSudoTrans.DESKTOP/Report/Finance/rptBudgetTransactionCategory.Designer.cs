@@ -1,6 +1,6 @@
 ﻿namespace VSudoTrans.DESKTOP.Report.Finance
 {
-    partial class rptBudgetTransactionEducationComponent
+    partial class rptBudgetTransactionCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrNo = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTransactionDate = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrEducationComponent = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCategory = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrDocumentNumber = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrJumlah = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -45,8 +45,8 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrEducationComponentCode = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrEducationComponentName = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrCategoryCode = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrCategoryName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPrintTime = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPrintDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
@@ -109,7 +109,7 @@
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrNo,
             this.xrTransactionDate,
-            this.xrEducationComponent,
+            this.xrCategory,
             this.xrDocumentNumber,
             this.xrJumlah});
             this.xrTableRow1.Name = "xrTableRow1";
@@ -133,14 +133,14 @@
             this.xrTransactionDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTransactionDate.Weight = 1.8797694758306061D;
             // 
-            // xrEducationComponent
+            // xrCategory
             // 
-            this.xrEducationComponent.Multiline = true;
-            this.xrEducationComponent.Name = "xrEducationComponent";
-            this.xrEducationComponent.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponent.Text = "xrEducationComponent";
-            this.xrEducationComponent.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrEducationComponent.Weight = 6.2584957826730987D;
+            this.xrCategory.Multiline = true;
+            this.xrCategory.Name = "xrCategory";
+            this.xrCategory.StylePriority.UseTextAlignment = false;
+            this.xrCategory.Text = "xrCategory";
+            this.xrCategory.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrCategory.Weight = 6.2584957826730987D;
             // 
             // xrDocumentNumber
             // 
@@ -185,8 +185,8 @@
             this.xrLabel2,
             this.xrLabel3,
             this.xrLabel4,
-            this.xrEducationComponentCode,
-            this.xrEducationComponentName,
+            this.xrCategoryCode,
+            this.xrCategoryName,
             this.xrPrintTime,
             this.xrPrintDate,
             this.xrLabel15,
@@ -308,55 +308,55 @@
             this.xrLabel4.Text = ":";
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // xrEducationComponentCode
+            // xrCategoryCode
             // 
-            this.xrEducationComponentCode.BackColor = System.Drawing.Color.Transparent;
-            this.xrEducationComponentCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(203)))), ((int)(((byte)(200)))));
-            this.xrEducationComponentCode.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrEducationComponentCode.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrEducationComponentCode.BorderWidth = 1F;
-            this.xrEducationComponentCode.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
-            this.xrEducationComponentCode.ForeColor = System.Drawing.Color.Black;
-            this.xrEducationComponentCode.LocationFloat = new DevExpress.Utils.PointFloat(541.3602F, 105.9411F);
-            this.xrEducationComponentCode.Name = "xrEducationComponentCode";
-            this.xrEducationComponentCode.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrEducationComponentCode.SizeF = new System.Drawing.SizeF(175.6396F, 19.99998F);
-            this.xrEducationComponentCode.StylePriority.UseBackColor = false;
-            this.xrEducationComponentCode.StylePriority.UseBorderColor = false;
-            this.xrEducationComponentCode.StylePriority.UseBorderDashStyle = false;
-            this.xrEducationComponentCode.StylePriority.UseBorders = false;
-            this.xrEducationComponentCode.StylePriority.UseBorderWidth = false;
-            this.xrEducationComponentCode.StylePriority.UseFont = false;
-            this.xrEducationComponentCode.StylePriority.UseForeColor = false;
-            this.xrEducationComponentCode.StylePriority.UsePadding = false;
-            this.xrEducationComponentCode.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponentCode.Text = "101";
-            this.xrEducationComponentCode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrCategoryCode.BackColor = System.Drawing.Color.Transparent;
+            this.xrCategoryCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(203)))), ((int)(((byte)(200)))));
+            this.xrCategoryCode.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrCategoryCode.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrCategoryCode.BorderWidth = 1F;
+            this.xrCategoryCode.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrCategoryCode.ForeColor = System.Drawing.Color.Black;
+            this.xrCategoryCode.LocationFloat = new DevExpress.Utils.PointFloat(541.3602F, 105.9411F);
+            this.xrCategoryCode.Name = "xrCategoryCode";
+            this.xrCategoryCode.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrCategoryCode.SizeF = new System.Drawing.SizeF(175.6396F, 19.99998F);
+            this.xrCategoryCode.StylePriority.UseBackColor = false;
+            this.xrCategoryCode.StylePriority.UseBorderColor = false;
+            this.xrCategoryCode.StylePriority.UseBorderDashStyle = false;
+            this.xrCategoryCode.StylePriority.UseBorders = false;
+            this.xrCategoryCode.StylePriority.UseBorderWidth = false;
+            this.xrCategoryCode.StylePriority.UseFont = false;
+            this.xrCategoryCode.StylePriority.UseForeColor = false;
+            this.xrCategoryCode.StylePriority.UsePadding = false;
+            this.xrCategoryCode.StylePriority.UseTextAlignment = false;
+            this.xrCategoryCode.Text = "101";
+            this.xrCategoryCode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // xrEducationComponentName
+            // xrCategoryName
             // 
-            this.xrEducationComponentName.BackColor = System.Drawing.Color.Transparent;
-            this.xrEducationComponentName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(203)))), ((int)(((byte)(200)))));
-            this.xrEducationComponentName.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrEducationComponentName.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrEducationComponentName.BorderWidth = 1F;
-            this.xrEducationComponentName.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
-            this.xrEducationComponentName.ForeColor = System.Drawing.Color.Black;
-            this.xrEducationComponentName.LocationFloat = new DevExpress.Utils.PointFloat(541.3605F, 125.941F);
-            this.xrEducationComponentName.Name = "xrEducationComponentName";
-            this.xrEducationComponentName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrEducationComponentName.SizeF = new System.Drawing.SizeF(175.6395F, 19.99998F);
-            this.xrEducationComponentName.StylePriority.UseBackColor = false;
-            this.xrEducationComponentName.StylePriority.UseBorderColor = false;
-            this.xrEducationComponentName.StylePriority.UseBorderDashStyle = false;
-            this.xrEducationComponentName.StylePriority.UseBorders = false;
-            this.xrEducationComponentName.StylePriority.UseBorderWidth = false;
-            this.xrEducationComponentName.StylePriority.UseFont = false;
-            this.xrEducationComponentName.StylePriority.UseForeColor = false;
-            this.xrEducationComponentName.StylePriority.UsePadding = false;
-            this.xrEducationComponentName.StylePriority.UseTextAlignment = false;
-            this.xrEducationComponentName.Text = "PENERIMAAN UMUM";
-            this.xrEducationComponentName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrCategoryName.BackColor = System.Drawing.Color.Transparent;
+            this.xrCategoryName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(203)))), ((int)(((byte)(200)))));
+            this.xrCategoryName.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrCategoryName.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrCategoryName.BorderWidth = 1F;
+            this.xrCategoryName.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrCategoryName.ForeColor = System.Drawing.Color.Black;
+            this.xrCategoryName.LocationFloat = new DevExpress.Utils.PointFloat(541.3605F, 125.941F);
+            this.xrCategoryName.Name = "xrCategoryName";
+            this.xrCategoryName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrCategoryName.SizeF = new System.Drawing.SizeF(175.6395F, 19.99998F);
+            this.xrCategoryName.StylePriority.UseBackColor = false;
+            this.xrCategoryName.StylePriority.UseBorderColor = false;
+            this.xrCategoryName.StylePriority.UseBorderDashStyle = false;
+            this.xrCategoryName.StylePriority.UseBorders = false;
+            this.xrCategoryName.StylePriority.UseBorderWidth = false;
+            this.xrCategoryName.StylePriority.UseFont = false;
+            this.xrCategoryName.StylePriority.UseForeColor = false;
+            this.xrCategoryName.StylePriority.UsePadding = false;
+            this.xrCategoryName.StylePriority.UseTextAlignment = false;
+            this.xrCategoryName.Text = "PENERIMAAN UMUM";
+            this.xrCategoryName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrPrintTime
             // 
@@ -774,7 +774,7 @@
             this.xrTotalPayment5.TextFormatString = "{0:N0}";
             this.xrTotalPayment5.Weight = 0.58521381126987249D;
             // 
-            // rptBudgetTransactionEducationComponent
+            // rptBudgetTransactionCategory
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -813,7 +813,7 @@
         public DevExpress.XtraReports.UI.XRTable xrTable1;
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         public DevExpress.XtraReports.UI.XRTableCell xrNo;
-        public DevExpress.XtraReports.UI.XRTableCell xrEducationComponent;
+        public DevExpress.XtraReports.UI.XRTableCell xrCategory;
         public DevExpress.XtraReports.UI.XRTable xrTable2;
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
         public DevExpress.XtraReports.UI.XRTableCell xrCaptionNo;
@@ -842,8 +842,8 @@
         public DevExpress.XtraReports.UI.XRLabel xrLabel2;
         public DevExpress.XtraReports.UI.XRLabel xrLabel3;
         public DevExpress.XtraReports.UI.XRLabel xrLabel4;
-        public DevExpress.XtraReports.UI.XRLabel xrEducationComponentCode;
-        public DevExpress.XtraReports.UI.XRLabel xrEducationComponentName;
+        public DevExpress.XtraReports.UI.XRLabel xrCategoryCode;
+        public DevExpress.XtraReports.UI.XRLabel xrCategoryName;
         public DevExpress.XtraReports.UI.XRTable xrTable3;
         public DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
         public DevExpress.XtraReports.UI.XRTableCell xrTotalFooter;

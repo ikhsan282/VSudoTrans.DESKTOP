@@ -253,7 +253,7 @@ namespace VSudoTrans.DESKTOP.Master.Identity
             //List<Company> userPlants = GetListDataRowSelected(_GridViewCompanySelect).OfType<Company>().ToList();
             //if (!userPlants.Any())
             //{
-            //    MessageHelper.ShowMessageError(this, "Otorisasi Sekolah harus diisi!");
+            //    MessageHelper.ShowMessageError(this, "Otorisasi Perusahaan harus diisi!");
             //    result = false;
             //}
 
@@ -330,7 +330,6 @@ namespace VSudoTrans.DESKTOP.Master.Identity
             _ApplicationUser = new ApplicationUser()
             {
                 Id = _ApplicationUser.Id,
-                UserType = Domain.EnumUserType.Employee,
                 CompanyId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CompanyPopUp.EditValue, "Id")),
                 FirstName = HelperConvert.String(FirstNameTextEdit.EditValue),
                 LastName = HelperConvert.String(LastNameTextEdit.EditValue),

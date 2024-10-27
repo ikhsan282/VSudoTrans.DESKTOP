@@ -41,7 +41,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ItemForTransactionDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.TransactionDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.ItemForCategory = new DevExpress.XtraLayout.LayoutControlItem();
-            this.EducationComponentPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
+            this.CategoryPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
             this.ItemForUnitMeasure = new DevExpress.XtraLayout.LayoutControlItem();
             this.UnitMeasurePopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
             this.ItemForQuantity = new DevExpress.XtraLayout.LayoutControlItem();
@@ -76,7 +76,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this.TransactionDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TransactionDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCategory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EducationComponentPopUp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoryPopUp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUnitMeasure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnitMeasurePopUp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForQuantity)).BeginInit();
@@ -108,7 +108,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this._DataLayoutControl.Controls.Add(this.CompanyPopUp);
             this._DataLayoutControl.Controls.Add(this.NoteMemoEdit);
             this._DataLayoutControl.Controls.Add(this.TransactionDateEdit);
-            this._DataLayoutControl.Controls.Add(this.EducationComponentPopUp);
+            this._DataLayoutControl.Controls.Add(this.CategoryPopUp);
             this._DataLayoutControl.Controls.Add(this.UnitMeasurePopUp);
             this._DataLayoutControl.Controls.Add(this.QuantityTextEdit);
             this._DataLayoutControl.Controls.Add(this.AmountTextEdit);
@@ -212,7 +212,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ItemForCompanyId.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompanyId.Name = "ItemForCompanyId";
             this.ItemForCompanyId.Size = new System.Drawing.Size(1236, 38);
-            this.ItemForCompanyId.Text = "Sekolah";
+            this.ItemForCompanyId.Text = "Perusahaan";
             this.ItemForCompanyId.TextSize = new System.Drawing.Size(157, 21);
             // 
             // CompanyPopUp
@@ -303,54 +303,54 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // 
             // ItemForCategory
             // 
-            this.ItemForCategory.Control = this.EducationComponentPopUp;
+            this.ItemForCategory.Control = this.CategoryPopUp;
             this.ItemForCategory.Location = new System.Drawing.Point(0, 114);
             this.ItemForCategory.Name = "ItemForCategory";
             this.ItemForCategory.Size = new System.Drawing.Size(1236, 38);
             this.ItemForCategory.Text = "Mata Anggaran";
             this.ItemForCategory.TextSize = new System.Drawing.Size(157, 21);
             // 
-            // EducationComponentPopUp
+            // CategoryPopUp
             // 
-            this.EducationComponentPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "EducationComponent", true));
-            this.EducationComponentPopUp.Location = new System.Drawing.Point(192, 169);
-            this.EducationComponentPopUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EducationComponentPopUp.MenuManager = this.mainRibbonControl;
-            this.EducationComponentPopUp.Name = "EducationComponentPopUp";
-            this.EducationComponentPopUp.ObjectId = null;
-            this.EducationComponentPopUp.OptionsCascadeControl = null;
-            this.EducationComponentPopUp.OptionsCascadeMember = null;
-            this.EducationComponentPopUp.OptionsChildControl = null;
-            this.EducationComponentPopUp.OptionsDataSource = null;
-            this.EducationComponentPopUp.OptionsDataType = null;
-            this.EducationComponentPopUp.OptionsDisplayCaption = null;
-            this.EducationComponentPopUp.OptionsDisplayColumns = null;
-            this.EducationComponentPopUp.OptionsDisplayText = null;
-            this.EducationComponentPopUp.OptionsDisplayTitle = null;
-            this.EducationComponentPopUp.OptionsDisplayWidth = null;
-            this.EducationComponentPopUp.OptionsFilterColumns = null;
-            this.EducationComponentPopUp.OptionsSortColumns = null;
-            this.EducationComponentPopUp.Properties.Appearance.Options.UseTextOptions = true;
-            this.EducationComponentPopUp.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.EducationComponentPopUp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CategoryPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Category", true));
+            this.CategoryPopUp.Location = new System.Drawing.Point(192, 169);
+            this.CategoryPopUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CategoryPopUp.MenuManager = this.mainRibbonControl;
+            this.CategoryPopUp.Name = "CategoryPopUp";
+            this.CategoryPopUp.ObjectId = null;
+            this.CategoryPopUp.OptionsCascadeControl = null;
+            this.CategoryPopUp.OptionsCascadeMember = null;
+            this.CategoryPopUp.OptionsChildControl = null;
+            this.CategoryPopUp.OptionsDataSource = null;
+            this.CategoryPopUp.OptionsDataType = null;
+            this.CategoryPopUp.OptionsDisplayCaption = null;
+            this.CategoryPopUp.OptionsDisplayColumns = null;
+            this.CategoryPopUp.OptionsDisplayText = null;
+            this.CategoryPopUp.OptionsDisplayTitle = null;
+            this.CategoryPopUp.OptionsDisplayWidth = null;
+            this.CategoryPopUp.OptionsFilterColumns = null;
+            this.CategoryPopUp.OptionsSortColumns = null;
+            this.CategoryPopUp.Properties.Appearance.Options.UseTextOptions = true;
+            this.CategoryPopUp.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.CategoryPopUp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EducationComponentPopUp.Properties.ObjectId = "";
-            this.EducationComponentPopUp.Properties.OptionsCascadeControl = null;
-            this.EducationComponentPopUp.Properties.OptionsCascadeMember = "";
-            this.EducationComponentPopUp.Properties.OptionsChildControl = null;
-            this.EducationComponentPopUp.Properties.OptionsDataSource = null;
-            this.EducationComponentPopUp.Properties.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
-            this.EducationComponentPopUp.Properties.OptionsDisplayCaption = "";
-            this.EducationComponentPopUp.Properties.OptionsDisplayColumns = "";
-            this.EducationComponentPopUp.Properties.OptionsDisplayFormat = "";
-            this.EducationComponentPopUp.Properties.OptionsDisplayText = "";
-            this.EducationComponentPopUp.Properties.OptionsDisplayTitle = "";
-            this.EducationComponentPopUp.Properties.OptionsDisplayWidth = "";
-            this.EducationComponentPopUp.Properties.OptionsFilterColumns = "";
-            this.EducationComponentPopUp.Properties.OptionsSortColumns = "";
-            this.EducationComponentPopUp.Size = new System.Drawing.Size(1063, 34);
-            this.EducationComponentPopUp.StyleController = this._DataLayoutControl;
-            this.EducationComponentPopUp.TabIndex = 22;
+            this.CategoryPopUp.Properties.ObjectId = "";
+            this.CategoryPopUp.Properties.OptionsCascadeControl = null;
+            this.CategoryPopUp.Properties.OptionsCascadeMember = "";
+            this.CategoryPopUp.Properties.OptionsChildControl = null;
+            this.CategoryPopUp.Properties.OptionsDataSource = null;
+            this.CategoryPopUp.Properties.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
+            this.CategoryPopUp.Properties.OptionsDisplayCaption = "";
+            this.CategoryPopUp.Properties.OptionsDisplayColumns = "";
+            this.CategoryPopUp.Properties.OptionsDisplayFormat = "";
+            this.CategoryPopUp.Properties.OptionsDisplayText = "";
+            this.CategoryPopUp.Properties.OptionsDisplayTitle = "";
+            this.CategoryPopUp.Properties.OptionsDisplayWidth = "";
+            this.CategoryPopUp.Properties.OptionsFilterColumns = "";
+            this.CategoryPopUp.Properties.OptionsSortColumns = "";
+            this.CategoryPopUp.Size = new System.Drawing.Size(1063, 34);
+            this.CategoryPopUp.StyleController = this._DataLayoutControl;
+            this.CategoryPopUp.TabIndex = 22;
             // 
             // ItemForUnitMeasure
             // 
@@ -597,7 +597,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this.TransactionDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TransactionDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCategory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EducationComponentPopUp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoryPopUp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUnitMeasure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnitMeasurePopUp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForQuantity)).EndInit();
@@ -643,7 +643,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
         private DevExpress.XtraEditors.DateEdit TransactionDateEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForTransactionDate;
         private DevExpress.XtraLayout.LayoutControlItem ItemForCategory;
-        private PopupContainerEditOwn EducationComponentPopUp;
+        private PopupContainerEditOwn CategoryPopUp;
         private DevExpress.XtraLayout.LayoutControlItem ItemForUnitMeasure;
         private PopupContainerEditOwn UnitMeasurePopUp;
         private DevExpress.XtraEditors.TextEdit QuantityTextEdit;

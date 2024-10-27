@@ -164,7 +164,7 @@
             // 
             // colCompanyName
             // 
-            this.colCompanyName.Caption = "Sekolah";
+            this.colCompanyName.Caption = "Perusahaan";
             this.colCompanyName.FieldName = "Company.Name";
             this.colCompanyName.MinWidth = 45;
             this.colCompanyName.Name = "colCompanyName";

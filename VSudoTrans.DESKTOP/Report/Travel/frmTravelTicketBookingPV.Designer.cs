@@ -217,7 +217,7 @@
             // 
             this.pivotGridField1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
             this.pivotGridField1.AreaIndex = 0;
-            this.pivotGridField1.Caption = "Sekolah";
+            this.pivotGridField1.Caption = "Perusahaan";
             dataSourceColumnBinding1.ColumnName = "Company.Name";
             this.pivotGridField1.DataBinding = dataSourceColumnBinding1;
             this.pivotGridField1.Name = "pivotGridField1";

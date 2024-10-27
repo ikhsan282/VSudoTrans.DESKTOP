@@ -10,8 +10,8 @@ namespace Domain.Entities.Attendance
     [DisplayName("Attendance History")]
     public class AttendanceHistory : BaseDomainDetail
     {
-        public int SchoolId { get; set; }
-        public School? School { get; set; }
+        public int CompanyId { get; set; }
+        public Company? Company { get; set; }
         public string PIN { get; set; }
         public DateTime Datetime { get; set; }
         public long IDatetime { get; set; }

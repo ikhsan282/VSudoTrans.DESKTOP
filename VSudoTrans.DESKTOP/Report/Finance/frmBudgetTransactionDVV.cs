@@ -1,19 +1,13 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
-using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraReports.UI;
 using Domain;
-using Domain.Entities.EducationPayment;
-using Domain.Entities.EducationResource;
 using Domain.Entities.Finance;
-using Domain.Entities.SQLView.EducationPayment;
 using Domain.Entities.SQLView.Finance;
-using Microsoft.Graph.Models;
 using PopUpUtils;
 using System;
 using System.Data;
 using System.Linq;
 using VSudoTrans.DESKTOP.BaseForm;
-using VSudoTrans.DESKTOP.Report.EducationPayment;
 using VSudoTrans.DESKTOP.Utils;
 
 namespace VSudoTrans.DESKTOP.Report.Finance
@@ -51,7 +45,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
 
             _LayoutControlItemFilter5.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             _LayoutControlItemFilter5.Text = "Mata Anggaran";
-            PopupEditHelper.General<EducationComponent>(fEndPoint: "/EducationComponents", fTitle: "Mata Anggaran", fControl: FilterPopUp5, fCascade: FilterPopUp3, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "250;100;400", fDisplayText: "Code;Name");
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fTitle: "Kategory", fControl: FilterPopUp5, fCascade: FilterPopUp3, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "250;100;400", fDisplayText: "Code;Name");
 
             _LayoutControlItemFilter6.Text = "Tahun";
             _LayoutControlItemFilter7.Text = "Bulan";
@@ -77,7 +71,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     OdataFilter += $"and Indicator eq '{FilterPopUp4.EditValue}' ";
 
                 if (FilterPopUp5.EditValue != null)
-                    OdataFilter += $"and EducationComponentId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp5.EditValue, "Id"))} ";
+                    OdataFilter += $"and CategoryId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp5.EditValue, "Id"))} ";
 
                 if (YearTextEdit.EditValue != null)
                     OdataFilter += $"and Year eq {HelperConvert.Date(YearTextEdit.EditValue).Year} ";
@@ -90,7 +84,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                 {
                     DataTable dt = new DataTable();
                     dt.Columns.Add("Indicator", typeof(string));
-                    dt.Columns.Add("EducationComponentName", typeof(string));
+                    dt.Columns.Add("CategoryName", typeof(string));
                     dt.Columns.Add("Year", typeof(int));
                     dt.Columns.Add("Month", typeof(int));
                     dt.Columns.Add("TransactionDate", typeof(string));
@@ -102,7 +96,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     {
                         DataRow r = dt.NewRow();
                         r["Indicator"] = EnumHelper.EnumTransactionIndicatorToString(data.Indicator);
-                        r["EducationComponentName"] = data.EducationComponentName;
+                        r["CategoryName"] = data.CategoryName;
                         r["Year"] = data.Year;
                         r["Month"] = data.Month;
                         r["TransactionDate"] = data.TransactionDate.ToString("dd-MMM-yyyy");
@@ -119,7 +113,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
 
                     //Detail
                     report.xrIndicator.ExpressionBindings.Add(new ExpressionBinding("Text", "[Indicator]"));
-                    report.xrEducationComponentName.ExpressionBindings.Add(new ExpressionBinding("Text", "[EducationComponentName]"));
+                    report.xrCategoryName.ExpressionBindings.Add(new ExpressionBinding("Text", "[CategoryName]"));
                     report.xrYear.ExpressionBindings.Add(new ExpressionBinding("Text", "[Year]"));
                     report.xrMonth.ExpressionBindings.Add(new ExpressionBinding("Text", "[Month]"));
                     report.xrTransactionDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[TransactionDate]"));

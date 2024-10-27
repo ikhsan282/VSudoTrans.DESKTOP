@@ -6,7 +6,6 @@ using PopUpUtils;
 using Domain.Entities.Finance;
 using System;
 using Domain.Entities.Shared;
-using Domain.Entities.EducationPayment;
 
 namespace VSudoTrans.DESKTOP.Transaction.Finance
 {
@@ -45,7 +44,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
 
         protected override void InitializeFomTitle(string fieldNames = "Code")
         {
-            base.InitializeFomTitle("EducationComponent.Name;UnitMeasure.Name");
+            base.InitializeFomTitle("Category.Name;UnitMeasure.Name");
         }
 
         protected override void DisplayEntity<T>()
@@ -53,11 +52,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             base.DisplayEntity<T>();
 
             _BudgetTransaction = OdataEntity as BudgetTransaction;
-
-            if (_BudgetTransaction.StudentEducationPaymentComponentId != null)
-            {
-                InializeDataReadOnly();
-            }
         }
 
         protected override void InitializeDefaultValidation()
@@ -65,7 +59,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             MyValidationHelper.SetValidation(_DxValidationProvider, CompanyPopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, DocumentNumberTextEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, TransactionDateEdit, ConditionOperator.IsNotBlank);
-            MyValidationHelper.SetValidation(_DxValidationProvider, EducationComponentPopUp, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, CategoryPopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, UnitMeasurePopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, QuantityTextEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, AmountTextEdit, ConditionOperator.IsNotBlank);
@@ -75,7 +69,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
         {
             PopupEditHelper.Company(CompanyPopUp);
             PopupEditHelper.General<UnitMeasure>(fEndPoint: "/UnitMeasures", fTitle: "Satuan Unit", fControl: UnitMeasurePopUp, fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
-            PopupEditHelper.General<EducationComponent>(fEndPoint: "/EducationComponents", fFilter: $"", fTitle: "Mata Anggaran", fControl: EducationComponentPopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fFilter: $"", fTitle: "Mata Anggaran", fControl: CategoryPopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
         }
 
 
@@ -114,7 +108,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             {
                 Id = _BudgetTransaction.Id,
                 CompanyId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CompanyPopUp.EditValue, "Id")),
-                EducationComponentId = HelperConvert.Int(AssemblyHelper.GetValueProperty(EducationComponentPopUp.EditValue, "Id")),
+                CategoryId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CategoryPopUp.EditValue, "Id")),
                 UnitMeasureId = HelperConvert.Int(AssemblyHelper.GetValueProperty(UnitMeasurePopUp.EditValue, "Id")),
                 Indicator = EnumTransactionIndicator.Kredit,
                 Quantity = HelperConvert.Int(QuantityTextEdit.EditValue),

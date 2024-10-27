@@ -19,7 +19,7 @@ namespace VSudoTrans.DESKTOP.Master.Organization
             InitializeComponent();
 
             this.EndPoint = "/Companys";
-            this.FormTitle = "Sekolah";
+            this.FormTitle = "Perusahaan";
 
             this.OdataSelect = "Id,Code,Name,PhoneNumber,Website";
             this.OdataExpand = "Group($select=name)";
@@ -133,7 +133,7 @@ namespace VSudoTrans.DESKTOP.Master.Organization
             _LayoutControlItemFilter2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 
             _LayoutControlItemFilter3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter3.Text = "Sekolah";
+            _LayoutControlItemFilter3.Text = "Perusahaan";
             PopupEditHelper.Company(FilterPopUp3);
         }
 

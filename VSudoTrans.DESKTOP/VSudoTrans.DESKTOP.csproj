@@ -491,14 +491,6 @@
     <Compile Include="Contract\AnnotationHelper.cs" />
     <Compile Include="Contract\Attendance\AttendanceCodeDto.cs" />
     <Compile Include="Contract\Attendance\RosterDto.cs" />
-    <Compile Include="Contract\EducationPayment\EducationComponentDto.cs" />
-    <Compile Include="Contract\EducationPayment\StudentEducationPaymentComponentDto.cs" />
-    <Compile Include="Contract\EducationPayment\StudentEducationPaymentDto.cs" />
-    <Compile Include="Contract\EducationResource\ClassDto.cs" />
-    <Compile Include="Contract\EducationResource\ForceYearDto.cs" />
-    <Compile Include="Contract\EducationResource\MajorDto.cs" />
-    <Compile Include="Contract\EducationResource\RombelDto.cs" />
-    <Compile Include="Contract\EducationResource\StudentDto.cs" />
     <Compile Include="Contract\Finance\BudgetTransactionDto.cs" />
     <Compile Include="Contract\HumanResource\EmployeeDto.cs" />
     <Compile Include="Contract\HumanResource\JobGradeDto.cs" />
@@ -516,19 +508,6 @@
     <Compile Include="Domain\Entities\Demography\District.cs" />
     <Compile Include="Domain\Entities\Demography\Province.cs" />
     <Compile Include="Domain\Entities\Demography\Village.cs" />
-    <Compile Include="Domain\Entities\EducationPayment\EducationComponent.cs" />
-    <Compile Include="Domain\Entities\EducationPayment\EducationComponentRegulation.cs" />
-    <Compile Include="Domain\Entities\EducationPayment\EducationComponentRegulationDetail.cs" />
-    <Compile Include="Domain\Entities\EducationPayment\StudentEducationPayment.cs" />
-    <Compile Include="Domain\Entities\EducationPayment\StudentEducationPaymentComponent.cs" />
-    <Compile Include="Domain\Entities\EducationPayment\StudentEducationPaymentHistory.cs" />
-    <Compile Include="Domain\Entities\EducationPayment\StudentEducationPaymentHistoryDetail.cs" />
-    <Compile Include="Domain\Entities\EducationResource\Class.cs" />
-    <Compile Include="Domain\Entities\EducationResource\ForceYear.cs" />
-    <Compile Include="Domain\Entities\EducationResource\Major.cs" />
-    <Compile Include="Domain\Entities\EducationResource\Rombel.cs" />
-    <Compile Include="Domain\Entities\EducationResource\Student.cs" />
-    <Compile Include="Domain\Entities\EducationResource\StudentPersonalData.cs" />
     <Compile Include="Domain\Entities\Finance\BudgetRegulation.cs" />
     <Compile Include="Domain\Entities\Finance\BudgetRegulationDetail.cs" />
     <Compile Include="Domain\Entities\Finance\BudgetTransaction.cs" />
@@ -775,126 +754,6 @@
     <Compile Include="Master\Demography\frmVillageLV.Designer.cs">
       <DependentUpon>frmVillageLV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\EducationPayment\frmEducationComponentDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationPayment\frmEducationComponentDV.Designer.cs">
-      <DependentUpon>frmEducationComponentDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationPayment\frmEducationComponentLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationPayment\frmEducationComponentLV.Designer.cs">
-      <DependentUpon>frmEducationComponentLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationPayment\frmEducationComponentRegulationDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationPayment\frmEducationComponentRegulationDV.Designer.cs">
-      <DependentUpon>frmEducationComponentRegulationDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationPayment\frmEducationComponentRegulationLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationPayment\frmEducationComponentRegulationLV.Designer.cs">
-      <DependentUpon>frmEducationComponentRegulationLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationPayment\frmImportEducationComponentWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationPayment\frmImportEducationComponentWV.Designer.cs">
-      <DependentUpon>frmImportEducationComponentWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmClassDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmClassDV.Designer.cs">
-      <DependentUpon>frmClassDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmClassLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmClassLV.Designer.cs">
-      <DependentUpon>frmClassLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportRombelWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportRombelWV.Designer.cs">
-      <DependentUpon>frmImportRombelWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmRombelDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmRombelDV.Designer.cs">
-      <DependentUpon>frmRombelDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmForceYearDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmForceYearDV.Designer.cs">
-      <DependentUpon>frmForceYearDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmRombelLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmRombelLV.Designer.cs">
-      <DependentUpon>frmRombelLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmForceYearLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmForceYearLV.Designer.cs">
-      <DependentUpon>frmForceYearLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportStudentWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportStudentWV.Designer.cs">
-      <DependentUpon>frmImportStudentWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportForceWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportForceWV.Designer.cs">
-      <DependentUpon>frmImportForceWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportMajorWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportMajorWV.Designer.cs">
-      <DependentUpon>frmImportMajorWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportClassWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmImportClassWV.Designer.cs">
-      <DependentUpon>frmImportClassWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmMajorDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmMajorDV.Designer.cs">
-      <DependentUpon>frmMajorDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmMajorLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmMajorLV.Designer.cs">
-      <DependentUpon>frmMajorLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmStudentDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmStudentDV.Designer.cs">
-      <DependentUpon>frmStudentDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmStudentLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\EducationResource\frmStudentLV.Designer.cs">
-      <DependentUpon>frmStudentLV.cs</DependentUpon>
-    </Compile>
     <Compile Include="Master\Finance\frmCategoryDV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -979,23 +838,11 @@
     <Compile Include="Master\Demography\frmCountryDV.Designer.cs">
       <DependentUpon>frmCountryDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\Identity\frmUserStudentDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Identity\frmUserStudentDV.Designer.cs">
-      <DependentUpon>frmUserStudentDV.cs</DependentUpon>
-    </Compile>
     <Compile Include="Master\Identity\frmUserDV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Master\Identity\frmUserDV.Designer.cs">
       <DependentUpon>frmUserDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Identity\frmUserStudentLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Identity\frmUserStudentLV.Designer.cs">
-      <DependentUpon>frmUserStudentLV.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\Identity\frmUserLV.cs">
       <SubType>Form</SubType>
@@ -1093,114 +940,6 @@
     <Compile Include="Master\Shared\frmUnitMeasureLV.Designer.cs">
       <DependentUpon>frmUnitMeasureLV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\Travel\frmPassengerDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmPassengerDV.Designer.cs">
-      <DependentUpon>frmPassengerDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Travel\frmPassengerLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmPassengerLV.Designer.cs">
-      <DependentUpon>frmPassengerLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Travel\frmRuteDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmRuteDV.Designer.cs">
-      <DependentUpon>frmRuteDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Travel\frmRuteLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmRuteLV.Designer.cs">
-      <DependentUpon>frmRuteLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Travel\frmScheduleDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmScheduleDV.Designer.cs">
-      <DependentUpon>frmScheduleDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Travel\frmScheduleLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmScheduleLV.Designer.cs">
-      <DependentUpon>frmScheduleLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Travel\frmTravelTicketBookingDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmTravelTicketBookingDV.Designer.cs">
-      <DependentUpon>frmTravelTicketBookingDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Travel\frmTravelTicketBookingLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmTravelTicketBookingLV.Designer.cs">
-      <DependentUpon>frmTravelTicketBookingLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Travel\frmTripScheduleDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmTripScheduleDV.Designer.cs">
-      <DependentUpon>frmTripScheduleDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Travel\frmTripScheduleLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Travel\frmTripScheduleLV.Designer.cs">
-      <DependentUpon>frmTripScheduleLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmBrandDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmBrandDV.Designer.cs">
-      <DependentUpon>frmBrandDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmBrandLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmBrandLV.Designer.cs">
-      <DependentUpon>frmBrandLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmModelUnitDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmModelUnitDV.Designer.cs">
-      <DependentUpon>frmModelUnitDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmModelUnitLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmModelUnitLV.Designer.cs">
-      <DependentUpon>frmModelUnitLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmTypeEngineDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmTypeEngineDV.Designer.cs">
-      <DependentUpon>frmTypeEngineDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmTypeEngineLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmTypeEngineLV.Designer.cs">
-      <DependentUpon>frmTypeEngineLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmVehicleDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmVehicleDV.Designer.cs">
-      <DependentUpon>frmVehicleDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmVehicleLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Vehicle\frmVehicleLV.Designer.cs">
-      <DependentUpon>frmVehicleLV.cs</DependentUpon>
-    </Compile>
     <Compile Include="Report\Attendance\frmAbsenceSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1219,89 +958,11 @@
     <Compile Include="Report\Attendance\frmEmployeeRecognitionPV.Designer.cs">
       <DependentUpon>frmEmployeeRecognitionPV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\EducationPayment\frmEArrearPaymentBookDVV.cs">
+    <Compile Include="Report\Finance\frmBudgetTransactionCategoryDVV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report\EducationPayment\frmEArrearPaymentBookDVV.Designer.cs">
-      <DependentUpon>frmEArrearPaymentBookDVV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentPaymentBookDVV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentPaymentBookDVV.Designer.cs">
-      <DependentUpon>frmStudentPaymentBookDVV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmEPaymentBookDVV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmEPaymentBookDVV.Designer.cs">
-      <DependentUpon>frmEPaymentBookDVV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookComponentDVV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookComponentDVV.Designer.cs">
-      <DependentUpon>frmStudentPaymentControlBookComponentDVV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentArrearControlBookDVV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentArrearControlBookDVV.Designer.cs">
-      <DependentUpon>frmStudentArrearControlBookDVV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookDVV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookDVV.Designer.cs">
-      <DependentUpon>frmStudentPaymentControlBookDVV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookPV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmStudentPaymentControlBookPV.Designer.cs">
-      <DependentUpon>frmStudentPaymentControlBookPV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmEPaymentInvoiceDVV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\frmEPaymentInvoiceDVV.Designer.cs">
-      <DependentUpon>frmEPaymentInvoiceDVV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptEPaymentBook.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptEPaymentBook.Designer.cs">
-      <DependentUpon>rptEPaymentBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptArrearControlBook.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptArrearControlBook.Designer.cs">
-      <DependentUpon>rptArrearControlBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptPaymentControlBookComponent.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptPaymentControlBookComponent.Designer.cs">
-      <DependentUpon>rptPaymentControlBookComponent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptPaymentControlBook.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptPaymentControlBook.Designer.cs">
-      <DependentUpon>rptPaymentControlBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptEPaymentInvoice.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\EducationPayment\rptEPaymentInvoice.Designer.cs">
-      <DependentUpon>rptEPaymentInvoice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\Finance\frmBudgetTransactionEducationComponentDVV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\Finance\frmBudgetTransactionEducationComponentDVV.Designer.cs">
-      <DependentUpon>frmBudgetTransactionEducationComponentDVV.cs</DependentUpon>
+    <Compile Include="Report\Finance\frmBudgetTransactionCategoryDVV.Designer.cs">
+      <DependentUpon>frmBudgetTransactionCategoryDVV.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\frmBudgetBalanceLV.cs">
       <SubType>Form</SubType>
@@ -1339,11 +1000,11 @@
     <Compile Include="Report\Finance\frmComparationBudgetRealizationDVV.Designer.cs">
       <DependentUpon>frmComparationBudgetRealizationDVV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\Finance\rptBudgetTransactionEducationComponent.cs">
+    <Compile Include="Report\Finance\rptBudgetTransactionCategory.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\Finance\rptBudgetTransactionEducationComponent.Designer.cs">
-      <DependentUpon>rptBudgetTransactionEducationComponent.cs</DependentUpon>
+    <Compile Include="Report\Finance\rptBudgetTransactionCategory.Designer.cs">
+      <DependentUpon>rptBudgetTransactionCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\rptBudgetTransaction.cs">
       <SubType>Component</SubType>
@@ -1466,48 +1127,6 @@
     <Compile Include="Transaction\Attendance\frmUploadFingerprintWV.Designer.cs">
       <DependentUpon>frmUploadFingerprintWV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction\EducationPayment\frmImportStudentEducationPaymentWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmImportStudentEducationPaymentWV.Designer.cs">
-      <DependentUpon>frmImportStudentEducationPaymentWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationDeletePaymentWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationDeletePaymentWV.Designer.cs">
-      <DependentUpon>frmStudentEducationDeletePaymentWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentDV.Designer.cs">
-      <DependentUpon>frmStudentEducationPaymentDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationDeleteWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationDeleteWV.Designer.cs">
-      <DependentUpon>frmStudentEducationDeleteWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentLV.Designer.cs">
-      <DependentUpon>frmStudentEducationPaymentLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentInvoiceWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentInvoiceWV.Designer.cs">
-      <DependentUpon>frmStudentEducationPaymentInvoiceWV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentWV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\EducationPayment\frmStudentEducationPaymentWV.Designer.cs">
-      <DependentUpon>frmStudentEducationPaymentWV.cs</DependentUpon>
-    </Compile>
     <Compile Include="Transaction\Finance\frmBudgetRegulationLV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1573,7 +1192,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
-    <None Include="Properties\DataSources\Contract.EducationPayment.ImportEducationComponentModel.datasource" />
+    <None Include="Properties\DataSources\Contract.EducationPayment.ImportCategoryModel.datasource" />
     <None Include="Properties\DataSources\Contract.EducationPayment.ImportStudentEducationPaymentModel.datasource" />
     <None Include="Properties\DataSources\Contract.EducationResource.ImportClassModel.datasource" />
     <None Include="Properties\DataSources\Contract.EducationResource.ImportForceModel.datasource" />
@@ -1595,9 +1214,9 @@
     <None Include="Properties\DataSources\Domain.Entities.Demography.District.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.Demography.Province.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.Demography.Village.datasource" />
-    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.EducationComponent.datasource" />
-    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.EducationComponentRegulation.datasource" />
-    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.EducationComponentRegulationDetail.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.Category.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.CategoryRegulation.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.EducationPayment.CategoryRegulationDetail.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.EducationPayment.StudentEducationPayment.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.EducationPayment.StudentEducationPaymentComponent.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.EducationPayment.StudentEducationPaymentHistory.datasource" />
@@ -2884,66 +2503,6 @@
     <EmbeddedResource Include="Master\Demography\frmVillageLV.resx">
       <DependentUpon>frmVillageLV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationPayment\frmEducationComponentDV.resx">
-      <DependentUpon>frmEducationComponentDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationPayment\frmEducationComponentLV.resx">
-      <DependentUpon>frmEducationComponentLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationPayment\frmEducationComponentRegulationDV.resx">
-      <DependentUpon>frmEducationComponentRegulationDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationPayment\frmEducationComponentRegulationLV.resx">
-      <DependentUpon>frmEducationComponentRegulationLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationPayment\frmImportEducationComponentWV.resx">
-      <DependentUpon>frmImportEducationComponentWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmClassDV.resx">
-      <DependentUpon>frmClassDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmClassLV.resx">
-      <DependentUpon>frmClassLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmImportRombelWV.resx">
-      <DependentUpon>frmImportRombelWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmRombelDV.resx">
-      <DependentUpon>frmRombelDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmForceYearDV.resx">
-      <DependentUpon>frmForceYearDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmRombelLV.resx">
-      <DependentUpon>frmRombelLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmForceYearLV.resx">
-      <DependentUpon>frmForceYearLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmImportStudentWV.resx">
-      <DependentUpon>frmImportStudentWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmImportForceWV.resx">
-      <DependentUpon>frmImportForceWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmImportMajorWV.resx">
-      <DependentUpon>frmImportMajorWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmImportClassWV.resx">
-      <DependentUpon>frmImportClassWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmMajorDV.resx">
-      <DependentUpon>frmMajorDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmMajorLV.resx">
-      <DependentUpon>frmMajorLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmStudentDV.resx">
-      <DependentUpon>frmStudentDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\EducationResource\frmStudentLV.resx">
-      <DependentUpon>frmStudentLV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Master\Finance\frmCategoryDV.resx">
       <DependentUpon>frmCategoryDV.cs</DependentUpon>
     </EmbeddedResource>
@@ -2986,14 +2545,8 @@
     <EmbeddedResource Include="Master\Demography\frmCountryDV.resx">
       <DependentUpon>frmCountryDV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\Identity\frmUserStudentDV.resx">
-      <DependentUpon>frmUserStudentDV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Master\Identity\frmUserDV.resx">
       <DependentUpon>frmUserDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Identity\frmUserStudentLV.resx">
-      <DependentUpon>frmUserStudentLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Identity\frmUserLV.resx">
       <DependentUpon>frmUserLV.cs</DependentUpon>
@@ -3043,60 +2596,6 @@
     <EmbeddedResource Include="Master\Shared\frmUnitMeasureLV.resx">
       <DependentUpon>frmUnitMeasureLV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmPassengerDV.resx">
-      <DependentUpon>frmPassengerDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmPassengerLV.resx">
-      <DependentUpon>frmPassengerLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmRuteDV.resx">
-      <DependentUpon>frmRuteDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmRuteLV.resx">
-      <DependentUpon>frmRuteLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmScheduleDV.resx">
-      <DependentUpon>frmScheduleDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmScheduleLV.resx">
-      <DependentUpon>frmScheduleLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmTravelTicketBookingDV.resx">
-      <DependentUpon>frmTravelTicketBookingDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmTravelTicketBookingLV.resx">
-      <DependentUpon>frmTravelTicketBookingLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmTripScheduleDV.resx">
-      <DependentUpon>frmTripScheduleDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmTripScheduleLV.resx">
-      <DependentUpon>frmTripScheduleLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Vehicle\frmBrandDV.resx">
-      <DependentUpon>frmBrandDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Vehicle\frmBrandLV.resx">
-      <DependentUpon>frmBrandLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Vehicle\frmModelUnitDV.resx">
-      <DependentUpon>frmModelUnitDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Vehicle\frmModelUnitLV.resx">
-      <DependentUpon>frmModelUnitLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Vehicle\frmTypeEngineDV.resx">
-      <DependentUpon>frmTypeEngineDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Vehicle\frmTypeEngineLV.resx">
-      <DependentUpon>frmTypeEngineLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Vehicle\frmVehicleDV.resx">
-      <DependentUpon>frmVehicleDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Vehicle\frmVehicleLV.resx">
-      <DependentUpon>frmVehicleLV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\Attendance\frmAbsenceSV.resx">
       <DependentUpon>frmAbsenceSV.cs</DependentUpon>
     </EmbeddedResource>
@@ -3106,47 +2605,8 @@
     <EmbeddedResource Include="Report\Attendance\frmEmployeeRecognitionPV.resx">
       <DependentUpon>frmEmployeeRecognitionPV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\frmEArrearPaymentBookDVV.resx">
-      <DependentUpon>frmEArrearPaymentBookDVV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\frmStudentPaymentBookDVV.resx">
-      <DependentUpon>frmStudentPaymentBookDVV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\frmEPaymentBookDVV.resx">
-      <DependentUpon>frmEPaymentBookDVV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\frmStudentPaymentControlBookComponentDVV.resx">
-      <DependentUpon>frmStudentPaymentControlBookComponentDVV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\frmStudentArrearControlBookDVV.resx">
-      <DependentUpon>frmStudentArrearControlBookDVV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\frmStudentPaymentControlBookDVV.resx">
-      <DependentUpon>frmStudentPaymentControlBookDVV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\frmStudentPaymentControlBookPV.resx">
-      <DependentUpon>frmStudentPaymentControlBookPV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\frmEPaymentInvoiceDVV.resx">
-      <DependentUpon>frmEPaymentInvoiceDVV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\rptEPaymentBook.resx">
-      <DependentUpon>rptEPaymentBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\rptArrearControlBook.resx">
-      <DependentUpon>rptArrearControlBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\rptPaymentControlBookComponent.resx">
-      <DependentUpon>rptPaymentControlBookComponent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\rptPaymentControlBook.resx">
-      <DependentUpon>rptPaymentControlBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\EducationPayment\rptEPaymentInvoice.resx">
-      <DependentUpon>rptEPaymentInvoice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\Finance\frmBudgetTransactionEducationComponentDVV.resx">
-      <DependentUpon>frmBudgetTransactionEducationComponentDVV.cs</DependentUpon>
+    <EmbeddedResource Include="Report\Finance\frmBudgetTransactionCategoryDVV.resx">
+      <DependentUpon>frmBudgetTransactionCategoryDVV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\frmBudgetBalanceLV.resx">
       <DependentUpon>frmBudgetBalanceLV.cs</DependentUpon>
@@ -3166,8 +2626,8 @@
     <EmbeddedResource Include="Report\Finance\frmComparationBudgetRealizationDVV.resx">
       <DependentUpon>frmComparationBudgetRealizationDVV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Finance\rptBudgetTransactionEducationComponent.resx">
-      <DependentUpon>rptBudgetTransactionEducationComponent.cs</DependentUpon>
+    <EmbeddedResource Include="Report\Finance\rptBudgetTransactionCategory.resx">
+      <DependentUpon>rptBudgetTransactionCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\rptBudgetTransaction.resx">
       <DependentUpon>rptBudgetTransaction.cs</DependentUpon>
@@ -3232,27 +2692,6 @@
     <EmbeddedResource Include="Transaction\Attendance\frmUploadFingerprintWV.resx">
       <DependentUpon>frmUploadFingerprintWV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\EducationPayment\frmImportStudentEducationPaymentWV.resx">
-      <DependentUpon>frmImportStudentEducationPaymentWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationDeletePaymentWV.resx">
-      <DependentUpon>frmStudentEducationDeletePaymentWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationPaymentDV.resx">
-      <DependentUpon>frmStudentEducationPaymentDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationDeleteWV.resx">
-      <DependentUpon>frmStudentEducationDeleteWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationPaymentLV.resx">
-      <DependentUpon>frmStudentEducationPaymentLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationPaymentInvoiceWV.resx">
-      <DependentUpon>frmStudentEducationPaymentInvoiceWV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\EducationPayment\frmStudentEducationPaymentWV.resx">
-      <DependentUpon>frmStudentEducationPaymentWV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\Finance\frmBudgetRegulationLV.resx">
       <DependentUpon>frmBudgetRegulationLV.cs</DependentUpon>
     </EmbeddedResource>
@@ -3275,7 +2714,10 @@
       <DependentUpon>frmKreditLV.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Master\Travel\" />
+    <Folder Include="Master\Vehicle\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="logo panca.ico" />
     <Content Include="Logo-VsudoTech.ico" />

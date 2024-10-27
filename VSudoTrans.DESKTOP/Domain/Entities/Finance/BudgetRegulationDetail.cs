@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
 using Domain.Base;
-using Domain.Entities.EducationPayment;
 
 namespace Domain.Entities.Finance
 {
@@ -11,8 +10,8 @@ namespace Domain.Entities.Finance
     {
         public int BudgetRegulationId { get; set; }
         public BudgetRegulation BudgetRegulation { get; set; }
-        public int EducationComponentId { get; set; }
-        public EducationComponent EducationComponent { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
         public decimal Amount { get; set; }
     }
 }

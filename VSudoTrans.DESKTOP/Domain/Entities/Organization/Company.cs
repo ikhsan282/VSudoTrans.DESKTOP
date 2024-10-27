@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Domain.Entities.Organization
 {
     [Table("Company")]
-    [DisplayName("Sekolah")]
+    [DisplayName("Perusahaan")]
     public class Company : BaseCodeName
     {
         public int GroupId { get; set; }

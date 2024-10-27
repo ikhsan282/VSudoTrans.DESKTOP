@@ -4,7 +4,6 @@ using Domain.Base;
 using Domain.Entities.Organization;
 using Domain.Entities.Shared;
 using System;
-using Domain.Entities.EducationPayment;
 
 namespace Domain.Entities.Finance
 {
@@ -14,10 +13,8 @@ namespace Domain.Entities.Finance
     {
         public int CompanyId { get; set; }
         public Company Company { get; set; }
-        public int? StudentEducationPaymentComponentId { get; set; }
-        public virtual StudentEducationPaymentComponent StudentEducationPaymentComponent { get; set; }
-        public int EducationComponentId { get; set; }
-        public EducationComponent EducationComponent { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
         public int UnitMeasureId { get; set; }
         public UnitMeasure UnitMeasure { get; set; }
         public EnumTransactionIndicator Indicator { get; set; }

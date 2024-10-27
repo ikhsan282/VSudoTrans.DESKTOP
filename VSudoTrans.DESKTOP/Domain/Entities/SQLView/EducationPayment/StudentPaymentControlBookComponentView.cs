@@ -17,9 +17,9 @@
         public int StudentId { get; set; }
         public string StudentCode { get; set; }
         public string StudentName { get; set; }
-        public int EducationComponentId { get; set; }
-        public string EducationComponentCode { get; set; }
-        public string EducationComponentName { get; set; }
+        public int CategoryId { get; set; }
+        public string CategoryCode { get; set; }
+        public string CategoryName { get; set; }
         public decimal Payment1 { get; set; }
         public decimal Payment2 { get; set; }
         public decimal Payment3 { get; set; }

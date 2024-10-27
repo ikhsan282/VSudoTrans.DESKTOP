@@ -2,8 +2,8 @@
 {
     public class ComparationBudgetRealizationResult
     {
-        public string EducationComponentCode { get; set; }
-        public string EducationComponentName { get; set; }
+        public string CategoryCode { get; set; }
+        public string CategoryName { get; set; }
         public decimal TotalBudgetAmount { get; set; }
         public decimal TotalRealizedAmount { get; set; }
         public decimal AmountVariance { get; set; }

@@ -56,7 +56,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             this.pivotGridFieldCompanyName = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pivotGridFieldMonth = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pivotGridFieldYear = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.pivotGridFieldEducationComponentName = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.pivotGridFieldCategoryName = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pivotGridFieldIndicator = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pivotGridFieldUnitMeasureName = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pivotGridFieldQuantity = new DevExpress.XtraPivotGrid.PivotGridField();
@@ -279,7 +279,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             // 
             this._pivotGridControl.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
             this.pivotGridFieldCompanyName,
-            this.pivotGridFieldEducationComponentName,
+            this.pivotGridFieldCategoryName,
             this.pivotGridFieldIndicator,
             this.pivotGridFieldUnitMeasureName,
             this.pivotGridFieldQuantity,
@@ -504,7 +504,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             // pivotGridFieldCompanyName
             // 
             this.pivotGridFieldCompanyName.AreaIndex = 0;
-            this.pivotGridFieldCompanyName.Caption = "Sekolah";
+            this.pivotGridFieldCompanyName.Caption = "Perusahaan";
             dataSourceColumnBinding1.ColumnName = "CompanyName";
             this.pivotGridFieldCompanyName.DataBinding = dataSourceColumnBinding1;
             this.pivotGridFieldCompanyName.MinWidth = 19;
@@ -531,16 +531,16 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             this.pivotGridFieldYear.MinWidth = 19;
             this.pivotGridFieldYear.Name = "pivotGridFieldYear";
             // 
-            // pivotGridFieldEducationComponentName
+            // pivotGridFieldCategoryName
             // 
-            this.pivotGridFieldEducationComponentName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.pivotGridFieldEducationComponentName.AreaIndex = 1;
-            this.pivotGridFieldEducationComponentName.Caption = "Mata Anggaran";
-            dataSourceColumnBinding2.ColumnName = "EducationComponentName";
-            this.pivotGridFieldEducationComponentName.DataBinding = dataSourceColumnBinding2;
-            this.pivotGridFieldEducationComponentName.MinWidth = 19;
-            this.pivotGridFieldEducationComponentName.Name = "pivotGridFieldEducationComponentName";
-            this.pivotGridFieldEducationComponentName.Width = 132;
+            this.pivotGridFieldCategoryName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.pivotGridFieldCategoryName.AreaIndex = 1;
+            this.pivotGridFieldCategoryName.Caption = "Mata Anggaran";
+            dataSourceColumnBinding2.ColumnName = "CategoryName";
+            this.pivotGridFieldCategoryName.DataBinding = dataSourceColumnBinding2;
+            this.pivotGridFieldCategoryName.MinWidth = 19;
+            this.pivotGridFieldCategoryName.Name = "pivotGridFieldCategoryName";
+            this.pivotGridFieldCategoryName.Width = 132;
             // 
             // pivotGridFieldIndicator
             // 
@@ -666,7 +666,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
         private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldCompanyName;
         private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldMonth;
         private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldYear;
-        private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldEducationComponentName;
+        private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldCategoryName;
         private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldIndicator;
         private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldUnitMeasureName;
         private DevExpress.XtraPivotGrid.PivotGridField pivotGridFieldQuantity;

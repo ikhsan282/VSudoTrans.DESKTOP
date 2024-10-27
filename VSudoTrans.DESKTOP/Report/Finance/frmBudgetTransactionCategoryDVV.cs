@@ -1,9 +1,6 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
-using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraReports.UI;
 using Domain;
-using Domain.Entities.EducationPayment;
-using Domain.Entities.EducationResource;
 using Domain.Entities.Finance;
 using Domain.Entities.SQLView.EducationPayment;
 using PopUpUtils;
@@ -15,9 +12,9 @@ using VSudoTrans.DESKTOP.Utils;
 
 namespace VSudoTrans.DESKTOP.Report.Finance
 {
-    public partial class frmBudgetTransactionEducationComponentDVV : frmBaseFilterDVV
+    public partial class frmBudgetTransactionCategoryDVV : frmBaseFilterDVV
     {
-        public frmBudgetTransactionEducationComponentDVV()
+        public frmBudgetTransactionCategoryDVV()
         {
             InitializeComponent();
 
@@ -47,7 +44,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             HelperConvert.FormatDateEdit(FilterDate2);
 
             _LayoutControlItemFilter3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter3.Text = "Sekolah";
+            _LayoutControlItemFilter3.Text = "Perusahaan";
             PopupEditHelper.Company(FilterPopUp3);
 
             _LayoutControlItemFilter4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
@@ -55,8 +52,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             SLUHelper.SetEnumDataSource<EnumTransactionIndicator>(IndicatorSearchLookUpEdit, EnumHelper.EnumTransactionIndicatorToString);
 
             _LayoutControlItemFilter5.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter5.Text = "Mata Anggaran";
-            PopupEditHelper.General<EducationComponent>(fEndPoint: "/EducationComponents", fTitle: "Mata Anggaran", fControl: FilterPopUp4, fCascade: FilterPopUp3, fCascadeMember: "CompanyId");
+            _LayoutControlItemFilter5.Text = "Kategori";
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fTitle: "Kategori", fControl: FilterPopUp4, fCascade: FilterPopUp3, fCascadeMember: "CompanyId");
         }
 
         protected override void InitializeDefaultValidation()
@@ -85,16 +82,16 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     OdataFilter += $" and Indicator eq '{indicator.ToString()}' ";
                 
                 if (FilterPopUp4.EditValue != null)
-                    OdataFilter = $"EducationComponentId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp4.EditValue, "Id"))} ";
+                    OdataFilter = $"CategoryId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp4.EditValue, "Id"))} ";
 
-                string expand = "EducationComponent";
+                string expand = "Category";
 
                 var budgetTransactions = HelperRestSharp.GetListOdata<BudgetTransaction>("/BudgetTransactions", "*", fExpand: expand, OdataFilter, fOrder: "Id");
 
                 if (budgetTransactions.Any())
                 {
                     // set report destination
-                    rptBudgetTransactionEducationComponent report = new rptBudgetTransactionEducationComponent();
+                    rptBudgetTransactionCategory report = new rptBudgetTransactionCategory();
                     report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
 
                     DataTable dt = new DataTable();
@@ -104,8 +101,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     dt.Columns.Add("DetailNote", typeof(string));
                     dt.Columns.Add("DetailDocumentNumber", typeof(string));
                     dt.Columns.Add("DetailAmount", typeof(decimal));
-                    dt.Columns.Add("HeaderEducationComponentCode", typeof(string));
-                    dt.Columns.Add("HeaderEducationComponentName", typeof(string));
+                    dt.Columns.Add("HeaderCategoryCode", typeof(string));
+                    dt.Columns.Add("HeaderCategoryName", typeof(string));
 
                     int loop = 0;
                     foreach (var budgetTransaction in budgetTransactions)
@@ -117,26 +114,26 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                         totalRow["DetailNote"] = budgetTransaction.Note;
                         totalRow["DetailDocumentNumber"] = budgetTransaction.DocumentNumber;
                         totalRow["DetailAmount"] = budgetTransaction.Amount;
-                        totalRow["HeaderEducationComponentCode"] = budgetTransaction.EducationComponent.Code;
-                        totalRow["HeaderEducationComponentName"] = budgetTransaction.EducationComponent.Name;
+                        totalRow["HeaderCategoryCode"] = budgetTransaction.Category.Code;
+                        totalRow["HeaderCategoryName"] = budgetTransaction.Category.Name;
                         dt.Rows.Add(totalRow);
                     }
 
                     report.DataSource = dt;
 
                     // Buat instance GroupField dan tambahkan ke band Header Grup.
-                    GroupField groupField = new GroupField("HeaderEducationComponentCode");
+                    GroupField groupField = new GroupField("HeaderCategoryCode");
                     report.GroupHeader.GroupFields.Add(groupField);
 
                     //Detail
                     report.xrTransactionDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDate]"));
-                    report.xrEducationComponent.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailNote]"));
+                    report.xrCategory.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailNote]"));
 
                     report.xrDocumentNumber.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDocumentNumber]"));
                     report.xrJumlah.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailAmount]"));
 
-                    report.xrEducationComponentCode.ExpressionBindings.Add(new ExpressionBinding("Text", "[HeaderEducationComponentCode]"));
-                    report.xrEducationComponentName.ExpressionBindings.Add(new ExpressionBinding("Text", "[HeaderEducationComponentName]"));
+                    report.xrCategoryCode.ExpressionBindings.Add(new ExpressionBinding("Text", "[HeaderCategoryCode]"));
+                    report.xrCategoryName.ExpressionBindings.Add(new ExpressionBinding("Text", "[HeaderCategoryName]"));
 
                     report.xrPrintDate.Text = DateTime.Now.ToString("dd MMMM yyyy");
                     report.xrPrintTime.Text = DateTime.Now.ToString("HH:mm:ss");

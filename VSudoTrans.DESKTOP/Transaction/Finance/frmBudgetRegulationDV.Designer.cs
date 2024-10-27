@@ -47,9 +47,10 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this._GridControlDetail = new DevExpress.XtraGrid.GridControl();
             this._BindingSourceDetail = new System.Windows.Forms.BindingSource(this.components);
             this._GridViewDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colEducationComponent = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.EducationComponentPopUp = new VSudoTrans.DESKTOP.Descendant.RepositoryItemPopupContainerEditOwn();
+            this.colCategory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CategoryPopUp = new VSudoTrans.DESKTOP.Descendant.RepositoryItemPopupContainerEditOwn();
             this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.AmountSpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.ItemForFromYear = new DevExpress.XtraLayout.LayoutControlItem();
             this.FromYearTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForIndicator = new DevExpress.XtraLayout.LayoutControlItem();
@@ -66,7 +67,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ModifiedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForModifiedDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ModifiedDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.AmountSpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).BeginInit();
             this._DataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).BeginInit();
@@ -88,7 +88,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this._GridControlDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._BindingSourceDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EducationComponentPopUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoryPopUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountSpinEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForFromYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FromYearTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIndicator)).BeginInit();
@@ -107,7 +108,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AmountSpinEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // _DataLayoutControl
@@ -124,6 +124,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this._DataLayoutControl.Controls.Add(this.ModifiedUserTextEdit);
             this._DataLayoutControl.Controls.Add(this.ModifiedDateDateEdit);
             this._DataLayoutControl.Controls.Add(this.FromYearTextEdit);
+            this._DataLayoutControl.Location = new System.Drawing.Point(0, 254);
             this._DataLayoutControl.Margin = new System.Windows.Forms.Padding(3);
             this._DataLayoutControl.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(945, 213, 975, 600);
             this._DataLayoutControl.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
@@ -219,13 +220,13 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ItemForCompany.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompany.Name = "ItemForCompany";
             this.ItemForCompany.Size = new System.Drawing.Size(834, 38);
-            this.ItemForCompany.Text = "Sekolah";
+            this.ItemForCompany.Text = "Perusahaan";
             this.ItemForCompany.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CompanyPopUp
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
-            this.CompanyPopUp.Location = new System.Drawing.Point(144, -411);
+            this.CompanyPopUp.Location = new System.Drawing.Point(144, -437);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -273,7 +274,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // CodeTextEdit
             // 
             this.CodeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Code", true));
-            this.CodeTextEdit.Location = new System.Drawing.Point(144, -335);
+            this.CodeTextEdit.Location = new System.Drawing.Point(144, -361);
             this.CodeTextEdit.MenuManager = this.mainRibbonControl;
             this.CodeTextEdit.Name = "CodeTextEdit";
             this.CodeTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -292,7 +293,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // NameTextEdit
             // 
             this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Name", true));
-            this.NameTextEdit.Location = new System.Drawing.Point(144, -297);
+            this.NameTextEdit.Location = new System.Drawing.Point(144, -323);
             this.NameTextEdit.MenuManager = this.mainRibbonControl;
             this.NameTextEdit.Name = "NameTextEdit";
             this.NameTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -312,7 +313,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // NoteMemoEdit
             // 
             this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
-            this.NoteMemoEdit.Location = new System.Drawing.Point(144, -221);
+            this.NoteMemoEdit.Location = new System.Drawing.Point(144, -247);
             this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
             this.NoteMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
             this.NoteMemoEdit.Name = "NoteMemoEdit";
@@ -332,13 +333,13 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // _GridControlDetail
             // 
             this._GridControlDetail.DataSource = this._BindingSourceDetail;
-            this._GridControlDetail.Location = new System.Drawing.Point(23, -117);
+            this._GridControlDetail.Location = new System.Drawing.Point(23, -143);
             this._GridControlDetail.MainView = this._GridViewDetail;
             this._GridControlDetail.MenuManager = this.mainRibbonControl;
             this._GridControlDetail.MinimumSize = new System.Drawing.Size(0, 501);
             this._GridControlDetail.Name = "_GridControlDetail";
             this._GridControlDetail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.EducationComponentPopUp,
+            this.CategoryPopUp,
             this.AmountSpinEdit});
             this._GridControlDetail.Size = new System.Drawing.Size(830, 501);
             this._GridControlDetail.TabIndex = 12;
@@ -352,46 +353,46 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // _GridViewDetail
             // 
             this._GridViewDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colEducationComponent,
+            this.colCategory,
             this.colAmount});
             this._GridViewDetail.DetailHeight = 351;
             this._GridViewDetail.GridControl = this._GridControlDetail;
             this._GridViewDetail.Name = "_GridViewDetail";
             this._GridViewDetail.OptionsEditForm.PopupEditFormWidth = 799;
             // 
-            // colEducationComponent
+            // colCategory
             // 
-            this.colEducationComponent.Caption = "Kategori";
-            this.colEducationComponent.ColumnEdit = this.EducationComponentPopUp;
-            this.colEducationComponent.FieldName = "EducationComponent";
-            this.colEducationComponent.MinWidth = 30;
-            this.colEducationComponent.Name = "colEducationComponent";
-            this.colEducationComponent.Visible = true;
-            this.colEducationComponent.VisibleIndex = 0;
-            this.colEducationComponent.Width = 570;
+            this.colCategory.Caption = "Kategori";
+            this.colCategory.ColumnEdit = this.CategoryPopUp;
+            this.colCategory.FieldName = "Category";
+            this.colCategory.MinWidth = 30;
+            this.colCategory.Name = "colCategory";
+            this.colCategory.Visible = true;
+            this.colCategory.VisibleIndex = 0;
+            this.colCategory.Width = 570;
             // 
-            // EducationComponentPopUp
+            // CategoryPopUp
             // 
-            this.EducationComponentPopUp.Appearance.Options.UseTextOptions = true;
-            this.EducationComponentPopUp.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.EducationComponentPopUp.AutoHeight = false;
-            this.EducationComponentPopUp.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CategoryPopUp.Appearance.Options.UseTextOptions = true;
+            this.CategoryPopUp.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.CategoryPopUp.AutoHeight = false;
+            this.CategoryPopUp.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EducationComponentPopUp.Name = "EducationComponentPopUp";
-            this.EducationComponentPopUp.ObjectId = null;
-            this.EducationComponentPopUp.OptionsCascadeControl = null;
-            this.EducationComponentPopUp.OptionsCascadeMember = "";
-            this.EducationComponentPopUp.OptionsChildControl = null;
-            this.EducationComponentPopUp.OptionsDataSource = null;
-            this.EducationComponentPopUp.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
-            this.EducationComponentPopUp.OptionsDisplayCaption = "";
-            this.EducationComponentPopUp.OptionsDisplayColumns = "";
-            this.EducationComponentPopUp.OptionsDisplayFormat = "";
-            this.EducationComponentPopUp.OptionsDisplayText = "";
-            this.EducationComponentPopUp.OptionsDisplayTitle = "";
-            this.EducationComponentPopUp.OptionsDisplayWidth = "";
-            this.EducationComponentPopUp.OptionsFilterColumns = "";
-            this.EducationComponentPopUp.OptionsSortColumns = "";
+            this.CategoryPopUp.Name = "CategoryPopUp";
+            this.CategoryPopUp.ObjectId = null;
+            this.CategoryPopUp.OptionsCascadeControl = null;
+            this.CategoryPopUp.OptionsCascadeMember = "";
+            this.CategoryPopUp.OptionsChildControl = null;
+            this.CategoryPopUp.OptionsDataSource = null;
+            this.CategoryPopUp.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
+            this.CategoryPopUp.OptionsDisplayCaption = "";
+            this.CategoryPopUp.OptionsDisplayColumns = "";
+            this.CategoryPopUp.OptionsDisplayFormat = "";
+            this.CategoryPopUp.OptionsDisplayText = "";
+            this.CategoryPopUp.OptionsDisplayTitle = "";
+            this.CategoryPopUp.OptionsDisplayWidth = "";
+            this.CategoryPopUp.OptionsFilterColumns = "";
+            this.CategoryPopUp.OptionsSortColumns = "";
             // 
             // colAmount
             // 
@@ -403,6 +404,13 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.colAmount.Visible = true;
             this.colAmount.VisibleIndex = 1;
             this.colAmount.Width = 628;
+            // 
+            // AmountSpinEdit
+            // 
+            this.AmountSpinEdit.AutoHeight = false;
+            this.AmountSpinEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.AmountSpinEdit.Name = "AmountSpinEdit";
             // 
             // ItemForFromYear
             // 
@@ -416,7 +424,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // FromYearTextEdit
             // 
             this.FromYearTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "FromYear", true));
-            this.FromYearTextEdit.Location = new System.Drawing.Point(144, -259);
+            this.FromYearTextEdit.Location = new System.Drawing.Point(144, -285);
             this.FromYearTextEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FromYearTextEdit.MenuManager = this.mainRibbonControl;
             this.FromYearTextEdit.Name = "FromYearTextEdit";
@@ -437,7 +445,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // IndicatorSearchLookUpEdit
             // 
             this.IndicatorSearchLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Indicator", true));
-            this.IndicatorSearchLookUpEdit.Location = new System.Drawing.Point(144, -373);
+            this.IndicatorSearchLookUpEdit.Location = new System.Drawing.Point(144, -399);
             this.IndicatorSearchLookUpEdit.MenuManager = this.mainRibbonControl;
             this.IndicatorSearchLookUpEdit.Name = "IndicatorSearchLookUpEdit";
             this.IndicatorSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -467,7 +475,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // ToYearTextEdit
             // 
             this.ToYearTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ToYear", true));
-            this.ToYearTextEdit.Location = new System.Drawing.Point(440, -259);
+            this.ToYearTextEdit.Location = new System.Drawing.Point(440, -285);
             this.ToYearTextEdit.MenuManager = this.mainRibbonControl;
             this.ToYearTextEdit.Name = "ToYearTextEdit";
             this.ToYearTextEdit.Size = new System.Drawing.Size(413, 34);
@@ -498,7 +506,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // CreatedUserTextEdit
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, -411);
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, -437);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
             this.CreatedUserTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -518,7 +526,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // 
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, -373);
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, -399);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -542,7 +550,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // ModifiedUserTextEdit
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, -335);
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, -361);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
             this.ModifiedUserTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -562,7 +570,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             // 
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, -297);
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, -323);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -573,13 +581,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ModifiedDateDateEdit.Size = new System.Drawing.Size(709, 34);
             this.ModifiedDateDateEdit.StyleController = this._DataLayoutControl;
             this.ModifiedDateDateEdit.TabIndex = 11;
-            // 
-            // AmountSpinEdit
-            // 
-            this.AmountSpinEdit.AutoHeight = false;
-            this.AmountSpinEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.AmountSpinEdit.Name = "AmountSpinEdit";
             // 
             // frmBudgetRegulationDV
             // 
@@ -610,7 +611,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this._GridControlDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._BindingSourceDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EducationComponentPopUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoryPopUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountSpinEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForFromYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FromYearTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIndicator)).EndInit();
@@ -629,7 +631,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AmountSpinEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -660,9 +661,9 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
         private DevExpress.XtraGrid.GridControl _GridControlDetail;
         private DevExpress.XtraGrid.Views.Grid.GridView _GridViewDetail;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraGrid.Columns.GridColumn colEducationComponent;
+        private DevExpress.XtraGrid.Columns.GridColumn colCategory;
         private DevExpress.XtraGrid.Columns.GridColumn colAmount;
-        private RepositoryItemPopupContainerEditOwn EducationComponentPopUp;
+        private RepositoryItemPopupContainerEditOwn CategoryPopUp;
         private System.Windows.Forms.BindingSource _BindingSourceDetail;
         private DevExpress.XtraEditors.TextEdit FromYearTextEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForFromYear;

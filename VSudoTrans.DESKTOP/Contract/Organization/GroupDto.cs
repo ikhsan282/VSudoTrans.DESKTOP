@@ -25,9 +25,9 @@ namespace Contract.Organization
 
     public class ImportGroupExcelModel
     {
-        [JsonProperty("Foundation Code")]
+        [JsonProperty("Group Code")]
         public string Code { get; set; }
-        [JsonProperty("Foundation Name")]
+        [JsonProperty("Group Name")]
         public string Name { get; set; }
         [JsonProperty("Note")]
         public string Note { get; set; }

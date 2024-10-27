@@ -11,8 +11,8 @@ namespace Domain.Entities.Attendance
     [DisplayName("Shift")]
     public class Shift : BaseCodeName
     {
-        public int SchoolId { get; set; }
-        public School? School { get; set; }
+        public int CompanyId { get; set; }
+        public Company? Company { get; set; }
         public TimeSpan StartWorkHour { get; set; }
         public TimeSpan EndWorkHour { get; set; }
         public TimeSpan StartBreakHour { get; set; }

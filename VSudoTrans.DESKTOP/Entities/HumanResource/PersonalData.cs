@@ -11,8 +11,8 @@ namespace Domain.Entities.HumanResource
     [DisplayName("Data Pribadi")]
     public class PersonalData : BaseDomainDetail
     {
-        public int SchoolId { get; set; }
-        public School? School { get; set; }
+        public int CompanyId { get; set; }
+        public Company? Company { get; set; }
         public string? Phone { get; set; }
         public string? Email { get; set; }
         public string? AlternatePhone { get; set; }

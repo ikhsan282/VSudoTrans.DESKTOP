@@ -869,7 +869,7 @@ namespace VSudoTrans.DESKTOP.Master.Organization
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 597);
             this.Name = "frmCompanyDV";
-            this.Text = "Sekolah";
+            this.Text = "Perusahaan";
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).EndInit();
             this._DataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).EndInit();

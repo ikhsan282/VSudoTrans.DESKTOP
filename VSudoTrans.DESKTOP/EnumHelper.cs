@@ -21,37 +21,6 @@ namespace VSudoTrans.DESKTOP
             }
         }
 
-        public static string EnumEducationTypeToString(EnumEducationType value)
-        {
-            switch (value)
-            {
-                case EnumEducationType.TunggakanBiayaSekolah:
-                    return "Tunggakan Biaya Sekolah";
-                case EnumEducationType.BiayaSekolah:
-                    return "Biaya Sekolah";
-                case EnumEducationType.FormulirPendaftaran:
-                    return "Formulir Pendaftaran";
-                case EnumEducationType.EvaluasiPendidikan:
-                    return "Evaluasi Pendidikan";
-                case EnumEducationType.BukudanBahanBelajar:
-                    return "Buku dan Bahan Belajar";
-                case EnumEducationType.KegiatanEkstrakurikuler:
-                    return "Kegiatan Ekstrakurikuler";
-                case EnumEducationType.KegiatanKhusus:
-                    return "Kegiatan Khusus";
-                case EnumEducationType.TransportasiAkomodasi:
-                    return "Transportasi/Akomodasi";
-                case EnumEducationType.PeralatandanSarana:
-                    return "Peralatan dan Sarana";
-                case EnumEducationType.KonselingDukungan:
-                    return "Konseling/Dukungan";
-                case EnumEducationType.PerlindunganKeamanan:
-                    return "Perlindungan/Keamanan";
-                default:
-                    return string.Format("{0} Description", value);
-            }
-        }
-
         public static string EnumClassToString(EnumClass value)
         {
             switch (value)
@@ -133,19 +102,19 @@ namespace VSudoTrans.DESKTOP
                 case EnumTypeEducation.TK:
                     return "Taman Kanak-Kanak";
                 case EnumTypeEducation.SD:
-                    return "Sekolah Dasar";
+                    return "Perusahaan Dasar";
                 case EnumTypeEducation.SDIT:
-                    return "Sekolah Dasar Islam Terpadu";
+                    return "Perusahaan Dasar Islam Terpadu";
                 case EnumTypeEducation.SMP:
-                    return "Sekolah Menengah Pertama";
+                    return "Perusahaan Menengah Pertama";
                 case EnumTypeEducation.MTS:
                     return "Madrasah Tsanawiyah";
                 case EnumTypeEducation.SMA:
-                    return "Sekolah Menengah Atas";
+                    return "Perusahaan Menengah Atas";
                 case EnumTypeEducation.MA:
                     return "Madrasah Aliyah";
                 case EnumTypeEducation.SMK:
-                    return "Sekolah Menengah Kejuruan";
+                    return "Perusahaan Menengah Kejuruan";
                 case EnumTypeEducation.D1:
                     return "Diploma 1";
                 case EnumTypeEducation.D2:
@@ -708,83 +677,6 @@ namespace VSudoTrans.DESKTOP
             }
 
         }
-        //public static string EnumEducationTypeToString(EnumEducationType value)
-        //{
-        //    switch (value)
-        //    {
-        //        case EnumEducationType.TS:
-        //            return "Tidak Sekolah";
-
-        //        case EnumEducationType.PAU:
-        //            return "PAUD";
-
-        //        case EnumEducationType.TK:
-        //            return "Taman Kanak";
-
-        //        case EnumEducationType.SD:
-        //            return "Sekolah Dasar";
-
-        //        case EnumEducationType.SMP:
-        //            return "Sekolah Tingkat Pertama";
-
-        //        case EnumEducationType.SMA:
-        //            return "Sekolah Lanjut Tingkat Atas";
-
-        //        case EnumEducationType.D1:
-        //            return "Diploma 1";
-
-        //        case EnumEducationType.D2:
-        //            return "Diploma 2";
-
-        //        case EnumEducationType.D3:
-        //            return "Diploma 3";
-
-        //        case EnumEducationType.S1:
-        //            return "Strata 1";
-
-        //        case EnumEducationType.S2:
-        //            return "Strata 2";
-
-        //        case EnumEducationType.S3:
-        //            return "Strata 3";
-
-        //        default:
-        //            return string.Format("{0} Description", value);
-
-        //    }
-        //}
-
-        //public static string EnumFamilyTypeToString(EnumFamilyType value)
-        //{
-        //    switch (value)
-        //    {
-        //        case EnumFamilyType.Adik:
-        //            return "Adik";
-
-        //        case EnumFamilyType.Anak:
-        //            return "Anak";
-
-        //        case EnumFamilyType.Istri:
-        //            return "Istri";
-
-        //        case EnumFamilyType.Kakak:
-        //            return "Kakak";
-
-        //        case EnumFamilyType.OrangTuaAyah:
-        //            return "Orang Tua Ayah";
-
-        //        case EnumFamilyType.OrangTuaIbu:
-        //            return "Orang Tua Ibu";
-
-        //        case EnumFamilyType.Suami:
-        //            return "Suami";
-
-        //        default:
-        //            return string.Format("{0} Description", value);
-
-        //    }
-        //}
-
 
         public static string EnumRecognitionToString(EnumRecognition value)
         {

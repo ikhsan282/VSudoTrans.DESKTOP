@@ -60,9 +60,9 @@ namespace Contract.Organization
     {
         [JsonProperty("Group Code")]
         public string GroupCode { get; set; }
-        [JsonProperty("School Code")]
+        [JsonProperty("Company Code")]
         public string Code { get; set; }
-        [JsonProperty("School Name")]
+        [JsonProperty("Company Name")]
         public string Name { get; set; }
         [JsonProperty("Website")]
         public string Website { get; set; }

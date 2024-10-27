@@ -718,7 +718,7 @@
             this.xrCaptionCompanyHeader.StylePriority.UseForeColor = false;
             this.xrCaptionCompanyHeader.StylePriority.UsePadding = false;
             this.xrCaptionCompanyHeader.StylePriority.UseTextAlignment = false;
-            this.xrCaptionCompanyHeader.Text = "Sekolah";
+            this.xrCaptionCompanyHeader.Text = "Perusahaan";
             this.xrCaptionCompanyHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrCompanyNameHeader

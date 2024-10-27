@@ -7,10 +7,8 @@ using DevExpress.XtraGrid.Views.Grid;
 using System;
 using Domain.Entities.Organization;
 using DevExpress.XtraEditors.DXErrorProvider;
-using System.Linq;
 using Domain.Entities.Demography;
 using PopUpUtils;
-using Domain.Entities.EducationResource;
 using System.IO;
 using Domain;
 
@@ -65,7 +63,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             if (CompanyPopUp.EditValue == null)
             {
                 e.Cancel = true;
-                MessageHelper.ShowMessageError(this, "Kolom Sekolah tidak boleh kosong!");
+                MessageHelper.ShowMessageError(this, "Kolom Perusahaan tidak boleh kosong!");
                 return;
             }
         }

@@ -7,10 +7,8 @@ using Domain.Entities.Attendance;
 using Domain.Entities.HumanResource;
 using System.Linq;
 using System.Windows.Forms;
-using System.IO;
 using PopUpUtils;
 using System.Drawing;
-using Domain.Entities.EducationPayment;
 using Newtonsoft.Json;
 
 namespace VSudoTrans.DESKTOP.Transaction.Attendance

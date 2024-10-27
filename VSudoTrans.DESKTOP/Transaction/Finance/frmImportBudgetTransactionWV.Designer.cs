@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.colUnitMeasureCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEducationComponentCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCategoryCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFailureDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatusImport = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSchoolCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCompanyCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIndicator = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTransactionDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDocumentNumber = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -87,10 +87,10 @@
             // 
             this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colStatusImport,
-            this.colSchoolCode,
+            this.colCompanyCode,
             this.colIndicator,
             this.colUnitMeasureCode,
-            this.colEducationComponentCode,
+            this.colCategoryCode,
             this.colDocumentNumber,
             this.colQuantity,
             this.colAmount,
@@ -122,15 +122,15 @@
             this.colUnitMeasureCode.VisibleIndex = 3;
             this.colUnitMeasureCode.Width = 122;
             // 
-            // colEducationComponentCode
+            // colCategoryCode
             // 
-            this.colEducationComponentCode.Caption = "Kode Mata Anggaran";
-            this.colEducationComponentCode.FieldName = "EducationComponentCode";
-            this.colEducationComponentCode.MinWidth = 30;
-            this.colEducationComponentCode.Name = "colEducationComponentCode";
-            this.colEducationComponentCode.Visible = true;
-            this.colEducationComponentCode.VisibleIndex = 4;
-            this.colEducationComponentCode.Width = 165;
+            this.colCategoryCode.Caption = "Kode Mata Anggaran";
+            this.colCategoryCode.FieldName = "CategoryCode";
+            this.colCategoryCode.MinWidth = 30;
+            this.colCategoryCode.Name = "colCategoryCode";
+            this.colCategoryCode.Visible = true;
+            this.colCategoryCode.VisibleIndex = 4;
+            this.colCategoryCode.Width = 165;
             // 
             // colNote
             // 
@@ -163,15 +163,15 @@
             this.colStatusImport.VisibleIndex = 0;
             this.colStatusImport.Width = 97;
             // 
-            // colSchoolCode
+            // colCompanyCode
             // 
-            this.colSchoolCode.Caption = "Kode Sekolah";
-            this.colSchoolCode.FieldName = "SchoolCode";
-            this.colSchoolCode.MinWidth = 30;
-            this.colSchoolCode.Name = "colSchoolCode";
-            this.colSchoolCode.Visible = true;
-            this.colSchoolCode.VisibleIndex = 1;
-            this.colSchoolCode.Width = 112;
+            this.colCompanyCode.Caption = "Kode Perusahaan";
+            this.colCompanyCode.FieldName = "CompanyCode";
+            this.colCompanyCode.MinWidth = 30;
+            this.colCompanyCode.Name = "colCompanyCode";
+            this.colCompanyCode.Visible = true;
+            this.colCompanyCode.VisibleIndex = 1;
+            this.colCompanyCode.Width = 112;
             // 
             // colIndicator
             // 
@@ -251,10 +251,10 @@
 
         private DevExpress.XtraGrid.Columns.GridColumn colStatusImport;
         private DevExpress.XtraGrid.Columns.GridColumn colUnitMeasureCode;
-        private DevExpress.XtraGrid.Columns.GridColumn colEducationComponentCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colCategoryCode;
         private DevExpress.XtraGrid.Columns.GridColumn colNote;
         private DevExpress.XtraGrid.Columns.GridColumn colFailureDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn colSchoolCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colCompanyCode;
         private DevExpress.XtraGrid.Columns.GridColumn colIndicator;
         private DevExpress.XtraGrid.Columns.GridColumn colDocumentNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colQuantity;

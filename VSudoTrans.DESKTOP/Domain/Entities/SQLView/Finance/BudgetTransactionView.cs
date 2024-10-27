@@ -9,9 +9,9 @@ namespace Domain.Entities.SQLView.Finance
         public int CompanyId { get; set; }
         public string CompanyCode { get; set; }
         public string CompanyName { get; set; }
-        public int EducationComponentId { get; set; }
-        public string EducationComponentCode { get; set; }
-        public string EducationComponentName { get; set; }
+        public int CategoryId { get; set; }
+        public string CategoryCode { get; set; }
+        public string CategoryName { get; set; }
         public int UnitMeasureId { get; set; }
         public string UnitMeasureCode { get; set; }
         public string UnitMeasureName { get; set; }

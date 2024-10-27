@@ -1,5 +1,4 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
-using Domain.Entities.EducationPayment;
 using Domain.Entities.Finance;
 using PopUpUtils;
 using VSudoTrans.DESKTOP.BaseForm;
@@ -14,11 +13,11 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             InitializeComponent();
 
             EndPoint = "/BudgetRegulations";
-            FormTitle = "Rencana Anggaran Pendapatan Dan Belanja Sekolah (RAPBS)";
+            FormTitle = "Rencana Anggaran Pendapatan Dan Belanja Perusahaan (RAPBS)";
 
             OdataSelect = "Id,FromYear,ToYear,Indicator,Code,Name";
             OdataExpand = "Company($select=name)";
-            OdataExpand += ",BudgetRegulationDetails($select=Amount;$expand=EducationComponent($select=code,name))";
+            OdataExpand += ",BudgetRegulationDetails($select=Amount;$expand=Category($select=code,name))";
 
             InitializeComponentAfter<BudgetRegulation>();
 
@@ -59,7 +58,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             _LayoutControlItemFilter2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 
             _LayoutControlItemFilter3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter3.Text = "Sekolah";
+            _LayoutControlItemFilter3.Text = "Perusahaan";
             PopupEditHelper.Company(FilterPopUp3);
         }
 

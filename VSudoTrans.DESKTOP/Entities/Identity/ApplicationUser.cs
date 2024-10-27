@@ -24,14 +24,14 @@ namespace Domain.Entities.Identity
         public DateTime? ModifiedDate { get; set; }
         public ApplicationUser()
         {
-            Schools = new HashSet<ApplicationUserSchool>();
+            Companys = new HashSet<ApplicationUserCompany>();
             Roles = new HashSet<ApplicationUserRole>();
             Tokens = new HashSet<ApplicationUserToken>();
             Logins = new HashSet<ApplicationUserLogin>();
             Claims = new HashSet<ApplicationUserClaim>();
             Infos = new HashSet<ApplicationUserInfo>();
         }
-        public virtual ICollection<ApplicationUserSchool> Schools { get; set; }
+        public virtual ICollection<ApplicationUserCompany> Companys { get; set; }
         public virtual ICollection<ApplicationUserClaim> Claims { get; set; }
         public virtual ICollection<ApplicationUserLogin> Logins { get; set; }
         public virtual ICollection<ApplicationUserToken> Tokens { get; set; }

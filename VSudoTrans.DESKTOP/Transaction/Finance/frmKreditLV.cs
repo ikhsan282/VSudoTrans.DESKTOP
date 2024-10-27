@@ -1,7 +1,6 @@
 ﻿using Contract.Finance;
 using DevExpress.XtraEditors.DXErrorProvider;
 using Domain;
-using Domain.Entities.EducationPayment;
 using Domain.Entities.Finance;
 using Newtonsoft.Json;
 using PopUpUtils;
@@ -24,7 +23,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
 
             OdataSelect = "Id,Quantity,Amount,TransactionDate,Note";
             OdataExpand = "Company($select=name)";
-            OdataExpand += ",EducationComponent($select=name)";
+            OdataExpand += ",Category($select=name)";
             OdataExpand += ",UnitMeasure($select=name)";
 
             InitializeComponentAfter<BudgetTransaction>();
@@ -130,12 +129,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             HelperConvert.FormatDateEdit(FilterDate2);
 
             _LayoutControlItemFilter3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter3.Text = "Sekolah";
+            _LayoutControlItemFilter3.Text = "Perusahaan";
             PopupEditHelper.Company(FilterPopUp3);
 
             _LayoutControlItemFilter4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             _LayoutControlItemFilter4.Text = "Mata Anggaran";
-            PopupEditHelper.General<EducationComponent>(fEndPoint: "/EducationComponents", fFilter: $"", fTitle: "Mata Anggaran", fControl: FilterPopUp4, fCascade: FilterPopUp3, fCascadeMember: "CompanyId");
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fFilter: $"", fTitle: "Mata Anggaran", fControl: FilterPopUp4, fCascade: FilterPopUp3, fCascadeMember: "CompanyId");
         }
 
         protected override void ActionRefresh<T>(string endPoint = "")
@@ -148,7 +147,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             OdataFilter = $"Indicator eq '{EnumTransactionIndicator.Kredit}' and CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))}";
 
             if (FilterPopUp4.EditValue != null)
-                OdataFilter += $" and EducationComponentId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp4.EditValue, "Id"))} ";
+                OdataFilter += $" and CategoryId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp4.EditValue, "Id"))} ";
 
             if (FilterDate1.EditValue != null && FilterDate1.EditValue != null)
                 OdataFilter += $" and TransactionDate ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} and TransactionDate le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";

@@ -9,8 +9,8 @@ namespace Domain.Entities.Attendance
     [DisplayName("Kode Kehadiran")]
     public class AttendanceCode : BaseCodeName
     {
-        public int SchoolId { get; set; }
-        public School? School { get; set; }
+        public int CompanyId { get; set; }
+        public Company? Company { get; set; }
         public EnumAbsenceType GroupType { get; set; } // Untuk Grouping
         public EnumAbsenceAssignmentType AssignmentType { get; set; } // Untuk fungsi
         public EnumGender Gender { get; set; }

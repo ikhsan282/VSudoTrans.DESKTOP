@@ -193,7 +193,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Attendance
             this.ItemForCompanyId.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompanyId.Name = "ItemForCompanyId";
             this.ItemForCompanyId.Size = new System.Drawing.Size(1032, 38);
-            this.ItemForCompanyId.Text = "Sekolah";
+            this.ItemForCompanyId.Text = "Perusahaan";
             this.ItemForCompanyId.TextSize = new System.Drawing.Size(81, 21);
             // 
             // emptySpaceItem1
@@ -314,7 +314,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Attendance
             // 
             // colCompany
             // 
-            this.colCompany.Caption = "Sekolah";
+            this.colCompany.Caption = "Perusahaan";
             this.colCompany.FieldName = "Company.Name";
             this.colCompany.MinWidth = 30;
             this.colCompany.Name = "colCompany";
@@ -370,7 +370,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Attendance
             // 
             // colCompanyTeacher
             // 
-            this.colCompanyTeacher.Caption = "Sekolah";
+            this.colCompanyTeacher.Caption = "Perusahaan";
             this.colCompanyTeacher.FieldName = "Company.Name";
             this.colCompanyTeacher.MinWidth = 30;
             this.colCompanyTeacher.Name = "colCompanyTeacher";

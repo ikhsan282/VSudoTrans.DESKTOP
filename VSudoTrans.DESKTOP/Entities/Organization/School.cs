@@ -4,9 +4,9 @@ using Domain.Base;
 
 namespace Domain.Entities.Organization
 {
-    [Table("School")]
-    [DisplayName("Sekolah")]
-    public class School : BaseCodeName
+    [Table("Company")]
+    [DisplayName("Perusahaan")]
+    public class Company : BaseCodeName
     {
         public int FoundationId { get; set; }
         public Foundation? Foundation { get; set; }
