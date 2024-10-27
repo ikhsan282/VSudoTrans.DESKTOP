@@ -113,7 +113,7 @@
             // 
             // bsiCopyRight
             // 
-            this.bsiCopyRight.Caption = "SKP";
+            this.bsiCopyRight.Caption = "VSudoTrans";
             this.bsiCopyRight.Id = 0;
             this.bsiCopyRight.Name = "bsiCopyRight";
             // 
@@ -237,7 +237,7 @@
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.EditValue = global::VSudoTrans.DESKTOP.Properties.Resources.Logo_VsudoTech;
             this.pictureEdit1.Location = new System.Drawing.Point(46, 26);
             this.pictureEdit1.MenuManager = this.barManager1;
             this.pictureEdit1.Name = "pictureEdit1";
@@ -344,12 +344,12 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.IconOptions.ColorizeInactiveIcon = DevExpress.Utils.DefaultBoolean.True;
-            this.IconOptions.Image = global::VSudoTrans.DESKTOP.Properties.Resources.logo_panca;
+            this.IconOptions.Image = global::VSudoTrans.DESKTOP.Properties.Resources.Logo_VsudoTech_Ico;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistem Keuangan Pancakarya";
+            this.Text = "VSudo Transportation System";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

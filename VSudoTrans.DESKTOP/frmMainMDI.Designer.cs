@@ -296,14 +296,14 @@
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this._RibbonControl);
             this.IconOptions.ColorizeInactiveIcon = DevExpress.Utils.DefaultBoolean.True;
-            this.IconOptions.Image = global::VSudoTrans.DESKTOP.Properties.Resources.logo_panca;
+            this.IconOptions.Image = global::VSudoTrans.DESKTOP.Properties.Resources.Logo_VsudoTech_Putih_Ico;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainMDI";
             this.Ribbon = this._RibbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
-            this.Text = "Sistem Keuangan Pancakarya";
+            this.Text = "VSudo Transportation System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainMDI_Load);
             ((System.ComponentModel.ISupportInitialize)(this._RibbonControl)).EndInit();

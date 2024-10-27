@@ -171,6 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 304);
             this.Controls.Add(this.layoutControl);
+            this.IconOptions.Image = global::VSudoTrans.DESKTOP.Properties.Resources.Logo_VsudoTech_Ico;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmChangePassword";

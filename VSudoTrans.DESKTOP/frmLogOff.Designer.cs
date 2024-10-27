@@ -84,7 +84,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this._radioGroup);
             this.Controls.Add(this.label1);
-            this.IconOptions.Image = global::VSudoTrans.DESKTOP.Properties.Resources.logo_panca;
+            this.IconOptions.Image = global::VSudoTrans.DESKTOP.Properties.Resources.Logo_VsudoTech_Ico;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogOff";

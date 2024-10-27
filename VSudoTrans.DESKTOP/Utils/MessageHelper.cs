@@ -17,7 +17,7 @@ namespace VSudoTrans.DESKTOP.Utils
     public class MessageHelper
     {
         public const string PathXML = "BPS.xml";
-        public const string MessageAppTitle = "SKP System";
+        public const string MessageAppTitle = "VSudo Transportation System";
         public const string MessageFormDetailTitle = "Detail ";
         public const string MessageFormDetailTitleNew = " (New)";
         public const string MessageResponseNotExpexcted = "Failed to perform operaiton with web service with not expected response code ";

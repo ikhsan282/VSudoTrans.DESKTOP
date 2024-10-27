@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.CodeTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControl = new DevExpress.XtraLayout.LayoutControl();
             this.btnVerificationCode = new System.Windows.Forms.Button();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.CodeTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CodeTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).BeginInit();
             this.layoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CodeTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
             this.SuspendLayout();
             // 
             // Root
@@ -62,6 +62,28 @@
             this.Root.Size = new System.Drawing.Size(441, 231);
             this.Root.Spacing = new DevExpress.XtraLayout.Utils.Padding(25, 25, 25, 25);
             this.Root.TextVisible = false;
+            // 
+            // ItemForEmail
+            // 
+            this.ItemForEmail.Control = this.CodeTextEdit;
+            this.ItemForEmail.Location = new System.Drawing.Point(0, 0);
+            this.ItemForEmail.Name = "ItemForEmail";
+            this.ItemForEmail.Size = new System.Drawing.Size(373, 64);
+            this.ItemForEmail.Text = "Kode";
+            this.ItemForEmail.TextLocation = DevExpress.Utils.Locations.Top;
+            this.ItemForEmail.TextSize = new System.Drawing.Size(35, 21);
+            // 
+            // CodeTextEdit
+            // 
+            this.CodeTextEdit.Location = new System.Drawing.Point(36, 62);
+            this.CodeTextEdit.Name = "CodeTextEdit";
+            this.CodeTextEdit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.CodeTextEdit.Properties.MaskSettings.Set("mask", "d");
+            this.CodeTextEdit.Properties.MaskSettings.Set("valueType", typeof(int));
+            this.CodeTextEdit.Properties.MaxLength = 6;
+            this.CodeTextEdit.Size = new System.Drawing.Size(369, 34);
+            this.CodeTextEdit.StyleController = this.layoutControl;
+            this.CodeTextEdit.TabIndex = 4;
             // 
             // layoutControl
             // 
@@ -123,28 +145,6 @@
             this.emptySpaceItem3.Size = new System.Drawing.Size(373, 25);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // CodeTextEdit
-            // 
-            this.CodeTextEdit.Location = new System.Drawing.Point(36, 62);
-            this.CodeTextEdit.Name = "CodeTextEdit";
-            this.CodeTextEdit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.CodeTextEdit.Properties.MaskSettings.Set("mask", "d");
-            this.CodeTextEdit.Properties.MaskSettings.Set("valueType", typeof(int));
-            this.CodeTextEdit.Properties.MaxLength = 6;
-            this.CodeTextEdit.Size = new System.Drawing.Size(369, 34);
-            this.CodeTextEdit.StyleController = this.layoutControl;
-            this.CodeTextEdit.TabIndex = 4;
-            // 
-            // ItemForEmail
-            // 
-            this.ItemForEmail.Control = this.CodeTextEdit;
-            this.ItemForEmail.Location = new System.Drawing.Point(0, 0);
-            this.ItemForEmail.Name = "ItemForEmail";
-            this.ItemForEmail.Size = new System.Drawing.Size(373, 64);
-            this.ItemForEmail.Text = "Kode";
-            this.ItemForEmail.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForEmail.TextSize = new System.Drawing.Size(35, 21);
-            // 
             // frmVerificationCode
             // 
             this.Appearance.Options.UseFont = true;
@@ -152,20 +152,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 231);
             this.Controls.Add(this.layoutControl);
+            this.IconOptions.Image = global::VSudoTrans.DESKTOP.Properties.Resources.Logo_VsudoTech_Ico;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmVerificationCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Verifikasi Kode OTP";
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CodeTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).EndInit();
             this.layoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CodeTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
             this.ResumeLayout(false);
 
         }
