@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace VSudoTrans.DESKTOP.Report.Travel
 {
-    public partial class frmESPJTripScheduleLV : frmBaseLV
+    public partial class frmESPJTripScheduleLV : frmBaseFilterLV
     {
         public frmESPJTripScheduleLV(int id)
         {
@@ -203,7 +203,7 @@ namespace VSudoTrans.DESKTOP.Report.Travel
 
                         paymentTypeCell = new XRTableCell();
                         paymentTypeCell.BackColor = Color.Transparent;
-                        //paymentTypeCell.Text = EnumHelper.EnumPaymentTypeToString(detail.TravelTicketBooking.PaymentType);//passenger.Passenger.Name;
+                        paymentTypeCell.Text = EnumHelper.EnumPaymentTypeToString(detail.TravelTicketBooking.PaymentType);//passenger.Passenger.Name;
                         paymentTypeCell.WidthF = 60F;
                         paymentTypeCell.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
                         dataRow.Cells.Add(paymentTypeCell);
@@ -257,7 +257,7 @@ namespace VSudoTrans.DESKTOP.Report.Travel
                     report.Name = $"E-SPJ {tripSchedule.Company.Name} ({tripSchedule.DocumentNumber})";
                     documentViewer1.DocumentSource = report;
                     documentViewer1.InitiateDocumentCreation();
-                    
+
                     //documentViewer1.PrintingSystem.ExportOptions.PrintPreview.ShowOptionsBeforeExport = true;
                 }
             }

@@ -11,8 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using VSudoTrans.DESKTOP.Master.Travel;
 
-namespace VSudoTrans.DESKTOP.Master.Travel
+namespace VSudoTrans.DESKTOP.Transaction.Travel
 {
     public partial class frmTravelTicketBookingDV : frmBaseDV
     {

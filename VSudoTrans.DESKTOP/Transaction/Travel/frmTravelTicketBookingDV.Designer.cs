@@ -1,6 +1,6 @@
 ﻿using VSudoTrans.DESKTOP.Descendant;
 
-namespace VSudoTrans.DESKTOP.Master.Travel
+namespace VSudoTrans.DESKTOP.Transaction.Travel
 {
     partial class frmTravelTicketBookingDV
     {

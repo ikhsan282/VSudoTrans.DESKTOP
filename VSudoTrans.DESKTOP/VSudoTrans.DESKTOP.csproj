@@ -976,17 +976,65 @@
     <Compile Include="Master\Travel\frmScheduleLV.Designer.cs">
       <DependentUpon>frmScheduleLV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\Travel\frmTravelTicketBookingDV.cs">
+    <Compile Include="Transaction\Travel\frmTravelTicketBookingDV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Master\Travel\frmTravelTicketBookingDV.Designer.cs">
+    <Compile Include="Transaction\Travel\frmTravelTicketBookingDV.Designer.cs">
       <DependentUpon>frmTravelTicketBookingDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\Travel\frmTravelTicketBookingLV.cs">
+    <Compile Include="Transaction\Travel\frmTravelTicketBookingLV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Master\Travel\frmTravelTicketBookingLV.Designer.cs">
+    <Compile Include="Transaction\Travel\frmTravelTicketBookingLV.Designer.cs">
       <DependentUpon>frmTravelTicketBookingLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmBrandDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmBrandDV.Designer.cs">
+      <DependentUpon>frmBrandDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmBrandLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmBrandLV.Designer.cs">
+      <DependentUpon>frmBrandLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmModelUnitDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmModelUnitDV.Designer.cs">
+      <DependentUpon>frmModelUnitDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmModelUnitLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmModelUnitLV.Designer.cs">
+      <DependentUpon>frmModelUnitLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmTypeEngineDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmTypeEngineDV.Designer.cs">
+      <DependentUpon>frmTypeEngineDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmTypeEngineLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmTypeEngineLV.Designer.cs">
+      <DependentUpon>frmTypeEngineLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmVehicleDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmVehicleDV.Designer.cs">
+      <DependentUpon>frmVehicleDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmVehicleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmVehicleLV.Designer.cs">
+      <DependentUpon>frmVehicleLV.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Attendance\frmAbsenceSV.cs">
       <SubType>Form</SubType>
@@ -1216,6 +1264,18 @@
     </Compile>
     <Compile Include="Transaction\Finance\frmKreditLV.Designer.cs">
       <DependentUpon>frmKreditLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Travel\frmTripScheduleDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Travel\frmTripScheduleDV.Designer.cs">
+      <DependentUpon>frmTripScheduleDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Travel\frmTripScheduleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Travel\frmTripScheduleLV.Designer.cs">
+      <DependentUpon>frmTripScheduleLV.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\AssemblyHelper.cs" />
     <Compile Include="Utils\ExceptionMiddlewareHelper.cs" />
@@ -2772,6 +2832,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\Finance\frmKreditLV.resx">
       <DependentUpon>frmKreditLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Travel\frmTravelTicketBookingLV.resx">
+      <DependentUpon>frmTravelTicketBookingLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Travel\frmTripScheduleLV.resx">
+      <DependentUpon>frmTripScheduleLV.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

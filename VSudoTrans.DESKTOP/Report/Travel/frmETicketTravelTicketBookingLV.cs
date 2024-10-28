@@ -181,7 +181,7 @@ namespace VSudoTrans.DESKTOP.Report.Travel
                     report.Name = $"E-Tiket {travel.Company.Name} ({travel.DocumentNumber})";
                     documentViewer1.DocumentSource = report;
                     documentViewer1.InitiateDocumentCreation();
-                    
+
                     //documentViewer1.PrintingSystem.ExportOptions.PrintPreview.ShowOptionsBeforeExport = true;
                 }
             }
