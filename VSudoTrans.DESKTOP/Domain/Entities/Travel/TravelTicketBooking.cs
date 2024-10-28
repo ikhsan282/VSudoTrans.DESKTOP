@@ -57,7 +57,7 @@ namespace Domain.Entities.Travel
         public virtual District DeliveryPointDistrict { get; set; }
         public int TotalTicket { get; set; }
         public decimal TotalPrice { get; set; }
-        //public EnumPaymentType PaymentType { get; set; } // Cash, Transfer
+        public EnumPaymentType PaymentType { get; set; } // Cash, Transfer
         public EnumStatusBooking Status { get; set; }
         public EnumPriceType PriceType { get; set; }
 

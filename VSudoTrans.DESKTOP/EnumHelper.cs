@@ -478,6 +478,19 @@ namespace VSudoTrans.DESKTOP
             }
         }
 
+        public static string EnumPaymentTypeToString(EnumPaymentType value)
+        {
+            switch (value)
+            {
+                case EnumPaymentType.Cash:
+                    return "Uang Tunai";
+                case EnumPaymentType.Transfer:
+                    return "Transfer";
+                default:
+                    return string.Format("{0} Description", value);
+            }
+        }
+
         public static string EnumPriceTypeToString(EnumPriceType value)
         {
             switch (value)

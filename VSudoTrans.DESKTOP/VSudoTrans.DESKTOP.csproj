@@ -952,6 +952,42 @@
     <Compile Include="Master\Travel\frmPassengerLV.Designer.cs">
       <DependentUpon>frmPassengerLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\Travel\frmRuteDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmRuteDV.Designer.cs">
+      <DependentUpon>frmRuteDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmRuteLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmRuteLV.Designer.cs">
+      <DependentUpon>frmRuteLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmScheduleDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmScheduleDV.Designer.cs">
+      <DependentUpon>frmScheduleDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmScheduleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmScheduleLV.Designer.cs">
+      <DependentUpon>frmScheduleLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmTravelTicketBookingDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmTravelTicketBookingDV.Designer.cs">
+      <DependentUpon>frmTravelTicketBookingDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Travel\frmTravelTicketBookingLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Travel\frmTravelTicketBookingLV.Designer.cs">
+      <DependentUpon>frmTravelTicketBookingLV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Attendance\frmAbsenceSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2613,6 +2649,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Travel\frmPassengerLV.resx">
       <DependentUpon>frmPassengerLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmRuteLV.resx">
+      <DependentUpon>frmRuteLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmScheduleLV.resx">
+      <DependentUpon>frmScheduleLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Attendance\frmAbsenceSV.resx">
       <DependentUpon>frmAbsenceSV.cs</DependentUpon>
