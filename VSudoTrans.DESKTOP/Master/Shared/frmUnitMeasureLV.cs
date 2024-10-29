@@ -3,6 +3,7 @@ using Domain.Entities.Shared;
 using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
@@ -26,6 +27,15 @@ namespace VSudoTrans.DESKTOP.Master.Shared
             bbiDelete.ItemClick += BbiDelete_ItemClick;
             bbiTemplateImport.ItemClick += BbiTemplateImport_ItemClick;
             bbiImportData.ItemClick += BbiImportData_ItemClick;
+
+            var roleNames = ApplicationSettings.Instance.UserRoles.Select(s => s.Name);
+            if (roleNames.FirstOrDefault(s => s == "Super Administrator") == null)
+            {
+                bbiNew.Enabled = false;
+                bbiEdit.Enabled = false;
+                bbiDelete.Enabled = false;
+                bbiImportData.Enabled = false;
+            }
         }
 
         private void BbiImportData_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -84,7 +94,7 @@ namespace VSudoTrans.DESKTOP.Master.Shared
 
         private void BbiTemplateImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fileExcel = HelperRestSharp.DownloadFile("VSudoTrans", "import/Import Satuan Ukuran.xlsx");
+            var fileExcel = HelperRestSharp.DownloadFile("vsudotrans", "import/Import Satuan Ukuran.xlsx");
             HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import Satuan Ukuran");
         }
 

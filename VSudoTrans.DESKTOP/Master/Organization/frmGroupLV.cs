@@ -8,6 +8,7 @@ using System;
 using Microsoft.OData.Client;
 using Newtonsoft.Json;
 using System.Threading;
+using System.Linq;
 
 namespace VSudoTrans.DESKTOP.Master.Organization
 {
@@ -18,7 +19,7 @@ namespace VSudoTrans.DESKTOP.Master.Organization
             InitializeComponent();
 
             this.EndPoint = "/Groups";
-            this.FormTitle = "Yayasan";
+            this.FormTitle = "Grup";
 
             this.OdataSelect = "Id,Code,Name";
 
@@ -28,6 +29,15 @@ namespace VSudoTrans.DESKTOP.Master.Organization
             bbiDelete.ItemClick += BbiDelete_ItemClick;
             bbiTemplateImport.ItemClick += BbiTemplateImport_ItemClick;
             bbiImportData.ItemClick += BbiImportData_ItemClick;
+
+            var roleNames = ApplicationSettings.Instance.UserRoles.Select(s => s.Name);
+            if (roleNames.FirstOrDefault(s => s == "Super Administrator") == null)
+            {
+                bbiNew.Enabled = false;
+                bbiEdit.Enabled = false;
+                bbiDelete.Enabled = false;
+                bbiImportData.Enabled = false;
+            }
         }
 
         private void BbiImportData_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -90,7 +100,7 @@ namespace VSudoTrans.DESKTOP.Master.Organization
 
         private void BbiTemplateImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fileExcel = HelperRestSharp.DownloadFile("VSudoTrans", "import/Import Group.xlsx");
+            var fileExcel = HelperRestSharp.DownloadFile("vsudotrans", "import/Import Group.xlsx");
             HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import Group");
         }
 

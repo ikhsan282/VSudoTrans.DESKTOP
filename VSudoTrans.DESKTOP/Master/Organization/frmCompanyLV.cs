@@ -39,6 +39,7 @@ namespace VSudoTrans.DESKTOP.Master.Organization
             {
                 bbiNew.Enabled = false;
                 bbiDelete.Enabled = false;
+                bbiImportData.Enabled = false;
             }
         }
 
@@ -102,7 +103,7 @@ namespace VSudoTrans.DESKTOP.Master.Organization
 
         private void BbiTemplateImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fileExcel = HelperRestSharp.DownloadFile("VSudoTrans", "import/Import Company.xlsx");
+            var fileExcel = HelperRestSharp.DownloadFile("vsudotrans", "import/Import Company.xlsx");
             HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import Company");
         }
 

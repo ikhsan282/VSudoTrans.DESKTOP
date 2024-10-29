@@ -93,7 +93,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
 
         private void BbiTemplateImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fileExcel = HelperRestSharp.DownloadFile("VSudoTrans", "import/Import JobTitle.xlsx");
+            var fileExcel = HelperRestSharp.DownloadFile("vsudotrans", "import/Import JobTitle.xlsx");
             HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import JobTitle");
         }
 

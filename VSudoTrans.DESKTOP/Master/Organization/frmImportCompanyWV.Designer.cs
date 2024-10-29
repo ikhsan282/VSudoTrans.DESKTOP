@@ -154,7 +154,7 @@
             // 
             // colGroupCode
             // 
-            this.colGroupCode.Caption = "Kode Yayasan";
+            this.colGroupCode.Caption = "Kode Grup";
             this.colGroupCode.FieldName = "GroupCode";
             this.colGroupCode.MinWidth = 30;
             this.colGroupCode.Name = "colGroupCode";

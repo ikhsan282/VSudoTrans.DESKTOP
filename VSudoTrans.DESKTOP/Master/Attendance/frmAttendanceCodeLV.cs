@@ -92,7 +92,7 @@ namespace VSudoTrans.DESKTOP.Master.Attendance
 
         private void BbiTemplateImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fileExcel = HelperRestSharp.DownloadFile("VSudoTrans", "import/Import AttendanceCode.xlsx");
+            var fileExcel = HelperRestSharp.DownloadFile("vsudotrans", "import/Import AttendanceCode.xlsx");
             HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import AttendanceCode");
         }
 

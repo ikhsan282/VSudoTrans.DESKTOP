@@ -103,7 +103,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
 
         private void BbiTemplateImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fileExcel = HelperRestSharp.DownloadFile("VSudoTrans", "import/Import Budget Transaction.xlsx");
+            var fileExcel = HelperRestSharp.DownloadFile("vsudotrans", "import/Import Budget Transaction.xlsx");
             HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import Budget Transaction");
         }
 

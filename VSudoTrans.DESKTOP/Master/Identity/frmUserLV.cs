@@ -48,8 +48,7 @@ namespace VSudoTrans.DESKTOP.Master.Identity
             if (!ActionValidate())
                 return;
 
-            this.OdataFilter = $"UserType eq 'Employee' ";
-            this.OdataFilter += $" and CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
+            this.OdataFilter += $" CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
 
             //this.OdataFilter = $"Employee/CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
 

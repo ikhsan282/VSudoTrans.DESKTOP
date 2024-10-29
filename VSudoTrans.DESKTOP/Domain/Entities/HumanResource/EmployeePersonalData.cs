@@ -59,7 +59,7 @@ namespace Domain.Entities.HumanResource
             get
             {
                 if (!string.IsNullOrEmpty(Photo))
-                    return "https://vsudotechstorage.blob.core.windows.net/VSudoTrans/employee/" + Photo;
+                    return "https://vsudotechstorage.blob.core.windows.net/vsudotrans/employee/" + Photo;
                 else
                     return string.Empty;
             }
@@ -75,7 +75,7 @@ namespace Domain.Entities.HumanResource
             get
             {
                 if (!string.IsNullOrEmpty(Signature))
-                    return "https://vsudotechstorage.blob.core.windows.net/VSudoTrans/employee/" + Signature;
+                    return "https://vsudotechstorage.blob.core.windows.net/vsudotrans/employee/" + Signature;
                 else
                     return string.Empty;
             }

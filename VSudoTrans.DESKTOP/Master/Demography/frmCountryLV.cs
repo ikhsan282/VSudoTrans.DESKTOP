@@ -1,5 +1,7 @@
 ﻿using Domain.Entities.Demography;
+using System.Linq;
 using VSudoTrans.DESKTOP.BaseForm;
+using VSudoTrans.DESKTOP.Utils;
 
 namespace VSudoTrans.DESKTOP.Master.Demography
 {
@@ -18,6 +20,15 @@ namespace VSudoTrans.DESKTOP.Master.Demography
 
             bbiRefresh.ItemClick += BbiRefresh_ItemClick;
             bbiDelete.ItemClick += BbiDelete_ItemClick;
+
+            var roleNames = ApplicationSettings.Instance.UserRoles.Select(s => s.Name);
+            if (roleNames.FirstOrDefault(s => s == "Super Administrator") == null)
+            {
+                bbiNew.Enabled = false;
+                bbiEdit.Enabled = false;
+                bbiDelete.Enabled = false;
+                bbiImportData.Enabled = false;
+            }
         }
 
         private void BbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

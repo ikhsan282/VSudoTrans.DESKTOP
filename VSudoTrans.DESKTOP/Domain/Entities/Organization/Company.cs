@@ -40,7 +40,7 @@ namespace Domain.Entities.Organization
             get
             {
                 if (!string.IsNullOrEmpty(Logo))
-                    return "https://vsudotechstorage.blob.core.windows.net/VSudoTrans/company/" + Logo;
+                    return "https://vsudotechstorage.blob.core.windows.net/vsudotrans/company/" + Logo;
                 else
                     return string.Empty;
             }
@@ -56,7 +56,7 @@ namespace Domain.Entities.Organization
             get
             {
                 if (!string.IsNullOrEmpty(Watermark))
-                    return "https://vsudotechstorage.blob.core.windows.net/VSudoTrans/company/" + Watermark;
+                    return "https://vsudotechstorage.blob.core.windows.net/vsudotrans/company/" + Watermark;
                 else
                     return string.Empty;
             }
@@ -72,7 +72,7 @@ namespace Domain.Entities.Organization
             get
             {
                 if (!string.IsNullOrEmpty(WatermarkPaid))
-                    return "https://vsudotechstorage.blob.core.windows.net/VSudoTrans/company/" + WatermarkPaid;
+                    return "https://vsudotechstorage.blob.core.windows.net/vsudotrans/company/" + WatermarkPaid;
                 else
                     return string.Empty;
             }
@@ -88,7 +88,7 @@ namespace Domain.Entities.Organization
             get
             {
                 if (!string.IsNullOrEmpty(WatermarkUnpaid))
-                    return "https://vsudotechstorage.blob.core.windows.net/VSudoTrans/company/" + WatermarkUnpaid;
+                    return "https://vsudotechstorage.blob.core.windows.net/vsudotrans/company/" + WatermarkUnpaid;
                 else
                     return string.Empty;
             }

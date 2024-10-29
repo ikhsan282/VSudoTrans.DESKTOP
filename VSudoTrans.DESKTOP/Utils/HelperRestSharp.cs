@@ -244,7 +244,7 @@ namespace VSudoTrans.DESKTOP.Utils
 
         public static string UploadFile(byte[] file, string fileName, string subFolder = "", string keyName = "Data", bool fAuth = true)
         {
-            return PostFile(file, fileName, "VSudoTrans", subFolder: subFolder, keyName: keyName, fAuth: fAuth);
+            return PostFile(file, fileName, "vsudotrans", subFolder: subFolder, keyName: keyName, fAuth: fAuth);
         }
 
         public static string PostFile(byte[] file, string fileName, string container, string subFolder = "", string keyName = "Data", bool fAuth = true)

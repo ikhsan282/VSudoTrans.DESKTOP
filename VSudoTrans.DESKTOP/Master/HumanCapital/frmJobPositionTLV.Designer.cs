@@ -205,6 +205,18 @@
             // 
             this.ItemForTreeList.Size = new System.Drawing.Size(906, 302);
             // 
+            // bbiImport
+            // 
+            this.bbiImport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiImport.ImageOptions.SvgImage")));
+            // 
+            // bbiTemplateImport
+            // 
+            this.bbiTemplateImport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiTemplateImport.ImageOptions.SvgImage")));
+            // 
+            // bbiImportData
+            // 
+            this.bbiImportData.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiImportData.ImageOptions.SvgImage")));
+            // 
             // colId
             // 
             this.colId.FieldName = "Id";
@@ -228,7 +240,7 @@
             this.colCode.Name = "colCode";
             this.colCode.Visible = true;
             this.colCode.VisibleIndex = 3;
-            this.colCode.Width = 205;
+            this.colCode.Width = 282;
             // 
             // colName
             // 
@@ -237,7 +249,7 @@
             this.colName.Name = "colName";
             this.colName.Visible = true;
             this.colName.VisibleIndex = 4;
-            this.colName.Width = 204;
+            this.colName.Width = 178;
             // 
             // colLevel
             // 
@@ -246,7 +258,7 @@
             this.colLevel.Name = "colLevel";
             this.colLevel.Visible = true;
             this.colLevel.VisibleIndex = 5;
-            this.colLevel.Width = 204;
+            this.colLevel.Width = 178;
             // 
             // colJobTitle
             // 
@@ -255,7 +267,7 @@
             this.colJobTitle.Name = "colJobTitle";
             this.colJobTitle.Visible = true;
             this.colJobTitle.VisibleIndex = 6;
-            this.colJobTitle.Width = 205;
+            this.colJobTitle.Width = 180;
             // 
             // colCompanyName
             // 
