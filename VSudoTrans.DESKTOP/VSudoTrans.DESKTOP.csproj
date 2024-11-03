@@ -500,6 +500,10 @@
     <Compile Include="Contract\Organization\GroupDto.cs" />
     <Compile Include="Contract\Organization\OrganizationStructureDto.cs" />
     <Compile Include="Contract\Shared\UnitMeasureDto.cs" />
+    <Compile Include="Contract\Vehicle\BrandVehicleDto.cs" />
+    <Compile Include="Contract\Vehicle\ModelUnitDto.cs" />
+    <Compile Include="Contract\Vehicle\TypeEngineDto.cs" />
+    <Compile Include="Contract\Vehicle\VehiclesDto.cs" />
     <Compile Include="Descendant\PopupContainerEditOwn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -975,6 +979,30 @@
     </Compile>
     <Compile Include="Master\Travel\frmScheduleLV.Designer.cs">
       <DependentUpon>frmScheduleLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmImportBrandWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmImportBrandWV.Designer.cs">
+      <DependentUpon>frmImportBrandWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmImportVehicleWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmImportVehicleWV.Designer.cs">
+      <DependentUpon>frmImportVehicleWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmImportTypeEngineWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmImportTypeEngineWV.Designer.cs">
+      <DependentUpon>frmImportTypeEngineWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmImportModelUnitWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmImportModelUnitWV.Designer.cs">
+      <DependentUpon>frmImportModelUnitWV.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction\Travel\frmTravelTicketBookingDV.cs">
       <SubType>Form</SubType>
@@ -2710,11 +2738,53 @@
     <EmbeddedResource Include="Master\Travel\frmPassengerLV.resx">
       <DependentUpon>frmPassengerLV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmRuteDV.resx">
+      <DependentUpon>frmRuteDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\Travel\frmRuteLV.resx">
       <DependentUpon>frmRuteLV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\Travel\frmScheduleDV.resx">
+      <DependentUpon>frmScheduleDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\Travel\frmScheduleLV.resx">
       <DependentUpon>frmScheduleLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmBrandDV.resx">
+      <DependentUpon>frmBrandDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmBrandLV.resx">
+      <DependentUpon>frmBrandLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmImportBrandWV.resx">
+      <DependentUpon>frmImportBrandWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmImportVehicleWV.resx">
+      <DependentUpon>frmImportVehicleWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmImportTypeEngineWV.resx">
+      <DependentUpon>frmImportTypeEngineWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmImportModelUnitWV.resx">
+      <DependentUpon>frmImportModelUnitWV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmModelUnitDV.resx">
+      <DependentUpon>frmModelUnitDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmModelUnitLV.resx">
+      <DependentUpon>frmModelUnitLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmTypeEngineDV.resx">
+      <DependentUpon>frmTypeEngineDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmTypeEngineLV.resx">
+      <DependentUpon>frmTypeEngineLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmVehicleDV.resx">
+      <DependentUpon>frmVehicleDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmVehicleLV.resx">
+      <DependentUpon>frmVehicleLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Attendance\frmAbsenceSV.resx">
       <DependentUpon>frmAbsenceSV.cs</DependentUpon>
@@ -2833,8 +2903,14 @@
     <EmbeddedResource Include="Transaction\Finance\frmKreditLV.resx">
       <DependentUpon>frmKreditLV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Travel\frmTravelTicketBookingDV.resx">
+      <DependentUpon>frmTravelTicketBookingDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\Travel\frmTravelTicketBookingLV.resx">
       <DependentUpon>frmTravelTicketBookingLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Travel\frmTripScheduleDV.resx">
+      <DependentUpon>frmTripScheduleDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\Travel\frmTripScheduleLV.resx">
       <DependentUpon>frmTripScheduleLV.cs</DependentUpon>

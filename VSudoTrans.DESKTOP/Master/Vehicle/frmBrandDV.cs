@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
 using Domain.Entities.Vehicle;
+using PopUpUtils;
 using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
 
@@ -17,6 +18,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             InitializeComponent();
 
             InitializeComponentAfter<BrandVehicle>();
+            InitializeSearchLookup();
             bbiSave.ItemClick += BbiSave_ItemClick;
             bbiSaveAndClose.ItemClick += BbiSaveAndClose_ItemClick;
             bbiSaveAndNew.ItemClick += BbiSaveAndNew_ItemClick;
@@ -27,6 +29,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
 
         protected override void InitializeDefaultValidation()
         {
+            MyValidationHelper.SetValidation(_DxValidationProvider, this.CompanyPopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.CodeTextEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.NameTextEdit, ConditionOperator.IsNotBlank);
         }
@@ -57,6 +60,10 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             }
             ActionSave<BrandVehicle>();
         }
+        protected override void InitializeSearchLookup()
+        {
+            PopupEditHelper.Company(CompanyPopUp);
+        }
 
         protected override void DisplayEntity<T>()
         {
@@ -70,6 +77,8 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
 
             _BrandVehicle = new BrandVehicle()
             {
+                Id = _BrandVehicle.Id,
+                CompanyId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CompanyPopUp.EditValue, "Id")),
                 Code = HelperConvert.String(CodeTextEdit.EditValue),
                 Name = HelperConvert.String(NameTextEdit.EditValue),
                 Note = HelperConvert.String(NoteMemoEdit.EditValue)

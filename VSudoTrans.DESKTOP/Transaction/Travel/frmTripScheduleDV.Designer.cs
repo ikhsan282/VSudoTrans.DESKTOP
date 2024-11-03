@@ -31,7 +31,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTripScheduleDV));
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroupDetail = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroupDetail = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -67,6 +66,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.VehiclePopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this._GridControlDetail = new DevExpress.XtraGrid.GridControl();
+            this._BindingSourceDetail = new System.Windows.Forms.BindingSource(this.components);
             this._GridViewDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colLineNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLineNumberDelivery = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -86,7 +86,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ModifiedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForModifiedDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ModifiedDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this._BindingSourceDetail = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).BeginInit();
             this._DataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).BeginInit();
@@ -131,6 +130,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             ((System.ComponentModel.ISupportInitialize)(this.VehiclePopUp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridControlDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TravelTicketBookingPopUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupAuditTrail)).BeginInit();
@@ -144,7 +144,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // _DataLayoutControl
@@ -187,17 +186,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // bbiSave
             // 
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
-            this.bbiSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSave.ImageOptions.SvgImage")));
             // 
             // bbiSaveAndClose
             // 
             this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
-            this.bbiSaveAndClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSaveAndClose.ImageOptions.SvgImage")));
             // 
             // bbiSaveAndNew
             // 
             this.bbiSaveAndNew.ImageOptions.ImageUri.Uri = "SaveAndNew";
-            this.bbiSaveAndNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSaveAndNew.ImageOptions.SvgImage")));
             // 
             // bbiReset
             // 
@@ -206,7 +202,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // bbiClose
             // 
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
-            this.bbiClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiClose.ImageOptions.SvgImage")));
             // 
             // _BindingSource
             // 
@@ -258,16 +253,16 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForDocumentNumber.Name = "ItemForDocumentNumber";
             this.ItemForDocumentNumber.Size = new System.Drawing.Size(1083, 38);
             this.ItemForDocumentNumber.Text = "No Dokumen";
-            this.ItemForDocumentNumber.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForDocumentNumber.TextSize = new System.Drawing.Size(109, 21);
             // 
             // DocumentNumberTextEdit
             // 
             this.DocumentNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DocumentNumber", true));
-            this.DocumentNumberTextEdit.Location = new System.Drawing.Point(133, -305);
+            this.DocumentNumberTextEdit.Location = new System.Drawing.Point(144, 55);
             this.DocumentNumberTextEdit.MenuManager = this.mainRibbonControl;
             this.DocumentNumberTextEdit.Name = "DocumentNumberTextEdit";
             this.DocumentNumberTextEdit.Properties.ReadOnly = true;
-            this.DocumentNumberTextEdit.Size = new System.Drawing.Size(969, 34);
+            this.DocumentNumberTextEdit.Size = new System.Drawing.Size(958, 34);
             this.DocumentNumberTextEdit.StyleController = this._DataLayoutControl;
             this.DocumentNumberTextEdit.TabIndex = 18;
             // 
@@ -278,12 +273,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForCompany.Name = "ItemForCompany";
             this.ItemForCompany.Size = new System.Drawing.Size(1083, 38);
             this.ItemForCompany.Text = "Perusahaan";
-            this.ItemForCompany.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForCompany.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CompanyPopUp
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
-            this.CompanyPopUp.Location = new System.Drawing.Point(133, -267);
+            this.CompanyPopUp.Location = new System.Drawing.Point(144, 93);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -315,7 +310,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.CompanyPopUp.Properties.OptionsDisplayWidth = "";
             this.CompanyPopUp.Properties.OptionsFilterColumns = "";
             this.CompanyPopUp.Properties.OptionsSortColumns = "";
-            this.CompanyPopUp.Size = new System.Drawing.Size(969, 34);
+            this.CompanyPopUp.Size = new System.Drawing.Size(958, 34);
             this.CompanyPopUp.StyleController = this._DataLayoutControl;
             this.CompanyPopUp.TabIndex = 17;
             // 
@@ -326,19 +321,19 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForDate.Name = "ItemForDate";
             this.ItemForDate.Size = new System.Drawing.Size(1083, 38);
             this.ItemForDate.Text = "Tanggal";
-            this.ItemForDate.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForDate.TextSize = new System.Drawing.Size(109, 21);
             // 
             // DateDateEdit
             // 
             this.DateDateEdit.EditValue = null;
-            this.DateDateEdit.Location = new System.Drawing.Point(133, -153);
+            this.DateDateEdit.Location = new System.Drawing.Point(144, 207);
             this.DateDateEdit.MenuManager = this.mainRibbonControl;
             this.DateDateEdit.Name = "DateDateEdit";
             this.DateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateDateEdit.Size = new System.Drawing.Size(969, 34);
+            this.DateDateEdit.Size = new System.Drawing.Size(958, 34);
             this.DateDateEdit.StyleController = this._DataLayoutControl;
             this.DateDateEdit.TabIndex = 7;
             // 
@@ -349,12 +344,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForStartTime.Name = "ItemForStartTime";
             this.ItemForStartTime.Size = new System.Drawing.Size(361, 38);
             this.ItemForStartTime.Text = "Berangkat";
-            this.ItemForStartTime.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForStartTime.TextSize = new System.Drawing.Size(109, 21);
             // 
             // StartTimeDateEdit
             // 
             this.StartTimeDateEdit.EditValue = null;
-            this.StartTimeDateEdit.Location = new System.Drawing.Point(133, -115);
+            this.StartTimeDateEdit.Location = new System.Drawing.Point(144, 245);
             this.StartTimeDateEdit.MenuManager = this.mainRibbonControl;
             this.StartTimeDateEdit.Name = "StartTimeDateEdit";
             this.StartTimeDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -366,7 +361,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.StartTimeDateEdit.Properties.EditFormat.FormatString = "";
             this.StartTimeDateEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.StartTimeDateEdit.Properties.MaskSettings.Set("mask", "");
-            this.StartTimeDateEdit.Size = new System.Drawing.Size(247, 34);
+            this.StartTimeDateEdit.Size = new System.Drawing.Size(236, 34);
             this.StartTimeDateEdit.StyleController = this._DataLayoutControl;
             this.StartTimeDateEdit.TabIndex = 27;
             // 
@@ -377,12 +372,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForEndTime.Name = "ItemForEndTime";
             this.ItemForEndTime.Size = new System.Drawing.Size(361, 38);
             this.ItemForEndTime.Text = "Sampai";
-            this.ItemForEndTime.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForEndTime.TextSize = new System.Drawing.Size(109, 21);
             // 
             // EndTimeDateEdit
             // 
             this.EndTimeDateEdit.EditValue = null;
-            this.EndTimeDateEdit.Location = new System.Drawing.Point(494, -115);
+            this.EndTimeDateEdit.Location = new System.Drawing.Point(505, 245);
             this.EndTimeDateEdit.MenuManager = this.mainRibbonControl;
             this.EndTimeDateEdit.Name = "EndTimeDateEdit";
             this.EndTimeDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -394,7 +389,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.EndTimeDateEdit.Properties.EditFormat.FormatString = "";
             this.EndTimeDateEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.EndTimeDateEdit.Properties.MaskSettings.Set("mask", "");
-            this.EndTimeDateEdit.Size = new System.Drawing.Size(247, 34);
+            this.EndTimeDateEdit.Size = new System.Drawing.Size(236, 34);
             this.EndTimeDateEdit.StyleController = this._DataLayoutControl;
             this.EndTimeDateEdit.TabIndex = 28;
             // 
@@ -405,12 +400,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForTotalDuration.Name = "ItemForTotalDuration";
             this.ItemForTotalDuration.Size = new System.Drawing.Size(361, 38);
             this.ItemForTotalDuration.Text = "Durasi";
-            this.ItemForTotalDuration.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForTotalDuration.TextSize = new System.Drawing.Size(109, 21);
             // 
             // TotalDurationTextEdit
             // 
             this.TotalDurationTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "TotalDuration", true));
-            this.TotalDurationTextEdit.Location = new System.Drawing.Point(855, -115);
+            this.TotalDurationTextEdit.Location = new System.Drawing.Point(866, 245);
             this.TotalDurationTextEdit.MenuManager = this.mainRibbonControl;
             this.TotalDurationTextEdit.Name = "TotalDurationTextEdit";
             this.TotalDurationTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -419,7 +414,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.TotalDurationTextEdit.Properties.Mask.EditMask = "G";
             this.TotalDurationTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TotalDurationTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TotalDurationTextEdit.Size = new System.Drawing.Size(247, 34);
+            this.TotalDurationTextEdit.Size = new System.Drawing.Size(236, 34);
             this.TotalDurationTextEdit.StyleController = this._DataLayoutControl;
             this.TotalDurationTextEdit.TabIndex = 10;
             // 
@@ -441,11 +436,11 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForPickupProvince.Name = "ItemForPickupProvince";
             this.ItemForPickupProvince.Size = new System.Drawing.Size(517, 38);
             this.ItemForPickupProvince.Text = "Provinsi";
-            this.ItemForPickupProvince.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForPickupProvince.TextSize = new System.Drawing.Size(109, 21);
             // 
             // PickupProvincePopUp
             // 
-            this.PickupProvincePopUp.Location = new System.Drawing.Point(145, -35);
+            this.PickupProvincePopUp.Location = new System.Drawing.Point(156, 325);
             this.PickupProvincePopUp.MenuManager = this.mainRibbonControl;
             this.PickupProvincePopUp.Name = "PickupProvincePopUp";
             this.PickupProvincePopUp.ObjectId = null;
@@ -477,7 +472,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.PickupProvincePopUp.Properties.OptionsDisplayWidth = "";
             this.PickupProvincePopUp.Properties.OptionsFilterColumns = "";
             this.PickupProvincePopUp.Properties.OptionsSortColumns = "";
-            this.PickupProvincePopUp.Size = new System.Drawing.Size(403, 34);
+            this.PickupProvincePopUp.Size = new System.Drawing.Size(392, 34);
             this.PickupProvincePopUp.StyleController = this._DataLayoutControl;
             this.PickupProvincePopUp.TabIndex = 13;
             // 
@@ -488,11 +483,11 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForPickupCity.Name = "ItemForPickupCity";
             this.ItemForPickupCity.Size = new System.Drawing.Size(517, 38);
             this.ItemForPickupCity.Text = "Kota";
-            this.ItemForPickupCity.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForPickupCity.TextSize = new System.Drawing.Size(109, 21);
             // 
             // PickupCityPopUp
             // 
-            this.PickupCityPopUp.Location = new System.Drawing.Point(145, 3);
+            this.PickupCityPopUp.Location = new System.Drawing.Point(156, 363);
             this.PickupCityPopUp.MenuManager = this.mainRibbonControl;
             this.PickupCityPopUp.Name = "PickupCityPopUp";
             this.PickupCityPopUp.ObjectId = null;
@@ -524,7 +519,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.PickupCityPopUp.Properties.OptionsDisplayWidth = "";
             this.PickupCityPopUp.Properties.OptionsFilterColumns = "";
             this.PickupCityPopUp.Properties.OptionsSortColumns = "";
-            this.PickupCityPopUp.Size = new System.Drawing.Size(403, 34);
+            this.PickupCityPopUp.Size = new System.Drawing.Size(392, 34);
             this.PickupCityPopUp.StyleController = this._DataLayoutControl;
             this.PickupCityPopUp.TabIndex = 14;
             // 
@@ -535,12 +530,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForPickupPointDistrict.Name = "ItemForPickupPointDistrict";
             this.ItemForPickupPointDistrict.Size = new System.Drawing.Size(517, 38);
             this.ItemForPickupPointDistrict.Text = "Kecamatan";
-            this.ItemForPickupPointDistrict.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForPickupPointDistrict.TextSize = new System.Drawing.Size(109, 21);
             // 
             // PickupDistrictPopUp
             // 
             this.PickupDistrictPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PickupPointDistrict", true));
-            this.PickupDistrictPopUp.Location = new System.Drawing.Point(145, 41);
+            this.PickupDistrictPopUp.Location = new System.Drawing.Point(156, 401);
             this.PickupDistrictPopUp.MenuManager = this.mainRibbonControl;
             this.PickupDistrictPopUp.Name = "PickupDistrictPopUp";
             this.PickupDistrictPopUp.ObjectId = null;
@@ -572,7 +567,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.PickupDistrictPopUp.Properties.OptionsDisplayWidth = "";
             this.PickupDistrictPopUp.Properties.OptionsFilterColumns = "";
             this.PickupDistrictPopUp.Properties.OptionsSortColumns = "";
-            this.PickupDistrictPopUp.Size = new System.Drawing.Size(403, 34);
+            this.PickupDistrictPopUp.Size = new System.Drawing.Size(392, 34);
             this.PickupDistrictPopUp.StyleController = this._DataLayoutControl;
             this.PickupDistrictPopUp.TabIndex = 21;
             // 
@@ -594,11 +589,11 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForDeliveryProvince.Name = "ItemForDeliveryProvince";
             this.ItemForDeliveryProvince.Size = new System.Drawing.Size(518, 38);
             this.ItemForDeliveryProvince.Text = "Provinsi";
-            this.ItemForDeliveryProvince.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForDeliveryProvince.TextSize = new System.Drawing.Size(109, 21);
             // 
             // DeliveryProvincePopUp
             // 
-            this.DeliveryProvincePopUp.Location = new System.Drawing.Point(686, -35);
+            this.DeliveryProvincePopUp.Location = new System.Drawing.Point(697, 325);
             this.DeliveryProvincePopUp.MenuManager = this.mainRibbonControl;
             this.DeliveryProvincePopUp.Name = "DeliveryProvincePopUp";
             this.DeliveryProvincePopUp.ObjectId = null;
@@ -630,7 +625,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.DeliveryProvincePopUp.Properties.OptionsDisplayWidth = "";
             this.DeliveryProvincePopUp.Properties.OptionsFilterColumns = "";
             this.DeliveryProvincePopUp.Properties.OptionsSortColumns = "";
-            this.DeliveryProvincePopUp.Size = new System.Drawing.Size(404, 34);
+            this.DeliveryProvincePopUp.Size = new System.Drawing.Size(393, 34);
             this.DeliveryProvincePopUp.StyleController = this._DataLayoutControl;
             this.DeliveryProvincePopUp.TabIndex = 15;
             // 
@@ -641,11 +636,11 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForDeliveryCity.Name = "ItemForDeliveryCity";
             this.ItemForDeliveryCity.Size = new System.Drawing.Size(518, 38);
             this.ItemForDeliveryCity.Text = "Kota";
-            this.ItemForDeliveryCity.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForDeliveryCity.TextSize = new System.Drawing.Size(109, 21);
             // 
             // DeliveryCityPopUp
             // 
-            this.DeliveryCityPopUp.Location = new System.Drawing.Point(686, 3);
+            this.DeliveryCityPopUp.Location = new System.Drawing.Point(697, 363);
             this.DeliveryCityPopUp.MenuManager = this.mainRibbonControl;
             this.DeliveryCityPopUp.Name = "DeliveryCityPopUp";
             this.DeliveryCityPopUp.ObjectId = null;
@@ -677,7 +672,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.DeliveryCityPopUp.Properties.OptionsDisplayWidth = "";
             this.DeliveryCityPopUp.Properties.OptionsFilterColumns = "";
             this.DeliveryCityPopUp.Properties.OptionsSortColumns = "";
-            this.DeliveryCityPopUp.Size = new System.Drawing.Size(404, 34);
+            this.DeliveryCityPopUp.Size = new System.Drawing.Size(393, 34);
             this.DeliveryCityPopUp.StyleController = this._DataLayoutControl;
             this.DeliveryCityPopUp.TabIndex = 16;
             // 
@@ -688,12 +683,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForDeliveryPointDistrict.Name = "ItemForDeliveryPointDistrict";
             this.ItemForDeliveryPointDistrict.Size = new System.Drawing.Size(518, 38);
             this.ItemForDeliveryPointDistrict.Text = "Kecamatan";
-            this.ItemForDeliveryPointDistrict.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForDeliveryPointDistrict.TextSize = new System.Drawing.Size(109, 21);
             // 
             // DeliveryDistrictPopUp
             // 
             this.DeliveryDistrictPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DeliveryPointDistrict", true));
-            this.DeliveryDistrictPopUp.Location = new System.Drawing.Point(686, 41);
+            this.DeliveryDistrictPopUp.Location = new System.Drawing.Point(697, 401);
             this.DeliveryDistrictPopUp.MenuManager = this.mainRibbonControl;
             this.DeliveryDistrictPopUp.Name = "DeliveryDistrictPopUp";
             this.DeliveryDistrictPopUp.ObjectId = null;
@@ -725,7 +720,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.DeliveryDistrictPopUp.Properties.OptionsDisplayWidth = "";
             this.DeliveryDistrictPopUp.Properties.OptionsFilterColumns = "";
             this.DeliveryDistrictPopUp.Properties.OptionsSortColumns = "";
-            this.DeliveryDistrictPopUp.Size = new System.Drawing.Size(404, 34);
+            this.DeliveryDistrictPopUp.Size = new System.Drawing.Size(393, 34);
             this.DeliveryDistrictPopUp.StyleController = this._DataLayoutControl;
             this.DeliveryDistrictPopUp.TabIndex = 22;
             // 
@@ -736,12 +731,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForEmployee.Name = "ItemForEmployee";
             this.ItemForEmployee.Size = new System.Drawing.Size(1083, 38);
             this.ItemForEmployee.Text = "Supir";
-            this.ItemForEmployee.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForEmployee.TextSize = new System.Drawing.Size(109, 21);
             // 
             // EmployeePopUp
             // 
             this.EmployeePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Employee", true));
-            this.EmployeePopUp.Location = new System.Drawing.Point(133, -229);
+            this.EmployeePopUp.Location = new System.Drawing.Point(144, 131);
             this.EmployeePopUp.MenuManager = this.mainRibbonControl;
             this.EmployeePopUp.Name = "EmployeePopUp";
             this.EmployeePopUp.ObjectId = null;
@@ -773,7 +768,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.EmployeePopUp.Properties.OptionsDisplayWidth = "";
             this.EmployeePopUp.Properties.OptionsFilterColumns = "";
             this.EmployeePopUp.Properties.OptionsSortColumns = "";
-            this.EmployeePopUp.Size = new System.Drawing.Size(969, 34);
+            this.EmployeePopUp.Size = new System.Drawing.Size(958, 34);
             this.EmployeePopUp.StyleController = this._DataLayoutControl;
             this.EmployeePopUp.TabIndex = 19;
             // 
@@ -784,12 +779,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForVehicle.Name = "ItemForVehicle";
             this.ItemForVehicle.Size = new System.Drawing.Size(1083, 38);
             this.ItemForVehicle.Text = "Kendaraan";
-            this.ItemForVehicle.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForVehicle.TextSize = new System.Drawing.Size(109, 21);
             // 
             // VehiclePopUp
             // 
             this.VehiclePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Vehicle", true));
-            this.VehiclePopUp.Location = new System.Drawing.Point(133, -191);
+            this.VehiclePopUp.Location = new System.Drawing.Point(144, 169);
             this.VehiclePopUp.MenuManager = this.mainRibbonControl;
             this.VehiclePopUp.Name = "VehiclePopUp";
             this.VehiclePopUp.ObjectId = null;
@@ -823,7 +818,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.VehiclePopUp.Properties.OptionsDisplayWidth = "";
             this.VehiclePopUp.Properties.OptionsFilterColumns = "";
             this.VehiclePopUp.Properties.OptionsSortColumns = "";
-            this.VehiclePopUp.Size = new System.Drawing.Size(969, 34);
+            this.VehiclePopUp.Size = new System.Drawing.Size(958, 34);
             this.VehiclePopUp.StyleController = this._DataLayoutControl;
             this.VehiclePopUp.TabIndex = 29;
             // 
@@ -839,7 +834,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // _GridControlDetail
             // 
             this._GridControlDetail.DataSource = this._BindingSourceDetail;
-            this._GridControlDetail.Location = new System.Drawing.Point(23, 91);
+            this._GridControlDetail.Location = new System.Drawing.Point(23, 451);
             this._GridControlDetail.MainView = this._GridViewDetail;
             this._GridControlDetail.MenuManager = this.mainRibbonControl;
             this._GridControlDetail.MinimumSize = new System.Drawing.Size(0, 300);
@@ -850,6 +845,10 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this._GridControlDetail.TabIndex = 30;
             this._GridControlDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this._GridViewDetail});
+            // 
+            // _BindingSourceDetail
+            // 
+            this._BindingSourceDetail.DataSource = typeof(Domain.Entities.Travel.TripScheduleDetail);
             // 
             // _GridViewDetail
             // 
@@ -986,16 +985,16 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForCreatedUser.Location = new System.Drawing.Point(0, 0);
             this.ItemForCreatedUser.Name = "ItemForCreatedUser";
             this.ItemForCreatedUser.Size = new System.Drawing.Size(1083, 38);
-            this.ItemForCreatedUser.Text = "Created User";
-            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForCreatedUser.Text = "Dibuat Oleh";
+            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CreatedUserTextEdit
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(133, -305);
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, 55);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
-            this.CreatedUserTextEdit.Size = new System.Drawing.Size(969, 34);
+            this.CreatedUserTextEdit.Size = new System.Drawing.Size(958, 34);
             this.CreatedUserTextEdit.StyleController = this._DataLayoutControl;
             this.CreatedUserTextEdit.TabIndex = 23;
             // 
@@ -1005,14 +1004,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForCreatedDate.Location = new System.Drawing.Point(0, 38);
             this.ItemForCreatedDate.Name = "ItemForCreatedDate";
             this.ItemForCreatedDate.Size = new System.Drawing.Size(1083, 38);
-            this.ItemForCreatedDate.Text = "Created Date";
-            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForCreatedDate.Text = "Dibuat Tanggal";
+            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CreatedDateDateEdit
             // 
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(133, -267);
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, 93);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1020,7 +1019,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CreatedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CreatedDateDateEdit.Size = new System.Drawing.Size(969, 34);
+            this.CreatedDateDateEdit.Size = new System.Drawing.Size(958, 34);
             this.CreatedDateDateEdit.StyleController = this._DataLayoutControl;
             this.CreatedDateDateEdit.TabIndex = 24;
             // 
@@ -1030,16 +1029,16 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForModifiedUser.Location = new System.Drawing.Point(0, 76);
             this.ItemForModifiedUser.Name = "ItemForModifiedUser";
             this.ItemForModifiedUser.Size = new System.Drawing.Size(1083, 38);
-            this.ItemForModifiedUser.Text = "Modified User";
-            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForModifiedUser.Text = "Diubah Oleh";
+            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(109, 21);
             // 
             // ModifiedUserTextEdit
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(133, -229);
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, 131);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
-            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(969, 34);
+            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(958, 34);
             this.ModifiedUserTextEdit.StyleController = this._DataLayoutControl;
             this.ModifiedUserTextEdit.TabIndex = 25;
             // 
@@ -1049,14 +1048,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForModifiedDate.Location = new System.Drawing.Point(0, 114);
             this.ItemForModifiedDate.Name = "ItemForModifiedDate";
             this.ItemForModifiedDate.Size = new System.Drawing.Size(1083, 586);
-            this.ItemForModifiedDate.Text = "Modified Date";
-            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForModifiedDate.Text = "Diubah Tanggal";
+            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(109, 21);
             // 
             // ModifiedDateDateEdit
             // 
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(133, -191);
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, 169);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1064,13 +1063,9 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ModifiedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(969, 34);
+            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(958, 34);
             this.ModifiedDateDateEdit.StyleController = this._DataLayoutControl;
             this.ModifiedDateDateEdit.TabIndex = 26;
-            // 
-            // _BindingSourceDetail
-            // 
-            this._BindingSourceDetail.DataSource = typeof(Domain.Entities.Travel.TripScheduleDetail);
             // 
             // frmTripScheduleDV
             // 
@@ -1123,6 +1118,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             ((System.ComponentModel.ISupportInitialize)(this.VehiclePopUp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridControlDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TravelTicketBookingPopUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupAuditTrail)).EndInit();
@@ -1136,7 +1132,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceDetail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

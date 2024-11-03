@@ -39,6 +39,8 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForNote = new DevExpress.XtraLayout.LayoutControlItem();
             this.NoteMemoEdit = new DevExpress.XtraEditors.MemoEdit();
+            this.ItemForBrand = new DevExpress.XtraLayout.LayoutControlItem();
+            this.BrandPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForCreatedUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.CreatedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -48,8 +50,8 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ModifiedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForModifiedDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ModifiedDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.BrandPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
-            this.ItemForBrand = new DevExpress.XtraLayout.LayoutControlItem();
+            this.CompanyPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
+            this.ItemForCompany = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).BeginInit();
             this._DataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).BeginInit();
@@ -65,6 +67,8 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBrand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BrandPopUp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).BeginInit();
@@ -76,12 +80,13 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BrandPopUp.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBrand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CompanyPopUp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCompany)).BeginInit();
             this.SuspendLayout();
             // 
             // _DataLayoutControl
             // 
+            this._DataLayoutControl.Controls.Add(this.CompanyPopUp);
             this._DataLayoutControl.Controls.Add(this.BrandPopUp);
             this._DataLayoutControl.Controls.Add(this.CodeTextEdit);
             this._DataLayoutControl.Controls.Add(this.NameTextEdit);
@@ -104,14 +109,6 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.mainRibbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(1135, 1295, 1135, 1295);
             this.mainRibbonControl.ExpandCollapseItem.Id = 0;
             this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(108, 113, 108, 113);
-            // 
-            // 
-            // 
-            this.mainRibbonControl.SearchEditItem.AccessibleName = "Search Item";
-            this.mainRibbonControl.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.mainRibbonControl.SearchEditItem.EditWidth = 150;
-            this.mainRibbonControl.SearchEditItem.Id = -5000;
-            this.mainRibbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.mainRibbonControl.Size = new System.Drawing.Size(1020, 254);
             // 
             // bbiSave
@@ -168,7 +165,8 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ItemForCode,
             this.ItemForName,
             this.ItemForNote,
-            this.ItemForBrand});
+            this.ItemForBrand,
+            this.ItemForCompany});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(978, 336);
@@ -177,165 +175,74 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ItemForCode
             // 
             this.ItemForCode.Control = this.CodeTextEdit;
-            this.ItemForCode.Location = new System.Drawing.Point(0, 38);
+            this.ItemForCode.Location = new System.Drawing.Point(0, 76);
             this.ItemForCode.Name = "ItemForCode";
             this.ItemForCode.Size = new System.Drawing.Size(978, 38);
             this.ItemForCode.Text = "Kode";
-            this.ItemForCode.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForCode.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CodeTextEdit
             // 
             this.CodeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Code", true));
-            this.CodeTextEdit.Location = new System.Drawing.Point(133, 93);
+            this.CodeTextEdit.Location = new System.Drawing.Point(144, 131);
             this.CodeTextEdit.MenuManager = this.mainRibbonControl;
             this.CodeTextEdit.Name = "CodeTextEdit";
-            this.CodeTextEdit.Size = new System.Drawing.Size(864, 34);
+            this.CodeTextEdit.Size = new System.Drawing.Size(853, 34);
             this.CodeTextEdit.StyleController = this._DataLayoutControl;
             this.CodeTextEdit.TabIndex = 5;
             // 
             // ItemForName
             // 
             this.ItemForName.Control = this.NameTextEdit;
-            this.ItemForName.Location = new System.Drawing.Point(0, 76);
+            this.ItemForName.Location = new System.Drawing.Point(0, 114);
             this.ItemForName.Name = "ItemForName";
             this.ItemForName.Size = new System.Drawing.Size(978, 38);
             this.ItemForName.Text = "Nama";
-            this.ItemForName.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForName.TextSize = new System.Drawing.Size(109, 21);
             // 
             // NameTextEdit
             // 
             this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Name", true));
-            this.NameTextEdit.Location = new System.Drawing.Point(133, 131);
+            this.NameTextEdit.Location = new System.Drawing.Point(144, 169);
             this.NameTextEdit.MenuManager = this.mainRibbonControl;
             this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Size = new System.Drawing.Size(864, 34);
+            this.NameTextEdit.Size = new System.Drawing.Size(853, 34);
             this.NameTextEdit.StyleController = this._DataLayoutControl;
             this.NameTextEdit.TabIndex = 6;
             // 
             // ItemForNote
             // 
             this.ItemForNote.Control = this.NoteMemoEdit;
-            this.ItemForNote.Location = new System.Drawing.Point(0, 114);
+            this.ItemForNote.Location = new System.Drawing.Point(0, 152);
             this.ItemForNote.Name = "ItemForNote";
-            this.ItemForNote.Size = new System.Drawing.Size(978, 222);
+            this.ItemForNote.Size = new System.Drawing.Size(978, 184);
             this.ItemForNote.StartNewLine = true;
             this.ItemForNote.Text = "Note";
-            this.ItemForNote.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForNote.TextSize = new System.Drawing.Size(109, 21);
             // 
             // NoteMemoEdit
             // 
             this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
-            this.NoteMemoEdit.Location = new System.Drawing.Point(133, 169);
+            this.NoteMemoEdit.Location = new System.Drawing.Point(144, 207);
             this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
             this.NoteMemoEdit.Name = "NoteMemoEdit";
-            this.NoteMemoEdit.Size = new System.Drawing.Size(864, 218);
+            this.NoteMemoEdit.Size = new System.Drawing.Size(853, 180);
             this.NoteMemoEdit.StyleController = this._DataLayoutControl;
             this.NoteMemoEdit.TabIndex = 7;
             // 
-            // layoutControlGroup3
+            // ItemForBrand
             // 
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForCreatedUser,
-            this.ItemForCreatedDate,
-            this.ItemForModifiedUser,
-            this.ItemForModifiedDate});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(978, 336);
-            this.layoutControlGroup3.Text = "Audit Trail";
-            // 
-            // ItemForCreatedUser
-            // 
-            this.ItemForCreatedUser.Control = this.CreatedUserTextEdit;
-            this.ItemForCreatedUser.Location = new System.Drawing.Point(0, 0);
-            this.ItemForCreatedUser.Name = "ItemForCreatedUser";
-            this.ItemForCreatedUser.Size = new System.Drawing.Size(978, 38);
-            this.ItemForCreatedUser.Text = "Created User";
-            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(98, 21);
-            // 
-            // CreatedUserTextEdit
-            // 
-            this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(133, 55);
-            this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
-            this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
-            this.CreatedUserTextEdit.Size = new System.Drawing.Size(864, 34);
-            this.CreatedUserTextEdit.StyleController = this._DataLayoutControl;
-            this.CreatedUserTextEdit.TabIndex = 8;
-            // 
-            // ItemForCreatedDate
-            // 
-            this.ItemForCreatedDate.Control = this.CreatedDateDateEdit;
-            this.ItemForCreatedDate.Location = new System.Drawing.Point(0, 38);
-            this.ItemForCreatedDate.Name = "ItemForCreatedDate";
-            this.ItemForCreatedDate.Size = new System.Drawing.Size(978, 38);
-            this.ItemForCreatedDate.Text = "Created Date";
-            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(98, 21);
-            // 
-            // CreatedDateDateEdit
-            // 
-            this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
-            this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(133, 93);
-            this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
-            this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
-            this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.CreatedDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CreatedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CreatedDateDateEdit.Size = new System.Drawing.Size(864, 34);
-            this.CreatedDateDateEdit.StyleController = this._DataLayoutControl;
-            this.CreatedDateDateEdit.TabIndex = 9;
-            // 
-            // ItemForModifiedUser
-            // 
-            this.ItemForModifiedUser.Control = this.ModifiedUserTextEdit;
-            this.ItemForModifiedUser.Location = new System.Drawing.Point(0, 76);
-            this.ItemForModifiedUser.Name = "ItemForModifiedUser";
-            this.ItemForModifiedUser.Size = new System.Drawing.Size(978, 38);
-            this.ItemForModifiedUser.Text = "Modified User";
-            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(98, 21);
-            // 
-            // ModifiedUserTextEdit
-            // 
-            this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(133, 131);
-            this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
-            this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
-            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(864, 34);
-            this.ModifiedUserTextEdit.StyleController = this._DataLayoutControl;
-            this.ModifiedUserTextEdit.TabIndex = 10;
-            // 
-            // ItemForModifiedDate
-            // 
-            this.ItemForModifiedDate.Control = this.ModifiedDateDateEdit;
-            this.ItemForModifiedDate.Location = new System.Drawing.Point(0, 114);
-            this.ItemForModifiedDate.Name = "ItemForModifiedDate";
-            this.ItemForModifiedDate.Size = new System.Drawing.Size(978, 222);
-            this.ItemForModifiedDate.Text = "Modified Date";
-            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(98, 21);
-            // 
-            // ModifiedDateDateEdit
-            // 
-            this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
-            this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(133, 169);
-            this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
-            this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
-            this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.ModifiedDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ModifiedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(864, 34);
-            this.ModifiedDateDateEdit.StyleController = this._DataLayoutControl;
-            this.ModifiedDateDateEdit.TabIndex = 11;
+            this.ItemForBrand.Control = this.BrandPopUp;
+            this.ItemForBrand.Location = new System.Drawing.Point(0, 38);
+            this.ItemForBrand.Name = "ItemForBrand";
+            this.ItemForBrand.Size = new System.Drawing.Size(978, 38);
+            this.ItemForBrand.Text = "Merek";
+            this.ItemForBrand.TextSize = new System.Drawing.Size(109, 21);
             // 
             // BrandPopUp
             // 
             this.BrandPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Brand", true));
-            this.BrandPopUp.Location = new System.Drawing.Point(133, 55);
+            this.BrandPopUp.Location = new System.Drawing.Point(144, 93);
             this.BrandPopUp.MenuManager = this.mainRibbonControl;
             this.BrandPopUp.Name = "BrandPopUp";
             this.BrandPopUp.ObjectId = null;
@@ -369,18 +276,159 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.BrandPopUp.Properties.OptionsDisplayWidth = "";
             this.BrandPopUp.Properties.OptionsFilterColumns = "";
             this.BrandPopUp.Properties.OptionsSortColumns = "";
-            this.BrandPopUp.Size = new System.Drawing.Size(864, 34);
+            this.BrandPopUp.Size = new System.Drawing.Size(853, 34);
             this.BrandPopUp.StyleController = this._DataLayoutControl;
             this.BrandPopUp.TabIndex = 12;
             // 
-            // ItemForBrand
+            // layoutControlGroup3
             // 
-            this.ItemForBrand.Control = this.BrandPopUp;
-            this.ItemForBrand.Location = new System.Drawing.Point(0, 0);
-            this.ItemForBrand.Name = "ItemForBrand";
-            this.ItemForBrand.Size = new System.Drawing.Size(978, 38);
-            this.ItemForBrand.Text = "Merek";
-            this.ItemForBrand.TextSize = new System.Drawing.Size(98, 21);
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForCreatedUser,
+            this.ItemForCreatedDate,
+            this.ItemForModifiedUser,
+            this.ItemForModifiedDate});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(978, 336);
+            this.layoutControlGroup3.Text = "Audit Trail";
+            // 
+            // ItemForCreatedUser
+            // 
+            this.ItemForCreatedUser.Control = this.CreatedUserTextEdit;
+            this.ItemForCreatedUser.Location = new System.Drawing.Point(0, 0);
+            this.ItemForCreatedUser.Name = "ItemForCreatedUser";
+            this.ItemForCreatedUser.Size = new System.Drawing.Size(978, 38);
+            this.ItemForCreatedUser.Text = "Dibuat Oleh";
+            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(109, 21);
+            // 
+            // CreatedUserTextEdit
+            // 
+            this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, 55);
+            this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
+            this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
+            this.CreatedUserTextEdit.Size = new System.Drawing.Size(853, 34);
+            this.CreatedUserTextEdit.StyleController = this._DataLayoutControl;
+            this.CreatedUserTextEdit.TabIndex = 8;
+            // 
+            // ItemForCreatedDate
+            // 
+            this.ItemForCreatedDate.Control = this.CreatedDateDateEdit;
+            this.ItemForCreatedDate.Location = new System.Drawing.Point(0, 38);
+            this.ItemForCreatedDate.Name = "ItemForCreatedDate";
+            this.ItemForCreatedDate.Size = new System.Drawing.Size(978, 38);
+            this.ItemForCreatedDate.Text = "Dibuat Tanggal";
+            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(109, 21);
+            // 
+            // CreatedDateDateEdit
+            // 
+            this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
+            this.CreatedDateDateEdit.EditValue = null;
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, 93);
+            this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
+            this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
+            this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.CreatedDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CreatedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CreatedDateDateEdit.Size = new System.Drawing.Size(853, 34);
+            this.CreatedDateDateEdit.StyleController = this._DataLayoutControl;
+            this.CreatedDateDateEdit.TabIndex = 9;
+            // 
+            // ItemForModifiedUser
+            // 
+            this.ItemForModifiedUser.Control = this.ModifiedUserTextEdit;
+            this.ItemForModifiedUser.Location = new System.Drawing.Point(0, 76);
+            this.ItemForModifiedUser.Name = "ItemForModifiedUser";
+            this.ItemForModifiedUser.Size = new System.Drawing.Size(978, 38);
+            this.ItemForModifiedUser.Text = "Diubah Oleh";
+            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(109, 21);
+            // 
+            // ModifiedUserTextEdit
+            // 
+            this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, 131);
+            this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
+            this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
+            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(853, 34);
+            this.ModifiedUserTextEdit.StyleController = this._DataLayoutControl;
+            this.ModifiedUserTextEdit.TabIndex = 10;
+            // 
+            // ItemForModifiedDate
+            // 
+            this.ItemForModifiedDate.Control = this.ModifiedDateDateEdit;
+            this.ItemForModifiedDate.Location = new System.Drawing.Point(0, 114);
+            this.ItemForModifiedDate.Name = "ItemForModifiedDate";
+            this.ItemForModifiedDate.Size = new System.Drawing.Size(978, 222);
+            this.ItemForModifiedDate.Text = "Diubah Tanggal";
+            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(109, 21);
+            // 
+            // ModifiedDateDateEdit
+            // 
+            this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
+            this.ModifiedDateDateEdit.EditValue = null;
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, 169);
+            this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
+            this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
+            this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.ModifiedDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ModifiedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(853, 34);
+            this.ModifiedDateDateEdit.StyleController = this._DataLayoutControl;
+            this.ModifiedDateDateEdit.TabIndex = 11;
+            // 
+            // CompanyPopUp
+            // 
+            this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
+            this.CompanyPopUp.Location = new System.Drawing.Point(144, 55);
+            this.CompanyPopUp.MenuManager = this.mainRibbonControl;
+            this.CompanyPopUp.Name = "CompanyPopUp";
+            this.CompanyPopUp.ObjectId = null;
+            this.CompanyPopUp.OptionsCascadeControl = null;
+            this.CompanyPopUp.OptionsCascadeMember = null;
+            this.CompanyPopUp.OptionsChildControl = null;
+            this.CompanyPopUp.OptionsDataSource = null;
+            this.CompanyPopUp.OptionsDataType = null;
+            this.CompanyPopUp.OptionsDisplayCaption = null;
+            this.CompanyPopUp.OptionsDisplayColumns = null;
+            this.CompanyPopUp.OptionsDisplayText = null;
+            this.CompanyPopUp.OptionsDisplayTitle = null;
+            this.CompanyPopUp.OptionsDisplayWidth = null;
+            this.CompanyPopUp.OptionsFilterColumns = null;
+            this.CompanyPopUp.OptionsSortColumns = null;
+            this.CompanyPopUp.Properties.Appearance.Options.UseTextOptions = true;
+            this.CompanyPopUp.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.CompanyPopUp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CompanyPopUp.Properties.ObjectId = "";
+            this.CompanyPopUp.Properties.OptionsCascadeControl = null;
+            this.CompanyPopUp.Properties.OptionsCascadeMember = "";
+            this.CompanyPopUp.Properties.OptionsChildControl = null;
+            this.CompanyPopUp.Properties.OptionsDataSource = null;
+            this.CompanyPopUp.Properties.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
+            this.CompanyPopUp.Properties.OptionsDisplayCaption = "";
+            this.CompanyPopUp.Properties.OptionsDisplayColumns = "";
+            this.CompanyPopUp.Properties.OptionsDisplayFormat = "";
+            this.CompanyPopUp.Properties.OptionsDisplayText = "";
+            this.CompanyPopUp.Properties.OptionsDisplayTitle = "";
+            this.CompanyPopUp.Properties.OptionsDisplayWidth = "";
+            this.CompanyPopUp.Properties.OptionsFilterColumns = "";
+            this.CompanyPopUp.Properties.OptionsSortColumns = "";
+            this.CompanyPopUp.Size = new System.Drawing.Size(853, 34);
+            this.CompanyPopUp.StyleController = this._DataLayoutControl;
+            this.CompanyPopUp.TabIndex = 13;
+            // 
+            // ItemForCompany
+            // 
+            this.ItemForCompany.Control = this.CompanyPopUp;
+            this.ItemForCompany.Location = new System.Drawing.Point(0, 0);
+            this.ItemForCompany.Name = "ItemForCompany";
+            this.ItemForCompany.Size = new System.Drawing.Size(978, 38);
+            this.ItemForCompany.Text = "Perusahaan";
+            this.ItemForCompany.TextSize = new System.Drawing.Size(109, 21);
             // 
             // frmModelUnitDV
             // 
@@ -404,6 +452,8 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBrand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BrandPopUp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).EndInit();
@@ -415,8 +465,8 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BrandPopUp.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBrand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CompanyPopUp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCompany)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,5 +493,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private Descendant.PopupContainerEditOwn BrandPopUp;
         private DevExpress.XtraLayout.LayoutControlItem ItemForBrand;
+        private Descendant.PopupContainerEditOwn CompanyPopUp;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForCompany;
     }
 }

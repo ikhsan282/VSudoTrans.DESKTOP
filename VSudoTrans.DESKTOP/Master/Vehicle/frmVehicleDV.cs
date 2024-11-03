@@ -3,6 +3,7 @@ using Domain.Entities.Vehicle;
 using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
 using PopUpUtils;
+using System;
 
 namespace VSudoTrans.DESKTOP.Master.Vehicle
 {
@@ -23,11 +24,13 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             bbiSaveAndClose.ItemClick += BbiSaveAndClose_ItemClick;
             bbiSaveAndNew.ItemClick += BbiSaveAndNew_ItemClick;
 
+            HelperConvert.FormatSpinEdit(SeatSpinEdit, "n0", 0, 999);
             HelperConvert.FormatDateTimeEdit(CreatedDateDateEdit);
             HelperConvert.FormatDateTimeEdit(ModifiedDateDateEdit);
             HelperConvert.FormatDateEdit(TaxDueDateEdit);
             HelperConvert.FormatDateEdit(StnkDueDateEdit);
             HelperConvert.FormatDateEdit(KirDueDateEdit);
+            HelperConvert.FormatDateTextEdit(ProductionYearTextEdit, "yyyy");
         }
 
         protected override void InitializeFomTitle(string fieldName = "Code")
@@ -95,6 +98,10 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             base.DisplayEntity<T>();
 
             _Vehicles = OdataEntity as Vehicles;
+            if (_Vehicles != null)
+            {
+                ProductionYearTextEdit.EditValue = new DateTime(_Vehicles.ProductionYear, 1, 1);
+            }
         }
 
         protected override void ActionEndEdit()
@@ -109,7 +116,12 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
                 TypeEngineId = HelperConvert.Int(AssemblyHelper.GetValueProperty(TypeEnginePopUp.EditValue, "Id")),
                 ModelUnitId = HelperConvert.Int(AssemblyHelper.GetValueProperty(ModelUnitPopUp.EditValue, "Id")),
 
+
+                Seat = HelperConvert.Int(SeatSpinEdit.EditValue),
+                ProductionYear = HelperConvert.Date(ProductionYearTextEdit.EditValue).Year,
+                VehicleColor = HelperConvert.String(VehicleColorTextEdit.EditValue),
                 FrameNumber = HelperConvert.String(FrameNumberTextEdit.EditValue),
+                MachineNumber = HelperConvert.String(MachineNumberTextEdit.EditValue),
                 VehicleNumber = HelperConvert.String(VehicleNumberTextEdit.EditValue),
                 BpkbNumber = HelperConvert.String(BpkbNumberTextEdit.EditValue),
 
@@ -119,7 +131,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
                 StnkDue = HelperConvert.Date(StnkDueDateEdit.EditValue),
                 KirDue = HelperConvert.Date(KirDueDateEdit.EditValue),
 
-                Notes = HelperConvert.String(NotesMemoEdit.EditValue),
+                Note = HelperConvert.String(NoteMemoEdit.EditValue),
             };
 
             OdataEntity = _Vehicles;

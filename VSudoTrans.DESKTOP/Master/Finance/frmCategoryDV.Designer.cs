@@ -309,7 +309,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             this.ItemForCreatedDate.Location = new System.Drawing.Point(0, 0);
             this.ItemForCreatedDate.Name = "ItemForCreatedDate";
             this.ItemForCreatedDate.Size = new System.Drawing.Size(1244, 40);
-            this.ItemForCreatedDate.Text = "Created Date";
+            this.ItemForCreatedDate.Text = "Dibuat Tanggal";
             this.ItemForCreatedDate.TextSize = new System.Drawing.Size(98, 21);
             // 
             // CreatedDateDateEdit
@@ -334,7 +334,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             this.ItemForModifiedUser.Location = new System.Drawing.Point(0, 120);
             this.ItemForModifiedUser.Name = "ItemForModifiedUser";
             this.ItemForModifiedUser.Size = new System.Drawing.Size(1244, 127);
-            this.ItemForModifiedUser.Text = "Modified User";
+            this.ItemForModifiedUser.Text = "Diubah Oleh";
             this.ItemForModifiedUser.TextSize = new System.Drawing.Size(98, 21);
             // 
             // ModifiedUserTextEdit
@@ -353,7 +353,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             this.ItemForCreatedUser.Location = new System.Drawing.Point(0, 40);
             this.ItemForCreatedUser.Name = "ItemForCreatedUser";
             this.ItemForCreatedUser.Size = new System.Drawing.Size(1244, 40);
-            this.ItemForCreatedUser.Text = "Created User";
+            this.ItemForCreatedUser.Text = "Dibuat Oleh";
             this.ItemForCreatedUser.TextSize = new System.Drawing.Size(98, 21);
             // 
             // CreatedUserTextEdit
@@ -372,7 +372,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             this.ItemForModifiedDate.Location = new System.Drawing.Point(0, 80);
             this.ItemForModifiedDate.Name = "ItemForModifiedDate";
             this.ItemForModifiedDate.Size = new System.Drawing.Size(1244, 40);
-            this.ItemForModifiedDate.Text = "Modified Date";
+            this.ItemForModifiedDate.Text = "Diubah Tanggal";
             this.ItemForModifiedDate.TextSize = new System.Drawing.Size(98, 21);
             // 
             // ModifiedDateDateEdit

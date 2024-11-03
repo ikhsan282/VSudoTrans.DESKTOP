@@ -30,11 +30,13 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
 
         protected override void InitializeSearchLookup()
         {
-            PopupEditHelper.General<BrandVehicle>(fEndPoint: "/BrandVehicles", fTitle: "Model", fControl: BrandPopUp, fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama");
+            PopupEditHelper.Company(CompanyPopUp);
+            PopupEditHelper.General<BrandVehicle>(fEndPoint: "/BrandVehicles", fTitle: "Model", fControl: BrandPopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama");
         }
 
         protected override void InitializeDefaultValidation()
         {
+            MyValidationHelper.SetValidation(_DxValidationProvider, this.CompanyPopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.CodeTextEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.NameTextEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.BrandPopUp, ConditionOperator.IsNotBlank);
@@ -80,6 +82,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             _ModelUnit = new ModelUnit()
             {
                 Id = _ModelUnit.Id,
+                CompanyId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CompanyPopUp.EditValue, "Id")),
                 Code = HelperConvert.String(CodeTextEdit.EditValue),
                 Name = HelperConvert.String(NameTextEdit.EditValue),
                 Note = HelperConvert.String(NoteMemoEdit.EditValue),

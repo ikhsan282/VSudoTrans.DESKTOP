@@ -31,16 +31,8 @@ namespace VSudoTrans.DESKTOP.Master.Travel
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRuteDV));
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this._GridControlSchedule = new DevExpress.XtraGrid.GridControl();
-            this._BindingSourceRuteSchedules = new System.Windows.Forms.BindingSource(this.components);
-            this._GridViewSchedule = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colSchedule = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SchedulePopUp = new VSudoTrans.DESKTOP.Descendant.RepositoryItemPopupContainerEditOwn();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForCode = new DevExpress.XtraLayout.LayoutControlItem();
             this.CodeTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -110,12 +102,21 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.btnRemoveDelivery = new DevExpress.XtraEditors.SimpleButton();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this._GridControlSchedule = new DevExpress.XtraGrid.GridControl();
+            this._BindingSourceRuteSchedules = new System.Windows.Forms.BindingSource(this.components);
+            this._GridViewSchedule = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colSchedule = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SchedulePopUp = new VSudoTrans.DESKTOP.Descendant.RepositoryItemPopupContainerEditOwn();
             this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this._GridControlTravelPrice = new DevExpress.XtraGrid.GridControl();
             this._BindingSourceTravelPrice = new System.Windows.Forms.BindingSource(this.components);
             this._GridViewTravelPrice = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colPriceType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PriceTypeSearchLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMinPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MinPriceSpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -135,8 +136,6 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ModifiedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForModifiedDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ModifiedDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.PriceTypeSearchLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).BeginInit();
             this._DataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).BeginInit();
@@ -145,12 +144,6 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridControlSchedule)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceRuteSchedules)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridViewSchedule)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SchedulePopUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodeTextEdit.Properties)).BeginInit();
@@ -204,11 +197,19 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControlSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceRuteSchedules)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridViewSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SchedulePopUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridControlTravelPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._BindingSourceTravelPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewTravelPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PriceTypeSearchLookUpEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinPriceSpinEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PriceSpinEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxPriceSpinEdit)).BeginInit();
@@ -225,8 +226,6 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PriceTypeSearchLookUpEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // _DataLayoutControl
@@ -278,30 +277,19 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.mainRibbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(1135, 1295, 1135, 1295);
             this.mainRibbonControl.ExpandCollapseItem.Id = 0;
             this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(108, 113, 108, 113);
-            // 
-            // 
-            // 
-            this.mainRibbonControl.SearchEditItem.AccessibleName = "Search Item";
-            this.mainRibbonControl.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.mainRibbonControl.SearchEditItem.EditWidth = 150;
-            this.mainRibbonControl.SearchEditItem.Id = -5000;
-            this.mainRibbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.mainRibbonControl.Size = new System.Drawing.Size(1440, 254);
             // 
             // bbiSave
             // 
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
-            this.bbiSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSave.ImageOptions.SvgImage")));
             // 
             // bbiSaveAndClose
             // 
             this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
-            this.bbiSaveAndClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSaveAndClose.ImageOptions.SvgImage")));
             // 
             // bbiSaveAndNew
             // 
             this.bbiSaveAndNew.ImageOptions.ImageUri.Uri = "SaveAndNew";
-            this.bbiSaveAndNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSaveAndNew.ImageOptions.SvgImage")));
             // 
             // bbiReset
             // 
@@ -310,7 +298,6 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             // bbiClose
             // 
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
-            this.bbiClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiClose.ImageOptions.SvgImage")));
             // 
             // _BindingSource
             // 
@@ -340,83 +327,6 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.layoutControlGroup7,
             this.layoutControlGroup3});
             // 
-            // layoutControlGroup6
-            // 
-            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem13});
-            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup6.Name = "layoutControlGroup6";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(1398, 339);
-            this.layoutControlGroup6.Text = "Jadwal";
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this._GridControlSchedule;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(1398, 339);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem13.TextVisible = false;
-            // 
-            // _GridControlSchedule
-            // 
-            this._GridControlSchedule.DataSource = this._BindingSourceRuteSchedules;
-            this._GridControlSchedule.Location = new System.Drawing.Point(23, 55);
-            this._GridControlSchedule.MainView = this._GridViewSchedule;
-            this._GridControlSchedule.MenuManager = this.mainRibbonControl;
-            this._GridControlSchedule.Name = "_GridControlSchedule";
-            this._GridControlSchedule.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.SchedulePopUp});
-            this._GridControlSchedule.Size = new System.Drawing.Size(1394, 335);
-            this._GridControlSchedule.TabIndex = 26;
-            this._GridControlSchedule.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this._GridViewSchedule});
-            // 
-            // _BindingSourceRuteSchedules
-            // 
-            this._BindingSourceRuteSchedules.DataSource = typeof(Domain.Entities.Travel.RuteSchedule);
-            // 
-            // _GridViewSchedule
-            // 
-            this._GridViewSchedule.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colSchedule});
-            this._GridViewSchedule.GridControl = this._GridControlSchedule;
-            this._GridViewSchedule.Name = "_GridViewSchedule";
-            // 
-            // colSchedule
-            // 
-            this.colSchedule.Caption = "Jadwal";
-            this.colSchedule.ColumnEdit = this.SchedulePopUp;
-            this.colSchedule.FieldName = "Schedule";
-            this.colSchedule.MinWidth = 30;
-            this.colSchedule.Name = "colSchedule";
-            this.colSchedule.Visible = true;
-            this.colSchedule.VisibleIndex = 0;
-            this.colSchedule.Width = 112;
-            // 
-            // SchedulePopUp
-            // 
-            this.SchedulePopUp.Appearance.Options.UseTextOptions = true;
-            this.SchedulePopUp.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.SchedulePopUp.AutoHeight = false;
-            this.SchedulePopUp.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.SchedulePopUp.Name = "SchedulePopUp";
-            this.SchedulePopUp.ObjectId = null;
-            this.SchedulePopUp.OptionsCascadeControl = null;
-            this.SchedulePopUp.OptionsCascadeMember = "";
-            this.SchedulePopUp.OptionsChildControl = null;
-            this.SchedulePopUp.OptionsDataSource = null;
-            this.SchedulePopUp.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
-            this.SchedulePopUp.OptionsDisplayCaption = "";
-            this.SchedulePopUp.OptionsDisplayColumns = "";
-            this.SchedulePopUp.OptionsDisplayFormat = "";
-            this.SchedulePopUp.OptionsDisplayText = "";
-            this.SchedulePopUp.OptionsDisplayTitle = "";
-            this.SchedulePopUp.OptionsDisplayWidth = "";
-            this.SchedulePopUp.OptionsFilterColumns = "";
-            this.SchedulePopUp.OptionsSortColumns = "";
-            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -438,15 +348,15 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForCode.Name = "ItemForCode";
             this.ItemForCode.Size = new System.Drawing.Size(1398, 38);
             this.ItemForCode.Text = "Kode";
-            this.ItemForCode.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForCode.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CodeTextEdit
             // 
             this.CodeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Code", true));
-            this.CodeTextEdit.Location = new System.Drawing.Point(133, 93);
+            this.CodeTextEdit.Location = new System.Drawing.Point(144, 93);
             this.CodeTextEdit.MenuManager = this.mainRibbonControl;
             this.CodeTextEdit.Name = "CodeTextEdit";
-            this.CodeTextEdit.Size = new System.Drawing.Size(1284, 34);
+            this.CodeTextEdit.Size = new System.Drawing.Size(1273, 34);
             this.CodeTextEdit.StyleController = this._DataLayoutControl;
             this.CodeTextEdit.TabIndex = 7;
             // 
@@ -457,15 +367,15 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForName.Name = "ItemForName";
             this.ItemForName.Size = new System.Drawing.Size(1398, 38);
             this.ItemForName.Text = "Nama";
-            this.ItemForName.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForName.TextSize = new System.Drawing.Size(109, 21);
             // 
             // NameTextEdit
             // 
             this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Name", true));
-            this.NameTextEdit.Location = new System.Drawing.Point(133, 131);
+            this.NameTextEdit.Location = new System.Drawing.Point(144, 131);
             this.NameTextEdit.MenuManager = this.mainRibbonControl;
             this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Size = new System.Drawing.Size(1284, 34);
+            this.NameTextEdit.Size = new System.Drawing.Size(1273, 34);
             this.NameTextEdit.StyleController = this._DataLayoutControl;
             this.NameTextEdit.TabIndex = 8;
             // 
@@ -477,15 +387,15 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForNote.Size = new System.Drawing.Size(1398, 95);
             this.ItemForNote.StartNewLine = true;
             this.ItemForNote.Text = "Note";
-            this.ItemForNote.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForNote.TextSize = new System.Drawing.Size(109, 21);
             // 
             // NoteMemoEdit
             // 
             this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
-            this.NoteMemoEdit.Location = new System.Drawing.Point(133, 299);
+            this.NoteMemoEdit.Location = new System.Drawing.Point(144, 299);
             this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
             this.NoteMemoEdit.Name = "NoteMemoEdit";
-            this.NoteMemoEdit.Size = new System.Drawing.Size(1284, 91);
+            this.NoteMemoEdit.Size = new System.Drawing.Size(1273, 91);
             this.NoteMemoEdit.StyleController = this._DataLayoutControl;
             this.NoteMemoEdit.TabIndex = 9;
             // 
@@ -506,11 +416,11 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForPickupProvince.Name = "ItemForPickupProvince";
             this.ItemForPickupProvince.Size = new System.Drawing.Size(675, 38);
             this.ItemForPickupProvince.Text = "Provinsi";
-            this.ItemForPickupProvince.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForPickupProvince.TextSize = new System.Drawing.Size(109, 21);
             // 
             // PickupProvincePopUp
             // 
-            this.PickupProvincePopUp.Location = new System.Drawing.Point(145, 211);
+            this.PickupProvincePopUp.Location = new System.Drawing.Point(156, 211);
             this.PickupProvincePopUp.MenuManager = this.mainRibbonControl;
             this.PickupProvincePopUp.Name = "PickupProvincePopUp";
             this.PickupProvincePopUp.ObjectId = null;
@@ -544,7 +454,7 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.PickupProvincePopUp.Properties.OptionsDisplayWidth = "";
             this.PickupProvincePopUp.Properties.OptionsFilterColumns = "";
             this.PickupProvincePopUp.Properties.OptionsSortColumns = "";
-            this.PickupProvincePopUp.Size = new System.Drawing.Size(561, 34);
+            this.PickupProvincePopUp.Size = new System.Drawing.Size(550, 34);
             this.PickupProvincePopUp.StyleController = this._DataLayoutControl;
             this.PickupProvincePopUp.TabIndex = 31;
             // 
@@ -555,12 +465,12 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForPickupCity.Name = "ItemForPickupCity";
             this.ItemForPickupCity.Size = new System.Drawing.Size(675, 38);
             this.ItemForPickupCity.Text = "Kota";
-            this.ItemForPickupCity.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForPickupCity.TextSize = new System.Drawing.Size(109, 21);
             // 
             // PickupCityPopUp
             // 
             this.PickupCityPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PickupPointCity", true));
-            this.PickupCityPopUp.Location = new System.Drawing.Point(145, 249);
+            this.PickupCityPopUp.Location = new System.Drawing.Point(156, 249);
             this.PickupCityPopUp.MenuManager = this.mainRibbonControl;
             this.PickupCityPopUp.Name = "PickupCityPopUp";
             this.PickupCityPopUp.ObjectId = null;
@@ -594,7 +504,7 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.PickupCityPopUp.Properties.OptionsDisplayWidth = "";
             this.PickupCityPopUp.Properties.OptionsFilterColumns = "";
             this.PickupCityPopUp.Properties.OptionsSortColumns = "";
-            this.PickupCityPopUp.Size = new System.Drawing.Size(561, 34);
+            this.PickupCityPopUp.Size = new System.Drawing.Size(550, 34);
             this.PickupCityPopUp.StyleController = this._DataLayoutControl;
             this.PickupCityPopUp.TabIndex = 32;
             // 
@@ -615,11 +525,11 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForDeliveryProvince.Name = "ItemForDeliveryProvince";
             this.ItemForDeliveryProvince.Size = new System.Drawing.Size(675, 38);
             this.ItemForDeliveryProvince.Text = "Provinsi";
-            this.ItemForDeliveryProvince.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForDeliveryProvince.TextSize = new System.Drawing.Size(109, 21);
             // 
             // DeliveryProvincePopUp
             // 
-            this.DeliveryProvincePopUp.Location = new System.Drawing.Point(844, 211);
+            this.DeliveryProvincePopUp.Location = new System.Drawing.Point(855, 211);
             this.DeliveryProvincePopUp.MenuManager = this.mainRibbonControl;
             this.DeliveryProvincePopUp.Name = "DeliveryProvincePopUp";
             this.DeliveryProvincePopUp.ObjectId = null;
@@ -653,7 +563,7 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.DeliveryProvincePopUp.Properties.OptionsDisplayWidth = "";
             this.DeliveryProvincePopUp.Properties.OptionsFilterColumns = "";
             this.DeliveryProvincePopUp.Properties.OptionsSortColumns = "";
-            this.DeliveryProvincePopUp.Size = new System.Drawing.Size(561, 34);
+            this.DeliveryProvincePopUp.Size = new System.Drawing.Size(550, 34);
             this.DeliveryProvincePopUp.StyleController = this._DataLayoutControl;
             this.DeliveryProvincePopUp.TabIndex = 33;
             // 
@@ -664,12 +574,12 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForDeliveryCity.Name = "ItemForDeliveryCity";
             this.ItemForDeliveryCity.Size = new System.Drawing.Size(675, 38);
             this.ItemForDeliveryCity.Text = "Kota";
-            this.ItemForDeliveryCity.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForDeliveryCity.TextSize = new System.Drawing.Size(109, 21);
             // 
             // DeliveryCityPopUp
             // 
             this.DeliveryCityPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DeliveryPointCity", true));
-            this.DeliveryCityPopUp.Location = new System.Drawing.Point(844, 249);
+            this.DeliveryCityPopUp.Location = new System.Drawing.Point(855, 249);
             this.DeliveryCityPopUp.MenuManager = this.mainRibbonControl;
             this.DeliveryCityPopUp.Name = "DeliveryCityPopUp";
             this.DeliveryCityPopUp.ObjectId = null;
@@ -703,7 +613,7 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.DeliveryCityPopUp.Properties.OptionsDisplayWidth = "";
             this.DeliveryCityPopUp.Properties.OptionsFilterColumns = "";
             this.DeliveryCityPopUp.Properties.OptionsSortColumns = "";
-            this.DeliveryCityPopUp.Size = new System.Drawing.Size(561, 34);
+            this.DeliveryCityPopUp.Size = new System.Drawing.Size(550, 34);
             this.DeliveryCityPopUp.StyleController = this._DataLayoutControl;
             this.DeliveryCityPopUp.TabIndex = 34;
             // 
@@ -714,12 +624,12 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForCompany.Name = "ItemForCompany";
             this.ItemForCompany.Size = new System.Drawing.Size(1398, 38);
             this.ItemForCompany.Text = "Perusahaan";
-            this.ItemForCompany.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForCompany.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CompanyPopUp
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
-            this.CompanyPopUp.Location = new System.Drawing.Point(133, 55);
+            this.CompanyPopUp.Location = new System.Drawing.Point(144, 55);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -753,7 +663,7 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.CompanyPopUp.Properties.OptionsDisplayWidth = "";
             this.CompanyPopUp.Properties.OptionsFilterColumns = "";
             this.CompanyPopUp.Properties.OptionsSortColumns = "";
-            this.CompanyPopUp.Size = new System.Drawing.Size(1284, 34);
+            this.CompanyPopUp.Size = new System.Drawing.Size(1273, 34);
             this.CompanyPopUp.StyleController = this._DataLayoutControl;
             this.CompanyPopUp.TabIndex = 30;
             // 
@@ -843,19 +753,19 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(662, 38);
             this.layoutControlItem2.Text = "Pencarian";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(98, 21);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(109, 21);
             // 
             // _SearchControlPickupDistrict
             // 
             this._SearchControlPickupDistrict.Client = this._GridControlPickupDistrict;
-            this._SearchControlPickupDistrict.Location = new System.Drawing.Point(133, 55);
+            this._SearchControlPickupDistrict.Location = new System.Drawing.Point(144, 55);
             this._SearchControlPickupDistrict.MenuManager = this.mainRibbonControl;
             this._SearchControlPickupDistrict.Name = "_SearchControlPickupDistrict";
             this._SearchControlPickupDistrict.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton()});
             this._SearchControlPickupDistrict.Properties.Client = this._GridControlPickupDistrict;
-            this._SearchControlPickupDistrict.Size = new System.Drawing.Size(548, 34);
+            this._SearchControlPickupDistrict.Size = new System.Drawing.Size(537, 34);
             this._SearchControlPickupDistrict.StyleController = this._DataLayoutControl;
             this._SearchControlPickupDistrict.TabIndex = 15;
             // 
@@ -929,19 +839,19 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(582, 38);
             this.layoutControlItem6.Text = "Pencarian";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(98, 21);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(109, 21);
             // 
             // searchControl2
             // 
             this.searchControl2.Client = this._GridControlPickupDistrictSelect;
-            this.searchControl2.Location = new System.Drawing.Point(949, 55);
+            this.searchControl2.Location = new System.Drawing.Point(960, 55);
             this.searchControl2.MenuManager = this.mainRibbonControl;
             this.searchControl2.Name = "searchControl2";
             this.searchControl2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton()});
             this.searchControl2.Properties.Client = this._GridControlPickupDistrictSelect;
-            this.searchControl2.Size = new System.Drawing.Size(468, 34);
+            this.searchControl2.Size = new System.Drawing.Size(457, 34);
             this.searchControl2.StyleController = this._DataLayoutControl;
             this.searchControl2.TabIndex = 19;
             // 
@@ -1083,19 +993,19 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(662, 38);
             this.layoutControlItem4.Text = "Pencarian";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(98, 21);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(109, 21);
             // 
             // searchControl1
             // 
             this.searchControl1.Client = this._GridControlDeliveryDistrict;
-            this.searchControl1.Location = new System.Drawing.Point(133, 55);
+            this.searchControl1.Location = new System.Drawing.Point(144, 55);
             this.searchControl1.MenuManager = this.mainRibbonControl;
             this.searchControl1.Name = "searchControl1";
             this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton()});
             this.searchControl1.Properties.Client = this._GridControlDeliveryDistrict;
-            this.searchControl1.Size = new System.Drawing.Size(548, 34);
+            this.searchControl1.Size = new System.Drawing.Size(537, 34);
             this.searchControl1.StyleController = this._DataLayoutControl;
             this.searchControl1.TabIndex = 17;
             // 
@@ -1169,19 +1079,19 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(586, 38);
             this.layoutControlItem10.Text = "Pencarian";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(98, 21);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(109, 21);
             // 
             // searchControl3
             // 
             this.searchControl3.Client = this._GridControlDeliveryDistrictSelect;
-            this.searchControl3.Location = new System.Drawing.Point(945, 55);
+            this.searchControl3.Location = new System.Drawing.Point(956, 55);
             this.searchControl3.MenuManager = this.mainRibbonControl;
             this.searchControl3.Name = "searchControl3";
             this.searchControl3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton()});
             this.searchControl3.Properties.Client = this._GridControlDeliveryDistrictSelect;
-            this.searchControl3.Size = new System.Drawing.Size(472, 34);
+            this.searchControl3.Size = new System.Drawing.Size(461, 34);
             this.searchControl3.StyleController = this._DataLayoutControl;
             this.searchControl3.TabIndex = 23;
             // 
@@ -1236,6 +1146,83 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(150, 123);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlGroup6
+            // 
+            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem13});
+            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup6.Name = "layoutControlGroup6";
+            this.layoutControlGroup6.Size = new System.Drawing.Size(1398, 339);
+            this.layoutControlGroup6.Text = "Jadwal";
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this._GridControlSchedule;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(1398, 339);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
+            // 
+            // _GridControlSchedule
+            // 
+            this._GridControlSchedule.DataSource = this._BindingSourceRuteSchedules;
+            this._GridControlSchedule.Location = new System.Drawing.Point(23, 55);
+            this._GridControlSchedule.MainView = this._GridViewSchedule;
+            this._GridControlSchedule.MenuManager = this.mainRibbonControl;
+            this._GridControlSchedule.Name = "_GridControlSchedule";
+            this._GridControlSchedule.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.SchedulePopUp});
+            this._GridControlSchedule.Size = new System.Drawing.Size(1394, 335);
+            this._GridControlSchedule.TabIndex = 26;
+            this._GridControlSchedule.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this._GridViewSchedule});
+            // 
+            // _BindingSourceRuteSchedules
+            // 
+            this._BindingSourceRuteSchedules.DataSource = typeof(Domain.Entities.Travel.RuteSchedule);
+            // 
+            // _GridViewSchedule
+            // 
+            this._GridViewSchedule.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSchedule});
+            this._GridViewSchedule.GridControl = this._GridControlSchedule;
+            this._GridViewSchedule.Name = "_GridViewSchedule";
+            // 
+            // colSchedule
+            // 
+            this.colSchedule.Caption = "Jadwal";
+            this.colSchedule.ColumnEdit = this.SchedulePopUp;
+            this.colSchedule.FieldName = "Schedule";
+            this.colSchedule.MinWidth = 30;
+            this.colSchedule.Name = "colSchedule";
+            this.colSchedule.Visible = true;
+            this.colSchedule.VisibleIndex = 0;
+            this.colSchedule.Width = 112;
+            // 
+            // SchedulePopUp
+            // 
+            this.SchedulePopUp.Appearance.Options.UseTextOptions = true;
+            this.SchedulePopUp.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.SchedulePopUp.AutoHeight = false;
+            this.SchedulePopUp.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SchedulePopUp.Name = "SchedulePopUp";
+            this.SchedulePopUp.ObjectId = null;
+            this.SchedulePopUp.OptionsCascadeControl = null;
+            this.SchedulePopUp.OptionsCascadeMember = "";
+            this.SchedulePopUp.OptionsChildControl = null;
+            this.SchedulePopUp.OptionsDataSource = null;
+            this.SchedulePopUp.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
+            this.SchedulePopUp.OptionsDisplayCaption = "";
+            this.SchedulePopUp.OptionsDisplayColumns = "";
+            this.SchedulePopUp.OptionsDisplayFormat = "";
+            this.SchedulePopUp.OptionsDisplayText = "";
+            this.SchedulePopUp.OptionsDisplayTitle = "";
+            this.SchedulePopUp.OptionsDisplayWidth = "";
+            this.SchedulePopUp.OptionsFilterColumns = "";
+            this.SchedulePopUp.OptionsSortColumns = "";
             // 
             // layoutControlGroup7
             // 
@@ -1300,6 +1287,21 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.colPriceType.Visible = true;
             this.colPriceType.VisibleIndex = 0;
             this.colPriceType.Width = 246;
+            // 
+            // PriceTypeSearchLookUpEdit
+            // 
+            this.PriceTypeSearchLookUpEdit.AutoHeight = false;
+            this.PriceTypeSearchLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.PriceTypeSearchLookUpEdit.Name = "PriceTypeSearchLookUpEdit";
+            this.PriceTypeSearchLookUpEdit.PopupView = this.repositoryItemSearchLookUpEdit1View;
+            // 
+            // repositoryItemSearchLookUpEdit1View
+            // 
+            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
+            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // colMinPrice
             // 
@@ -1409,16 +1411,16 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForCreatedUser.Location = new System.Drawing.Point(0, 0);
             this.ItemForCreatedUser.Name = "ItemForCreatedUser";
             this.ItemForCreatedUser.Size = new System.Drawing.Size(1398, 38);
-            this.ItemForCreatedUser.Text = "Created User";
-            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForCreatedUser.Text = "Dibuat Oleh";
+            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CreatedUserTextEdit
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(133, 55);
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, 55);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
-            this.CreatedUserTextEdit.Size = new System.Drawing.Size(1284, 34);
+            this.CreatedUserTextEdit.Size = new System.Drawing.Size(1273, 34);
             this.CreatedUserTextEdit.StyleController = this._DataLayoutControl;
             this.CreatedUserTextEdit.TabIndex = 10;
             // 
@@ -1428,14 +1430,14 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForCreatedDate.Location = new System.Drawing.Point(0, 38);
             this.ItemForCreatedDate.Name = "ItemForCreatedDate";
             this.ItemForCreatedDate.Size = new System.Drawing.Size(1398, 38);
-            this.ItemForCreatedDate.Text = "Created Date";
-            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForCreatedDate.Text = "Dibuat Tanggal";
+            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CreatedDateDateEdit
             // 
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(133, 93);
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, 93);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1443,7 +1445,7 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CreatedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CreatedDateDateEdit.Size = new System.Drawing.Size(1284, 34);
+            this.CreatedDateDateEdit.Size = new System.Drawing.Size(1273, 34);
             this.CreatedDateDateEdit.StyleController = this._DataLayoutControl;
             this.CreatedDateDateEdit.TabIndex = 11;
             // 
@@ -1453,16 +1455,16 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForModifiedUser.Location = new System.Drawing.Point(0, 76);
             this.ItemForModifiedUser.Name = "ItemForModifiedUser";
             this.ItemForModifiedUser.Size = new System.Drawing.Size(1398, 38);
-            this.ItemForModifiedUser.Text = "Modified User";
-            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForModifiedUser.Text = "Diubah Oleh";
+            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(109, 21);
             // 
             // ModifiedUserTextEdit
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(133, 131);
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, 131);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
-            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(1284, 34);
+            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(1273, 34);
             this.ModifiedUserTextEdit.StyleController = this._DataLayoutControl;
             this.ModifiedUserTextEdit.TabIndex = 12;
             // 
@@ -1472,14 +1474,14 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             this.ItemForModifiedDate.Location = new System.Drawing.Point(0, 114);
             this.ItemForModifiedDate.Name = "ItemForModifiedDate";
             this.ItemForModifiedDate.Size = new System.Drawing.Size(1398, 225);
-            this.ItemForModifiedDate.Text = "Modified Date";
-            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(98, 21);
+            this.ItemForModifiedDate.Text = "Diubah Tanggal";
+            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(109, 21);
             // 
             // ModifiedDateDateEdit
             // 
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(133, 169);
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, 169);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1487,24 +1489,9 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ModifiedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(1284, 34);
+            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(1273, 34);
             this.ModifiedDateDateEdit.StyleController = this._DataLayoutControl;
             this.ModifiedDateDateEdit.TabIndex = 13;
-            // 
-            // PriceTypeSearchLookUpEdit
-            // 
-            this.PriceTypeSearchLookUpEdit.AutoHeight = false;
-            this.PriceTypeSearchLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.PriceTypeSearchLookUpEdit.Name = "PriceTypeSearchLookUpEdit";
-            this.PriceTypeSearchLookUpEdit.PopupView = this.repositoryItemSearchLookUpEdit1View;
-            // 
-            // repositoryItemSearchLookUpEdit1View
-            // 
-            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
-            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // frmRuteDV
             // 
@@ -1521,12 +1508,6 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridControlSchedule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceRuteSchedules)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridViewSchedule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SchedulePopUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodeTextEdit.Properties)).EndInit();
@@ -1580,11 +1561,19 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControlSchedule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceRuteSchedules)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridViewSchedule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SchedulePopUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridControlTravelPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._BindingSourceTravelPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewTravelPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PriceTypeSearchLookUpEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinPriceSpinEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PriceSpinEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxPriceSpinEdit)).EndInit();
@@ -1601,8 +1590,6 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PriceTypeSearchLookUpEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

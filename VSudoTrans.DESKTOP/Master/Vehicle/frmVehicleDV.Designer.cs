@@ -42,10 +42,6 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ModelUnitPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
             this.ItemForTypeEngineId = new DevExpress.XtraLayout.LayoutControlItem();
             this.TypeEnginePopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
-            this.ItemForVehicleNumber = new DevExpress.XtraLayout.LayoutControlItem();
-            this.VehicleNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForNotes = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NotesMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForOwnership = new DevExpress.XtraLayout.LayoutControlItem();
             this.OwnershipTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -59,6 +55,18 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.StnkDueDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.ItemForKirDue = new DevExpress.XtraLayout.LayoutControlItem();
             this.KirDueDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.ItemForMachineNumber = new DevExpress.XtraLayout.LayoutControlItem();
+            this.MachineNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForProductionYear = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ProductionYearTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForVehicleColor = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VehicleColorTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForSeat = new DevExpress.XtraLayout.LayoutControlItem();
+            this.SeatSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ItemForVehicleNumber = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VehicleNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForNotes = new DevExpress.XtraLayout.LayoutControlItem();
+            this.NoteMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForCreatedUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.CreatedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -85,10 +93,6 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             ((System.ComponentModel.ISupportInitialize)(this.ModelUnitPopUp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTypeEngineId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TypeEnginePopUp.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicleNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VehicleNumberTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNotes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NotesMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForOwnership)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OwnershipTextEdit.Properties)).BeginInit();
@@ -105,6 +109,18 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             ((System.ComponentModel.ISupportInitialize)(this.ItemForKirDue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KirDueDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KirDueDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForMachineNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MachineNumberTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForProductionYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductionYearTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicleColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleColorTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForSeat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeatSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicleNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleNumberTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNotes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).BeginInit();
@@ -120,6 +136,10 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // 
             // _DataLayoutControl
             // 
+            this._DataLayoutControl.Controls.Add(this.SeatSpinEdit);
+            this._DataLayoutControl.Controls.Add(this.VehicleColorTextEdit);
+            this._DataLayoutControl.Controls.Add(this.ProductionYearTextEdit);
+            this._DataLayoutControl.Controls.Add(this.MachineNumberTextEdit);
             this._DataLayoutControl.Controls.Add(this.FrameNumberTextEdit);
             this._DataLayoutControl.Controls.Add(this.VehicleNumberTextEdit);
             this._DataLayoutControl.Controls.Add(this.BpkbNumberTextEdit);
@@ -131,7 +151,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this._DataLayoutControl.Controls.Add(this.CreatedDateDateEdit);
             this._DataLayoutControl.Controls.Add(this.ModifiedUserTextEdit);
             this._DataLayoutControl.Controls.Add(this.ModifiedDateDateEdit);
-            this._DataLayoutControl.Controls.Add(this.NotesMemoEdit);
+            this._DataLayoutControl.Controls.Add(this.NoteMemoEdit);
             this._DataLayoutControl.Controls.Add(this.CompanyPopUp);
             this._DataLayoutControl.Controls.Add(this.BrandPopUp);
             this._DataLayoutControl.Controls.Add(this.ModelUnitPopUp);
@@ -150,21 +170,13 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // 
             this.lcgRoot.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
-            this.lcgRoot.Size = new System.Drawing.Size(1100, 546);
+            this.lcgRoot.Size = new System.Drawing.Size(1100, 926);
             // 
             // mainRibbonControl
             // 
             this.mainRibbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(1135, 1295, 1135, 1295);
             this.mainRibbonControl.ExpandCollapseItem.Id = 0;
             this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(108, 113, 108, 113);
-            // 
-            // 
-            // 
-            this.mainRibbonControl.SearchEditItem.AccessibleName = "Search Item";
-            this.mainRibbonControl.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.mainRibbonControl.SearchEditItem.EditWidth = 150;
-            this.mainRibbonControl.SearchEditItem.Id = -5000;
-            this.mainRibbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.mainRibbonControl.Size = new System.Drawing.Size(1126, 254);
             // 
             // bbiSave
@@ -203,14 +215,14 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.tabbedControlGroup1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1082, 528);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1082, 908);
             // 
             // tabbedControlGroup1
             // 
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup2;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1082, 528);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1082, 908);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,
             this.layoutControlGroup3});
@@ -222,12 +234,11 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ItemForBrandId,
             this.ItemForModelUnitId,
             this.ItemForTypeEngineId,
-            this.ItemForVehicleNumber,
-            this.ItemForNotes,
-            this.layoutControlGroup4});
+            this.layoutControlGroup4,
+            this.ItemForNotes});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1058, 472);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1058, 852);
             this.layoutControlGroup2.Text = "Detail";
             // 
             // ItemForCompanyId
@@ -283,7 +294,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ItemForBrandId
             // 
             this.ItemForBrandId.Control = this.BrandPopUp;
-            this.ItemForBrandId.Location = new System.Drawing.Point(0, 76);
+            this.ItemForBrandId.Location = new System.Drawing.Point(0, 38);
             this.ItemForBrandId.Name = "ItemForBrandId";
             this.ItemForBrandId.Size = new System.Drawing.Size(529, 38);
             this.ItemForBrandId.Text = "Merek";
@@ -292,7 +303,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // BrandPopUp
             // 
             this.BrandPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Brand", true));
-            this.BrandPopUp.Location = new System.Drawing.Point(203, 131);
+            this.BrandPopUp.Location = new System.Drawing.Point(203, 93);
             this.BrandPopUp.MenuManager = this.mainRibbonControl;
             this.BrandPopUp.Name = "BrandPopUp";
             this.BrandPopUp.ObjectId = null;
@@ -334,7 +345,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ItemForModelUnitId
             // 
             this.ItemForModelUnitId.Control = this.ModelUnitPopUp;
-            this.ItemForModelUnitId.Location = new System.Drawing.Point(529, 76);
+            this.ItemForModelUnitId.Location = new System.Drawing.Point(529, 38);
             this.ItemForModelUnitId.Name = "ItemForModelUnitId";
             this.ItemForModelUnitId.Size = new System.Drawing.Size(529, 38);
             this.ItemForModelUnitId.Text = "Model Unit";
@@ -343,7 +354,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ModelUnitPopUp
             // 
             this.ModelUnitPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModelUnit", true));
-            this.ModelUnitPopUp.Location = new System.Drawing.Point(732, 131);
+            this.ModelUnitPopUp.Location = new System.Drawing.Point(732, 93);
             this.ModelUnitPopUp.MenuManager = this.mainRibbonControl;
             this.ModelUnitPopUp.Name = "ModelUnitPopUp";
             this.ModelUnitPopUp.ObjectId = null;
@@ -385,7 +396,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ItemForTypeEngineId
             // 
             this.ItemForTypeEngineId.Control = this.TypeEnginePopUp;
-            this.ItemForTypeEngineId.Location = new System.Drawing.Point(0, 114);
+            this.ItemForTypeEngineId.Location = new System.Drawing.Point(0, 76);
             this.ItemForTypeEngineId.Name = "ItemForTypeEngineId";
             this.ItemForTypeEngineId.Size = new System.Drawing.Size(1058, 38);
             this.ItemForTypeEngineId.Text = "Tipe Mesin";
@@ -394,7 +405,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // TypeEnginePopUp
             // 
             this.TypeEnginePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "TypeEngine", true));
-            this.TypeEnginePopUp.Location = new System.Drawing.Point(203, 169);
+            this.TypeEnginePopUp.Location = new System.Drawing.Point(203, 131);
             this.TypeEnginePopUp.MenuManager = this.mainRibbonControl;
             this.TypeEnginePopUp.Name = "TypeEnginePopUp";
             this.TypeEnginePopUp.ObjectId = null;
@@ -433,44 +444,6 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.TypeEnginePopUp.StyleController = this._DataLayoutControl;
             this.TypeEnginePopUp.TabIndex = 10;
             // 
-            // ItemForVehicleNumber
-            // 
-            this.ItemForVehicleNumber.Control = this.VehicleNumberTextEdit;
-            this.ItemForVehicleNumber.Location = new System.Drawing.Point(0, 38);
-            this.ItemForVehicleNumber.Name = "ItemForVehicleNumber";
-            this.ItemForVehicleNumber.Size = new System.Drawing.Size(1058, 38);
-            this.ItemForVehicleNumber.Text = "Nomor Kendaraan (Plat)";
-            this.ItemForVehicleNumber.TextSize = new System.Drawing.Size(168, 21);
-            // 
-            // VehicleNumberTextEdit
-            // 
-            this.VehicleNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "VehicleNumber", true));
-            this.VehicleNumberTextEdit.Location = new System.Drawing.Point(203, 93);
-            this.VehicleNumberTextEdit.MenuManager = this.mainRibbonControl;
-            this.VehicleNumberTextEdit.Name = "VehicleNumberTextEdit";
-            this.VehicleNumberTextEdit.Size = new System.Drawing.Size(874, 34);
-            this.VehicleNumberTextEdit.StyleController = this._DataLayoutControl;
-            this.VehicleNumberTextEdit.TabIndex = 15;
-            // 
-            // ItemForNotes
-            // 
-            this.ItemForNotes.Control = this.NotesMemoEdit;
-            this.ItemForNotes.Location = new System.Drawing.Point(0, 152);
-            this.ItemForNotes.Name = "ItemForNotes";
-            this.ItemForNotes.Size = new System.Drawing.Size(1058, 38);
-            this.ItemForNotes.Text = "Notes";
-            this.ItemForNotes.TextSize = new System.Drawing.Size(168, 21);
-            // 
-            // NotesMemoEdit
-            // 
-            this.NotesMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Notes", true));
-            this.NotesMemoEdit.Location = new System.Drawing.Point(203, 207);
-            this.NotesMemoEdit.MenuManager = this.mainRibbonControl;
-            this.NotesMemoEdit.Name = "NotesMemoEdit";
-            this.NotesMemoEdit.Size = new System.Drawing.Size(874, 34);
-            this.NotesMemoEdit.StyleController = this._DataLayoutControl;
-            this.NotesMemoEdit.TabIndex = 26;
-            // 
             // layoutControlGroup4
             // 
             this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -479,10 +452,15 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ItemForBpkbNumber,
             this.ItemForTaxDue,
             this.ItemForStnkDue,
-            this.ItemForKirDue});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 190);
+            this.ItemForKirDue,
+            this.ItemForMachineNumber,
+            this.ItemForProductionYear,
+            this.ItemForVehicleColor,
+            this.ItemForSeat,
+            this.ItemForVehicleNumber});
+            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 114);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(1058, 282);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(1058, 434);
             this.layoutControlGroup4.Text = "Legalitas";
             // 
             // ItemForOwnership
@@ -497,7 +475,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // OwnershipTextEdit
             // 
             this.OwnershipTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Ownership", true));
-            this.OwnershipTextEdit.Location = new System.Drawing.Point(215, 287);
+            this.OwnershipTextEdit.Location = new System.Drawing.Point(215, 211);
             this.OwnershipTextEdit.MenuManager = this.mainRibbonControl;
             this.OwnershipTextEdit.Name = "OwnershipTextEdit";
             this.OwnershipTextEdit.Size = new System.Drawing.Size(850, 34);
@@ -507,7 +485,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ItemForFrameNumber
             // 
             this.ItemForFrameNumber.Control = this.FrameNumberTextEdit;
-            this.ItemForFrameNumber.Location = new System.Drawing.Point(0, 38);
+            this.ItemForFrameNumber.Location = new System.Drawing.Point(0, 152);
             this.ItemForFrameNumber.Name = "ItemForFrameNumber";
             this.ItemForFrameNumber.Size = new System.Drawing.Size(1034, 38);
             this.ItemForFrameNumber.Text = "Nomor Rangka";
@@ -516,7 +494,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // FrameNumberTextEdit
             // 
             this.FrameNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "FrameNumber", true));
-            this.FrameNumberTextEdit.Location = new System.Drawing.Point(215, 325);
+            this.FrameNumberTextEdit.Location = new System.Drawing.Point(215, 363);
             this.FrameNumberTextEdit.MenuManager = this.mainRibbonControl;
             this.FrameNumberTextEdit.Name = "FrameNumberTextEdit";
             this.FrameNumberTextEdit.Size = new System.Drawing.Size(850, 34);
@@ -526,7 +504,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ItemForBpkbNumber
             // 
             this.ItemForBpkbNumber.Control = this.BpkbNumberTextEdit;
-            this.ItemForBpkbNumber.Location = new System.Drawing.Point(0, 76);
+            this.ItemForBpkbNumber.Location = new System.Drawing.Point(0, 228);
             this.ItemForBpkbNumber.Name = "ItemForBpkbNumber";
             this.ItemForBpkbNumber.Size = new System.Drawing.Size(1034, 38);
             this.ItemForBpkbNumber.Text = "Nomor BPKP";
@@ -535,7 +513,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // BpkbNumberTextEdit
             // 
             this.BpkbNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "BpkbNumber", true));
-            this.BpkbNumberTextEdit.Location = new System.Drawing.Point(215, 363);
+            this.BpkbNumberTextEdit.Location = new System.Drawing.Point(215, 439);
             this.BpkbNumberTextEdit.MenuManager = this.mainRibbonControl;
             this.BpkbNumberTextEdit.Name = "BpkbNumberTextEdit";
             this.BpkbNumberTextEdit.Size = new System.Drawing.Size(850, 34);
@@ -545,7 +523,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ItemForTaxDue
             // 
             this.ItemForTaxDue.Control = this.TaxDueDateEdit;
-            this.ItemForTaxDue.Location = new System.Drawing.Point(0, 114);
+            this.ItemForTaxDue.Location = new System.Drawing.Point(0, 266);
             this.ItemForTaxDue.Name = "ItemForTaxDue";
             this.ItemForTaxDue.Size = new System.Drawing.Size(1034, 38);
             this.ItemForTaxDue.Text = "Jatuh Tempo Pajak";
@@ -555,7 +533,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // 
             this.TaxDueDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "TaxDue", true));
             this.TaxDueDateEdit.EditValue = null;
-            this.TaxDueDateEdit.Location = new System.Drawing.Point(215, 401);
+            this.TaxDueDateEdit.Location = new System.Drawing.Point(215, 477);
             this.TaxDueDateEdit.MenuManager = this.mainRibbonControl;
             this.TaxDueDateEdit.Name = "TaxDueDateEdit";
             this.TaxDueDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -570,7 +548,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ItemForStnkDue
             // 
             this.ItemForStnkDue.Control = this.StnkDueDateEdit;
-            this.ItemForStnkDue.Location = new System.Drawing.Point(0, 152);
+            this.ItemForStnkDue.Location = new System.Drawing.Point(0, 304);
             this.ItemForStnkDue.Name = "ItemForStnkDue";
             this.ItemForStnkDue.Size = new System.Drawing.Size(1034, 38);
             this.ItemForStnkDue.Text = "Jatuh Tempo STNK";
@@ -580,7 +558,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // 
             this.StnkDueDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "StnkDue", true));
             this.StnkDueDateEdit.EditValue = null;
-            this.StnkDueDateEdit.Location = new System.Drawing.Point(215, 439);
+            this.StnkDueDateEdit.Location = new System.Drawing.Point(215, 515);
             this.StnkDueDateEdit.MenuManager = this.mainRibbonControl;
             this.StnkDueDateEdit.Name = "StnkDueDateEdit";
             this.StnkDueDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -595,7 +573,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // ItemForKirDue
             // 
             this.ItemForKirDue.Control = this.KirDueDateEdit;
-            this.ItemForKirDue.Location = new System.Drawing.Point(0, 190);
+            this.ItemForKirDue.Location = new System.Drawing.Point(0, 342);
             this.ItemForKirDue.Name = "ItemForKirDue";
             this.ItemForKirDue.Size = new System.Drawing.Size(1034, 38);
             this.ItemForKirDue.Text = "Jatuh Tempo KIR";
@@ -605,7 +583,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             // 
             this.KirDueDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "KirDue", true));
             this.KirDueDateEdit.EditValue = null;
-            this.KirDueDateEdit.Location = new System.Drawing.Point(215, 477);
+            this.KirDueDateEdit.Location = new System.Drawing.Point(215, 553);
             this.KirDueDateEdit.MenuManager = this.mainRibbonControl;
             this.KirDueDateEdit.Name = "KirDueDateEdit";
             this.KirDueDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -617,6 +595,127 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.KirDueDateEdit.StyleController = this._DataLayoutControl;
             this.KirDueDateEdit.TabIndex = 19;
             // 
+            // ItemForMachineNumber
+            // 
+            this.ItemForMachineNumber.Control = this.MachineNumberTextEdit;
+            this.ItemForMachineNumber.Location = new System.Drawing.Point(0, 190);
+            this.ItemForMachineNumber.Name = "ItemForMachineNumber";
+            this.ItemForMachineNumber.Size = new System.Drawing.Size(1034, 38);
+            this.ItemForMachineNumber.Text = "Nomor Mesin";
+            this.ItemForMachineNumber.TextSize = new System.Drawing.Size(168, 21);
+            // 
+            // MachineNumberTextEdit
+            // 
+            this.MachineNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "MachineNumber", true));
+            this.MachineNumberTextEdit.Location = new System.Drawing.Point(215, 401);
+            this.MachineNumberTextEdit.MenuManager = this.mainRibbonControl;
+            this.MachineNumberTextEdit.Name = "MachineNumberTextEdit";
+            this.MachineNumberTextEdit.Size = new System.Drawing.Size(850, 34);
+            this.MachineNumberTextEdit.StyleController = this._DataLayoutControl;
+            this.MachineNumberTextEdit.TabIndex = 27;
+            // 
+            // ItemForProductionYear
+            // 
+            this.ItemForProductionYear.Control = this.ProductionYearTextEdit;
+            this.ItemForProductionYear.Location = new System.Drawing.Point(0, 76);
+            this.ItemForProductionYear.Name = "ItemForProductionYear";
+            this.ItemForProductionYear.Size = new System.Drawing.Size(1034, 38);
+            this.ItemForProductionYear.Text = "Tahun Pembuatan";
+            this.ItemForProductionYear.TextSize = new System.Drawing.Size(168, 21);
+            // 
+            // ProductionYearTextEdit
+            // 
+            this.ProductionYearTextEdit.Location = new System.Drawing.Point(215, 287);
+            this.ProductionYearTextEdit.MenuManager = this.mainRibbonControl;
+            this.ProductionYearTextEdit.Name = "ProductionYearTextEdit";
+            this.ProductionYearTextEdit.Size = new System.Drawing.Size(850, 34);
+            this.ProductionYearTextEdit.StyleController = this._DataLayoutControl;
+            this.ProductionYearTextEdit.TabIndex = 28;
+            // 
+            // ItemForVehicleColor
+            // 
+            this.ItemForVehicleColor.Control = this.VehicleColorTextEdit;
+            this.ItemForVehicleColor.Location = new System.Drawing.Point(0, 114);
+            this.ItemForVehicleColor.Name = "ItemForVehicleColor";
+            this.ItemForVehicleColor.Size = new System.Drawing.Size(517, 38);
+            this.ItemForVehicleColor.Text = "Warna";
+            this.ItemForVehicleColor.TextSize = new System.Drawing.Size(168, 21);
+            // 
+            // VehicleColorTextEdit
+            // 
+            this.VehicleColorTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "VehicleColor", true));
+            this.VehicleColorTextEdit.Location = new System.Drawing.Point(215, 325);
+            this.VehicleColorTextEdit.MenuManager = this.mainRibbonControl;
+            this.VehicleColorTextEdit.Name = "VehicleColorTextEdit";
+            this.VehicleColorTextEdit.Size = new System.Drawing.Size(333, 34);
+            this.VehicleColorTextEdit.StyleController = this._DataLayoutControl;
+            this.VehicleColorTextEdit.TabIndex = 29;
+            // 
+            // ItemForSeat
+            // 
+            this.ItemForSeat.Control = this.SeatSpinEdit;
+            this.ItemForSeat.Location = new System.Drawing.Point(517, 114);
+            this.ItemForSeat.Name = "ItemForSeat";
+            this.ItemForSeat.Size = new System.Drawing.Size(517, 38);
+            this.ItemForSeat.Text = "Jumlah Bangku";
+            this.ItemForSeat.TextSize = new System.Drawing.Size(168, 21);
+            // 
+            // SeatSpinEdit
+            // 
+            this.SeatSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Seat", true));
+            this.SeatSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.SeatSpinEdit.Location = new System.Drawing.Point(732, 325);
+            this.SeatSpinEdit.MenuManager = this.mainRibbonControl;
+            this.SeatSpinEdit.Name = "SeatSpinEdit";
+            this.SeatSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SeatSpinEdit.Size = new System.Drawing.Size(333, 34);
+            this.SeatSpinEdit.StyleController = this._DataLayoutControl;
+            this.SeatSpinEdit.TabIndex = 31;
+            // 
+            // ItemForVehicleNumber
+            // 
+            this.ItemForVehicleNumber.Control = this.VehicleNumberTextEdit;
+            this.ItemForVehicleNumber.Location = new System.Drawing.Point(0, 38);
+            this.ItemForVehicleNumber.Name = "ItemForVehicleNumber";
+            this.ItemForVehicleNumber.Size = new System.Drawing.Size(1034, 38);
+            this.ItemForVehicleNumber.Text = "Nomor Kendaraan (Plat)";
+            this.ItemForVehicleNumber.TextSize = new System.Drawing.Size(168, 21);
+            // 
+            // VehicleNumberTextEdit
+            // 
+            this.VehicleNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "VehicleNumber", true));
+            this.VehicleNumberTextEdit.Location = new System.Drawing.Point(215, 249);
+            this.VehicleNumberTextEdit.MenuManager = this.mainRibbonControl;
+            this.VehicleNumberTextEdit.Name = "VehicleNumberTextEdit";
+            this.VehicleNumberTextEdit.Size = new System.Drawing.Size(850, 34);
+            this.VehicleNumberTextEdit.StyleController = this._DataLayoutControl;
+            this.VehicleNumberTextEdit.TabIndex = 15;
+            // 
+            // ItemForNotes
+            // 
+            this.ItemForNotes.Control = this.NoteMemoEdit;
+            this.ItemForNotes.Location = new System.Drawing.Point(0, 548);
+            this.ItemForNotes.Name = "ItemForNotes";
+            this.ItemForNotes.Size = new System.Drawing.Size(1058, 304);
+            this.ItemForNotes.Text = "Catatan";
+            this.ItemForNotes.TextSize = new System.Drawing.Size(168, 21);
+            // 
+            // NoteMemoEdit
+            // 
+            this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
+            this.NoteMemoEdit.Location = new System.Drawing.Point(203, 603);
+            this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
+            this.NoteMemoEdit.MinimumSize = new System.Drawing.Size(0, 300);
+            this.NoteMemoEdit.Name = "NoteMemoEdit";
+            this.NoteMemoEdit.Size = new System.Drawing.Size(874, 300);
+            this.NoteMemoEdit.StyleController = this._DataLayoutControl;
+            this.NoteMemoEdit.TabIndex = 26;
+            // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -626,7 +725,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ItemForModifiedDate});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1058, 472);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1058, 852);
             this.layoutControlGroup3.Text = "Audit Trail";
             // 
             // ItemForCreatedUser
@@ -635,7 +734,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ItemForCreatedUser.Location = new System.Drawing.Point(0, 0);
             this.ItemForCreatedUser.Name = "ItemForCreatedUser";
             this.ItemForCreatedUser.Size = new System.Drawing.Size(1058, 38);
-            this.ItemForCreatedUser.Text = "Created User";
+            this.ItemForCreatedUser.Text = "Dibuat Oleh";
             this.ItemForCreatedUser.TextSize = new System.Drawing.Size(168, 21);
             // 
             // CreatedUserTextEdit
@@ -654,7 +753,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ItemForCreatedDate.Location = new System.Drawing.Point(0, 38);
             this.ItemForCreatedDate.Name = "ItemForCreatedDate";
             this.ItemForCreatedDate.Size = new System.Drawing.Size(1058, 38);
-            this.ItemForCreatedDate.Text = "Created Date";
+            this.ItemForCreatedDate.Text = "Dibuat Tanggal";
             this.ItemForCreatedDate.TextSize = new System.Drawing.Size(168, 21);
             // 
             // CreatedDateDateEdit
@@ -679,7 +778,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ItemForModifiedUser.Location = new System.Drawing.Point(0, 76);
             this.ItemForModifiedUser.Name = "ItemForModifiedUser";
             this.ItemForModifiedUser.Size = new System.Drawing.Size(1058, 38);
-            this.ItemForModifiedUser.Text = "Modified User";
+            this.ItemForModifiedUser.Text = "Diubah Oleh";
             this.ItemForModifiedUser.TextSize = new System.Drawing.Size(168, 21);
             // 
             // ModifiedUserTextEdit
@@ -697,8 +796,8 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             this.ItemForModifiedDate.Control = this.ModifiedDateDateEdit;
             this.ItemForModifiedDate.Location = new System.Drawing.Point(0, 114);
             this.ItemForModifiedDate.Name = "ItemForModifiedDate";
-            this.ItemForModifiedDate.Size = new System.Drawing.Size(1058, 358);
-            this.ItemForModifiedDate.Text = "Modified Date";
+            this.ItemForModifiedDate.Size = new System.Drawing.Size(1058, 738);
+            this.ItemForModifiedDate.Text = "Diubah Tanggal";
             this.ItemForModifiedDate.TextSize = new System.Drawing.Size(168, 21);
             // 
             // ModifiedDateDateEdit
@@ -741,10 +840,6 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             ((System.ComponentModel.ISupportInitialize)(this.ModelUnitPopUp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTypeEngineId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TypeEnginePopUp.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicleNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VehicleNumberTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNotes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NotesMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForOwnership)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OwnershipTextEdit.Properties)).EndInit();
@@ -761,6 +856,18 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
             ((System.ComponentModel.ISupportInitialize)(this.ItemForKirDue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KirDueDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KirDueDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForMachineNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MachineNumberTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForProductionYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductionYearTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicleColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleColorTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForSeat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeatSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicleNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleNumberTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNotes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).EndInit();
@@ -789,7 +896,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
         private DevExpress.XtraEditors.DateEdit CreatedDateDateEdit;
         private DevExpress.XtraEditors.TextEdit ModifiedUserTextEdit;
         private DevExpress.XtraEditors.DateEdit ModifiedDateDateEdit;
-        private DevExpress.XtraEditors.MemoEdit NotesMemoEdit;
+        private DevExpress.XtraEditors.MemoEdit NoteMemoEdit;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem ItemForBrandId;
         private DevExpress.XtraLayout.LayoutControlItem ItemForModelUnitId;
@@ -815,5 +922,13 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
         private PopupContainerEditOwn BrandPopUp;
         private PopupContainerEditOwn ModelUnitPopUp;
         private PopupContainerEditOwn TypeEnginePopUp;
+        private DevExpress.XtraEditors.TextEdit MachineNumberTextEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForMachineNumber;
+        private DevExpress.XtraEditors.TextEdit ProductionYearTextEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForProductionYear;
+        private DevExpress.XtraEditors.SpinEdit SeatSpinEdit;
+        private DevExpress.XtraEditors.TextEdit VehicleColorTextEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForVehicleColor;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForSeat;
     }
 }

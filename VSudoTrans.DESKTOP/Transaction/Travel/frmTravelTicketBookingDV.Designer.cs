@@ -32,7 +32,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTravelTicketBookingDV));
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions2 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
@@ -245,30 +244,19 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // 
             this.mainRibbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(1135, 1233, 1135, 1233);
             this.mainRibbonControl.ExpandCollapseItem.Id = 0;
-            // 
-            // 
-            // 
-            this.mainRibbonControl.SearchEditItem.AccessibleName = "Search Item";
-            this.mainRibbonControl.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.mainRibbonControl.SearchEditItem.EditWidth = 150;
-            this.mainRibbonControl.SearchEditItem.Id = -5000;
-            this.mainRibbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.mainRibbonControl.Size = new System.Drawing.Size(1167, 254);
             // 
             // bbiSave
             // 
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
-            this.bbiSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSave.ImageOptions.SvgImage")));
             // 
             // bbiSaveAndClose
             // 
             this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
-            this.bbiSaveAndClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSaveAndClose.ImageOptions.SvgImage")));
             // 
             // bbiSaveAndNew
             // 
             this.bbiSaveAndNew.ImageOptions.ImageUri.Uri = "SaveAndNew";
-            this.bbiSaveAndNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSaveAndNew.ImageOptions.SvgImage")));
             // 
             // bbiReset
             // 
@@ -277,7 +265,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // bbiClose
             // 
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
-            this.bbiClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiClose.ImageOptions.SvgImage")));
             // 
             // _BindingSource
             // 
@@ -334,7 +321,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // CompanyPopUp
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
-            this.CompanyPopUp.Location = new System.Drawing.Point(179, -451);
+            this.CompanyPopUp.Location = new System.Drawing.Point(179, 55);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -396,7 +383,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // PickupAddressMemoEdit
             // 
             this.PickupAddressMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PickupAddress", true));
-            this.PickupAddressMemoEdit.Location = new System.Drawing.Point(191, -67);
+            this.PickupAddressMemoEdit.Location = new System.Drawing.Point(191, 439);
             this.PickupAddressMemoEdit.MenuManager = this.mainRibbonControl;
             this.PickupAddressMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
             this.PickupAddressMemoEdit.Name = "PickupAddressMemoEdit";
@@ -416,7 +403,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // PickupProvincePopUp
             // 
             this.PickupProvincePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PickupPointProvince", true));
-            this.PickupProvincePopUp.Location = new System.Drawing.Point(191, -181);
+            this.PickupProvincePopUp.Location = new System.Drawing.Point(191, 325);
             this.PickupProvincePopUp.MenuManager = this.mainRibbonControl;
             this.PickupProvincePopUp.Name = "PickupProvincePopUp";
             this.PickupProvincePopUp.ObjectId = null;
@@ -466,7 +453,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // PickupCityPopUp
             // 
             this.PickupCityPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PickupPointCity", true));
-            this.PickupCityPopUp.Location = new System.Drawing.Point(191, -143);
+            this.PickupCityPopUp.Location = new System.Drawing.Point(191, 363);
             this.PickupCityPopUp.MenuManager = this.mainRibbonControl;
             this.PickupCityPopUp.Name = "PickupCityPopUp";
             this.PickupCityPopUp.ObjectId = null;
@@ -516,7 +503,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // PickupDistrictPopUp
             // 
             this.PickupDistrictPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PickupPointDistrict", true));
-            this.PickupDistrictPopUp.Location = new System.Drawing.Point(191, -105);
+            this.PickupDistrictPopUp.Location = new System.Drawing.Point(191, 401);
             this.PickupDistrictPopUp.MenuManager = this.mainRibbonControl;
             this.PickupDistrictPopUp.Name = "PickupDistrictPopUp";
             this.PickupDistrictPopUp.ObjectId = null;
@@ -578,7 +565,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // DeliveryAddressMemoEdit
             // 
             this.DeliveryAddressMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DeliveryAddress", true));
-            this.DeliveryAddressMemoEdit.Location = new System.Drawing.Point(740, -67);
+            this.DeliveryAddressMemoEdit.Location = new System.Drawing.Point(740, 439);
             this.DeliveryAddressMemoEdit.MenuManager = this.mainRibbonControl;
             this.DeliveryAddressMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
             this.DeliveryAddressMemoEdit.Name = "DeliveryAddressMemoEdit";
@@ -598,7 +585,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // DeliveryProvincePopUp
             // 
             this.DeliveryProvincePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DeliveryPointProvince", true));
-            this.DeliveryProvincePopUp.Location = new System.Drawing.Point(740, -181);
+            this.DeliveryProvincePopUp.Location = new System.Drawing.Point(740, 325);
             this.DeliveryProvincePopUp.MenuManager = this.mainRibbonControl;
             this.DeliveryProvincePopUp.Name = "DeliveryProvincePopUp";
             this.DeliveryProvincePopUp.ObjectId = null;
@@ -648,7 +635,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // DeliveryCityPopUp
             // 
             this.DeliveryCityPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DeliveryPointCity", true));
-            this.DeliveryCityPopUp.Location = new System.Drawing.Point(740, -143);
+            this.DeliveryCityPopUp.Location = new System.Drawing.Point(740, 363);
             this.DeliveryCityPopUp.MenuManager = this.mainRibbonControl;
             this.DeliveryCityPopUp.Name = "DeliveryCityPopUp";
             this.DeliveryCityPopUp.ObjectId = null;
@@ -698,7 +685,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // DeliveryDistrictPopUp
             // 
             this.DeliveryDistrictPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DeliveryPointDistrict", true));
-            this.DeliveryDistrictPopUp.Location = new System.Drawing.Point(740, -105);
+            this.DeliveryDistrictPopUp.Location = new System.Drawing.Point(740, 401);
             this.DeliveryDistrictPopUp.MenuManager = this.mainRibbonControl;
             this.DeliveryDistrictPopUp.Name = "DeliveryDistrictPopUp";
             this.DeliveryDistrictPopUp.ObjectId = null;
@@ -748,7 +735,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // TimeDateEdit
             // 
             this.TimeDateEdit.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.TimeDateEdit.Location = new System.Drawing.Point(179, -375);
+            this.TimeDateEdit.Location = new System.Drawing.Point(179, 131);
             this.TimeDateEdit.MenuManager = this.mainRibbonControl;
             this.TimeDateEdit.Name = "TimeDateEdit";
             this.TimeDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -777,7 +764,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // 
             this.DateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Date", true));
             this.DateDateEdit.EditValue = null;
-            this.DateDateEdit.Location = new System.Drawing.Point(179, -413);
+            this.DateDateEdit.Location = new System.Drawing.Point(179, 93);
             this.DateDateEdit.MenuManager = this.mainRibbonControl;
             this.DateDateEdit.Name = "DateDateEdit";
             this.DateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -800,7 +787,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // PaymentTypeSearchLookUpEdit
             // 
             this.PaymentTypeSearchLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PaymentType", true));
-            this.PaymentTypeSearchLookUpEdit.Location = new System.Drawing.Point(179, -337);
+            this.PaymentTypeSearchLookUpEdit.Location = new System.Drawing.Point(179, 169);
             this.PaymentTypeSearchLookUpEdit.MenuManager = this.mainRibbonControl;
             this.PaymentTypeSearchLookUpEdit.Name = "PaymentTypeSearchLookUpEdit";
             this.PaymentTypeSearchLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -833,7 +820,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // StatusSearchLookUpEdit
             // 
             this.StatusSearchLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Status", true));
-            this.StatusSearchLookUpEdit.Location = new System.Drawing.Point(179, -299);
+            this.StatusSearchLookUpEdit.Location = new System.Drawing.Point(179, 207);
             this.StatusSearchLookUpEdit.MenuManager = this.mainRibbonControl;
             this.StatusSearchLookUpEdit.Name = "StatusSearchLookUpEdit";
             this.StatusSearchLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -866,7 +853,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // NoteMemoEdit
             // 
             this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
-            this.NoteMemoEdit.Location = new System.Drawing.Point(179, 637);
+            this.NoteMemoEdit.Location = new System.Drawing.Point(179, 1143);
             this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
             this.NoteMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
             this.NoteMemoEdit.Name = "NoteMemoEdit";
@@ -876,7 +863,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // 
             // groupRute
             // 
-            buttonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonImageOptions1.SvgImage")));
             buttonImageOptions1.SvgImageSize = new System.Drawing.Size(15, 15);
             this.groupRute.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
             new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton(" Tambah Rute Baru", true, buttonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
@@ -904,7 +890,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // 
             // RuteTextEdit
             // 
-            this.RuteTextEdit.Location = new System.Drawing.Point(191, 91);
+            this.RuteTextEdit.Location = new System.Drawing.Point(191, 597);
             this.RuteTextEdit.MenuManager = this.mainRibbonControl;
             this.RuteTextEdit.MinimumSize = new System.Drawing.Size(0, 10);
             this.RuteTextEdit.Name = "RuteTextEdit";
@@ -925,7 +911,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // 
             // TravelPickupDistrictMemoEdit
             // 
-            this.TravelPickupDistrictMemoEdit.Location = new System.Drawing.Point(35, 155);
+            this.TravelPickupDistrictMemoEdit.Location = new System.Drawing.Point(35, 661);
             this.TravelPickupDistrictMemoEdit.MenuManager = this.mainRibbonControl;
             this.TravelPickupDistrictMemoEdit.MinimumSize = new System.Drawing.Size(0, 70);
             this.TravelPickupDistrictMemoEdit.Name = "TravelPickupDistrictMemoEdit";
@@ -946,7 +932,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // 
             // TravelScheduleMemoEdit
             // 
-            this.TravelScheduleMemoEdit.Location = new System.Drawing.Point(572, 155);
+            this.TravelScheduleMemoEdit.Location = new System.Drawing.Point(572, 661);
             this.TravelScheduleMemoEdit.MenuManager = this.mainRibbonControl;
             this.TravelScheduleMemoEdit.MinimumSize = new System.Drawing.Size(0, 70);
             this.TravelScheduleMemoEdit.Name = "TravelScheduleMemoEdit";
@@ -967,7 +953,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // 
             // TravelDeliveryDistrictMemoEdit
             // 
-            this.TravelDeliveryDistrictMemoEdit.Location = new System.Drawing.Point(303, 155);
+            this.TravelDeliveryDistrictMemoEdit.Location = new System.Drawing.Point(303, 661);
             this.TravelDeliveryDistrictMemoEdit.MenuManager = this.mainRibbonControl;
             this.TravelDeliveryDistrictMemoEdit.MinimumSize = new System.Drawing.Size(0, 70);
             this.TravelDeliveryDistrictMemoEdit.Name = "TravelDeliveryDistrictMemoEdit";
@@ -988,7 +974,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // 
             // TravelPriceMemoEdit
             // 
-            this.TravelPriceMemoEdit.Location = new System.Drawing.Point(841, 155);
+            this.TravelPriceMemoEdit.Location = new System.Drawing.Point(841, 661);
             this.TravelPriceMemoEdit.MenuManager = this.mainRibbonControl;
             this.TravelPriceMemoEdit.MinimumSize = new System.Drawing.Size(0, 70);
             this.TravelPriceMemoEdit.Name = "TravelPriceMemoEdit";
@@ -999,7 +985,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // 
             // groupPassenger
             // 
-            buttonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonImageOptions2.SvgImage")));
             buttonImageOptions2.SvgImageSize = new System.Drawing.Size(12, 12);
             this.groupPassenger.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
             new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton(" Tambah Penumpang Baru", true, buttonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
@@ -1029,7 +1014,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             0,
             0,
             0});
-            this.TotalTicketSpinEdit.Location = new System.Drawing.Point(191, 283);
+            this.TotalTicketSpinEdit.Location = new System.Drawing.Point(191, 789);
             this.TotalTicketSpinEdit.MenuManager = this.mainRibbonControl;
             this.TotalTicketSpinEdit.Name = "TotalTicketSpinEdit";
             this.TotalTicketSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1050,7 +1035,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // TotalPriceTextEdit
             // 
             this.TotalPriceTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "TotalPrice", true));
-            this.TotalPriceTextEdit.Location = new System.Drawing.Point(728, 283);
+            this.TotalPriceTextEdit.Location = new System.Drawing.Point(728, 789);
             this.TotalPriceTextEdit.MenuManager = this.mainRibbonControl;
             this.TotalPriceTextEdit.Name = "TotalPriceTextEdit";
             this.TotalPriceTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -1075,7 +1060,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // _GridControlPassenger
             // 
             this._GridControlPassenger.DataSource = this._BindingSourcePassenger;
-            this._GridControlPassenger.Location = new System.Drawing.Point(35, 321);
+            this._GridControlPassenger.Location = new System.Drawing.Point(35, 827);
             this._GridControlPassenger.MainView = this._GridViewPassenger;
             this._GridControlPassenger.MenuManager = this.mainRibbonControl;
             this._GridControlPassenger.MinimumSize = new System.Drawing.Size(0, 300);
@@ -1184,7 +1169,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             // PriceTypeSearchLookUpEdit
             // 
             this.PriceTypeSearchLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PriceType", true));
-            this.PriceTypeSearchLookUpEdit.Location = new System.Drawing.Point(179, -261);
+            this.PriceTypeSearchLookUpEdit.Location = new System.Drawing.Point(179, 245);
             this.PriceTypeSearchLookUpEdit.MenuManager = this.mainRibbonControl;
             this.PriceTypeSearchLookUpEdit.Name = "PriceTypeSearchLookUpEdit";
             this.PriceTypeSearchLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -1223,13 +1208,13 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForCreatedUser.Location = new System.Drawing.Point(0, 0);
             this.ItemForCreatedUser.Name = "ItemForCreatedUser";
             this.ItemForCreatedUser.Size = new System.Drawing.Size(1099, 38);
-            this.ItemForCreatedUser.Text = "Created User";
+            this.ItemForCreatedUser.Text = "Dibuat Oleh";
             this.ItemForCreatedUser.TextSize = new System.Drawing.Size(144, 21);
             // 
             // CreatedUserTextEdit
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(179, -451);
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(179, 55);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
             this.CreatedUserTextEdit.Size = new System.Drawing.Size(939, 34);
@@ -1242,14 +1227,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForCreatedDate.Location = new System.Drawing.Point(0, 38);
             this.ItemForCreatedDate.Name = "ItemForCreatedDate";
             this.ItemForCreatedDate.Size = new System.Drawing.Size(1099, 38);
-            this.ItemForCreatedDate.Text = "Created Date";
+            this.ItemForCreatedDate.Text = "Dibuat Tanggal";
             this.ItemForCreatedDate.TextSize = new System.Drawing.Size(144, 21);
             // 
             // CreatedDateDateEdit
             // 
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(179, -413);
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(179, 93);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1267,13 +1252,13 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForModifiedUser.Location = new System.Drawing.Point(0, 76);
             this.ItemForModifiedUser.Name = "ItemForModifiedUser";
             this.ItemForModifiedUser.Size = new System.Drawing.Size(1099, 38);
-            this.ItemForModifiedUser.Text = "Modified User";
+            this.ItemForModifiedUser.Text = "Diubah Oleh";
             this.ItemForModifiedUser.TextSize = new System.Drawing.Size(144, 21);
             // 
             // ModifiedUserTextEdit
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(179, -375);
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(179, 131);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
             this.ModifiedUserTextEdit.Size = new System.Drawing.Size(939, 34);
@@ -1286,14 +1271,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             this.ItemForModifiedDate.Location = new System.Drawing.Point(0, 114);
             this.ItemForModifiedDate.Name = "ItemForModifiedDate";
             this.ItemForModifiedDate.Size = new System.Drawing.Size(1099, 1078);
-            this.ItemForModifiedDate.Text = "Modified Date";
+            this.ItemForModifiedDate.Text = "Diubah Tanggal";
             this.ItemForModifiedDate.TextSize = new System.Drawing.Size(144, 21);
             // 
             // ModifiedDateDateEdit
             // 
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(179, -337);
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(179, 169);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
