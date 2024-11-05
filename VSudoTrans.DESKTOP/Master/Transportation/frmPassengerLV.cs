@@ -1,10 +1,10 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
-using Domain.Entities.Travel;
+using Domain.Entities.Transportation;
 using PopUpUtils;
 using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
 
-namespace VSudoTrans.DESKTOP.Master.Travel
+namespace VSudoTrans.DESKTOP.Master.Transportation
 {
     public partial class frmPassengerLV : frmBaseFilterLV
     {

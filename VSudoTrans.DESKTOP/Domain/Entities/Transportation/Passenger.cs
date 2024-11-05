@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using Domain.Entities.Organization;
 
-namespace Domain.Entities.Travel
+namespace Domain.Entities.Transportation
 {
     [Table("Passenger")]
     [DisplayName("Penumpang")]

@@ -1,14 +1,14 @@
 ﻿using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
 using DevExpress.XtraEditors.DXErrorProvider;
-using Domain.Entities.Travel;
+using Domain.Entities.Transportation;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
 using PopUpUtils;
 using Domain;
 
-namespace VSudoTrans.DESKTOP.Master.Travel
+namespace VSudoTrans.DESKTOP.Master.Transportation
 {
     public partial class frmPassengerDV : frmBaseDV
     {

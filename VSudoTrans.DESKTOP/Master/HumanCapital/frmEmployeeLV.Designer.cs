@@ -35,6 +35,9 @@
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCompany = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOrganizationStructureName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colJobTitleName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colJobPositionName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -158,6 +161,9 @@
             // 
             this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCompany,
+            this.colOrganizationStructureName,
+            this.colJobTitleName,
+            this.colJobPositionName,
             this.colCode,
             this.colName,
             this.colJoinDate,
@@ -241,8 +247,8 @@
             this.colJoinDate.MinWidth = 30;
             this.colJoinDate.Name = "colJoinDate";
             this.colJoinDate.Visible = true;
-            this.colJoinDate.VisibleIndex = 3;
-            this.colJoinDate.Width = 232;
+            this.colJoinDate.VisibleIndex = 6;
+            this.colJoinDate.Width = 156;
             // 
             // colResignationDate
             // 
@@ -251,8 +257,8 @@
             this.colResignationDate.MinWidth = 30;
             this.colResignationDate.Name = "colResignationDate";
             this.colResignationDate.Visible = true;
-            this.colResignationDate.VisibleIndex = 4;
-            this.colResignationDate.Width = 232;
+            this.colResignationDate.VisibleIndex = 7;
+            this.colResignationDate.Width = 144;
             // 
             // colCode
             // 
@@ -260,8 +266,8 @@
             this.colCode.MinWidth = 30;
             this.colCode.Name = "colCode";
             this.colCode.Visible = true;
-            this.colCode.VisibleIndex = 1;
-            this.colCode.Width = 94;
+            this.colCode.VisibleIndex = 4;
+            this.colCode.Width = 106;
             // 
             // colName
             // 
@@ -269,8 +275,8 @@
             this.colName.MinWidth = 30;
             this.colName.Name = "colName";
             this.colName.Visible = true;
-            this.colName.VisibleIndex = 2;
-            this.colName.Width = 232;
+            this.colName.VisibleIndex = 5;
+            this.colName.Width = 208;
             // 
             // colCompany
             // 
@@ -280,7 +286,7 @@
             this.colCompany.Name = "colCompany";
             this.colCompany.Visible = true;
             this.colCompany.VisibleIndex = 0;
-            this.colCompany.Width = 204;
+            this.colCompany.Width = 208;
             // 
             // colPhoneNumber
             // 
@@ -289,8 +295,38 @@
             this.colPhoneNumber.MinWidth = 30;
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
-            this.colPhoneNumber.VisibleIndex = 5;
-            this.colPhoneNumber.Width = 112;
+            this.colPhoneNumber.VisibleIndex = 8;
+            this.colPhoneNumber.Width = 238;
+            // 
+            // colOrganizationStructureName
+            // 
+            this.colOrganizationStructureName.Caption = "Organisasi";
+            this.colOrganizationStructureName.FieldName = "OrganizationStructure.Name";
+            this.colOrganizationStructureName.MinWidth = 30;
+            this.colOrganizationStructureName.Name = "colOrganizationStructureName";
+            this.colOrganizationStructureName.Visible = true;
+            this.colOrganizationStructureName.VisibleIndex = 1;
+            this.colOrganizationStructureName.Width = 149;
+            // 
+            // colJobTitleName
+            // 
+            this.colJobTitleName.Caption = "Jabatan";
+            this.colJobTitleName.FieldName = "JobTitle.Name";
+            this.colJobTitleName.MinWidth = 30;
+            this.colJobTitleName.Name = "colJobTitleName";
+            this.colJobTitleName.Visible = true;
+            this.colJobTitleName.VisibleIndex = 2;
+            this.colJobTitleName.Width = 92;
+            // 
+            // colJobPositionName
+            // 
+            this.colJobPositionName.Caption = "Posisi";
+            this.colJobPositionName.FieldName = "JobPosition.Name";
+            this.colJobPositionName.MinWidth = 30;
+            this.colJobPositionName.Name = "colJobPositionName";
+            this.colJobPositionName.Visible = true;
+            this.colJobPositionName.VisibleIndex = 3;
+            this.colJobPositionName.Width = 175;
             // 
             // frmEmployeeLV
             // 
@@ -339,5 +375,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colResignationDate;
         private DevExpress.XtraGrid.Columns.GridColumn colCompany;
         private DevExpress.XtraGrid.Columns.GridColumn colPhoneNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrganizationStructureName;
+        private DevExpress.XtraGrid.Columns.GridColumn colJobTitleName;
+        private DevExpress.XtraGrid.Columns.GridColumn colJobPositionName;
     }
 }

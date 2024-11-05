@@ -21,7 +21,10 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             this.FormTitle = "Karyawan";
 
             this.OdataSelect = "Id,Code,Name,JoinDate,ResignationDate,PhoneNumber";
-            this.OdataExpand = "Company($select=name)";
+            this.OdataExpand = "Company($select=name),";
+            this.OdataExpand += "OrganizationStructure($select=name),";
+            this.OdataExpand += "JobTitle($select=name),";
+            this.OdataExpand += "JobPosition($select=name)";
 
             InitializeComponentAfter<Employee>();
 
@@ -32,6 +35,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             bbiTemplateImport.ItemClick += BbiTemplateImport_ItemClick;
             bbiImportData.ItemClick += BbiImportData_ItemClick;
 
+            _GridView.OptionsView.ColumnAutoWidth = false;
             GridHelper.GridColumnInitializeLayout(colJoinDate, typeof(DateTime));
             GridHelper.GridColumnInitializeLayout(colResignationDate, typeof(DateTime));
         }

@@ -1,6 +1,6 @@
 ﻿using VSudoTrans.DESKTOP.Descendant;
 
-namespace VSudoTrans.DESKTOP.Master.Travel
+namespace VSudoTrans.DESKTOP.Master.Transportation
 {
     partial class frmPassengerDV
     {
@@ -153,7 +153,7 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             // 
             // _BindingSource
             // 
-            this._BindingSource.DataSource = typeof(Domain.Entities.Travel.Passenger);
+            this._BindingSource.DataSource = typeof(Domain.Entities.Transportation.Passenger);
             // 
             // layoutControlGroup1
             // 

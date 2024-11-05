@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using VSudoTrans.DESKTOP.Master.Travel;
+using VSudoTrans.DESKTOP.Master.Transportation;
+using Domain.Entities.Transportation;
 
 namespace VSudoTrans.DESKTOP.Transaction.Travel
 {

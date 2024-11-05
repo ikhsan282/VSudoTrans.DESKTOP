@@ -131,6 +131,13 @@
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseBackColor = true;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseFont = true;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.dataLayoutControl1.Size = new System.Drawing.Size(660, 390);
             this.dataLayoutControl1.Controls.SetChildIndex(this._GridControl, 0);
             this.dataLayoutControl1.Controls.SetChildIndex(this._SearchControl, 0);
@@ -182,10 +189,18 @@
             // 
             // dockPanel1_Container
             // 
+            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 47);
             this.dockPanel1_Container.Size = new System.Drawing.Size(311, 339);
             // 
             // dataLayoutControl2
             // 
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseBackColor = true;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseFont = true;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.dataLayoutControl2.Size = new System.Drawing.Size(311, 339);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterPopUp3, 0);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterDate1, 0);
@@ -266,7 +281,7 @@
             this.colVehicleNumber.Name = "colVehicleNumber";
             this.colVehicleNumber.Visible = true;
             this.colVehicleNumber.VisibleIndex = 3;
-            this.colVehicleNumber.Width = 194;
+            this.colVehicleNumber.Width = 228;
             // 
             // colVehicleColor
             // 
@@ -276,7 +291,7 @@
             this.colVehicleColor.Name = "colVehicleColor";
             this.colVehicleColor.Visible = true;
             this.colVehicleColor.VisibleIndex = 4;
-            this.colVehicleColor.Width = 154;
+            this.colVehicleColor.Width = 143;
             // 
             // colSeat
             // 
@@ -286,7 +301,7 @@
             this.colSeat.Name = "colSeat";
             this.colSeat.Visible = true;
             this.colSeat.VisibleIndex = 5;
-            this.colSeat.Width = 179;
+            this.colSeat.Width = 167;
             // 
             // colProductionYear
             // 
@@ -296,7 +311,7 @@
             this.colProductionYear.Name = "colProductionYear";
             this.colProductionYear.Visible = true;
             this.colProductionYear.VisibleIndex = 6;
-            this.colProductionYear.Width = 230;
+            this.colProductionYear.Width = 219;
             // 
             // frmVehicleLV
             // 

@@ -1,4 +1,4 @@
-﻿namespace VSudoTrans.DESKTOP.Master.Travel
+﻿namespace VSudoTrans.DESKTOP.Master.Transportation
 {
     partial class frmPassengerLV
     {
@@ -206,7 +206,7 @@
             // 
             // _BindingSource
             // 
-            this._BindingSource.DataSource = typeof(Domain.Entities.Travel.Passenger);
+            this._BindingSource.DataSource = typeof(Domain.Entities.Transportation.Passenger);
             // 
             // FilterPopUp3
             // 

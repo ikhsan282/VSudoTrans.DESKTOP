@@ -530,7 +530,7 @@
     <Compile Include="Domain\Entities\SQLView\EducationPayment\ArrearStudentEducationPaymentView.cs" />
     <Compile Include="Domain\Entities\SQLView\Finance\BudgetTransactionView.cs" />
     <Compile Include="Domain\Entities\SQLView\HumanResource\EmployeeRecognitionView.cs" />
-    <Compile Include="Domain\Entities\Travel\Passenger.cs" />
+    <Compile Include="Domain\Entities\Transportation\Passenger.cs" />
     <Compile Include="Domain\Entities\Travel\Rute.cs" />
     <Compile Include="Domain\Entities\Travel\Schedule.cs" />
     <Compile Include="Domain\Entities\Travel\TravelTicketBooking.cs" />
@@ -944,16 +944,16 @@
     <Compile Include="Master\Shared\frmUnitMeasureLV.Designer.cs">
       <DependentUpon>frmUnitMeasureLV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\Travel\frmPassengerDV.cs">
+    <Compile Include="Master\Transportation\frmPassengerDV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Master\Travel\frmPassengerDV.Designer.cs">
+    <Compile Include="Master\Transportation\frmPassengerDV.Designer.cs">
       <DependentUpon>frmPassengerDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\Travel\frmPassengerLV.cs">
+    <Compile Include="Master\Transportation\frmPassengerLV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Master\Travel\frmPassengerLV.Designer.cs">
+    <Compile Include="Master\Transportation\frmPassengerLV.Designer.cs">
       <DependentUpon>frmPassengerLV.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\Travel\frmRuteDV.cs">
@@ -2732,10 +2732,10 @@
     <EmbeddedResource Include="Master\Shared\frmUnitMeasureLV.resx">
       <DependentUpon>frmUnitMeasureLV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmPassengerDV.resx">
+    <EmbeddedResource Include="Master\Transportation\frmPassengerDV.resx">
       <DependentUpon>frmPassengerDV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\Travel\frmPassengerLV.resx">
+    <EmbeddedResource Include="Master\Transportation\frmPassengerLV.resx">
       <DependentUpon>frmPassengerLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Travel\frmRuteDV.resx">
