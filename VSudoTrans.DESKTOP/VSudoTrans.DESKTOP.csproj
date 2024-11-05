@@ -492,6 +492,7 @@
     <Compile Include="Contract\Attendance\AttendanceCodeDto.cs" />
     <Compile Include="Contract\Attendance\RosterDto.cs" />
     <Compile Include="Contract\Finance\BudgetTransactionDto.cs" />
+    <Compile Include="Contract\HumanResource\BankDto.cs" />
     <Compile Include="Contract\HumanResource\EmployeeDto.cs" />
     <Compile Include="Contract\HumanResource\JobGradeDto.cs" />
     <Compile Include="Contract\HumanResource\JobPositionDto.cs" />
@@ -517,10 +518,12 @@
     <Compile Include="Domain\Entities\Finance\BudgetRegulationDetail.cs" />
     <Compile Include="Domain\Entities\Finance\BudgetTransaction.cs" />
     <Compile Include="Domain\Entities\Finance\Category.cs" />
+    <Compile Include="Domain\Entities\HumanResource\Bank.cs" />
     <Compile Include="Domain\Entities\HumanResource\EmployeePersonalData.cs" />
     <Compile Include="Domain\Entities\HumanResource\JobGrade.cs" />
     <Compile Include="Domain\Entities\HumanResource\JobPosition.cs" />
     <Compile Include="Domain\Entities\Organization\OrganizationStructure.cs" />
+    <Compile Include="Domain\Entities\Rental\RentalCarBooking.cs" />
     <Compile Include="Domain\Entities\Shared\UnitMeasure.cs" />
     <Compile Include="Domain\Entities\SQLProc\BudgetTransactionResult.cs" />
     <Compile Include="Domain\Entities\SQLProc\ComparationBudgetRealizationResult.cs" />
@@ -784,6 +787,12 @@
     <Compile Include="Master\HumanCapital\frmImportEmployeeWV.Designer.cs">
       <DependentUpon>frmImportEmployeeWV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\HumanCapital\frmImportBankWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmImportBankWV.Designer.cs">
+      <DependentUpon>frmImportBankWV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\HumanCapital\frmImportJobTitleWV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -819,6 +828,18 @@
     </Compile>
     <Compile Include="Master\HumanCapital\frmJobPositionTLV.Designer.cs">
       <DependentUpon>frmJobPositionTLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmBankLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmBankLV.Designer.cs">
+      <DependentUpon>frmBankLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmBankDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HumanCapital\frmBankDV.Designer.cs">
+      <DependentUpon>frmBankDV.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\HumanCapital\frmJobTitleLV.cs">
       <SubType>Form</SubType>
@@ -1023,6 +1044,18 @@
     </Compile>
     <Compile Include="Master\Vehicle\frmCategoryVehicleLV.Designer.cs">
       <DependentUpon>frmCategoryVehicleLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Rental\frmRentalCarBookingDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Rental\frmRentalCarBookingDV.Designer.cs">
+      <DependentUpon>frmRentalCarBookingDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Rental\frmRentalCarBookingLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Rental\frmRentalCarBookingLV.Designer.cs">
+      <DependentUpon>frmRentalCarBookingLV.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction\Travel\frmTravelTicketBookingDV.cs">
       <SubType>Form</SubType>
@@ -2671,6 +2704,9 @@
     <EmbeddedResource Include="Master\HumanCapital\frmImportEmployeeWV.resx">
       <DependentUpon>frmImportEmployeeWV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmImportBankWV.resx">
+      <DependentUpon>frmImportBankWV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\HumanCapital\frmImportJobTitleWV.resx">
       <DependentUpon>frmImportJobTitleWV.cs</DependentUpon>
     </EmbeddedResource>
@@ -2688,6 +2724,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\HumanCapital\frmJobPositionTLV.resx">
       <DependentUpon>frmJobPositionTLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmBankLV.resx">
+      <DependentUpon>frmBankLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HumanCapital\frmBankDV.resx">
+      <DependentUpon>frmBankDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\HumanCapital\frmJobTitleLV.resx">
       <DependentUpon>frmJobTitleLV.cs</DependentUpon>
@@ -2931,6 +2973,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\Finance\frmKreditLV.resx">
       <DependentUpon>frmKreditLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Rental\frmRentalCarBookingDV.resx">
+      <DependentUpon>frmRentalCarBookingDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Rental\frmRentalCarBookingLV.resx">
+      <DependentUpon>frmRentalCarBookingLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\Travel\frmTravelTicketBookingDV.resx">
       <DependentUpon>frmTravelTicketBookingDV.cs</DependentUpon>

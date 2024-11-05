@@ -59,7 +59,75 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
             this.EmailTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForTabPicture = new DevExpress.XtraLayout.LayoutControlItem();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.PhotoPictureEdit = new DevExpress.XtraEditors.PictureEdit();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.SignaturePictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControlGroupPersonalData = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForAlternateCountryCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.AlternateCountryCodeSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ItemForAlternateEmail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.AlternateEmailTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForAlternatePhoneNumber = new DevExpress.XtraLayout.LayoutControlItem();
+            this.AlternatePhoneNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForNoKTP = new DevExpress.XtraLayout.LayoutControlItem();
+            this.NoKTPTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForPresentAddress = new DevExpress.XtraLayout.LayoutControlItem();
+            this.PresentAddressMemoEdit = new DevExpress.XtraEditors.MemoEdit();
+            this.ItemForAddress = new DevExpress.XtraLayout.LayoutControlItem();
+            this.AddressMemoEdit = new DevExpress.XtraEditors.MemoEdit();
+            this.ItemForNoKK = new DevExpress.XtraLayout.LayoutControlItem();
+            this.NoKKTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForBirthPlace = new DevExpress.XtraLayout.LayoutControlItem();
+            this.BirthPlaceTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForBirthDay = new DevExpress.XtraLayout.LayoutControlItem();
+            this.BirthDayDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.ItemForReligion = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ReligionSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ItemForGender = new DevExpress.XtraLayout.LayoutControlItem();
+            this.GenderSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ItemForBloodType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.BloodTypeSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ItemForMaritalStatus = new DevExpress.XtraLayout.LayoutControlItem();
+            this.MaritalStatusSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView21 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ItemForHeight = new DevExpress.XtraLayout.LayoutControlItem();
+            this.HeightSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ItemForWeight = new DevExpress.XtraLayout.LayoutControlItem();
+            this.WeightSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ItemForEthnic = new DevExpress.XtraLayout.LayoutControlItem();
+            this.EthnicTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForNationality = new DevExpress.XtraLayout.LayoutControlItem();
+            this.NationalityTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForChild = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ChildSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ItemForSibling = new DevExpress.XtraLayout.LayoutControlItem();
+            this.SiblingSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.layoutControlGroupParent = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForFatherName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.FatherNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForCountryCodeFather = new DevExpress.XtraLayout.LayoutControlItem();
+            this.CountryCodeFatherSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ItemForFatherWork = new DevExpress.XtraLayout.LayoutControlItem();
+            this.FatherWorkTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForMotherName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.MotherNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForCountryCodeMother = new DevExpress.XtraLayout.LayoutControlItem();
+            this.CountryCodeMotherSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ItemForMotherWork = new DevExpress.XtraLayout.LayoutControlItem();
+            this.MotherWorkTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForPhoneNumberFather = new DevExpress.XtraLayout.LayoutControlItem();
+            this.PhoneNumberFatherTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForPhoneNumberMother = new DevExpress.XtraLayout.LayoutControlItem();
+            this.PhoneNumberMotherTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroupNote = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForNote = new DevExpress.XtraLayout.LayoutControlItem();
             this.NoteMemoEdit = new DevExpress.XtraEditors.MemoEdit();
@@ -72,74 +140,12 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             this.CreatedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForModifiedDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ModifiedDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.ItemForTabPicture = new DevExpress.XtraLayout.LayoutControlItem();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.PhotoPictureEdit = new DevExpress.XtraEditors.PictureEdit();
-            this.SignaturePictureEdit = new DevExpress.XtraEditors.PictureEdit();
-            this.AlternateEmailTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.AlternateCountryCodeSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.AlternatePhoneNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForAlternatePhoneNumber = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForAlternateCountryCode = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForAlternateEmail = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NoKTPTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ReligionSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.GenderSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.AddressMemoEdit = new DevExpress.XtraEditors.MemoEdit();
-            this.BirthDayDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.PresentAddressMemoEdit = new DevExpress.XtraEditors.MemoEdit();
-            this.WeightSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.NoKKTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.NationalityTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.HeightSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.ChildSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.BloodTypeSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.BirthPlaceTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.SiblingSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.MaritalStatusSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView21 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.EthnicTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForNoKTP = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForPresentAddress = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForNoKK = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForBirthPlace = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForBirthDay = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForMaritalStatus = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForHeight = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForWeight = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForNationality = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForEthnic = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForSibling = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForReligion = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForBloodType = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForGender = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForChild = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForAddress = new DevExpress.XtraLayout.LayoutControlItem();
-            this.CountryCodeFatherSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.PhoneNumberFatherTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.MotherWorkTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.FatherNameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.MotherNameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.FatherWorkTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.PhoneNumberMotherTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.CountryCodeMotherSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlGroupParent = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.ItemForFatherName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForCountryCodeFather = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForFatherWork = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForMotherName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForCountryCodeMother = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForMotherWork = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForPhoneNumberFather = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForPhoneNumberMother = new DevExpress.XtraLayout.LayoutControlItem();
+            this.AccountNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForAccountNumber = new DevExpress.XtraLayout.LayoutControlItem();
+            this.AccountNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForAccountName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.BankPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
+            this.ItemForBank = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).BeginInit();
             this._DataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).BeginInit();
@@ -176,7 +182,77 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTabPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureEdit.Properties)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SignaturePictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPersonalData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternateCountryCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlternateCountryCodeSearchLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternateEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlternateEmailTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternatePhoneNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlternatePhoneNumberTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNoKTP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoKTPTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPresentAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PresentAddressMemoEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddressMemoEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNoKK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoKKTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthPlace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthPlaceTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthDay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDayDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDayDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForReligion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReligionSearchLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGender)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderSearchLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBloodType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BloodTypeSearchLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForMaritalStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaritalStatusSearchLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HeightSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForWeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeightSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEthnic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EthnicTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNationality)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NationalityTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForChild)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChildSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForSibling)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SiblingSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupParent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForFatherName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FatherNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCountryCodeFather)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountryCodeFatherSearchLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForFatherWork)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FatherWorkTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForMotherName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MotherNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCountryCodeMother)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountryCodeMotherSearchLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForMotherWork)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MotherWorkTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumberFather)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberFatherTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumberMother)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberMotherTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupNote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).BeginInit();
@@ -191,80 +267,19 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTabPicture)).BeginInit();
-            this.xtraTabPage1.SuspendLayout();
-            this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SignaturePictureEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlternateEmailTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlternateCountryCodeSearchLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlternatePhoneNumberTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternatePhoneNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternateCountryCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternateEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoKTPTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReligionSearchLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GenderSearchLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddressMemoEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BirthDayDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BirthDayDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PresentAddressMemoEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeightSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoKKTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NationalityTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HeightSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChildSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BloodTypeSearchLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BirthPlaceTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SiblingSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaritalStatusSearchLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EthnicTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNoKTP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPresentAddress)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNoKK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthPlace)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthDay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForMaritalStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForWeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNationality)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForEthnic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForSibling)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForReligion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBloodType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForGender)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForChild)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForAddress)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CountryCodeFatherSearchLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberFatherTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MotherWorkTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FatherNameTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MotherNameTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FatherWorkTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberMotherTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CountryCodeMotherSearchLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupParent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForFatherName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCountryCodeFather)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForFatherWork)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForMotherName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCountryCodeMother)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForMotherWork)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumberFather)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumberMother)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountNumberTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAccountNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAccountName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BankPopUp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBank)).BeginInit();
             this.SuspendLayout();
             // 
             // _DataLayoutControl
             // 
+            this._DataLayoutControl.Controls.Add(this.BankPopUp);
+            this._DataLayoutControl.Controls.Add(this.AccountNameTextEdit);
+            this._DataLayoutControl.Controls.Add(this.AccountNumberTextEdit);
             this._DataLayoutControl.Controls.Add(this.xtraTabControl1);
             this._DataLayoutControl.Controls.Add(this.EmailTextEdit);
             this._DataLayoutControl.Controls.Add(this.JobTitlePopUp);
@@ -398,14 +413,17 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             this.ItemForCountryCode,
             this.ItemForPhoneNumber,
             this.ItemForCompany,
-            this.ItemForResignationDate,
             this.ItemForOrganizationStructure,
             this.ItemForJobPosition,
             this.ItemForJobGrade,
             this.ItemForJobTitle,
             this.ItemForName,
             this.ItemForEmail,
-            this.ItemForTabPicture});
+            this.ItemForTabPicture,
+            this.ItemForAccountNumber,
+            this.ItemForResignationDate,
+            this.ItemForBank,
+            this.ItemForAccountName});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(1196, 802);
@@ -423,7 +441,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // CodeTextEdit
             // 
             this.CodeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Code", true));
-            this.CodeTextEdit.Location = new System.Drawing.Point(246, 245);
+            this.CodeTextEdit.Location = new System.Drawing.Point(246, -38);
             this.CodeTextEdit.MenuManager = this.mainRibbonControl;
             this.CodeTextEdit.Name = "CodeTextEdit";
             this.CodeTextEdit.Size = new System.Drawing.Size(615, 34);
@@ -444,7 +462,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // 
             this.JoinDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "JoinDate", true));
             this.JoinDateDateEdit.EditValue = null;
-            this.JoinDateDateEdit.Location = new System.Drawing.Point(246, 397);
+            this.JoinDateDateEdit.Location = new System.Drawing.Point(246, 114);
             this.JoinDateDateEdit.MenuManager = this.mainRibbonControl;
             this.JoinDateDateEdit.Name = "JoinDateDateEdit";
             this.JoinDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -468,7 +486,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // CountryCodeSearchLookUpEdit
             // 
             this.CountryCodeSearchLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CountryCode", true));
-            this.CountryCodeSearchLookUpEdit.Location = new System.Drawing.Point(246, 321);
+            this.CountryCodeSearchLookUpEdit.Location = new System.Drawing.Point(246, 38);
             this.CountryCodeSearchLookUpEdit.MenuManager = this.mainRibbonControl;
             this.CountryCodeSearchLookUpEdit.Name = "CountryCodeSearchLookUpEdit";
             this.CountryCodeSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -499,7 +517,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // PhoneNumberTextEdit
             // 
             this.PhoneNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PhoneNumber", true));
-            this.PhoneNumberTextEdit.Location = new System.Drawing.Point(569, 321);
+            this.PhoneNumberTextEdit.Location = new System.Drawing.Point(569, 38);
             this.PhoneNumberTextEdit.MenuManager = this.mainRibbonControl;
             this.PhoneNumberTextEdit.Name = "PhoneNumberTextEdit";
             this.PhoneNumberTextEdit.Size = new System.Drawing.Size(292, 34);
@@ -518,7 +536,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // CompanyPopUp
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
-            this.CompanyPopUp.Location = new System.Drawing.Point(246, 55);
+            this.CompanyPopUp.Location = new System.Drawing.Point(246, -228);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -561,7 +579,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             this.ItemForResignationDate.Control = this.ResignationDateDateEdit;
             this.ItemForResignationDate.Location = new System.Drawing.Point(0, 380);
             this.ItemForResignationDate.Name = "ItemForResignationDate";
-            this.ItemForResignationDate.Size = new System.Drawing.Size(842, 422);
+            this.ItemForResignationDate.Size = new System.Drawing.Size(842, 38);
             this.ItemForResignationDate.Text = "Tanggal Keluar Kerja";
             this.ItemForResignationDate.TextSize = new System.Drawing.Size(211, 21);
             // 
@@ -569,7 +587,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // 
             this.ResignationDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ResignationDate", true));
             this.ResignationDateDateEdit.EditValue = null;
-            this.ResignationDateDateEdit.Location = new System.Drawing.Point(246, 435);
+            this.ResignationDateDateEdit.Location = new System.Drawing.Point(246, 152);
             this.ResignationDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ResignationDateDateEdit.Name = "ResignationDateDateEdit";
             this.ResignationDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -593,7 +611,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // OrganizationStructurePopUp
             // 
             this.OrganizationStructurePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "OrganizationStructure", true));
-            this.OrganizationStructurePopUp.Location = new System.Drawing.Point(246, 93);
+            this.OrganizationStructurePopUp.Location = new System.Drawing.Point(246, -190);
             this.OrganizationStructurePopUp.MenuManager = this.mainRibbonControl;
             this.OrganizationStructurePopUp.Name = "OrganizationStructurePopUp";
             this.OrganizationStructurePopUp.ObjectId = null;
@@ -641,7 +659,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // JobPositionPopUp
             // 
             this.JobPositionPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "JobPosition", true));
-            this.JobPositionPopUp.Location = new System.Drawing.Point(246, 169);
+            this.JobPositionPopUp.Location = new System.Drawing.Point(246, -114);
             this.JobPositionPopUp.MenuManager = this.mainRibbonControl;
             this.JobPositionPopUp.Name = "JobPositionPopUp";
             this.JobPositionPopUp.ObjectId = null;
@@ -689,7 +707,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // JobGradePopUp
             // 
             this.JobGradePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "JobGrade", true));
-            this.JobGradePopUp.Location = new System.Drawing.Point(246, 207);
+            this.JobGradePopUp.Location = new System.Drawing.Point(246, -76);
             this.JobGradePopUp.MenuManager = this.mainRibbonControl;
             this.JobGradePopUp.Name = "JobGradePopUp";
             this.JobGradePopUp.ObjectId = null;
@@ -737,7 +755,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // JobTitlePopUp
             // 
             this.JobTitlePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "JobTitle", true));
-            this.JobTitlePopUp.Location = new System.Drawing.Point(246, 131);
+            this.JobTitlePopUp.Location = new System.Drawing.Point(246, -152);
             this.JobTitlePopUp.MenuManager = this.mainRibbonControl;
             this.JobTitlePopUp.Name = "JobTitlePopUp";
             this.JobTitlePopUp.ObjectId = null;
@@ -787,7 +805,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // NameTextEdit
             // 
             this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Name", true));
-            this.NameTextEdit.Location = new System.Drawing.Point(246, 283);
+            this.NameTextEdit.Location = new System.Drawing.Point(246, 0);
             this.NameTextEdit.MenuManager = this.mainRibbonControl;
             this.NameTextEdit.Name = "NameTextEdit";
             this.NameTextEdit.Size = new System.Drawing.Size(615, 34);
@@ -806,12 +824,69 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // EmailTextEdit
             // 
             this.EmailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Email", true));
-            this.EmailTextEdit.Location = new System.Drawing.Point(246, 359);
+            this.EmailTextEdit.Location = new System.Drawing.Point(246, 76);
             this.EmailTextEdit.MenuManager = this.mainRibbonControl;
             this.EmailTextEdit.Name = "EmailTextEdit";
             this.EmailTextEdit.Size = new System.Drawing.Size(615, 34);
             this.EmailTextEdit.StyleController = this._DataLayoutControl;
             this.EmailTextEdit.TabIndex = 23;
+            // 
+            // ItemForTabPicture
+            // 
+            this.ItemForTabPicture.Control = this.xtraTabControl1;
+            this.ItemForTabPicture.Location = new System.Drawing.Point(842, 0);
+            this.ItemForTabPicture.Name = "ItemForTabPicture";
+            this.ItemForTabPicture.Size = new System.Drawing.Size(354, 802);
+            this.ItemForTabPicture.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForTabPicture.TextVisible = false;
+            // 
+            // xtraTabControl1
+            // 
+            this.xtraTabControl1.Location = new System.Drawing.Point(865, -228);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(350, 798);
+            this.xtraTabControl1.TabIndex = 24;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Controls.Add(this.PhotoPictureEdit);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(348, 764);
+            this.xtraTabPage1.Text = "Foto";
+            // 
+            // PhotoPictureEdit
+            // 
+            this.PhotoPictureEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PhotoPictureEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PhotoPictureEdit.Location = new System.Drawing.Point(0, 0);
+            this.PhotoPictureEdit.MenuManager = this.mainRibbonControl;
+            this.PhotoPictureEdit.Name = "PhotoPictureEdit";
+            this.PhotoPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.PhotoPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.PhotoPictureEdit.Size = new System.Drawing.Size(348, 764);
+            this.PhotoPictureEdit.TabIndex = 1;
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.SignaturePictureEdit);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(348, 764);
+            this.xtraTabPage2.Text = "Tanda Tangan";
+            // 
+            // SignaturePictureEdit
+            // 
+            this.SignaturePictureEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SignaturePictureEdit.Location = new System.Drawing.Point(0, 0);
+            this.SignaturePictureEdit.MenuManager = this.mainRibbonControl;
+            this.SignaturePictureEdit.Name = "SignaturePictureEdit";
+            this.SignaturePictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.SignaturePictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.SignaturePictureEdit.Size = new System.Drawing.Size(348, 764);
+            this.SignaturePictureEdit.TabIndex = 1;
             // 
             // layoutControlGroupPersonalData
             // 
@@ -841,6 +916,650 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             this.layoutControlGroupPersonalData.Size = new System.Drawing.Size(1196, 802);
             this.layoutControlGroupPersonalData.Text = "Data Pribadi";
             // 
+            // ItemForAlternateCountryCode
+            // 
+            this.ItemForAlternateCountryCode.Control = this.AlternateCountryCodeSearchLookUpEdit;
+            this.ItemForAlternateCountryCode.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForAlternateCountryCode.CustomizationFormText = "Nomor Telepon Alternatif";
+            this.ItemForAlternateCountryCode.Location = new System.Drawing.Point(0, 0);
+            this.ItemForAlternateCountryCode.Name = "ItemForAlternateCountryCode";
+            this.ItemForAlternateCountryCode.Size = new System.Drawing.Size(419, 38);
+            this.ItemForAlternateCountryCode.Text = "Nomor Telepon Alternatif";
+            this.ItemForAlternateCountryCode.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // AlternateCountryCodeSearchLookUpEdit
+            // 
+            this.AlternateCountryCodeSearchLookUpEdit.Location = new System.Drawing.Point(246, -228);
+            this.AlternateCountryCodeSearchLookUpEdit.Name = "AlternateCountryCodeSearchLookUpEdit";
+            this.AlternateCountryCodeSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.AlternateCountryCodeSearchLookUpEdit.Properties.NullText = "";
+            this.AlternateCountryCodeSearchLookUpEdit.Properties.PopupView = this.gridView11;
+            this.AlternateCountryCodeSearchLookUpEdit.Size = new System.Drawing.Size(192, 34);
+            this.AlternateCountryCodeSearchLookUpEdit.StyleController = this._DataLayoutControl;
+            this.AlternateCountryCodeSearchLookUpEdit.TabIndex = 22;
+            // 
+            // gridView11
+            // 
+            this.gridView11.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView11.Name = "gridView11";
+            this.gridView11.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView11.OptionsView.ShowGroupPanel = false;
+            // 
+            // ItemForAlternateEmail
+            // 
+            this.ItemForAlternateEmail.Control = this.AlternateEmailTextEdit;
+            this.ItemForAlternateEmail.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForAlternateEmail.CustomizationFormText = "Email Alternatif";
+            this.ItemForAlternateEmail.Location = new System.Drawing.Point(0, 38);
+            this.ItemForAlternateEmail.Name = "ItemForAlternateEmail";
+            this.ItemForAlternateEmail.Size = new System.Drawing.Size(1196, 38);
+            this.ItemForAlternateEmail.Text = "Email Alternatif";
+            this.ItemForAlternateEmail.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // AlternateEmailTextEdit
+            // 
+            this.AlternateEmailTextEdit.Location = new System.Drawing.Point(246, -190);
+            this.AlternateEmailTextEdit.Name = "AlternateEmailTextEdit";
+            this.AlternateEmailTextEdit.Size = new System.Drawing.Size(969, 34);
+            this.AlternateEmailTextEdit.StyleController = this._DataLayoutControl;
+            this.AlternateEmailTextEdit.TabIndex = 23;
+            // 
+            // ItemForAlternatePhoneNumber
+            // 
+            this.ItemForAlternatePhoneNumber.Control = this.AlternatePhoneNumberTextEdit;
+            this.ItemForAlternatePhoneNumber.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForAlternatePhoneNumber.CustomizationFormText = "Nomor Telepon Alternatif";
+            this.ItemForAlternatePhoneNumber.Location = new System.Drawing.Point(419, 0);
+            this.ItemForAlternatePhoneNumber.Name = "ItemForAlternatePhoneNumber";
+            this.ItemForAlternatePhoneNumber.Size = new System.Drawing.Size(777, 38);
+            this.ItemForAlternatePhoneNumber.Text = "Nomor Telepon Alternatif";
+            this.ItemForAlternatePhoneNumber.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForAlternatePhoneNumber.TextVisible = false;
+            // 
+            // AlternatePhoneNumberTextEdit
+            // 
+            this.AlternatePhoneNumberTextEdit.Location = new System.Drawing.Point(442, -228);
+            this.AlternatePhoneNumberTextEdit.Name = "AlternatePhoneNumberTextEdit";
+            this.AlternatePhoneNumberTextEdit.Size = new System.Drawing.Size(773, 34);
+            this.AlternatePhoneNumberTextEdit.StyleController = this._DataLayoutControl;
+            this.AlternatePhoneNumberTextEdit.TabIndex = 21;
+            // 
+            // ItemForNoKTP
+            // 
+            this.ItemForNoKTP.Control = this.NoKTPTextEdit;
+            this.ItemForNoKTP.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForNoKTP.CustomizationFormText = "Nomor Kartu Tanda Penduduk";
+            this.ItemForNoKTP.Location = new System.Drawing.Point(0, 76);
+            this.ItemForNoKTP.Name = "ItemForNoKTP";
+            this.ItemForNoKTP.Size = new System.Drawing.Size(598, 38);
+            this.ItemForNoKTP.Text = "Nomor Kartu Tanda Penduduk";
+            this.ItemForNoKTP.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // NoKTPTextEdit
+            // 
+            this.NoKTPTextEdit.Location = new System.Drawing.Point(246, -152);
+            this.NoKTPTextEdit.Name = "NoKTPTextEdit";
+            this.NoKTPTextEdit.Size = new System.Drawing.Size(371, 34);
+            this.NoKTPTextEdit.StyleController = this._DataLayoutControl;
+            this.NoKTPTextEdit.TabIndex = 30;
+            // 
+            // ItemForPresentAddress
+            // 
+            this.ItemForPresentAddress.Control = this.PresentAddressMemoEdit;
+            this.ItemForPresentAddress.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForPresentAddress.CustomizationFormText = "Alamat 1";
+            this.ItemForPresentAddress.Location = new System.Drawing.Point(0, 114);
+            this.ItemForPresentAddress.Name = "ItemForPresentAddress";
+            this.ItemForPresentAddress.Size = new System.Drawing.Size(598, 64);
+            this.ItemForPresentAddress.Text = "Alamat 1";
+            this.ItemForPresentAddress.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // PresentAddressMemoEdit
+            // 
+            this.PresentAddressMemoEdit.Location = new System.Drawing.Point(246, -114);
+            this.PresentAddressMemoEdit.MinimumSize = new System.Drawing.Size(0, 60);
+            this.PresentAddressMemoEdit.Name = "PresentAddressMemoEdit";
+            this.PresentAddressMemoEdit.Size = new System.Drawing.Size(371, 60);
+            this.PresentAddressMemoEdit.StyleController = this._DataLayoutControl;
+            this.PresentAddressMemoEdit.TabIndex = 32;
+            // 
+            // ItemForAddress
+            // 
+            this.ItemForAddress.Control = this.AddressMemoEdit;
+            this.ItemForAddress.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForAddress.CustomizationFormText = "Alamat 2";
+            this.ItemForAddress.Location = new System.Drawing.Point(598, 114);
+            this.ItemForAddress.Name = "ItemForAddress";
+            this.ItemForAddress.Size = new System.Drawing.Size(598, 64);
+            this.ItemForAddress.Text = "Alamat 2";
+            this.ItemForAddress.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // AddressMemoEdit
+            // 
+            this.AddressMemoEdit.Location = new System.Drawing.Point(844, -114);
+            this.AddressMemoEdit.MinimumSize = new System.Drawing.Size(0, 60);
+            this.AddressMemoEdit.Name = "AddressMemoEdit";
+            this.AddressMemoEdit.Size = new System.Drawing.Size(371, 60);
+            this.AddressMemoEdit.StyleController = this._DataLayoutControl;
+            this.AddressMemoEdit.TabIndex = 33;
+            // 
+            // ItemForNoKK
+            // 
+            this.ItemForNoKK.Control = this.NoKKTextEdit;
+            this.ItemForNoKK.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForNoKK.CustomizationFormText = "Nomor Kartu Keluarga";
+            this.ItemForNoKK.Location = new System.Drawing.Point(598, 76);
+            this.ItemForNoKK.Name = "ItemForNoKK";
+            this.ItemForNoKK.Size = new System.Drawing.Size(598, 38);
+            this.ItemForNoKK.Text = "Nomor Kartu Keluarga";
+            this.ItemForNoKK.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // NoKKTextEdit
+            // 
+            this.NoKKTextEdit.Location = new System.Drawing.Point(844, -152);
+            this.NoKKTextEdit.Name = "NoKKTextEdit";
+            this.NoKKTextEdit.Size = new System.Drawing.Size(371, 34);
+            this.NoKKTextEdit.StyleController = this._DataLayoutControl;
+            this.NoKKTextEdit.TabIndex = 31;
+            // 
+            // ItemForBirthPlace
+            // 
+            this.ItemForBirthPlace.Control = this.BirthPlaceTextEdit;
+            this.ItemForBirthPlace.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForBirthPlace.CustomizationFormText = "Tempat Lahir";
+            this.ItemForBirthPlace.Location = new System.Drawing.Point(0, 178);
+            this.ItemForBirthPlace.Name = "ItemForBirthPlace";
+            this.ItemForBirthPlace.Size = new System.Drawing.Size(598, 38);
+            this.ItemForBirthPlace.Text = "Tempat Lahir";
+            this.ItemForBirthPlace.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // BirthPlaceTextEdit
+            // 
+            this.BirthPlaceTextEdit.Location = new System.Drawing.Point(246, -50);
+            this.BirthPlaceTextEdit.Name = "BirthPlaceTextEdit";
+            this.BirthPlaceTextEdit.Size = new System.Drawing.Size(371, 34);
+            this.BirthPlaceTextEdit.StyleController = this._DataLayoutControl;
+            this.BirthPlaceTextEdit.TabIndex = 34;
+            // 
+            // ItemForBirthDay
+            // 
+            this.ItemForBirthDay.Control = this.BirthDayDateEdit;
+            this.ItemForBirthDay.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForBirthDay.CustomizationFormText = "Tanggal Lahir";
+            this.ItemForBirthDay.Location = new System.Drawing.Point(598, 178);
+            this.ItemForBirthDay.Name = "ItemForBirthDay";
+            this.ItemForBirthDay.Size = new System.Drawing.Size(598, 38);
+            this.ItemForBirthDay.Text = "Tanggal Lahir";
+            this.ItemForBirthDay.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // BirthDayDateEdit
+            // 
+            this.BirthDayDateEdit.EditValue = null;
+            this.BirthDayDateEdit.Location = new System.Drawing.Point(844, -50);
+            this.BirthDayDateEdit.Name = "BirthDayDateEdit";
+            this.BirthDayDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BirthDayDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BirthDayDateEdit.Size = new System.Drawing.Size(371, 34);
+            this.BirthDayDateEdit.StyleController = this._DataLayoutControl;
+            this.BirthDayDateEdit.TabIndex = 35;
+            // 
+            // ItemForReligion
+            // 
+            this.ItemForReligion.Control = this.ReligionSearchLookUpEdit;
+            this.ItemForReligion.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForReligion.CustomizationFormText = "Agama";
+            this.ItemForReligion.Location = new System.Drawing.Point(0, 216);
+            this.ItemForReligion.Name = "ItemForReligion";
+            this.ItemForReligion.Size = new System.Drawing.Size(1196, 38);
+            this.ItemForReligion.Text = "Agama";
+            this.ItemForReligion.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // ReligionSearchLookUpEdit
+            // 
+            this.ReligionSearchLookUpEdit.Location = new System.Drawing.Point(246, -12);
+            this.ReligionSearchLookUpEdit.Name = "ReligionSearchLookUpEdit";
+            this.ReligionSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ReligionSearchLookUpEdit.Properties.NullText = "";
+            this.ReligionSearchLookUpEdit.Properties.PopupView = this.gridView3;
+            this.ReligionSearchLookUpEdit.Size = new System.Drawing.Size(969, 34);
+            this.ReligionSearchLookUpEdit.StyleController = this._DataLayoutControl;
+            this.ReligionSearchLookUpEdit.TabIndex = 37;
+            // 
+            // gridView3
+            // 
+            this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            // 
+            // ItemForGender
+            // 
+            this.ItemForGender.Control = this.GenderSearchLookUpEdit;
+            this.ItemForGender.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForGender.CustomizationFormText = "Jenis Kelamin";
+            this.ItemForGender.Location = new System.Drawing.Point(0, 254);
+            this.ItemForGender.Name = "ItemForGender";
+            this.ItemForGender.Size = new System.Drawing.Size(1196, 38);
+            this.ItemForGender.Text = "Jenis Kelamin";
+            this.ItemForGender.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // GenderSearchLookUpEdit
+            // 
+            this.GenderSearchLookUpEdit.Location = new System.Drawing.Point(246, 26);
+            this.GenderSearchLookUpEdit.Name = "GenderSearchLookUpEdit";
+            this.GenderSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.GenderSearchLookUpEdit.Properties.NullText = "";
+            this.GenderSearchLookUpEdit.Properties.PopupView = this.gridView5;
+            this.GenderSearchLookUpEdit.Size = new System.Drawing.Size(969, 34);
+            this.GenderSearchLookUpEdit.StyleController = this._DataLayoutControl;
+            this.GenderSearchLookUpEdit.TabIndex = 39;
+            // 
+            // gridView5
+            // 
+            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView5.OptionsView.ShowGroupPanel = false;
+            // 
+            // ItemForBloodType
+            // 
+            this.ItemForBloodType.Control = this.BloodTypeSearchLookUpEdit;
+            this.ItemForBloodType.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForBloodType.CustomizationFormText = "Golongan Darah";
+            this.ItemForBloodType.Location = new System.Drawing.Point(0, 292);
+            this.ItemForBloodType.Name = "ItemForBloodType";
+            this.ItemForBloodType.Size = new System.Drawing.Size(1196, 38);
+            this.ItemForBloodType.Text = "Golongan Darah";
+            this.ItemForBloodType.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // BloodTypeSearchLookUpEdit
+            // 
+            this.BloodTypeSearchLookUpEdit.Location = new System.Drawing.Point(246, 64);
+            this.BloodTypeSearchLookUpEdit.Name = "BloodTypeSearchLookUpEdit";
+            this.BloodTypeSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BloodTypeSearchLookUpEdit.Properties.NullText = "";
+            this.BloodTypeSearchLookUpEdit.Properties.PopupView = this.gridView4;
+            this.BloodTypeSearchLookUpEdit.Size = new System.Drawing.Size(969, 34);
+            this.BloodTypeSearchLookUpEdit.StyleController = this._DataLayoutControl;
+            this.BloodTypeSearchLookUpEdit.TabIndex = 38;
+            // 
+            // gridView4
+            // 
+            this.gridView4.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView4.OptionsView.ShowGroupPanel = false;
+            // 
+            // ItemForMaritalStatus
+            // 
+            this.ItemForMaritalStatus.Control = this.MaritalStatusSearchLookUpEdit;
+            this.ItemForMaritalStatus.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForMaritalStatus.CustomizationFormText = "Status Pernikahan";
+            this.ItemForMaritalStatus.Location = new System.Drawing.Point(0, 330);
+            this.ItemForMaritalStatus.Name = "ItemForMaritalStatus";
+            this.ItemForMaritalStatus.Size = new System.Drawing.Size(1196, 38);
+            this.ItemForMaritalStatus.Text = "Status Pernikahan";
+            this.ItemForMaritalStatus.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // MaritalStatusSearchLookUpEdit
+            // 
+            this.MaritalStatusSearchLookUpEdit.Location = new System.Drawing.Point(246, 102);
+            this.MaritalStatusSearchLookUpEdit.Name = "MaritalStatusSearchLookUpEdit";
+            this.MaritalStatusSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.MaritalStatusSearchLookUpEdit.Properties.NullText = "";
+            this.MaritalStatusSearchLookUpEdit.Properties.PopupView = this.gridView21;
+            this.MaritalStatusSearchLookUpEdit.Size = new System.Drawing.Size(969, 34);
+            this.MaritalStatusSearchLookUpEdit.StyleController = this._DataLayoutControl;
+            this.MaritalStatusSearchLookUpEdit.TabIndex = 36;
+            // 
+            // gridView21
+            // 
+            this.gridView21.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView21.Name = "gridView21";
+            this.gridView21.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView21.OptionsView.ShowGroupPanel = false;
+            // 
+            // ItemForHeight
+            // 
+            this.ItemForHeight.Control = this.HeightSpinEdit;
+            this.ItemForHeight.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForHeight.CustomizationFormText = "Tinggi Badan";
+            this.ItemForHeight.Location = new System.Drawing.Point(0, 368);
+            this.ItemForHeight.Name = "ItemForHeight";
+            this.ItemForHeight.Size = new System.Drawing.Size(1196, 38);
+            this.ItemForHeight.Text = "Tinggi Badan";
+            this.ItemForHeight.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // HeightSpinEdit
+            // 
+            this.HeightSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.HeightSpinEdit.Location = new System.Drawing.Point(246, 140);
+            this.HeightSpinEdit.Name = "HeightSpinEdit";
+            this.HeightSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.HeightSpinEdit.Size = new System.Drawing.Size(969, 34);
+            this.HeightSpinEdit.StyleController = this._DataLayoutControl;
+            this.HeightSpinEdit.TabIndex = 40;
+            // 
+            // ItemForWeight
+            // 
+            this.ItemForWeight.Control = this.WeightSpinEdit;
+            this.ItemForWeight.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForWeight.CustomizationFormText = "Berat Badan";
+            this.ItemForWeight.Location = new System.Drawing.Point(0, 406);
+            this.ItemForWeight.Name = "ItemForWeight";
+            this.ItemForWeight.Size = new System.Drawing.Size(1196, 38);
+            this.ItemForWeight.Text = "Berat Badan";
+            this.ItemForWeight.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // WeightSpinEdit
+            // 
+            this.WeightSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.WeightSpinEdit.Location = new System.Drawing.Point(246, 178);
+            this.WeightSpinEdit.Name = "WeightSpinEdit";
+            this.WeightSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.WeightSpinEdit.Size = new System.Drawing.Size(969, 34);
+            this.WeightSpinEdit.StyleController = this._DataLayoutControl;
+            this.WeightSpinEdit.TabIndex = 41;
+            // 
+            // ItemForEthnic
+            // 
+            this.ItemForEthnic.Control = this.EthnicTextEdit;
+            this.ItemForEthnic.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForEthnic.CustomizationFormText = "Suku";
+            this.ItemForEthnic.Location = new System.Drawing.Point(0, 444);
+            this.ItemForEthnic.Name = "ItemForEthnic";
+            this.ItemForEthnic.Size = new System.Drawing.Size(598, 38);
+            this.ItemForEthnic.Text = "Suku";
+            this.ItemForEthnic.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // EthnicTextEdit
+            // 
+            this.EthnicTextEdit.Location = new System.Drawing.Point(246, 216);
+            this.EthnicTextEdit.Name = "EthnicTextEdit";
+            this.EthnicTextEdit.Size = new System.Drawing.Size(371, 34);
+            this.EthnicTextEdit.StyleController = this._DataLayoutControl;
+            this.EthnicTextEdit.TabIndex = 43;
+            // 
+            // ItemForNationality
+            // 
+            this.ItemForNationality.Control = this.NationalityTextEdit;
+            this.ItemForNationality.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForNationality.CustomizationFormText = "Kebangsaan";
+            this.ItemForNationality.Location = new System.Drawing.Point(598, 444);
+            this.ItemForNationality.Name = "ItemForNationality";
+            this.ItemForNationality.Size = new System.Drawing.Size(598, 38);
+            this.ItemForNationality.Text = "Kebangsaan";
+            this.ItemForNationality.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // NationalityTextEdit
+            // 
+            this.NationalityTextEdit.Location = new System.Drawing.Point(844, 216);
+            this.NationalityTextEdit.Name = "NationalityTextEdit";
+            this.NationalityTextEdit.Size = new System.Drawing.Size(371, 34);
+            this.NationalityTextEdit.StyleController = this._DataLayoutControl;
+            this.NationalityTextEdit.TabIndex = 42;
+            // 
+            // ItemForChild
+            // 
+            this.ItemForChild.Control = this.ChildSpinEdit;
+            this.ItemForChild.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForChild.CustomizationFormText = "Anak Ke";
+            this.ItemForChild.Location = new System.Drawing.Point(0, 482);
+            this.ItemForChild.Name = "ItemForChild";
+            this.ItemForChild.Size = new System.Drawing.Size(598, 38);
+            this.ItemForChild.Text = "Anak Ke";
+            this.ItemForChild.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // ChildSpinEdit
+            // 
+            this.ChildSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ChildSpinEdit.Location = new System.Drawing.Point(246, 254);
+            this.ChildSpinEdit.Name = "ChildSpinEdit";
+            this.ChildSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ChildSpinEdit.Size = new System.Drawing.Size(371, 34);
+            this.ChildSpinEdit.StyleController = this._DataLayoutControl;
+            this.ChildSpinEdit.TabIndex = 44;
+            // 
+            // ItemForSibling
+            // 
+            this.ItemForSibling.Control = this.SiblingSpinEdit;
+            this.ItemForSibling.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForSibling.CustomizationFormText = "Saudara Kandung";
+            this.ItemForSibling.Location = new System.Drawing.Point(598, 482);
+            this.ItemForSibling.Name = "ItemForSibling";
+            this.ItemForSibling.Size = new System.Drawing.Size(598, 38);
+            this.ItemForSibling.Text = "Saudara Kandung";
+            this.ItemForSibling.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // SiblingSpinEdit
+            // 
+            this.SiblingSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.SiblingSpinEdit.Location = new System.Drawing.Point(844, 254);
+            this.SiblingSpinEdit.Name = "SiblingSpinEdit";
+            this.SiblingSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SiblingSpinEdit.Size = new System.Drawing.Size(371, 34);
+            this.SiblingSpinEdit.StyleController = this._DataLayoutControl;
+            this.SiblingSpinEdit.TabIndex = 45;
+            // 
+            // layoutControlGroupParent
+            // 
+            this.layoutControlGroupParent.CustomizationFormText = "Orang Tua";
+            this.layoutControlGroupParent.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForFatherName,
+            this.ItemForCountryCodeFather,
+            this.ItemForFatherWork,
+            this.ItemForMotherName,
+            this.ItemForCountryCodeMother,
+            this.ItemForMotherWork,
+            this.ItemForPhoneNumberFather,
+            this.ItemForPhoneNumberMother});
+            this.layoutControlGroupParent.Location = new System.Drawing.Point(0, 520);
+            this.layoutControlGroupParent.Name = "layoutControlGroupParent";
+            this.layoutControlGroupParent.OptionsItemText.TextToControlDistance = 5;
+            this.layoutControlGroupParent.Size = new System.Drawing.Size(1196, 282);
+            this.layoutControlGroupParent.Text = "Orang Tua";
+            // 
+            // ItemForFatherName
+            // 
+            this.ItemForFatherName.Control = this.FatherNameTextEdit;
+            this.ItemForFatherName.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForFatherName.CustomizationFormText = "Nama Ayah";
+            this.ItemForFatherName.Location = new System.Drawing.Point(0, 0);
+            this.ItemForFatherName.Name = "ItemForFatherName";
+            this.ItemForFatherName.Size = new System.Drawing.Size(1172, 38);
+            this.ItemForFatherName.Text = "Nama Ayah";
+            this.ItemForFatherName.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // FatherNameTextEdit
+            // 
+            this.FatherNameTextEdit.Location = new System.Drawing.Point(258, 334);
+            this.FatherNameTextEdit.Name = "FatherNameTextEdit";
+            this.FatherNameTextEdit.Size = new System.Drawing.Size(945, 34);
+            this.FatherNameTextEdit.StyleController = this._DataLayoutControl;
+            this.FatherNameTextEdit.TabIndex = 46;
+            // 
+            // ItemForCountryCodeFather
+            // 
+            this.ItemForCountryCodeFather.Control = this.CountryCodeFatherSearchLookUpEdit;
+            this.ItemForCountryCodeFather.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForCountryCodeFather.CustomizationFormText = "Nomor Telepon Ayah";
+            this.ItemForCountryCodeFather.Location = new System.Drawing.Point(0, 38);
+            this.ItemForCountryCodeFather.Name = "ItemForCountryCodeFather";
+            this.ItemForCountryCodeFather.Size = new System.Drawing.Size(586, 38);
+            this.ItemForCountryCodeFather.Text = "Nomor Telepon Ayah";
+            this.ItemForCountryCodeFather.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // CountryCodeFatherSearchLookUpEdit
+            // 
+            this.CountryCodeFatherSearchLookUpEdit.Location = new System.Drawing.Point(258, 372);
+            this.CountryCodeFatherSearchLookUpEdit.Name = "CountryCodeFatherSearchLookUpEdit";
+            this.CountryCodeFatherSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CountryCodeFatherSearchLookUpEdit.Properties.NullText = "";
+            this.CountryCodeFatherSearchLookUpEdit.Properties.PopupView = this.gridView6;
+            this.CountryCodeFatherSearchLookUpEdit.Size = new System.Drawing.Size(359, 34);
+            this.CountryCodeFatherSearchLookUpEdit.StyleController = this._DataLayoutControl;
+            this.CountryCodeFatherSearchLookUpEdit.TabIndex = 47;
+            // 
+            // gridView6
+            // 
+            this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView6.Name = "gridView6";
+            this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView6.OptionsView.ShowGroupPanel = false;
+            // 
+            // ItemForFatherWork
+            // 
+            this.ItemForFatherWork.Control = this.FatherWorkTextEdit;
+            this.ItemForFatherWork.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForFatherWork.CustomizationFormText = "Pekerjaan Ayah";
+            this.ItemForFatherWork.Location = new System.Drawing.Point(0, 76);
+            this.ItemForFatherWork.Name = "ItemForFatherWork";
+            this.ItemForFatherWork.Size = new System.Drawing.Size(1172, 38);
+            this.ItemForFatherWork.Text = "Pekerjaan Ayah";
+            this.ItemForFatherWork.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // FatherWorkTextEdit
+            // 
+            this.FatherWorkTextEdit.Location = new System.Drawing.Point(258, 410);
+            this.FatherWorkTextEdit.Name = "FatherWorkTextEdit";
+            this.FatherWorkTextEdit.Size = new System.Drawing.Size(945, 34);
+            this.FatherWorkTextEdit.StyleController = this._DataLayoutControl;
+            this.FatherWorkTextEdit.TabIndex = 48;
+            // 
+            // ItemForMotherName
+            // 
+            this.ItemForMotherName.Control = this.MotherNameTextEdit;
+            this.ItemForMotherName.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForMotherName.CustomizationFormText = "Nama Ibu";
+            this.ItemForMotherName.Location = new System.Drawing.Point(0, 114);
+            this.ItemForMotherName.Name = "ItemForMotherName";
+            this.ItemForMotherName.Size = new System.Drawing.Size(1172, 38);
+            this.ItemForMotherName.Text = "Nama Ibu";
+            this.ItemForMotherName.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // MotherNameTextEdit
+            // 
+            this.MotherNameTextEdit.Location = new System.Drawing.Point(258, 448);
+            this.MotherNameTextEdit.Name = "MotherNameTextEdit";
+            this.MotherNameTextEdit.Size = new System.Drawing.Size(945, 34);
+            this.MotherNameTextEdit.StyleController = this._DataLayoutControl;
+            this.MotherNameTextEdit.TabIndex = 49;
+            // 
+            // ItemForCountryCodeMother
+            // 
+            this.ItemForCountryCodeMother.Control = this.CountryCodeMotherSearchLookUpEdit;
+            this.ItemForCountryCodeMother.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForCountryCodeMother.CustomizationFormText = "Nomor Telepon Ibu";
+            this.ItemForCountryCodeMother.Location = new System.Drawing.Point(0, 152);
+            this.ItemForCountryCodeMother.Name = "ItemForCountryCodeMother";
+            this.ItemForCountryCodeMother.Size = new System.Drawing.Size(586, 38);
+            this.ItemForCountryCodeMother.Text = "Nomor Telepon Ibu";
+            this.ItemForCountryCodeMother.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // CountryCodeMotherSearchLookUpEdit
+            // 
+            this.CountryCodeMotherSearchLookUpEdit.Location = new System.Drawing.Point(258, 486);
+            this.CountryCodeMotherSearchLookUpEdit.Name = "CountryCodeMotherSearchLookUpEdit";
+            this.CountryCodeMotherSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CountryCodeMotherSearchLookUpEdit.Properties.NullText = "";
+            this.CountryCodeMotherSearchLookUpEdit.Properties.PopupView = this.gridView7;
+            this.CountryCodeMotherSearchLookUpEdit.Size = new System.Drawing.Size(359, 34);
+            this.CountryCodeMotherSearchLookUpEdit.StyleController = this._DataLayoutControl;
+            this.CountryCodeMotherSearchLookUpEdit.TabIndex = 50;
+            // 
+            // gridView7
+            // 
+            this.gridView7.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView7.Name = "gridView7";
+            this.gridView7.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView7.OptionsView.ShowGroupPanel = false;
+            // 
+            // ItemForMotherWork
+            // 
+            this.ItemForMotherWork.Control = this.MotherWorkTextEdit;
+            this.ItemForMotherWork.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForMotherWork.CustomizationFormText = "Pekerjaan Ibu";
+            this.ItemForMotherWork.Location = new System.Drawing.Point(0, 190);
+            this.ItemForMotherWork.Name = "ItemForMotherWork";
+            this.ItemForMotherWork.Size = new System.Drawing.Size(1172, 38);
+            this.ItemForMotherWork.Text = "Pekerjaan Ibu";
+            this.ItemForMotherWork.TextSize = new System.Drawing.Size(211, 21);
+            // 
+            // MotherWorkTextEdit
+            // 
+            this.MotherWorkTextEdit.Location = new System.Drawing.Point(258, 524);
+            this.MotherWorkTextEdit.Name = "MotherWorkTextEdit";
+            this.MotherWorkTextEdit.Size = new System.Drawing.Size(945, 34);
+            this.MotherWorkTextEdit.StyleController = this._DataLayoutControl;
+            this.MotherWorkTextEdit.TabIndex = 51;
+            // 
+            // ItemForPhoneNumberFather
+            // 
+            this.ItemForPhoneNumberFather.Control = this.PhoneNumberFatherTextEdit;
+            this.ItemForPhoneNumberFather.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForPhoneNumberFather.CustomizationFormText = "ItemForPhoneNumberFather";
+            this.ItemForPhoneNumberFather.Location = new System.Drawing.Point(586, 38);
+            this.ItemForPhoneNumberFather.Name = "ItemForPhoneNumberFather";
+            this.ItemForPhoneNumberFather.Size = new System.Drawing.Size(586, 38);
+            this.ItemForPhoneNumberFather.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForPhoneNumberFather.TextVisible = false;
+            // 
+            // PhoneNumberFatherTextEdit
+            // 
+            this.PhoneNumberFatherTextEdit.Location = new System.Drawing.Point(621, 372);
+            this.PhoneNumberFatherTextEdit.Name = "PhoneNumberFatherTextEdit";
+            this.PhoneNumberFatherTextEdit.Size = new System.Drawing.Size(582, 34);
+            this.PhoneNumberFatherTextEdit.StyleController = this._DataLayoutControl;
+            this.PhoneNumberFatherTextEdit.TabIndex = 52;
+            // 
+            // ItemForPhoneNumberMother
+            // 
+            this.ItemForPhoneNumberMother.Control = this.PhoneNumberMotherTextEdit;
+            this.ItemForPhoneNumberMother.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ItemForPhoneNumberMother.CustomizationFormText = "ItemForPhoneNumberMother";
+            this.ItemForPhoneNumberMother.Location = new System.Drawing.Point(586, 152);
+            this.ItemForPhoneNumberMother.Name = "ItemForPhoneNumberMother";
+            this.ItemForPhoneNumberMother.Size = new System.Drawing.Size(586, 38);
+            this.ItemForPhoneNumberMother.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForPhoneNumberMother.TextVisible = false;
+            // 
+            // PhoneNumberMotherTextEdit
+            // 
+            this.PhoneNumberMotherTextEdit.Location = new System.Drawing.Point(621, 486);
+            this.PhoneNumberMotherTextEdit.Name = "PhoneNumberMotherTextEdit";
+            this.PhoneNumberMotherTextEdit.Size = new System.Drawing.Size(582, 34);
+            this.PhoneNumberMotherTextEdit.StyleController = this._DataLayoutControl;
+            this.PhoneNumberMotherTextEdit.TabIndex = 53;
+            // 
             // layoutControlGroupNote
             // 
             this.layoutControlGroupNote.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -863,7 +1582,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // NoteMemoEdit
             // 
             this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
-            this.NoteMemoEdit.Location = new System.Drawing.Point(246, 55);
+            this.NoteMemoEdit.Location = new System.Drawing.Point(246, -228);
             this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
             this.NoteMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
             this.NoteMemoEdit.Name = "NoteMemoEdit";
@@ -896,7 +1615,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // 
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(246, 55);
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(246, -228);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -920,7 +1639,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // ModifiedUserTextEdit
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(246, 169);
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(246, -114);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
             this.ModifiedUserTextEdit.Size = new System.Drawing.Size(969, 34);
@@ -939,7 +1658,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // CreatedUserTextEdit
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(246, 93);
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(246, -190);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
             this.CreatedUserTextEdit.Size = new System.Drawing.Size(969, 34);
@@ -959,7 +1678,7 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             // 
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(246, 131);
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(246, -152);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -971,708 +1690,93 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             this.ModifiedDateDateEdit.StyleController = this._DataLayoutControl;
             this.ModifiedDateDateEdit.TabIndex = 9;
             // 
-            // xtraTabControl1
+            // AccountNumberTextEdit
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(865, 55);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(350, 798);
-            this.xtraTabControl1.TabIndex = 24;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.AccountNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "AccountNumber", true));
+            this.AccountNumberTextEdit.Location = new System.Drawing.Point(246, 190);
+            this.AccountNumberTextEdit.MenuManager = this.mainRibbonControl;
+            this.AccountNumberTextEdit.Name = "AccountNumberTextEdit";
+            this.AccountNumberTextEdit.Size = new System.Drawing.Size(615, 34);
+            this.AccountNumberTextEdit.StyleController = this._DataLayoutControl;
+            this.AccountNumberTextEdit.TabIndex = 54;
             // 
-            // ItemForTabPicture
+            // ItemForAccountNumber
             // 
-            this.ItemForTabPicture.Control = this.xtraTabControl1;
-            this.ItemForTabPicture.Location = new System.Drawing.Point(842, 0);
-            this.ItemForTabPicture.Name = "ItemForTabPicture";
-            this.ItemForTabPicture.Size = new System.Drawing.Size(354, 802);
-            this.ItemForTabPicture.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForTabPicture.TextVisible = false;
+            this.ItemForAccountNumber.Control = this.AccountNumberTextEdit;
+            this.ItemForAccountNumber.Location = new System.Drawing.Point(0, 418);
+            this.ItemForAccountNumber.Name = "ItemForAccountNumber";
+            this.ItemForAccountNumber.Size = new System.Drawing.Size(842, 38);
+            this.ItemForAccountNumber.Text = "No Rekening";
+            this.ItemForAccountNumber.TextSize = new System.Drawing.Size(211, 21);
             // 
-            // xtraTabPage1
+            // AccountNameTextEdit
             // 
-            this.xtraTabPage1.Controls.Add(this.PhotoPictureEdit);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(348, 764);
-            this.xtraTabPage1.Text = "Foto";
+            this.AccountNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "AccountName", true));
+            this.AccountNameTextEdit.Location = new System.Drawing.Point(246, 228);
+            this.AccountNameTextEdit.MenuManager = this.mainRibbonControl;
+            this.AccountNameTextEdit.Name = "AccountNameTextEdit";
+            this.AccountNameTextEdit.Size = new System.Drawing.Size(615, 34);
+            this.AccountNameTextEdit.StyleController = this._DataLayoutControl;
+            this.AccountNameTextEdit.TabIndex = 55;
             // 
-            // xtraTabPage2
+            // ItemForAccountName
             // 
-            this.xtraTabPage2.Controls.Add(this.SignaturePictureEdit);
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(348, 380);
-            this.xtraTabPage2.Text = "Tanda Tangan";
+            this.ItemForAccountName.Control = this.AccountNameTextEdit;
+            this.ItemForAccountName.Location = new System.Drawing.Point(0, 456);
+            this.ItemForAccountName.Name = "ItemForAccountName";
+            this.ItemForAccountName.Size = new System.Drawing.Size(842, 38);
+            this.ItemForAccountName.Text = "Atasnama Rekening";
+            this.ItemForAccountName.TextSize = new System.Drawing.Size(211, 21);
             // 
-            // PhotoPictureEdit
+            // BankPopUp
             // 
-            this.PhotoPictureEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PhotoPictureEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhotoPictureEdit.Location = new System.Drawing.Point(0, 0);
-            this.PhotoPictureEdit.MenuManager = this.mainRibbonControl;
-            this.PhotoPictureEdit.Name = "PhotoPictureEdit";
-            this.PhotoPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.PhotoPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.PhotoPictureEdit.Size = new System.Drawing.Size(348, 764);
-            this.PhotoPictureEdit.TabIndex = 1;
-            // 
-            // SignaturePictureEdit
-            // 
-            this.SignaturePictureEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SignaturePictureEdit.Location = new System.Drawing.Point(0, 0);
-            this.SignaturePictureEdit.MenuManager = this.mainRibbonControl;
-            this.SignaturePictureEdit.Name = "SignaturePictureEdit";
-            this.SignaturePictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.SignaturePictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.SignaturePictureEdit.Size = new System.Drawing.Size(348, 380);
-            this.SignaturePictureEdit.TabIndex = 1;
-            // 
-            // AlternateEmailTextEdit
-            // 
-            this.AlternateEmailTextEdit.Location = new System.Drawing.Point(246, 93);
-            this.AlternateEmailTextEdit.Name = "AlternateEmailTextEdit";
-            this.AlternateEmailTextEdit.Size = new System.Drawing.Size(969, 34);
-            this.AlternateEmailTextEdit.StyleController = this._DataLayoutControl;
-            this.AlternateEmailTextEdit.TabIndex = 23;
-            // 
-            // AlternateCountryCodeSearchLookUpEdit
-            // 
-            this.AlternateCountryCodeSearchLookUpEdit.Location = new System.Drawing.Point(246, 55);
-            this.AlternateCountryCodeSearchLookUpEdit.Name = "AlternateCountryCodeSearchLookUpEdit";
-            this.AlternateCountryCodeSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.BankPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Bank", true));
+            this.BankPopUp.Location = new System.Drawing.Point(246, 266);
+            this.BankPopUp.MenuManager = this.mainRibbonControl;
+            this.BankPopUp.Name = "BankPopUp";
+            this.BankPopUp.ObjectId = null;
+            this.BankPopUp.OptionsCascadeControl = null;
+            this.BankPopUp.OptionsCascadeMember = null;
+            this.BankPopUp.OptionsChildControl = null;
+            this.BankPopUp.OptionsDataSource = null;
+            this.BankPopUp.OptionsDataType = null;
+            this.BankPopUp.OptionsDisplayCaption = null;
+            this.BankPopUp.OptionsDisplayColumns = null;
+            this.BankPopUp.OptionsDisplayText = null;
+            this.BankPopUp.OptionsDisplayTitle = null;
+            this.BankPopUp.OptionsDisplayWidth = null;
+            this.BankPopUp.OptionsFilterColumns = null;
+            this.BankPopUp.OptionsSortColumns = null;
+            this.BankPopUp.Properties.Appearance.Options.UseTextOptions = true;
+            this.BankPopUp.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.BankPopUp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.AlternateCountryCodeSearchLookUpEdit.Properties.NullText = "";
-            this.AlternateCountryCodeSearchLookUpEdit.Properties.PopupView = this.gridView11;
-            this.AlternateCountryCodeSearchLookUpEdit.Size = new System.Drawing.Size(192, 34);
-            this.AlternateCountryCodeSearchLookUpEdit.StyleController = this._DataLayoutControl;
-            this.AlternateCountryCodeSearchLookUpEdit.TabIndex = 22;
-            // 
-            // gridView11
-            // 
-            this.gridView11.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView11.Name = "gridView11";
-            this.gridView11.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView11.OptionsView.ShowGroupPanel = false;
-            // 
-            // AlternatePhoneNumberTextEdit
-            // 
-            this.AlternatePhoneNumberTextEdit.Location = new System.Drawing.Point(442, 55);
-            this.AlternatePhoneNumberTextEdit.Name = "AlternatePhoneNumberTextEdit";
-            this.AlternatePhoneNumberTextEdit.Size = new System.Drawing.Size(773, 34);
-            this.AlternatePhoneNumberTextEdit.StyleController = this._DataLayoutControl;
-            this.AlternatePhoneNumberTextEdit.TabIndex = 21;
-            // 
-            // ItemForAlternatePhoneNumber
-            // 
-            this.ItemForAlternatePhoneNumber.Control = this.AlternatePhoneNumberTextEdit;
-            this.ItemForAlternatePhoneNumber.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForAlternatePhoneNumber.CustomizationFormText = "Nomor Telepon Alternatif";
-            this.ItemForAlternatePhoneNumber.Location = new System.Drawing.Point(419, 0);
-            this.ItemForAlternatePhoneNumber.Name = "ItemForAlternatePhoneNumber";
-            this.ItemForAlternatePhoneNumber.Size = new System.Drawing.Size(777, 38);
-            this.ItemForAlternatePhoneNumber.Text = "Nomor Telepon Alternatif";
-            this.ItemForAlternatePhoneNumber.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForAlternatePhoneNumber.TextVisible = false;
-            // 
-            // ItemForAlternateCountryCode
-            // 
-            this.ItemForAlternateCountryCode.Control = this.AlternateCountryCodeSearchLookUpEdit;
-            this.ItemForAlternateCountryCode.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForAlternateCountryCode.CustomizationFormText = "Nomor Telepon Alternatif";
-            this.ItemForAlternateCountryCode.Location = new System.Drawing.Point(0, 0);
-            this.ItemForAlternateCountryCode.Name = "ItemForAlternateCountryCode";
-            this.ItemForAlternateCountryCode.Size = new System.Drawing.Size(419, 38);
-            this.ItemForAlternateCountryCode.Text = "Nomor Telepon Alternatif";
-            this.ItemForAlternateCountryCode.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForAlternateEmail
-            // 
-            this.ItemForAlternateEmail.Control = this.AlternateEmailTextEdit;
-            this.ItemForAlternateEmail.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForAlternateEmail.CustomizationFormText = "Email Alternatif";
-            this.ItemForAlternateEmail.Location = new System.Drawing.Point(0, 38);
-            this.ItemForAlternateEmail.Name = "ItemForAlternateEmail";
-            this.ItemForAlternateEmail.Size = new System.Drawing.Size(1196, 38);
-            this.ItemForAlternateEmail.Text = "Email Alternatif";
-            this.ItemForAlternateEmail.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // NoKTPTextEdit
-            // 
-            this.NoKTPTextEdit.Location = new System.Drawing.Point(246, 131);
-            this.NoKTPTextEdit.Name = "NoKTPTextEdit";
-            this.NoKTPTextEdit.Size = new System.Drawing.Size(371, 34);
-            this.NoKTPTextEdit.StyleController = this._DataLayoutControl;
-            this.NoKTPTextEdit.TabIndex = 30;
-            // 
-            // ReligionSearchLookUpEdit
-            // 
-            this.ReligionSearchLookUpEdit.Location = new System.Drawing.Point(246, 271);
-            this.ReligionSearchLookUpEdit.Name = "ReligionSearchLookUpEdit";
-            this.ReligionSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ReligionSearchLookUpEdit.Properties.NullText = "";
-            this.ReligionSearchLookUpEdit.Properties.PopupView = this.gridView3;
-            this.ReligionSearchLookUpEdit.Size = new System.Drawing.Size(969, 34);
-            this.ReligionSearchLookUpEdit.StyleController = this._DataLayoutControl;
-            this.ReligionSearchLookUpEdit.TabIndex = 37;
-            // 
-            // gridView3
-            // 
-            this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView3.OptionsView.ShowGroupPanel = false;
-            // 
-            // GenderSearchLookUpEdit
-            // 
-            this.GenderSearchLookUpEdit.Location = new System.Drawing.Point(246, 309);
-            this.GenderSearchLookUpEdit.Name = "GenderSearchLookUpEdit";
-            this.GenderSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.GenderSearchLookUpEdit.Properties.NullText = "";
-            this.GenderSearchLookUpEdit.Properties.PopupView = this.gridView5;
-            this.GenderSearchLookUpEdit.Size = new System.Drawing.Size(969, 34);
-            this.GenderSearchLookUpEdit.StyleController = this._DataLayoutControl;
-            this.GenderSearchLookUpEdit.TabIndex = 39;
-            // 
-            // gridView5
-            // 
-            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView5.Name = "gridView5";
-            this.gridView5.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView5.OptionsView.ShowGroupPanel = false;
-            // 
-            // AddressMemoEdit
-            // 
-            this.AddressMemoEdit.Location = new System.Drawing.Point(844, 169);
-            this.AddressMemoEdit.MinimumSize = new System.Drawing.Size(0, 60);
-            this.AddressMemoEdit.Name = "AddressMemoEdit";
-            this.AddressMemoEdit.Size = new System.Drawing.Size(371, 60);
-            this.AddressMemoEdit.StyleController = this._DataLayoutControl;
-            this.AddressMemoEdit.TabIndex = 33;
-            // 
-            // BirthDayDateEdit
-            // 
-            this.BirthDayDateEdit.EditValue = null;
-            this.BirthDayDateEdit.Location = new System.Drawing.Point(844, 233);
-            this.BirthDayDateEdit.Name = "BirthDayDateEdit";
-            this.BirthDayDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.BirthDayDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.BirthDayDateEdit.Size = new System.Drawing.Size(371, 34);
-            this.BirthDayDateEdit.StyleController = this._DataLayoutControl;
-            this.BirthDayDateEdit.TabIndex = 35;
-            // 
-            // PresentAddressMemoEdit
-            // 
-            this.PresentAddressMemoEdit.Location = new System.Drawing.Point(246, 169);
-            this.PresentAddressMemoEdit.MinimumSize = new System.Drawing.Size(0, 60);
-            this.PresentAddressMemoEdit.Name = "PresentAddressMemoEdit";
-            this.PresentAddressMemoEdit.Size = new System.Drawing.Size(371, 60);
-            this.PresentAddressMemoEdit.StyleController = this._DataLayoutControl;
-            this.PresentAddressMemoEdit.TabIndex = 32;
-            // 
-            // WeightSpinEdit
-            // 
-            this.WeightSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.WeightSpinEdit.Location = new System.Drawing.Point(246, 461);
-            this.WeightSpinEdit.Name = "WeightSpinEdit";
-            this.WeightSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.WeightSpinEdit.Size = new System.Drawing.Size(969, 34);
-            this.WeightSpinEdit.StyleController = this._DataLayoutControl;
-            this.WeightSpinEdit.TabIndex = 41;
-            // 
-            // NoKKTextEdit
-            // 
-            this.NoKKTextEdit.Location = new System.Drawing.Point(844, 131);
-            this.NoKKTextEdit.Name = "NoKKTextEdit";
-            this.NoKKTextEdit.Size = new System.Drawing.Size(371, 34);
-            this.NoKKTextEdit.StyleController = this._DataLayoutControl;
-            this.NoKKTextEdit.TabIndex = 31;
-            // 
-            // NationalityTextEdit
-            // 
-            this.NationalityTextEdit.Location = new System.Drawing.Point(844, 499);
-            this.NationalityTextEdit.Name = "NationalityTextEdit";
-            this.NationalityTextEdit.Size = new System.Drawing.Size(371, 34);
-            this.NationalityTextEdit.StyleController = this._DataLayoutControl;
-            this.NationalityTextEdit.TabIndex = 42;
-            // 
-            // HeightSpinEdit
-            // 
-            this.HeightSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.HeightSpinEdit.Location = new System.Drawing.Point(246, 423);
-            this.HeightSpinEdit.Name = "HeightSpinEdit";
-            this.HeightSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.HeightSpinEdit.Size = new System.Drawing.Size(969, 34);
-            this.HeightSpinEdit.StyleController = this._DataLayoutControl;
-            this.HeightSpinEdit.TabIndex = 40;
-            // 
-            // ChildSpinEdit
-            // 
-            this.ChildSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ChildSpinEdit.Location = new System.Drawing.Point(246, 537);
-            this.ChildSpinEdit.Name = "ChildSpinEdit";
-            this.ChildSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ChildSpinEdit.Size = new System.Drawing.Size(371, 34);
-            this.ChildSpinEdit.StyleController = this._DataLayoutControl;
-            this.ChildSpinEdit.TabIndex = 44;
-            // 
-            // BloodTypeSearchLookUpEdit
-            // 
-            this.BloodTypeSearchLookUpEdit.Location = new System.Drawing.Point(246, 347);
-            this.BloodTypeSearchLookUpEdit.Name = "BloodTypeSearchLookUpEdit";
-            this.BloodTypeSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.BloodTypeSearchLookUpEdit.Properties.NullText = "";
-            this.BloodTypeSearchLookUpEdit.Properties.PopupView = this.gridView4;
-            this.BloodTypeSearchLookUpEdit.Size = new System.Drawing.Size(969, 34);
-            this.BloodTypeSearchLookUpEdit.StyleController = this._DataLayoutControl;
-            this.BloodTypeSearchLookUpEdit.TabIndex = 38;
-            // 
-            // gridView4
-            // 
-            this.gridView4.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView4.Name = "gridView4";
-            this.gridView4.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView4.OptionsView.ShowGroupPanel = false;
-            // 
-            // BirthPlaceTextEdit
-            // 
-            this.BirthPlaceTextEdit.Location = new System.Drawing.Point(246, 233);
-            this.BirthPlaceTextEdit.Name = "BirthPlaceTextEdit";
-            this.BirthPlaceTextEdit.Size = new System.Drawing.Size(371, 34);
-            this.BirthPlaceTextEdit.StyleController = this._DataLayoutControl;
-            this.BirthPlaceTextEdit.TabIndex = 34;
-            // 
-            // SiblingSpinEdit
-            // 
-            this.SiblingSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.SiblingSpinEdit.Location = new System.Drawing.Point(844, 537);
-            this.SiblingSpinEdit.Name = "SiblingSpinEdit";
-            this.SiblingSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.SiblingSpinEdit.Size = new System.Drawing.Size(371, 34);
-            this.SiblingSpinEdit.StyleController = this._DataLayoutControl;
-            this.SiblingSpinEdit.TabIndex = 45;
-            // 
-            // MaritalStatusSearchLookUpEdit
-            // 
-            this.MaritalStatusSearchLookUpEdit.Location = new System.Drawing.Point(246, 385);
-            this.MaritalStatusSearchLookUpEdit.Name = "MaritalStatusSearchLookUpEdit";
-            this.MaritalStatusSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.MaritalStatusSearchLookUpEdit.Properties.NullText = "";
-            this.MaritalStatusSearchLookUpEdit.Properties.PopupView = this.gridView21;
-            this.MaritalStatusSearchLookUpEdit.Size = new System.Drawing.Size(969, 34);
-            this.MaritalStatusSearchLookUpEdit.StyleController = this._DataLayoutControl;
-            this.MaritalStatusSearchLookUpEdit.TabIndex = 36;
-            // 
-            // gridView21
-            // 
-            this.gridView21.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView21.Name = "gridView21";
-            this.gridView21.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView21.OptionsView.ShowGroupPanel = false;
-            // 
-            // EthnicTextEdit
-            // 
-            this.EthnicTextEdit.Location = new System.Drawing.Point(246, 499);
-            this.EthnicTextEdit.Name = "EthnicTextEdit";
-            this.EthnicTextEdit.Size = new System.Drawing.Size(371, 34);
-            this.EthnicTextEdit.StyleController = this._DataLayoutControl;
-            this.EthnicTextEdit.TabIndex = 43;
-            // 
-            // ItemForNoKTP
-            // 
-            this.ItemForNoKTP.Control = this.NoKTPTextEdit;
-            this.ItemForNoKTP.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForNoKTP.CustomizationFormText = "Nomor Kartu Tanda Penduduk";
-            this.ItemForNoKTP.Location = new System.Drawing.Point(0, 76);
-            this.ItemForNoKTP.Name = "ItemForNoKTP";
-            this.ItemForNoKTP.Size = new System.Drawing.Size(598, 38);
-            this.ItemForNoKTP.Text = "Nomor Kartu Tanda Penduduk";
-            this.ItemForNoKTP.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForPresentAddress
-            // 
-            this.ItemForPresentAddress.Control = this.PresentAddressMemoEdit;
-            this.ItemForPresentAddress.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForPresentAddress.CustomizationFormText = "Alamat 1";
-            this.ItemForPresentAddress.Location = new System.Drawing.Point(0, 114);
-            this.ItemForPresentAddress.Name = "ItemForPresentAddress";
-            this.ItemForPresentAddress.Size = new System.Drawing.Size(598, 64);
-            this.ItemForPresentAddress.Text = "Alamat 1";
-            this.ItemForPresentAddress.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForNoKK
-            // 
-            this.ItemForNoKK.Control = this.NoKKTextEdit;
-            this.ItemForNoKK.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForNoKK.CustomizationFormText = "Nomor Kartu Keluarga";
-            this.ItemForNoKK.Location = new System.Drawing.Point(598, 76);
-            this.ItemForNoKK.Name = "ItemForNoKK";
-            this.ItemForNoKK.Size = new System.Drawing.Size(598, 38);
-            this.ItemForNoKK.Text = "Nomor Kartu Keluarga";
-            this.ItemForNoKK.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForBirthPlace
-            // 
-            this.ItemForBirthPlace.Control = this.BirthPlaceTextEdit;
-            this.ItemForBirthPlace.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForBirthPlace.CustomizationFormText = "Tempat Lahir";
-            this.ItemForBirthPlace.Location = new System.Drawing.Point(0, 178);
-            this.ItemForBirthPlace.Name = "ItemForBirthPlace";
-            this.ItemForBirthPlace.Size = new System.Drawing.Size(598, 38);
-            this.ItemForBirthPlace.Text = "Tempat Lahir";
-            this.ItemForBirthPlace.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForBirthDay
-            // 
-            this.ItemForBirthDay.Control = this.BirthDayDateEdit;
-            this.ItemForBirthDay.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForBirthDay.CustomizationFormText = "Tanggal Lahir";
-            this.ItemForBirthDay.Location = new System.Drawing.Point(598, 178);
-            this.ItemForBirthDay.Name = "ItemForBirthDay";
-            this.ItemForBirthDay.Size = new System.Drawing.Size(598, 38);
-            this.ItemForBirthDay.Text = "Tanggal Lahir";
-            this.ItemForBirthDay.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForMaritalStatus
-            // 
-            this.ItemForMaritalStatus.Control = this.MaritalStatusSearchLookUpEdit;
-            this.ItemForMaritalStatus.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForMaritalStatus.CustomizationFormText = "Status Pernikahan";
-            this.ItemForMaritalStatus.Location = new System.Drawing.Point(0, 330);
-            this.ItemForMaritalStatus.Name = "ItemForMaritalStatus";
-            this.ItemForMaritalStatus.Size = new System.Drawing.Size(1196, 38);
-            this.ItemForMaritalStatus.Text = "Status Pernikahan";
-            this.ItemForMaritalStatus.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForHeight
-            // 
-            this.ItemForHeight.Control = this.HeightSpinEdit;
-            this.ItemForHeight.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForHeight.CustomizationFormText = "Tinggi Badan";
-            this.ItemForHeight.Location = new System.Drawing.Point(0, 368);
-            this.ItemForHeight.Name = "ItemForHeight";
-            this.ItemForHeight.Size = new System.Drawing.Size(1196, 38);
-            this.ItemForHeight.Text = "Tinggi Badan";
-            this.ItemForHeight.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForWeight
-            // 
-            this.ItemForWeight.Control = this.WeightSpinEdit;
-            this.ItemForWeight.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForWeight.CustomizationFormText = "Berat Badan";
-            this.ItemForWeight.Location = new System.Drawing.Point(0, 406);
-            this.ItemForWeight.Name = "ItemForWeight";
-            this.ItemForWeight.Size = new System.Drawing.Size(1196, 38);
-            this.ItemForWeight.Text = "Berat Badan";
-            this.ItemForWeight.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForNationality
-            // 
-            this.ItemForNationality.Control = this.NationalityTextEdit;
-            this.ItemForNationality.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForNationality.CustomizationFormText = "Kebangsaan";
-            this.ItemForNationality.Location = new System.Drawing.Point(598, 444);
-            this.ItemForNationality.Name = "ItemForNationality";
-            this.ItemForNationality.Size = new System.Drawing.Size(598, 38);
-            this.ItemForNationality.Text = "Kebangsaan";
-            this.ItemForNationality.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForEthnic
-            // 
-            this.ItemForEthnic.Control = this.EthnicTextEdit;
-            this.ItemForEthnic.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForEthnic.CustomizationFormText = "Suku";
-            this.ItemForEthnic.Location = new System.Drawing.Point(0, 444);
-            this.ItemForEthnic.Name = "ItemForEthnic";
-            this.ItemForEthnic.Size = new System.Drawing.Size(598, 38);
-            this.ItemForEthnic.Text = "Suku";
-            this.ItemForEthnic.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForSibling
-            // 
-            this.ItemForSibling.Control = this.SiblingSpinEdit;
-            this.ItemForSibling.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForSibling.CustomizationFormText = "Saudara Kandung";
-            this.ItemForSibling.Location = new System.Drawing.Point(598, 482);
-            this.ItemForSibling.Name = "ItemForSibling";
-            this.ItemForSibling.Size = new System.Drawing.Size(598, 38);
-            this.ItemForSibling.Text = "Saudara Kandung";
-            this.ItemForSibling.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForReligion
-            // 
-            this.ItemForReligion.Control = this.ReligionSearchLookUpEdit;
-            this.ItemForReligion.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForReligion.CustomizationFormText = "Agama";
-            this.ItemForReligion.Location = new System.Drawing.Point(0, 216);
-            this.ItemForReligion.Name = "ItemForReligion";
-            this.ItemForReligion.Size = new System.Drawing.Size(1196, 38);
-            this.ItemForReligion.Text = "Agama";
-            this.ItemForReligion.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForBloodType
-            // 
-            this.ItemForBloodType.Control = this.BloodTypeSearchLookUpEdit;
-            this.ItemForBloodType.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForBloodType.CustomizationFormText = "Golongan Darah";
-            this.ItemForBloodType.Location = new System.Drawing.Point(0, 292);
-            this.ItemForBloodType.Name = "ItemForBloodType";
-            this.ItemForBloodType.Size = new System.Drawing.Size(1196, 38);
-            this.ItemForBloodType.Text = "Golongan Darah";
-            this.ItemForBloodType.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForGender
-            // 
-            this.ItemForGender.Control = this.GenderSearchLookUpEdit;
-            this.ItemForGender.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForGender.CustomizationFormText = "Jenis Kelamin";
-            this.ItemForGender.Location = new System.Drawing.Point(0, 254);
-            this.ItemForGender.Name = "ItemForGender";
-            this.ItemForGender.Size = new System.Drawing.Size(1196, 38);
-            this.ItemForGender.Text = "Jenis Kelamin";
-            this.ItemForGender.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForChild
-            // 
-            this.ItemForChild.Control = this.ChildSpinEdit;
-            this.ItemForChild.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForChild.CustomizationFormText = "Anak Ke";
-            this.ItemForChild.Location = new System.Drawing.Point(0, 482);
-            this.ItemForChild.Name = "ItemForChild";
-            this.ItemForChild.Size = new System.Drawing.Size(598, 38);
-            this.ItemForChild.Text = "Anak Ke";
-            this.ItemForChild.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForAddress
-            // 
-            this.ItemForAddress.Control = this.AddressMemoEdit;
-            this.ItemForAddress.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForAddress.CustomizationFormText = "Alamat 2";
-            this.ItemForAddress.Location = new System.Drawing.Point(598, 114);
-            this.ItemForAddress.Name = "ItemForAddress";
-            this.ItemForAddress.Size = new System.Drawing.Size(598, 64);
-            this.ItemForAddress.Text = "Alamat 2";
-            this.ItemForAddress.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // CountryCodeFatherSearchLookUpEdit
-            // 
-            this.CountryCodeFatherSearchLookUpEdit.Location = new System.Drawing.Point(258, 655);
-            this.CountryCodeFatherSearchLookUpEdit.Name = "CountryCodeFatherSearchLookUpEdit";
-            this.CountryCodeFatherSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CountryCodeFatherSearchLookUpEdit.Properties.NullText = "";
-            this.CountryCodeFatherSearchLookUpEdit.Properties.PopupView = this.gridView6;
-            this.CountryCodeFatherSearchLookUpEdit.Size = new System.Drawing.Size(359, 34);
-            this.CountryCodeFatherSearchLookUpEdit.StyleController = this._DataLayoutControl;
-            this.CountryCodeFatherSearchLookUpEdit.TabIndex = 47;
-            // 
-            // gridView6
-            // 
-            this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView6.Name = "gridView6";
-            this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView6.OptionsView.ShowGroupPanel = false;
-            // 
-            // PhoneNumberFatherTextEdit
-            // 
-            this.PhoneNumberFatherTextEdit.Location = new System.Drawing.Point(621, 655);
-            this.PhoneNumberFatherTextEdit.Name = "PhoneNumberFatherTextEdit";
-            this.PhoneNumberFatherTextEdit.Size = new System.Drawing.Size(582, 34);
-            this.PhoneNumberFatherTextEdit.StyleController = this._DataLayoutControl;
-            this.PhoneNumberFatherTextEdit.TabIndex = 52;
-            // 
-            // MotherWorkTextEdit
-            // 
-            this.MotherWorkTextEdit.Location = new System.Drawing.Point(258, 807);
-            this.MotherWorkTextEdit.Name = "MotherWorkTextEdit";
-            this.MotherWorkTextEdit.Size = new System.Drawing.Size(945, 34);
-            this.MotherWorkTextEdit.StyleController = this._DataLayoutControl;
-            this.MotherWorkTextEdit.TabIndex = 51;
-            // 
-            // FatherNameTextEdit
-            // 
-            this.FatherNameTextEdit.Location = new System.Drawing.Point(258, 617);
-            this.FatherNameTextEdit.Name = "FatherNameTextEdit";
-            this.FatherNameTextEdit.Size = new System.Drawing.Size(945, 34);
-            this.FatherNameTextEdit.StyleController = this._DataLayoutControl;
-            this.FatherNameTextEdit.TabIndex = 46;
-            // 
-            // MotherNameTextEdit
-            // 
-            this.MotherNameTextEdit.Location = new System.Drawing.Point(258, 731);
-            this.MotherNameTextEdit.Name = "MotherNameTextEdit";
-            this.MotherNameTextEdit.Size = new System.Drawing.Size(945, 34);
-            this.MotherNameTextEdit.StyleController = this._DataLayoutControl;
-            this.MotherNameTextEdit.TabIndex = 49;
-            // 
-            // FatherWorkTextEdit
-            // 
-            this.FatherWorkTextEdit.Location = new System.Drawing.Point(258, 693);
-            this.FatherWorkTextEdit.Name = "FatherWorkTextEdit";
-            this.FatherWorkTextEdit.Size = new System.Drawing.Size(945, 34);
-            this.FatherWorkTextEdit.StyleController = this._DataLayoutControl;
-            this.FatherWorkTextEdit.TabIndex = 48;
-            // 
-            // PhoneNumberMotherTextEdit
-            // 
-            this.PhoneNumberMotherTextEdit.Location = new System.Drawing.Point(621, 769);
-            this.PhoneNumberMotherTextEdit.Name = "PhoneNumberMotherTextEdit";
-            this.PhoneNumberMotherTextEdit.Size = new System.Drawing.Size(582, 34);
-            this.PhoneNumberMotherTextEdit.StyleController = this._DataLayoutControl;
-            this.PhoneNumberMotherTextEdit.TabIndex = 53;
-            // 
-            // CountryCodeMotherSearchLookUpEdit
-            // 
-            this.CountryCodeMotherSearchLookUpEdit.Location = new System.Drawing.Point(258, 769);
-            this.CountryCodeMotherSearchLookUpEdit.Name = "CountryCodeMotherSearchLookUpEdit";
-            this.CountryCodeMotherSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CountryCodeMotherSearchLookUpEdit.Properties.NullText = "";
-            this.CountryCodeMotherSearchLookUpEdit.Properties.PopupView = this.gridView7;
-            this.CountryCodeMotherSearchLookUpEdit.Size = new System.Drawing.Size(359, 34);
-            this.CountryCodeMotherSearchLookUpEdit.StyleController = this._DataLayoutControl;
-            this.CountryCodeMotherSearchLookUpEdit.TabIndex = 50;
-            // 
-            // gridView7
-            // 
-            this.gridView7.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView7.Name = "gridView7";
-            this.gridView7.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView7.OptionsView.ShowGroupPanel = false;
-            // 
-            // layoutControlGroupParent
-            // 
-            this.layoutControlGroupParent.CustomizationFormText = "Orang Tua";
-            this.layoutControlGroupParent.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForFatherName,
-            this.ItemForCountryCodeFather,
-            this.ItemForFatherWork,
-            this.ItemForMotherName,
-            this.ItemForCountryCodeMother,
-            this.ItemForMotherWork,
-            this.ItemForPhoneNumberFather,
-            this.ItemForPhoneNumberMother});
-            this.layoutControlGroupParent.Location = new System.Drawing.Point(0, 520);
-            this.layoutControlGroupParent.Name = "layoutControlGroupParent";
-            this.layoutControlGroupParent.OptionsItemText.TextToControlDistance = 5;
-            this.layoutControlGroupParent.Size = new System.Drawing.Size(1196, 282);
-            this.layoutControlGroupParent.Text = "Orang Tua";
-            // 
-            // ItemForFatherName
-            // 
-            this.ItemForFatherName.Control = this.FatherNameTextEdit;
-            this.ItemForFatherName.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForFatherName.CustomizationFormText = "Nama Ayah";
-            this.ItemForFatherName.Location = new System.Drawing.Point(0, 0);
-            this.ItemForFatherName.Name = "ItemForFatherName";
-            this.ItemForFatherName.Size = new System.Drawing.Size(1172, 38);
-            this.ItemForFatherName.Text = "Nama Ayah";
-            this.ItemForFatherName.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForCountryCodeFather
-            // 
-            this.ItemForCountryCodeFather.Control = this.CountryCodeFatherSearchLookUpEdit;
-            this.ItemForCountryCodeFather.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForCountryCodeFather.CustomizationFormText = "Nomor Telepon Ayah";
-            this.ItemForCountryCodeFather.Location = new System.Drawing.Point(0, 38);
-            this.ItemForCountryCodeFather.Name = "ItemForCountryCodeFather";
-            this.ItemForCountryCodeFather.Size = new System.Drawing.Size(586, 38);
-            this.ItemForCountryCodeFather.Text = "Nomor Telepon Ayah";
-            this.ItemForCountryCodeFather.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForFatherWork
-            // 
-            this.ItemForFatherWork.Control = this.FatherWorkTextEdit;
-            this.ItemForFatherWork.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForFatherWork.CustomizationFormText = "Pekerjaan Ayah";
-            this.ItemForFatherWork.Location = new System.Drawing.Point(0, 76);
-            this.ItemForFatherWork.Name = "ItemForFatherWork";
-            this.ItemForFatherWork.Size = new System.Drawing.Size(1172, 38);
-            this.ItemForFatherWork.Text = "Pekerjaan Ayah";
-            this.ItemForFatherWork.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForMotherName
-            // 
-            this.ItemForMotherName.Control = this.MotherNameTextEdit;
-            this.ItemForMotherName.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForMotherName.CustomizationFormText = "Nama Ibu";
-            this.ItemForMotherName.Location = new System.Drawing.Point(0, 114);
-            this.ItemForMotherName.Name = "ItemForMotherName";
-            this.ItemForMotherName.Size = new System.Drawing.Size(1172, 38);
-            this.ItemForMotherName.Text = "Nama Ibu";
-            this.ItemForMotherName.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForCountryCodeMother
-            // 
-            this.ItemForCountryCodeMother.Control = this.CountryCodeMotherSearchLookUpEdit;
-            this.ItemForCountryCodeMother.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForCountryCodeMother.CustomizationFormText = "Nomor Telepon Ibu";
-            this.ItemForCountryCodeMother.Location = new System.Drawing.Point(0, 152);
-            this.ItemForCountryCodeMother.Name = "ItemForCountryCodeMother";
-            this.ItemForCountryCodeMother.Size = new System.Drawing.Size(586, 38);
-            this.ItemForCountryCodeMother.Text = "Nomor Telepon Ibu";
-            this.ItemForCountryCodeMother.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForMotherWork
-            // 
-            this.ItemForMotherWork.Control = this.MotherWorkTextEdit;
-            this.ItemForMotherWork.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForMotherWork.CustomizationFormText = "Pekerjaan Ibu";
-            this.ItemForMotherWork.Location = new System.Drawing.Point(0, 190);
-            this.ItemForMotherWork.Name = "ItemForMotherWork";
-            this.ItemForMotherWork.Size = new System.Drawing.Size(1172, 38);
-            this.ItemForMotherWork.Text = "Pekerjaan Ibu";
-            this.ItemForMotherWork.TextSize = new System.Drawing.Size(211, 21);
-            // 
-            // ItemForPhoneNumberFather
-            // 
-            this.ItemForPhoneNumberFather.Control = this.PhoneNumberFatherTextEdit;
-            this.ItemForPhoneNumberFather.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForPhoneNumberFather.CustomizationFormText = "ItemForPhoneNumberFather";
-            this.ItemForPhoneNumberFather.Location = new System.Drawing.Point(586, 38);
-            this.ItemForPhoneNumberFather.Name = "ItemForPhoneNumberFather";
-            this.ItemForPhoneNumberFather.Size = new System.Drawing.Size(586, 38);
-            this.ItemForPhoneNumberFather.Text = "ItemForPhoneNumberFather";
-            this.ItemForPhoneNumberFather.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForPhoneNumberFather.TextVisible = false;
-            // 
-            // ItemForPhoneNumberMother
-            // 
-            this.ItemForPhoneNumberMother.Control = this.PhoneNumberMotherTextEdit;
-            this.ItemForPhoneNumberMother.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ItemForPhoneNumberMother.CustomizationFormText = "ItemForPhoneNumberMother";
-            this.ItemForPhoneNumberMother.Location = new System.Drawing.Point(586, 152);
-            this.ItemForPhoneNumberMother.Name = "ItemForPhoneNumberMother";
-            this.ItemForPhoneNumberMother.Size = new System.Drawing.Size(586, 38);
-            this.ItemForPhoneNumberMother.Text = "ItemForPhoneNumberMother";
-            this.ItemForPhoneNumberMother.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForPhoneNumberMother.TextVisible = false;
+            this.BankPopUp.Properties.ObjectId = "";
+            this.BankPopUp.Properties.OptionsCascadeControl = null;
+            this.BankPopUp.Properties.OptionsCascadeMember = "";
+            this.BankPopUp.Properties.OptionsChildControl = null;
+            this.BankPopUp.Properties.OptionsDataSource = null;
+            this.BankPopUp.Properties.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
+            this.BankPopUp.Properties.OptionsDisplayCaption = "";
+            this.BankPopUp.Properties.OptionsDisplayColumns = "";
+            this.BankPopUp.Properties.OptionsDisplayFormat = "";
+            this.BankPopUp.Properties.OptionsDisplayText = "";
+            this.BankPopUp.Properties.OptionsDisplayTitle = "";
+            this.BankPopUp.Properties.OptionsDisplayWidth = "";
+            this.BankPopUp.Properties.OptionsFilterColumns = "";
+            this.BankPopUp.Properties.OptionsSortColumns = "";
+            this.BankPopUp.Size = new System.Drawing.Size(615, 34);
+            this.BankPopUp.StyleController = this._DataLayoutControl;
+            this.BankPopUp.TabIndex = 56;
+            // 
+            // ItemForBank
+            // 
+            this.ItemForBank.Control = this.BankPopUp;
+            this.ItemForBank.Location = new System.Drawing.Point(0, 494);
+            this.ItemForBank.Name = "ItemForBank";
+            this.ItemForBank.Size = new System.Drawing.Size(842, 308);
+            this.ItemForBank.Text = "Bank";
+            this.ItemForBank.TextSize = new System.Drawing.Size(211, 21);
             // 
             // frmEmployeeDV
             // 
@@ -1719,7 +1823,77 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTabPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureEdit.Properties)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SignaturePictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPersonalData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternateCountryCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlternateCountryCodeSearchLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternateEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlternateEmailTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternatePhoneNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlternatePhoneNumberTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNoKTP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoKTPTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPresentAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PresentAddressMemoEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddressMemoEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNoKK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoKKTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthPlace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthPlaceTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthDay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDayDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDayDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForReligion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReligionSearchLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGender)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderSearchLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBloodType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BloodTypeSearchLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForMaritalStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaritalStatusSearchLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HeightSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForWeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeightSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEthnic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EthnicTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNationality)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NationalityTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForChild)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChildSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForSibling)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SiblingSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupParent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForFatherName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FatherNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCountryCodeFather)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountryCodeFatherSearchLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForFatherWork)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FatherWorkTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForMotherName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MotherNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCountryCodeMother)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountryCodeMotherSearchLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForMotherWork)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MotherWorkTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumberFather)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberFatherTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumberMother)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberMotherTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupNote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).EndInit();
@@ -1734,76 +1908,12 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTabPicture)).EndInit();
-            this.xtraTabPage1.ResumeLayout(false);
-            this.xtraTabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SignaturePictureEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlternateEmailTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlternateCountryCodeSearchLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlternatePhoneNumberTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternatePhoneNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternateCountryCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForAlternateEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoKTPTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReligionSearchLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GenderSearchLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddressMemoEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BirthDayDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BirthDayDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PresentAddressMemoEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeightSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoKKTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NationalityTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HeightSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChildSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BloodTypeSearchLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BirthPlaceTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SiblingSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaritalStatusSearchLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EthnicTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNoKTP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPresentAddress)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNoKK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthPlace)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthDay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForMaritalStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForWeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNationality)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForEthnic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForSibling)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForReligion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBloodType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForGender)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForChild)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForAddress)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CountryCodeFatherSearchLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberFatherTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MotherWorkTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FatherNameTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MotherNameTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FatherWorkTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberMotherTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CountryCodeMotherSearchLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupParent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForFatherName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCountryCodeFather)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForFatherWork)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForMotherName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCountryCodeMother)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForMotherWork)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumberFather)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumberMother)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountNumberTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAccountNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAccountName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BankPopUp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBank)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1920,5 +2030,11 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
         private DevExpress.XtraLayout.LayoutControlItem ItemForMotherWork;
         private DevExpress.XtraLayout.LayoutControlItem ItemForPhoneNumberFather;
         private DevExpress.XtraLayout.LayoutControlItem ItemForPhoneNumberMother;
+        private PopupContainerEditOwn BankPopUp;
+        private DevExpress.XtraEditors.TextEdit AccountNameTextEdit;
+        private DevExpress.XtraEditors.TextEdit AccountNumberTextEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForAccountNumber;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForBank;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForAccountName;
     }
 }

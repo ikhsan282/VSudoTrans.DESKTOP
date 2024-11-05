@@ -444,8 +444,11 @@ namespace Domain
         Debit = 1
     }
 
-    public class CountryCode : BaseCodeName
+    public class CountryCode
     {
+        public string Id { get; set; }
+        public string Code { get; set; }
+        public string Name { get; set; }
         public string Example { get; set; }
     }
 
@@ -982,14 +985,14 @@ namespace Domain
                 //},
                 new CountryCode()
                 {
-                    Id = 62,
+                    Id = "62",
                     Code = "62",
                     Name = "Indonesia",
                     Example = "6281234567890"
                 },
                 new CountryCode()
                 {
-                    Id = 02,
+                    Id = "02",
                     Code = "02",
                     Name = "Indonesia",
                     Example = "021215556"

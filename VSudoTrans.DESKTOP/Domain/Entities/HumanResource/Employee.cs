@@ -34,5 +34,11 @@ namespace Domain.Entities.HumanResource
         public string PhoneNumber { get; set; }
         [MaxLength(200)]
         public string Email { get; set; }
+        [MaxLength(200)]
+        public string AccountNumber { get; set; }
+        [MaxLength(200)]
+        public string AccountName { get; set; }
+        public int? BankId { get; set; }
+        public Bank Bank { get; set; }
     }
 }

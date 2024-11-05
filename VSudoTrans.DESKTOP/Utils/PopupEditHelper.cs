@@ -10,6 +10,7 @@ using Domain.Entities.Identity;
 using Domain.Entities.Organization;
 using DevExpress.Pdf.Native.BouncyCastle.Asn1.X509;
 using System.Linq;
+using Domain.Entities.Transportation;
 
 namespace PopUpUtils
 {
@@ -285,6 +286,11 @@ namespace PopUpUtils
             repo.OptionsDisplayColumns = "Code;Name;PhoneNumber";
             repo.OptionsDisplayCaption = "Kode;Nama;Nomor Telepon";
             repo.OptionsDisplayWidth = "100;400;300";
+        }
+
+        public static void Passenger(PopupContainerEditOwn fControl, PopupContainerEditOwn fCascade = null, string fCascadeMember = "", PopupContainerEditOwn fChild = null)
+        {
+            General<Passenger>(fEndPoint: "/Passengers", fTitle: "Penumpang", fControl: fControl, fCascade: fCascade, fCascadeMember: fCascadeMember, fChild: fChild, fSelect: "Id,Code,Name,PhoneNumber", fDisplayText: "Code;Name;PhoneNumber", fDisplaycolumn: "Code;Name;PhoneNumber", fCaptionColumn: "Kode;Nama;Nomor Telepon", fWidthColumn: "150;400;300");
         }
     }
 }

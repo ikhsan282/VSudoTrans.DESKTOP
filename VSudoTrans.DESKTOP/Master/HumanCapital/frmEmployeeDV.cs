@@ -248,7 +248,8 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
             PopupEditHelper.General<OrganizationStructure>(fEndPoint: "/OrganizationStructures", fTitle: "Organisasi", fControl: OrganizationStructurePopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama");
             PopupEditHelper.General<JobTitle>(fEndPoint: "/JobTitles", fTitle: "Jabatan", fControl: JobTitlePopUp, fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama");
             PopupEditHelper.General<JobPosition>(fEndPoint: "/JobPositions", fTitle: "Posisi Pekerjaan", fControl: JobPositionPopUp, fDisplaycolumn: "Code;Name;JobTitle.Code;JobTitle.Name", fCaptionColumn: "Kode;Nama;Kode Jabatan; Nama Jabatan", fExpand: "JobTitle($select=Id,Code,Name)");
-            PopupEditHelper.General<JobGrade>(fEndPoint: "/JobGradeS", fTitle: "Golongan", fControl: JobGradePopUp, fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama");
+            PopupEditHelper.General<JobGrade>(fEndPoint: "/JobGrades", fTitle: "Golongan", fControl: JobGradePopUp, fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama");
+            PopupEditHelper.General<Bank>(fEndPoint: "/Banks", fTitle: "Bank", fControl: BankPopUp, fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama");
 
             countryCodeList = DataCountryCodes.GetCountryCodes();
             SLUHelper.GeneralSlU(CountryCodeSearchLookUpEdit, countryCodeList, displayMember: "Code");
@@ -364,6 +365,10 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
                 CountryCode = HelperConvert.String(CountryCodeSearchLookUpEdit.EditValue),
                 PhoneNumber = HelperConvert.String(PhoneNumberTextEdit.EditValue),
                 Email = HelperConvert.String(EmailTextEdit.EditValue),
+
+                AccountNumber = HelperConvert.String(AccountNumberTextEdit.EditValue),
+                AccountName = HelperConvert.String(AccountNameTextEdit.EditValue),
+                BankId = HelperConvert.Int(AssemblyHelper.GetValueProperty(BankPopUp.EditValue, "Id")),
             };
 
             var resignationDate = HelperConvert.Date(ResignationDateDateEdit.EditValue);
