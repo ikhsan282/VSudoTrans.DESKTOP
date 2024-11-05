@@ -62,7 +62,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             SLUHelper.SetEnumDataSource(PassengerTypeSearchLookUpEdit, new Converter<EnumPassengerType, string>(EnumHelper.EnumPassengerTypeToString));
             SLUHelper.SetEnumDataSource(StatusSearchLookUpEdit, new Converter<EnumStatusBooking, string>(EnumHelper.EnumStatusBookingToString));
             SLUHelper.SetEnumDataSource(PaymentTypeSearchLookUpEdit, new Converter<EnumPaymentType, string>(EnumHelper.EnumPaymentTypeToString));
-            SLUHelper.SetEnumDataSource(PriceTypeSearchLookUpEdit, new Converter<EnumPriceType, string>(EnumHelper.EnumPriceTypeToString));
 
             groupPassenger.CustomButtonClick += GroupPassenger_CustomButtonClick;
             groupRute.CustomButtonClick += GroupRute_CustomButtonClick;
@@ -203,23 +202,23 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
                 }
                 else
                 {
-                    var priceTravel = rute.TravelPrices.Where(s => s.PriceType == (EnumPriceType)HelperConvert.Int(PriceTypeSearchLookUpEdit.EditValue)).FirstOrDefault();
-                    if (priceTravel != null)
-                    {
-                        if (price < priceTravel.MinPrice)
-                        {
-                            gridView.SetColumnError(colPrice, $"Harga tidak boleh dibawah {string.Format("{0:N0}", priceTravel.MinPrice)}");
-                            e.Valid = false;
-                            return;
-                        }
-                        else
-                        if (price > priceTravel.MaxPrice)
-                        {
-                            gridView.SetColumnError(colPrice, $"Harga tidak boleh diatas {string.Format("{0:N0}", priceTravel.MaxPrice)}");
-                            e.Valid = false;
-                            return;
-                        }
-                    }
+                    //var priceTravel = rute.TravelPrices.Where(s => s.PriceType == (EnumPriceType)HelperConvert.Int(PriceTypeSearchLookUpEdit.EditValue)).FirstOrDefault();
+                    //if (priceTravel != null)
+                    //{
+                    //    if (price < priceTravel.MinPrice)
+                    //    {
+                    //        gridView.SetColumnError(colPrice, $"Harga tidak boleh dibawah {string.Format("{0:N0}", priceTravel.MinPrice)}");
+                    //        e.Valid = false;
+                    //        return;
+                    //    }
+                    //    else
+                    //    if (price > priceTravel.MaxPrice)
+                    //    {
+                    //        gridView.SetColumnError(colPrice, $"Harga tidak boleh diatas {string.Format("{0:N0}", priceTravel.MaxPrice)}");
+                    //        e.Valid = false;
+                    //        return;
+                    //    }
+                    //}
                 }
             }
 
@@ -337,7 +336,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             TotalTicketSpinEdit.EditValue = 1;
             StatusSearchLookUpEdit.EditValue = EnumStatusBooking.New;
             PaymentTypeSearchLookUpEdit.EditValue = EnumPaymentType.Cash;
-            PriceTypeSearchLookUpEdit.EditValue = EnumPriceType.Regular;
+            //PriceTypeSearchLookUpEdit.EditValue = EnumPriceType.Regular;
 
             DateDateEdit.EditValue = DateTime.Today;
             TimeDateEdit.EditValue = DateTime.Now;
@@ -426,7 +425,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             _TravelTicketBooking.Time = HelperConvert.Date(TimeDateEdit.EditValue).TimeOfDay;
             _TravelTicketBooking.Status = (EnumStatusBooking)StatusSearchLookUpEdit.EditValue;
             _TravelTicketBooking.PaymentType = (EnumPaymentType)PaymentTypeSearchLookUpEdit.EditValue;
-            _TravelTicketBooking.PriceType = (EnumPriceType)PriceTypeSearchLookUpEdit.EditValue;
+            //_TravelTicketBooking.PriceType = (EnumPriceType)PriceTypeSearchLookUpEdit.EditValue;
             _TravelTicketBooking.PickupPointProvinceId = HelperConvert.Int(AssemblyHelper.GetValueProperty(PickupProvincePopUp.EditValue, "Id"));
             _TravelTicketBooking.PickupPointCityId = HelperConvert.Int(AssemblyHelper.GetValueProperty(PickupCityPopUp.EditValue, "Id"));
             _TravelTicketBooking.PickupPointDistrictId = HelperConvert.Int(AssemblyHelper.GetValueProperty(PickupDistrictPopUp.EditValue, "Id"));
@@ -435,8 +434,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
             _TravelTicketBooking.DeliveryPointCityId = HelperConvert.Int(AssemblyHelper.GetValueProperty(DeliveryCityPopUp.EditValue, "Id"));
             _TravelTicketBooking.DeliveryPointDistrictId = HelperConvert.Int(AssemblyHelper.GetValueProperty(DeliveryDistrictPopUp.EditValue, "Id"));
             _TravelTicketBooking.DeliveryAddress = HelperConvert.String(DeliveryAddressMemoEdit.EditValue);
-
-            _TravelTicketBooking.RuteId = rute.Id;
 
             _TravelTicketBooking.TotalPrice = HelperConvert.Decimal(TotalPriceTextEdit.EditValue);
             _TravelTicketBooking.TotalTicket = HelperConvert.Int(TotalTicketSpinEdit.EditValue);
@@ -474,7 +471,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Travel
                     string price = "";
                     foreach (var travelPrice in rute.TravelPrices)
                     {
-                        price += $"{EnumHelper.EnumPriceTypeToString(travelPrice.PriceType)} : {string.Format("{0:N0}", travelPrice.Price)}{Environment.NewLine}";
+                        //price += $"{EnumHelper.EnumPriceTypeToString(travelPrice.PriceType)} : {string.Format("{0:N0}", travelPrice.Price)}{Environment.NewLine}";
                     }
                     TravelPriceMemoEdit.EditValue = price;
 

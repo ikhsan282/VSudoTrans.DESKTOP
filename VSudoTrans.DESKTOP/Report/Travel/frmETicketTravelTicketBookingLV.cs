@@ -58,7 +58,7 @@ namespace VSudoTrans.DESKTOP.Report.Travel
                     CultureInfo indonesianCulture = CultureInfo.GetCultureInfo("id-ID");
                     string totalPrice = string.Format(indonesianCulture, "{0:N0}", travel.TotalPrice);
 
-                    report.xrRuteHeader.Text = $"{travel.Rute.PickupPointCity.Name} - {travel.Rute.DeliveryPointCity.Name}";
+                    //report.xrRuteHeader.Text = $"{travel.Rute.PickupPointCity.Name} - {travel.Rute.DeliveryPointCity.Name}";
                     report.xrDocumentNumberHeader.Text = travel.DocumentNumber.ToString();
                     report.xrDateHeader.Text = travel.Date.ToString("dd MMMM yyyy");
                     report.xrTimeHeader.Text = travel.Time.ToString(@"hh\:mm");

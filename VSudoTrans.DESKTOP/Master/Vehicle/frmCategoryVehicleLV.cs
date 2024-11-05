@@ -11,22 +11,19 @@ using VSudoTrans.DESKTOP.Utils;
 
 namespace VSudoTrans.DESKTOP.Master.Vehicle
 {
-    public partial class frmVehicleLV : frmBaseFilterLV
+    public partial class frmCategoryVehicleLV : frmBaseFilterLV
     {
-        public frmVehicleLV()
+        public frmCategoryVehicleLV()
         {
             InitializeComponent();
 
-            this.EndPoint = "/Vehicles";
-            this.FormTitle = "Kendaraan";
+            this.EndPoint = "/CategoryVehicles";
+            this.FormTitle = "Tipe Mesin";
 
-            this.OdataSelect = "Id,VehicleNumber,Seat,VehicleColor,ProductionYear";
+            this.OdataSelect = "Id,Code,Name";
             this.OdataExpand = "Company($select=name)";
-            this.OdataExpand += ",Brand($select=name)";
-            this.OdataExpand += ",ModelUnit($select=name)";
-            this.OdataExpand += ",CategoryVehicle($select=name)";
 
-            InitializeComponentAfter<Vehicles>();
+            InitializeComponentAfter<CategoryVehicle>();
 
             InitializeSearchLookup();
 
@@ -38,17 +35,17 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
 
         private void BbiImportData_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            string url = "/Vehicles/Import/ValidateFile";
+            string url = "/CategoryVehicles/Import/ValidateFile";
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     MessageHelper.WaitFormShow(this);
-                    ImportSummaryVehicleModel result = null;
+                    ImportSummaryCategoryVehicleModel result = null;
                     try
                     {
-                        result = HelperRestSharp.UploadFileImport<ImportSummaryVehicleModel>(File.ReadAllBytes(openFileDialog.FileName), openFileDialog.FileName, url);
+                        result = HelperRestSharp.UploadFileImport<ImportSummaryCategoryVehicleModel>(File.ReadAllBytes(openFileDialog.FileName), openFileDialog.FileName, url);
                     }
                     catch (Exception ex)
                     {
@@ -61,7 +58,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
 
                     if (result != null)
                     {
-                        using (var form = new frmImportVehicleWV())
+                        using (var form = new frmImportCategoryVehicleWV())
                         {
                             if (result.TotalFailed > 0)
                                 form.btnOK.Enabled = false;
@@ -72,7 +69,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
                             if (resultDialog == System.Windows.Forms.DialogResult.OK)
                             {
                                 var jsonString = JsonConvert.SerializeObject(result.Data);
-                                var response = HelperRestSharp.Post("/Vehicles/Import", jsonString);
+                                var response = HelperRestSharp.Post("/CategoryVehicles/Import", jsonString);
 
                                 if (!string.IsNullOrEmpty(response))
                                 {
@@ -80,7 +77,7 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
                                     if (res)
                                     {
                                         MessageHelper.ShowMessageInformation(this, MessageHelper.MessageSaveSuccessfully);
-                                        ActionRefresh<Vehicles>();
+                                        ActionRefresh<CategoryVehicle>();
                                     }
                                 }
                             }
@@ -96,23 +93,23 @@ namespace VSudoTrans.DESKTOP.Master.Vehicle
 
         private void BbiTemplateImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fileExcel = HelperRestSharp.DownloadFile("vsudotrans", "import/Import Vehicle.xlsx");
-            HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import Vehicle");
+            var fileExcel = HelperRestSharp.DownloadFile("vsudotrans", "import/Import Type Engine.xlsx");
+            HelperRestSharp.SaveFileDialog(fileExcel, "File Template Import Type Engine");
         }
 
         private void BbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ActionDelete<Vehicles>();
+            ActionDelete<CategoryVehicle>();
         }
 
         private void BbiRefresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ActionRefresh<Vehicles>();
+            ActionRefresh<CategoryVehicle>();
         }
 
         protected override void ActionShowFormDetail(object fCopy = null)
         {
-            FormDetail = new frmVehicleDV(this.EntityId, this.EndPoint, fCopy);
+            FormDetail = new frmCategoryVehicleDV(this.EntityId, this.EndPoint, fCopy);
             base.ActionShowFormDetail();
         }
         protected override void InitializeDefaultValidation()

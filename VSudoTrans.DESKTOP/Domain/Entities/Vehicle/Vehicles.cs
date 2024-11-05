@@ -20,6 +20,8 @@ namespace Domain.Entities.Vehicle
         public virtual ModelUnit ModelUnit { get; set; }
         public int TypeEngineId { get; set; }
         public virtual TypeEngine TypeEngine { get; set; }
+        public int CategoryVehicleId { get; set; }
+        public virtual CategoryVehicle CategoryVehicle { get; set; }
         public string FrameNumber { get; set; }
         public string MachineNumber { get; set; }
         public int Seat { get; set; }

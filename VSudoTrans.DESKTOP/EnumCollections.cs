@@ -4,28 +4,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public enum EnumPriceType : short
-    {
-        [Display(Name = "Reguler")]
-        Regular = 0,
-        [Display(Name = "Reguler Premium")]
-        RegularPremium = 1,
-        [Display(Name = "Private")]
-        Private = 2,
-        [Display(Name = "Private Premium")]
-        PrivatePremium = 3,
-        [Display(Name = "Elf Pendek")]
-        ElfShort = 4,
-        [Display(Name = "Elf Panjang")]
-        ElfLong = 5,
-        [Display(Name = "Hiace")]
-        Hiace = 6,
-        [Display(Name = "Bus Sedang")]
-        MediumBus = 7,
-        [Display(Name = "Bus Besar")]
-        BigBus = 8
-    }
-
     public enum EnumPassengerType : short
     {
         [Display(Name = "Orang")]

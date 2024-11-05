@@ -14,6 +14,7 @@ namespace Contract.Vehicle
         [Required(ErrorMessage = AnnotationHelper.Invalid)]
         public int ModelUnitId { get; set; }
         public int TypeEngineId { get; set; }
+        public int CategoryVehicleId { get; set; }
         [Required(ErrorMessage = AnnotationHelper.Invalid)]
         [StringLength(50, ErrorMessage = AnnotationHelper.Length + "{1} karakter")]
         public string FrameNumber { get; set; }
@@ -43,6 +44,7 @@ namespace Contract.Vehicle
         public string BrandCode { get; set; }
         public string ModelCode { get; set; }
         public string TypeEngineCode { get; set; }
+        public string CategoryVehicleCode { get; set; }
         public string FrameNumber { get; set; }
         public string MachineNumber { get; set; }
         public string Seat { get; set; }
@@ -74,6 +76,8 @@ namespace Contract.Vehicle
         public string ModelCode { get; set; }
         [JsonProperty("Type Engine Code")]
         public string TypeEngineCode { get; set; }
+        [JsonProperty("Category Vehicle Code")]
+        public string CategoryVehicleCode { get; set; }
         [JsonProperty("Frame Number")]
         public string FrameNumber { get; set; }
         [JsonProperty("Machine Number")]

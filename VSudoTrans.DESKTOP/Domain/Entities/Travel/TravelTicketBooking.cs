@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System;
 using System.Collections.Generic;
 using Domain.Entities.Transportation;
+using Domain.Entities.Vehicle;
 
 namespace Domain.Entities.Travel
 {
@@ -24,8 +25,6 @@ namespace Domain.Entities.Travel
         public string DocumentNumber { get; set; }
         public DateTime Date { get; set; }
         public TimeSpan Time { get; set; }
-        public int RuteId { get; set; }
-        public virtual Rute Rute { get; set; }
         public virtual Schedule Schedule { get; set; }
         [MaxLength(2000)]
         public string PickupAddress { get; set; }
@@ -60,7 +59,8 @@ namespace Domain.Entities.Travel
         public decimal TotalPrice { get; set; }
         public EnumPaymentType PaymentType { get; set; } // Cash, Transfer
         public EnumStatusBooking Status { get; set; }
-        public EnumPriceType PriceType { get; set; }
+        public int CategoryVehicleId { get; set; }
+        public virtual CategoryVehicle CategoryVehicle { get; set; }
 
         [MaxLength(2000)]
         public string Note { get; set; }

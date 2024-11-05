@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
 using Domain.Entities.Demography;
 using System.Collections.Generic;
+using Domain.Entities.Vehicle;
 
 namespace Domain.Entities.Travel
 {
@@ -38,7 +39,8 @@ namespace Domain.Entities.Travel
     {
         public int RuteId { get; set; }
         public virtual Rute Rute { get; set; }
-        public EnumPriceType PriceType { get; set; }
+        public int CategoryVehicleId { get; set; }
+        public virtual CategoryVehicle CategoryVehicle { get; set; }
         public decimal MinPrice { get; set; } // Minimal
         public decimal Price { get; set; } // Normal
         public decimal MaxPrice { get; set; } // Maximal

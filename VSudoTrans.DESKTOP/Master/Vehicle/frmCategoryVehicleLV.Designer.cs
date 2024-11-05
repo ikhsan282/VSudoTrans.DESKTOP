@@ -1,6 +1,6 @@
 ﻿namespace VSudoTrans.DESKTOP.Master.Vehicle
 {
-    partial class frmVehicleLV
+    partial class frmCategoryVehicleLV
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVehicleLV));
-            this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colBrandName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colModelUnitName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVehicleNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVehicleColor = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSeat = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colProductionYear = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCategoryVehicleName = new DevExpress.XtraGrid.Columns.GridColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoryVehicleLV));
+            this.colCompany = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this._GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._GridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._SearchControl.Properties)).BeginInit();
@@ -65,10 +60,18 @@
             ((System.ComponentModel.ISupportInitialize)(this._DxValidationProvider)).BeginInit();
             this.SuspendLayout();
             // 
+            // _GridView
+            // 
+            this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colCompany,
+            this.colCode,
+            this.colName});
+            this._GridView.OptionsBehavior.Editable = false;
+            // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(982, 254);
+            this.ribbonControl.Size = new System.Drawing.Size(907, 254);
             // 
             // bbiRefresh
             // 
@@ -132,14 +135,7 @@
             // 
             // dataLayoutControl1
             // 
-            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
-            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseBackColor = true;
-            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseFont = true;
-            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
-            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(660, 390);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(585, 408);
             this.dataLayoutControl1.Controls.SetChildIndex(this._GridControl, 0);
             this.dataLayoutControl1.Controls.SetChildIndex(this._SearchControl, 0);
             // 
@@ -153,56 +149,36 @@
             this._GridControl.EmbeddedNavigator.Buttons.First.Visible = false;
             this._GridControl.EmbeddedNavigator.Buttons.Last.Visible = false;
             this._GridControl.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this._GridControl.Size = new System.Drawing.Size(638, 304);
-            // 
-            // _GridView
-            // 
-            this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colCompanyName,
-            this.colBrandName,
-            this.colModelUnitName,
-            this.colCategoryVehicleName,
-            this.colVehicleNumber,
-            this.colVehicleColor,
-            this.colSeat,
-            this.colProductionYear});
-            this._GridView.OptionsBehavior.Editable = false;
+            this._GridControl.Size = new System.Drawing.Size(563, 322);
             // 
             // Root
             // 
-            this.Root.Size = new System.Drawing.Size(660, 390);
+            this.Root.Size = new System.Drawing.Size(585, 408);
             // 
             // ItemForGridControl
             // 
-            this.ItemForGridControl.Size = new System.Drawing.Size(642, 308);
+            this.ItemForGridControl.Size = new System.Drawing.Size(567, 326);
             // 
             // _SearchControl
             // 
-            this._SearchControl.Size = new System.Drawing.Size(638, 34);
+            this._SearchControl.Size = new System.Drawing.Size(563, 34);
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Size = new System.Drawing.Size(642, 64);
+            this.layoutControlItem2.Size = new System.Drawing.Size(567, 64);
             // 
             // _DockPanelRight
             // 
-            this._DockPanelRight.Location = new System.Drawing.Point(660, 254);
-            this._DockPanelRight.Size = new System.Drawing.Size(322, 390);
+            this._DockPanelRight.Location = new System.Drawing.Point(585, 254);
+            this._DockPanelRight.Size = new System.Drawing.Size(322, 408);
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Size = new System.Drawing.Size(311, 339);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(311, 357);
             // 
             // dataLayoutControl2
             // 
-            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
-            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseBackColor = true;
-            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseFont = true;
-            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
-            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.dataLayoutControl2.Size = new System.Drawing.Size(311, 339);
+            this.dataLayoutControl2.Size = new System.Drawing.Size(311, 357);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterPopUp3, 0);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterDate1, 0);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterDate2, 0);
@@ -213,11 +189,11 @@
             // 
             // layoutControlGroup1
             // 
-            this.layoutControlGroup1.Size = new System.Drawing.Size(311, 339);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(311, 357);
             // 
             // emptySpaceItem1
             // 
-            this.emptySpaceItem1.Size = new System.Drawing.Size(293, 129);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(293, 147);
             // 
             // FilterDate2
             // 
@@ -225,7 +201,7 @@
             // 
             // _BindingSource
             // 
-            this._BindingSource.DataSource = typeof(Domain.Entities.Vehicle.Vehicles);
+            this._BindingSource.DataSource = typeof(Domain.Entities.Vehicle.CategoryVehicle);
             // 
             // FilterPopUp3
             // 
@@ -244,99 +220,49 @@
             // 
             this.bbiImportData.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiImportData.ImageOptions.SvgImage")));
             // 
-            // colCompanyName
+            // colCompany
             // 
-            this.colCompanyName.Caption = "Perusahaan";
-            this.colCompanyName.FieldName = "Company.Name";
-            this.colCompanyName.MinWidth = 30;
-            this.colCompanyName.Name = "colCompanyName";
-            this.colCompanyName.Visible = true;
-            this.colCompanyName.VisibleIndex = 0;
-            this.colCompanyName.Width = 243;
+            this.colCompany.Caption = "Perusahaan";
+            this.colCompany.FieldName = "Company.Name";
+            this.colCompany.MinWidth = 30;
+            this.colCompany.Name = "colCompany";
+            this.colCompany.Visible = true;
+            this.colCompany.VisibleIndex = 0;
+            this.colCompany.Width = 359;
             // 
-            // colBrandName
+            // colCode
             // 
-            this.colBrandName.Caption = "Nama Merek";
-            this.colBrandName.FieldName = "Brand.Name";
-            this.colBrandName.MinWidth = 30;
-            this.colBrandName.Name = "colBrandName";
-            this.colBrandName.Visible = true;
-            this.colBrandName.VisibleIndex = 1;
-            this.colBrandName.Width = 208;
+            this.colCode.Caption = "Kode Tipe Mesin";
+            this.colCode.FieldName = "Code";
+            this.colCode.MinWidth = 30;
+            this.colCode.Name = "colCode";
+            this.colCode.Visible = true;
+            this.colCode.VisibleIndex = 1;
+            this.colCode.Width = 359;
             // 
-            // colModelUnitName
+            // colName
             // 
-            this.colModelUnitName.Caption = "Nama Model Unit";
-            this.colModelUnitName.FieldName = "ModelUnit.Name";
-            this.colModelUnitName.MinWidth = 30;
-            this.colModelUnitName.Name = "colModelUnitName";
-            this.colModelUnitName.Visible = true;
-            this.colModelUnitName.VisibleIndex = 2;
-            this.colModelUnitName.Width = 223;
+            this.colName.Caption = "Nama Tipe Mesin";
+            this.colName.FieldName = "Name";
+            this.colName.MinWidth = 30;
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 2;
+            this.colName.Width = 758;
             // 
-            // colVehicleNumber
-            // 
-            this.colVehicleNumber.Caption = "Nomor Kendaraan (Plat)";
-            this.colVehicleNumber.FieldName = "VehicleNumber";
-            this.colVehicleNumber.MinWidth = 30;
-            this.colVehicleNumber.Name = "colVehicleNumber";
-            this.colVehicleNumber.Visible = true;
-            this.colVehicleNumber.VisibleIndex = 4;
-            this.colVehicleNumber.Width = 245;
-            // 
-            // colVehicleColor
-            // 
-            this.colVehicleColor.Caption = "Warna";
-            this.colVehicleColor.FieldName = "VehicleColor";
-            this.colVehicleColor.MinWidth = 30;
-            this.colVehicleColor.Name = "colVehicleColor";
-            this.colVehicleColor.Visible = true;
-            this.colVehicleColor.VisibleIndex = 5;
-            this.colVehicleColor.Width = 90;
-            // 
-            // colSeat
-            // 
-            this.colSeat.Caption = "Jumlah Bangku";
-            this.colSeat.FieldName = "Seat";
-            this.colSeat.MinWidth = 30;
-            this.colSeat.Name = "colSeat";
-            this.colSeat.Visible = true;
-            this.colSeat.VisibleIndex = 6;
-            this.colSeat.Width = 131;
-            // 
-            // colProductionYear
-            // 
-            this.colProductionYear.Caption = "Tahun Pembuatan";
-            this.colProductionYear.FieldName = "ProductionYear";
-            this.colProductionYear.MinWidth = 30;
-            this.colProductionYear.Name = "colProductionYear";
-            this.colProductionYear.Visible = true;
-            this.colProductionYear.VisibleIndex = 7;
-            this.colProductionYear.Width = 161;
-            // 
-            // colCategoryVehicleName
-            // 
-            this.colCategoryVehicleName.Caption = "Kategori";
-            this.colCategoryVehicleName.FieldName = "CategoryVehicle.Name";
-            this.colCategoryVehicleName.MinWidth = 30;
-            this.colCategoryVehicleName.Name = "colCategoryVehicleName";
-            this.colCategoryVehicleName.Visible = true;
-            this.colCategoryVehicleName.VisibleIndex = 3;
-            this.colCategoryVehicleName.Width = 175;
-            // 
-            // frmVehicleLV
+            // frmCategoryVehicleLV
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 644);
-            this.Name = "frmVehicleLV";
-            this.Text = "frmVehicleLV";
+            this.ClientSize = new System.Drawing.Size(907, 662);
+            this.Name = "frmCategoryVehicleLV";
+            this.Text = "frmCategoryVehicleLV";
+            ((System.ComponentModel.ISupportInitialize)(this._GridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._GridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._SearchControl.Properties)).EndInit();
@@ -365,13 +291,8 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.Columns.GridColumn colCompanyName;
-        private DevExpress.XtraGrid.Columns.GridColumn colBrandName;
-        private DevExpress.XtraGrid.Columns.GridColumn colModelUnitName;
-        private DevExpress.XtraGrid.Columns.GridColumn colVehicleNumber;
-        private DevExpress.XtraGrid.Columns.GridColumn colVehicleColor;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeat;
-        private DevExpress.XtraGrid.Columns.GridColumn colProductionYear;
-        private DevExpress.XtraGrid.Columns.GridColumn colCategoryVehicleName;
+        private DevExpress.XtraGrid.Columns.GridColumn colCompany;
+        private DevExpress.XtraGrid.Columns.GridColumn colCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
     }
 }

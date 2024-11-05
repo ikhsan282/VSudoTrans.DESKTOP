@@ -501,6 +501,7 @@
     <Compile Include="Contract\Organization\OrganizationStructureDto.cs" />
     <Compile Include="Contract\Shared\UnitMeasureDto.cs" />
     <Compile Include="Contract\Vehicle\BrandVehicleDto.cs" />
+    <Compile Include="Contract\Vehicle\CategoryVehicleDto.cs" />
     <Compile Include="Contract\Vehicle\ModelUnitDto.cs" />
     <Compile Include="Contract\Vehicle\TypeEngineDto.cs" />
     <Compile Include="Contract\Vehicle\VehiclesDto.cs" />
@@ -536,6 +537,7 @@
     <Compile Include="Domain\Entities\Travel\TravelTicketBooking.cs" />
     <Compile Include="Domain\Entities\Travel\TripSchedule.cs" />
     <Compile Include="Domain\Entities\Vehicle\BrandVehicle.cs" />
+    <Compile Include="Domain\Entities\Vehicle\CategoryVehicle.cs" />
     <Compile Include="Domain\Entities\Vehicle\ModelUnit.cs" />
     <Compile Include="Domain\Entities\Vehicle\TypeEngine.cs" />
     <Compile Include="Domain\Entities\Vehicle\Vehicles.cs" />
@@ -986,6 +988,12 @@
     <Compile Include="Master\Vehicle\frmImportBrandWV.Designer.cs">
       <DependentUpon>frmImportBrandWV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\Vehicle\frmImportCategoryVehicleWV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmImportCategoryVehicleWV.Designer.cs">
+      <DependentUpon>frmImportCategoryVehicleWV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\Vehicle\frmImportVehicleWV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1003,6 +1011,18 @@
     </Compile>
     <Compile Include="Master\Vehicle\frmImportModelUnitWV.Designer.cs">
       <DependentUpon>frmImportModelUnitWV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmCategoryVehicleDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmCategoryVehicleDV.Designer.cs">
+      <DependentUpon>frmCategoryVehicleDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmCategoryVehicleLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Vehicle\frmCategoryVehicleLV.Designer.cs">
+      <DependentUpon>frmCategoryVehicleLV.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction\Travel\frmTravelTicketBookingDV.cs">
       <SubType>Form</SubType>
@@ -2759,6 +2779,9 @@
     <EmbeddedResource Include="Master\Vehicle\frmImportBrandWV.resx">
       <DependentUpon>frmImportBrandWV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmImportCategoryVehicleWV.resx">
+      <DependentUpon>frmImportCategoryVehicleWV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\Vehicle\frmImportVehicleWV.resx">
       <DependentUpon>frmImportVehicleWV.cs</DependentUpon>
     </EmbeddedResource>
@@ -2774,8 +2797,14 @@
     <EmbeddedResource Include="Master\Vehicle\frmModelUnitLV.resx">
       <DependentUpon>frmModelUnitLV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmCategoryVehicleDV.resx">
+      <DependentUpon>frmCategoryVehicleDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\Vehicle\frmTypeEngineDV.resx">
       <DependentUpon>frmTypeEngineDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Vehicle\frmCategoryVehicleLV.resx">
+      <DependentUpon>frmCategoryVehicleLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Vehicle\frmTypeEngineLV.resx">
       <DependentUpon>frmTypeEngineLV.cs</DependentUpon>

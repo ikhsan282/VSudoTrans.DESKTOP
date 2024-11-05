@@ -1,6 +1,6 @@
 ﻿namespace VSudoTrans.DESKTOP.Master.Vehicle
 {
-    partial class frmImportVehicleWV
+    partial class frmImportCategoryVehicleWV
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImportVehicleWV));
+            this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFailureDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatusImport = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCompanyCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colBrandCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colModelCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTypeEngineCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFrameNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMachineNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSeat = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colProductionYear = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVehicleNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVehicleColor = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colOwnership = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCategoryVehicleCode = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -61,7 +51,7 @@
             // 
             // _BindingSource
             // 
-            this._BindingSource.DataSource = typeof(Contract.Vehicle.ImportVehicleModel);
+            this._BindingSource.DataSource = typeof(Contract.Vehicle.ImportCategoryVehicleModel);
             // 
             // layoutControl1
             // 
@@ -86,17 +76,8 @@
             this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colStatusImport,
             this.colCompanyCode,
-            this.colBrandCode,
-            this.colModelCode,
-            this.colTypeEngineCode,
-            this.colCategoryVehicleCode,
-            this.colFrameNumber,
-            this.colMachineNumber,
-            this.colSeat,
-            this.colProductionYear,
-            this.colVehicleColor,
-            this.colVehicleNumber,
-            this.colOwnership,
+            this.colCode,
+            this.colName,
             this.colNote,
             this.colFailureDescription});
             this._GridView.OptionsBehavior.Editable = false;
@@ -114,6 +95,26 @@
             // _SearchControl
             // 
             // 
+            // colCode
+            // 
+            this.colCode.Caption = "Kode";
+            this.colCode.FieldName = "Code";
+            this.colCode.MinWidth = 30;
+            this.colCode.Name = "colCode";
+            this.colCode.Visible = true;
+            this.colCode.VisibleIndex = 2;
+            this.colCode.Width = 193;
+            // 
+            // colName
+            // 
+            this.colName.Caption = "Nama";
+            this.colName.FieldName = "Name";
+            this.colName.MinWidth = 30;
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 3;
+            this.colName.Width = 337;
+            // 
             // colNote
             // 
             this.colNote.Caption = "Catatan";
@@ -121,7 +122,7 @@
             this.colNote.MinWidth = 30;
             this.colNote.Name = "colNote";
             this.colNote.Visible = true;
-            this.colNote.VisibleIndex = 13;
+            this.colNote.VisibleIndex = 4;
             this.colNote.Width = 298;
             // 
             // colFailureDescription
@@ -132,7 +133,7 @@
             this.colFailureDescription.MinWidth = 30;
             this.colFailureDescription.Name = "colFailureDescription";
             this.colFailureDescription.Visible = true;
-            this.colFailureDescription.VisibleIndex = 14;
+            this.colFailureDescription.VisibleIndex = 5;
             this.colFailureDescription.Width = 311;
             // 
             // colStatusImport
@@ -155,124 +156,13 @@
             this.colCompanyCode.VisibleIndex = 1;
             this.colCompanyCode.Width = 138;
             // 
-            // colBrandCode
-            // 
-            this.colBrandCode.Caption = "Kode Merek";
-            this.colBrandCode.FieldName = "BrandCode";
-            this.colBrandCode.MinWidth = 30;
-            this.colBrandCode.Name = "colBrandCode";
-            this.colBrandCode.Visible = true;
-            this.colBrandCode.VisibleIndex = 2;
-            this.colBrandCode.Width = 126;
-            // 
-            // colModelCode
-            // 
-            this.colModelCode.Caption = "Kode Model";
-            this.colModelCode.FieldName = "ModelCode";
-            this.colModelCode.MinWidth = 30;
-            this.colModelCode.Name = "colModelCode";
-            this.colModelCode.Visible = true;
-            this.colModelCode.VisibleIndex = 3;
-            this.colModelCode.Width = 123;
-            // 
-            // colTypeEngineCode
-            // 
-            this.colTypeEngineCode.Caption = "Kode Tipe Mesin";
-            this.colTypeEngineCode.FieldName = "TypeEngineCode";
-            this.colTypeEngineCode.MinWidth = 30;
-            this.colTypeEngineCode.Name = "colTypeEngineCode";
-            this.colTypeEngineCode.Visible = true;
-            this.colTypeEngineCode.VisibleIndex = 4;
-            this.colTypeEngineCode.Width = 132;
-            // 
-            // colFrameNumber
-            // 
-            this.colFrameNumber.Caption = "Nomor Rangka";
-            this.colFrameNumber.FieldName = "FrameNumber";
-            this.colFrameNumber.MinWidth = 30;
-            this.colFrameNumber.Name = "colFrameNumber";
-            this.colFrameNumber.Visible = true;
-            this.colFrameNumber.VisibleIndex = 6;
-            this.colFrameNumber.Width = 147;
-            // 
-            // colMachineNumber
-            // 
-            this.colMachineNumber.Caption = "Nomor Mesin";
-            this.colMachineNumber.FieldName = "MachineNumber";
-            this.colMachineNumber.MinWidth = 30;
-            this.colMachineNumber.Name = "colMachineNumber";
-            this.colMachineNumber.Visible = true;
-            this.colMachineNumber.VisibleIndex = 7;
-            this.colMachineNumber.Width = 137;
-            // 
-            // colSeat
-            // 
-            this.colSeat.Caption = "Jumlah Bangku";
-            this.colSeat.FieldName = "Seat";
-            this.colSeat.MinWidth = 30;
-            this.colSeat.Name = "colSeat";
-            this.colSeat.Visible = true;
-            this.colSeat.VisibleIndex = 8;
-            this.colSeat.Width = 124;
-            // 
-            // colProductionYear
-            // 
-            this.colProductionYear.Caption = "Tahun Pembuatan";
-            this.colProductionYear.FieldName = "ProductionYear";
-            this.colProductionYear.MinWidth = 30;
-            this.colProductionYear.Name = "colProductionYear";
-            this.colProductionYear.Visible = true;
-            this.colProductionYear.VisibleIndex = 9;
-            this.colProductionYear.Width = 144;
-            // 
-            // colVehicleNumber
-            // 
-            this.colVehicleNumber.Caption = "Nomor Kendaraan (Plat)";
-            this.colVehicleNumber.FieldName = "VehicleNumber";
-            this.colVehicleNumber.MinWidth = 30;
-            this.colVehicleNumber.Name = "colVehicleNumber";
-            this.colVehicleNumber.Visible = true;
-            this.colVehicleNumber.VisibleIndex = 10;
-            this.colVehicleNumber.Width = 186;
-            // 
-            // colVehicleColor
-            // 
-            this.colVehicleColor.Caption = "Warna";
-            this.colVehicleColor.FieldName = "VehicleColor";
-            this.colVehicleColor.MinWidth = 30;
-            this.colVehicleColor.Name = "colVehicleColor";
-            this.colVehicleColor.Visible = true;
-            this.colVehicleColor.VisibleIndex = 11;
-            this.colVehicleColor.Width = 157;
-            // 
-            // colOwnership
-            // 
-            this.colOwnership.Caption = "Kepemilikan";
-            this.colOwnership.FieldName = "Ownership";
-            this.colOwnership.MinWidth = 30;
-            this.colOwnership.Name = "colOwnership";
-            this.colOwnership.Visible = true;
-            this.colOwnership.VisibleIndex = 12;
-            this.colOwnership.Width = 110;
-            // 
-            // colCategoryVehicleCode
-            // 
-            this.colCategoryVehicleCode.Caption = "Kode Kategori Kendaraan";
-            this.colCategoryVehicleCode.FieldName = "CategoryVehicleCode";
-            this.colCategoryVehicleCode.MinWidth = 30;
-            this.colCategoryVehicleCode.Name = "colCategoryVehicleCode";
-            this.colCategoryVehicleCode.Visible = true;
-            this.colCategoryVehicleCode.VisibleIndex = 5;
-            this.colCategoryVehicleCode.Width = 193;
-            // 
-            // frmImportVehicleWV
+            // frmImportCategoryVehicleWV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 756);
-            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmImportVehicleWV.IconOptions.Image")));
-            this.Name = "frmImportVehicleWV";
-            this.Text = "frmImportVehicleWV";
+            this.Name = "frmImportCategoryVehicleWV";
+            this.Text = "frmImportCategoryVehicleWV";
             ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -293,19 +183,10 @@
         #endregion
 
         private DevExpress.XtraGrid.Columns.GridColumn colStatusImport;
+        private DevExpress.XtraGrid.Columns.GridColumn colCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colNote;
         private DevExpress.XtraGrid.Columns.GridColumn colFailureDescription;
         private DevExpress.XtraGrid.Columns.GridColumn colCompanyCode;
-        private DevExpress.XtraGrid.Columns.GridColumn colBrandCode;
-        private DevExpress.XtraGrid.Columns.GridColumn colModelCode;
-        private DevExpress.XtraGrid.Columns.GridColumn colTypeEngineCode;
-        private DevExpress.XtraGrid.Columns.GridColumn colFrameNumber;
-        private DevExpress.XtraGrid.Columns.GridColumn colMachineNumber;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeat;
-        private DevExpress.XtraGrid.Columns.GridColumn colProductionYear;
-        private DevExpress.XtraGrid.Columns.GridColumn colVehicleColor;
-        private DevExpress.XtraGrid.Columns.GridColumn colVehicleNumber;
-        private DevExpress.XtraGrid.Columns.GridColumn colOwnership;
-        private DevExpress.XtraGrid.Columns.GridColumn colCategoryVehicleCode;
     }
 }

@@ -169,8 +169,6 @@ namespace VSudoTrans.DESKTOP.Master.Travel
             #endregion
 
             InitializeSearchLookup();
-
-            SLUHelper.SetEnumDataSource(PriceTypeSearchLookUpEdit, new Converter<EnumPriceType, string>(EnumHelper.EnumPriceTypeToString));
         }
 
         private void _GridViewTravelPrice_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
@@ -264,24 +262,24 @@ namespace VSudoTrans.DESKTOP.Master.Travel
                 return;
             }
 
-            var cekpriceType = result.PriceType;
-            if (cekpriceType != null)
-            {
-                var priceType = (EnumPriceType)cekpriceType;
-                for (int i = 0; i < gridView.RowCount; i++)
-                {
-                    if (i != gridView.GetDataSourceRowIndex(gridView.FocusedRowHandle))
-                    {
-                        var tempVal = (EnumPriceType)gridView.GetRowCellValue(i, "PriceType");
-                        if (tempVal == priceType)
-                        {
-                            gridView.SetColumnError(colPriceType, "Adanya duplikasi data tipe harga");
-                            e.Valid = false;
-                            return;
-                        }
-                    }
-                }
-            }
+            //var cekpriceType = result.PriceType;
+            //if (cekpriceType != null)
+            //{
+            //    var priceType = (EnumPriceType)cekpriceType;
+            //    for (int i = 0; i < gridView.RowCount; i++)
+            //    {
+            //        if (i != gridView.GetDataSourceRowIndex(gridView.FocusedRowHandle))
+            //        {
+            //            var tempVal = (EnumPriceType)gridView.GetRowCellValue(i, "PriceType");
+            //            if (tempVal == priceType)
+            //            {
+            //                gridView.SetColumnError(colPriceType, "Adanya duplikasi data tipe harga");
+            //                e.Valid = false;
+            //                return;
+            //            }
+            //        }
+            //    }
+            //}
 
             if (e.Valid)
                 gridView.ClearColumnErrors();

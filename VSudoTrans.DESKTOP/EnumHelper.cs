@@ -491,33 +491,6 @@ namespace VSudoTrans.DESKTOP
             }
         }
 
-        public static string EnumPriceTypeToString(EnumPriceType value)
-        {
-            switch (value)
-            {
-                case EnumPriceType.Regular:
-                    return "Biasa";
-                case EnumPriceType.RegularPremium:
-                    return "Biasa Premium";
-                case EnumPriceType.Private:
-                    return "Pribadi";
-                case EnumPriceType.PrivatePremium:
-                    return "Pribadi Premium";
-                case EnumPriceType.ElfShort:
-                    return "Elf Pendek";
-                case EnumPriceType.ElfLong:
-                    return "Elf Panjang";
-                case EnumPriceType.Hiace:
-                    return "Hiace";
-                case EnumPriceType.MediumBus:
-                    return "Bus Sedang";
-                case EnumPriceType.BigBus:
-                    return "Bus Besar";
-                default:
-                    return $"{value} Deskripsi";
-            }
-        }
-
         public static string EnumDayTypeToString(EnumDayType value)
         {
             switch (value)
