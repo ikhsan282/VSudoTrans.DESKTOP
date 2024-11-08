@@ -1045,6 +1045,18 @@
     <Compile Include="Master\Vehicle\frmCategoryVehicleLV.Designer.cs">
       <DependentUpon>frmCategoryVehicleLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Rental\frmRentalCarBookingInvoiceLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Rental\frmRentalCarBookingInvoiceLV.Designer.cs">
+      <DependentUpon>frmRentalCarBookingInvoiceLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rental\rptRentalCarBookingInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rental\rptRentalCarBookingInvoice.Designer.cs">
+      <DependentUpon>rptRentalCarBookingInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\Rental\frmRentalCarBookingDV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1443,6 +1455,9 @@
     <None Include="Properties\DataSources\Domain.Entities.Organization.Group.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.Organization.OrganizationStructure.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.Organization.School.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Rental.RentalCarBooking.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Rental.RentalCarBookingEmployee.datasource" />
+    <None Include="Properties\DataSources\Domain.Entities.Rental.RentalCarBookingPayment.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.Shared.AuditEntry.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.Shared.AuditTrail.datasource" />
     <None Include="Properties\DataSources\Domain.Entities.Shared.Sequence.datasource" />
@@ -2901,6 +2916,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\rptComparationBudgetRealization.resx">
       <DependentUpon>rptComparationBudgetRealization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rental\frmRentalCarBookingInvoiceLV.resx">
+      <DependentUpon>frmRentalCarBookingInvoiceLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rental\rptRentalCarBookingInvoice.resx">
+      <DependentUpon>rptRentalCarBookingInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Travel\frmESPJTripScheduleLV.resx">
       <DependentUpon>frmESPJTripScheduleLV.cs</DependentUpon>

@@ -6,6 +6,8 @@ using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
 using PopUpUtils;
 using System;
+using System.Drawing;
+using VSudoTrans.DESKTOP.Report.Rental;
 
 namespace VSudoTrans.DESKTOP.Transaction.Rental
 {
@@ -18,10 +20,11 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.EndPoint = "/RentalCarBookings";
             this.FormTitle = "Pemesanan Sewa Mobil";
 
-            this.OdataSelect = "Id,Date,Time,Status,TotalPrice";
+            this.OdataSelect = "Id,Date,Time,Status,TotalPrice,BBM,TotalOperationalCost,TotalPayment";
             this.OdataExpand = "Company($select=name)";
             this.OdataExpand += ",PickupPointCity($select=name),DeliveryPointCity($select=name)";
             this.OdataExpand += ",Passenger($select=Name,PhoneNumber)";
+            this.OdataExpand += ",Vehicle($select=VehicleNumber)";
             this.OdataExpand += ",RentalCarBookingEmployees($select=EmployeeId,Amount;$expand=Employee($select=Code,Name))";
             this.OdataExpand += ",RentalCarBookingPayments($select=PaymentMethod,Date,Amount)";
 
@@ -38,13 +41,55 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
 
             GridHelper.GridColumnInitializeLayout(colDate, typeof(DateTime));
             GridHelper.GridColumnInitializeLayout(colTime, typeof(TimeSpan), "hh:mm");
-            GridHelper.GridColumnInitializeLayout(colTotalPrice, typeof(decimal), "n0");
+            GridHelper.GridColumnInitializeLayout(colTotalOperationalCost, typeof(decimal), "n0", fTotal: true);
+            GridHelper.GridColumnInitializeLayout(colTotalPayment, typeof(decimal), "n0", fTotal: true);
+            GridHelper.GridColumnInitializeLayout(colTotalPrice, typeof(decimal), "n0", fTotal: true);
+            _GridView.OptionsView.ShowFooter = true;
+            _GridView.OptionsView.ColumnAutoWidth = false;
 
             _GridView.CustomDrawCell += _GridView_CustomDrawCell;
+            _GridView.RowCellStyle += _GridView_RowCellStyle;
 
-            //bbiPrintETicket.ItemClick += BbiPrintETicket_ItemClick;
+            bbiPrintInvoice.ItemClick += BbiPrintInvoice_ItemClick;
 
             InitializeSearchLookup();
+        }
+
+        private void BbiPrintInvoice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            EntityId = GetIdOfDataRowSelected();
+            if (EntityId == null)
+            {
+                MessageHelper.ShowMessageError(this, MessageHelper.MessagePleaseSelect);
+                return;
+            }
+
+            var formDetail = new frmRentalCarBookingInvoiceLV(HelperConvert.Int(this.EntityId));
+
+            try
+            {
+                if (formDetail != null)
+                {
+                    formDetail.MdiParent = MdiParent;
+                    formDetail.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageHelper.ShowMessageError(this, ex);
+            }
+        }
+
+        private void _GridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            var totalPrice = HelperConvert.Decimal(_GridView.GetRowCellValue(e.RowHandle, colTotalPrice));
+            var totalPayment = HelperConvert.Decimal(_GridView.GetRowCellValue(e.RowHandle, colTotalPayment));
+            if (totalPayment >= totalPrice)
+                e.Appearance.BackColor = Color.LightGreen;
+            else if (totalPayment < totalPrice && totalPayment != 0)
+                e.Appearance.BackColor = Color.LightYellow;
+            else
+                e.Appearance.BackColor = Color.LightPink;
         }
 
         protected override void InitializeDefaultValidation()
@@ -69,37 +114,16 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
 
         protected override void ActionRefresh<T>(string endPoint = "")
         {
+            InitializeDefaultValidation();
+            if (!ActionValidate())
+                return;
+
             this.OdataFilter = $"Date ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-dd")} and Date le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-dd")}";
 
             if (FilterPopUp3.EditValue != null)
                 OdataFilter += $" and CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
 
             base.ActionRefresh<T>(endPoint);
-        }
-
-        private void BbiPrintETicket_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            EntityId = GetIdOfDataRowSelected();
-            if (EntityId == null)
-            {
-                MessageHelper.ShowMessageError(this, MessageHelper.MessagePleaseSelect);
-                return;
-            }
-
-            //var formDetail = new frmETicketRentalCarBookingLV(HelperConvert.Int(this.EntityId));
-
-            //try
-            //{
-            //    if (formDetail != null)
-            //    {
-            //        formDetail.MdiParent = MdiParent;
-            //        formDetail.Show();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageHelper.ShowMessageError(this, ex);
-            //}
         }
 
         private void _GridView_CustomDrawCell(object sender, RowCellCustomDrawEventArgs e)

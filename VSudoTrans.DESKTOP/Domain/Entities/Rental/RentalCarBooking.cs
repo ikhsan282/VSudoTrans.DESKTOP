@@ -16,6 +16,11 @@ namespace Domain.Entities.Rental
     [DisplayName("Pemesanan Sewa Mobil")]
     public class RentalCarBooking : BaseDomainDetail
     {
+        public RentalCarBooking()
+        {
+            RentalCarBookingEmployees = new HashSet<RentalCarBookingEmployee>();
+            RentalCarBookingPayments = new HashSet<RentalCarBookingPayment>();
+        }
         public int CompanyId { get; set; }
         public virtual Company Company { get; set; }
         [MaxLength(40)]
@@ -52,6 +57,9 @@ namespace Domain.Entities.Rental
         [ForeignKey("DeliveryPointDistrictId")]
         public virtual District DeliveryPointDistrict { get; set; }
         public decimal TotalPrice { get; set; }
+        public decimal BBM { get; set; }
+        public decimal TotalOperationalCost { get; set; }
+        public decimal TotalPayment { get; set; }
         public EnumStatusBooking Status { get; set; }
         public int CategoryVehicleId { get; set; }
         public virtual CategoryVehicle CategoryVehicle { get; set; }
@@ -63,11 +71,6 @@ namespace Domain.Entities.Rental
 
         [MaxLength(2000)]
         public string Note { get; set; }
-        public RentalCarBooking()
-        {
-            RentalCarBookingEmployees = new HashSet<RentalCarBookingEmployee>();
-            RentalCarBookingPayments = new HashSet<RentalCarBookingPayment>();
-        }
         public virtual ICollection<RentalCarBookingEmployee> RentalCarBookingEmployees { get; set; }
         public virtual ICollection<RentalCarBookingPayment> RentalCarBookingPayments { get; set; }
     }

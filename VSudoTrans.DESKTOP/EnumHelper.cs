@@ -320,24 +320,10 @@ namespace VSudoTrans.DESKTOP
         {
             switch (value)
             {
-                case EnumPaymentMethod.QRISShopeePay:
-                    return "Quick Response Code Indonesian Standard (QRIS) by Shopee Pay";
-                case EnumPaymentMethod.QRISGopay:
-                    return "Quick Response Code Indonesian Standard (QRIS) by Gopay";
-                case EnumPaymentMethod.BCA:
-                    return "BCA Virtual Account";
-                case EnumPaymentMethod.BRI:
-                    return "BRI Virtual Account";
-                case EnumPaymentMethod.BNI:
-                    return "BNI Virtual Account";
-                case EnumPaymentMethod.Permata:
-                    return "Permata Virtual Account";
-                case EnumPaymentMethod.CIMB:
-                    return "CIMB Niaga Virtual Account";
-                case EnumPaymentMethod.Mandiri:
-                    return "Mandiri Bill Payment";
                 case EnumPaymentMethod.Cash:
                     return "Uang Tunai";
+                case EnumPaymentMethod.Transfer:
+                    return "Transfer";
                 default:
                     return string.Format("{0} Description", value);
             }

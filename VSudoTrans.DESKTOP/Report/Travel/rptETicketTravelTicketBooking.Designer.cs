@@ -919,7 +919,7 @@
             this.baseControlStyle,
             this.evenDetailStyle,
             this.oddDetailStyle});
-            this.Version = "22.2";
+            this.Version = "23.2";
             ((System.ComponentModel.ISupportInitialize)(this.detailTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

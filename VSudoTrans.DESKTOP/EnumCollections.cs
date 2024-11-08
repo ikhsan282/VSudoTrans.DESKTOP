@@ -116,24 +116,10 @@ namespace Domain
 
     public enum EnumPaymentMethod : short
     {
-        [Display(Name = "Quick Response Code Indonesian Standard (QRIS) by Shopee Pay")]
-        QRISShopeePay = 0,
-        [Display(Name = "Quick Response Code Indonesian Standard (QRIS) by Gopay")]
-        QRISGopay = 1,
-        [Display(Name = "BCA Virtual Account")]
-        BCA = 2,
-        [Display(Name = "BRI Virtual Account")]
-        BRI = 3,
-        [Display(Name = "BNI Virtual Account")]
-        BNI = 4,
-        [Display(Name = "Permata Virtual Account")]
-        Permata = 5,
-        [Display(Name = "CIMB Niaga Virtual Account")]
-        CIMB = 6,
-        [Display(Name = "Mandiri Bill Payment")]
-        Mandiri = 7,
         [Display(Name = "Uang Tunai")]
-        Cash = 8,
+        Cash = 0,
+        [Display(Name = "Transfer")]
+        Transfer = 1,
     }
 
     public enum EnumTypeEducation : short

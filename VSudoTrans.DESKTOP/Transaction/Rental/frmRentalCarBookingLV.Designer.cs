@@ -37,7 +37,9 @@
             this.colDeliveryPointCity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTotalPayment = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTotalOperationalCost = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bbiPrintInvoice = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -69,7 +71,14 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.bbiPrintInvoice});
+            this.ribbonControl.MaxItemId = 23;
             this.ribbonControl.Size = new System.Drawing.Size(1071, 254);
+            // 
+            // rpgTasks
+            // 
+            this.rpgTasks.ItemLinks.Add(this.bbiPrintInvoice);
             // 
             // bbiRefresh
             // 
@@ -133,6 +142,13 @@
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseBackColor = true;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseFont = true;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.dataLayoutControl1.Size = new System.Drawing.Size(749, 412);
             this.dataLayoutControl1.Controls.SetChildIndex(this._GridControl, 0);
             this.dataLayoutControl1.Controls.SetChildIndex(this._SearchControl, 0);
@@ -159,8 +175,9 @@
             this.colTime,
             this.colPickupPointCity,
             this.colDeliveryPointCity,
-            this.colTotalPrice,
-            this.colStatus});
+            this.colTotalOperationalCost,
+            this.colTotalPayment,
+            this.colTotalPrice});
             this._GridView.OptionsBehavior.Editable = false;
             // 
             // Root
@@ -190,6 +207,13 @@
             // 
             // dataLayoutControl2
             // 
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseBackColor = true;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseFont = true;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.dataLayoutControl2.Size = new System.Drawing.Size(311, 361);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterPopUp3, 0);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterDate1, 0);
@@ -240,7 +264,7 @@
             this.colVehicleNumber.Name = "colVehicleNumber";
             this.colVehicleNumber.Visible = true;
             this.colVehicleNumber.VisibleIndex = 0;
-            this.colVehicleNumber.Width = 208;
+            this.colVehicleNumber.Width = 110;
             // 
             // colPassengerName
             // 
@@ -250,7 +274,7 @@
             this.colPassengerName.Name = "colPassengerName";
             this.colPassengerName.Visible = true;
             this.colPassengerName.VisibleIndex = 1;
-            this.colPassengerName.Width = 179;
+            this.colPassengerName.Width = 174;
             // 
             // colPassengerPhoneNumber
             // 
@@ -260,7 +284,7 @@
             this.colPassengerPhoneNumber.Name = "colPassengerPhoneNumber";
             this.colPassengerPhoneNumber.Visible = true;
             this.colPassengerPhoneNumber.VisibleIndex = 2;
-            this.colPassengerPhoneNumber.Width = 174;
+            this.colPassengerPhoneNumber.Width = 139;
             // 
             // colDate
             // 
@@ -270,7 +294,7 @@
             this.colDate.Name = "colDate";
             this.colDate.Visible = true;
             this.colDate.VisibleIndex = 4;
-            this.colDate.Width = 130;
+            this.colDate.Width = 128;
             // 
             // colPickupPointCity
             // 
@@ -294,13 +318,13 @@
             // 
             // colTotalPrice
             // 
-            this.colTotalPrice.Caption = "Harga";
+            this.colTotalPrice.Caption = "Total Harga";
             this.colTotalPrice.FieldName = "TotalPrice";
             this.colTotalPrice.MinWidth = 30;
             this.colTotalPrice.Name = "colTotalPrice";
             this.colTotalPrice.Visible = true;
-            this.colTotalPrice.VisibleIndex = 7;
-            this.colTotalPrice.Width = 190;
+            this.colTotalPrice.VisibleIndex = 9;
+            this.colTotalPrice.Width = 129;
             // 
             // colTime
             // 
@@ -310,17 +334,34 @@
             this.colTime.Name = "colTime";
             this.colTime.Visible = true;
             this.colTime.VisibleIndex = 3;
-            this.colTime.Width = 59;
+            this.colTime.Width = 58;
             // 
-            // colStatus
+            // colTotalPayment
             // 
-            this.colStatus.Caption = "Status";
-            this.colStatus.FieldName = "Status";
-            this.colStatus.MinWidth = 30;
-            this.colStatus.Name = "colStatus";
-            this.colStatus.Visible = true;
-            this.colStatus.VisibleIndex = 8;
-            this.colStatus.Width = 146;
+            this.colTotalPayment.Caption = "Total Pembayaran";
+            this.colTotalPayment.FieldName = "TotalPayment";
+            this.colTotalPayment.MinWidth = 30;
+            this.colTotalPayment.Name = "colTotalPayment";
+            this.colTotalPayment.Visible = true;
+            this.colTotalPayment.VisibleIndex = 8;
+            this.colTotalPayment.Width = 153;
+            // 
+            // colTotalOperationalCost
+            // 
+            this.colTotalOperationalCost.Caption = "Total Biaya Operasional";
+            this.colTotalOperationalCost.FieldName = "TotalOperationalCost";
+            this.colTotalOperationalCost.MinWidth = 30;
+            this.colTotalOperationalCost.Name = "colTotalOperationalCost";
+            this.colTotalOperationalCost.Visible = true;
+            this.colTotalOperationalCost.VisibleIndex = 7;
+            this.colTotalOperationalCost.Width = 195;
+            // 
+            // bbiPrintInvoice
+            // 
+            this.bbiPrintInvoice.Caption = "Print Invoice";
+            this.bbiPrintInvoice.Id = 22;
+            this.bbiPrintInvoice.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiPrintInvoice.ImageOptions.SvgImage")));
+            this.bbiPrintInvoice.Name = "bbiPrintInvoice";
             // 
             // frmRentalCarBookingLV
             // 
@@ -370,6 +411,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPickupPointCity;
         private DevExpress.XtraGrid.Columns.GridColumn colDeliveryPointCity;
         private DevExpress.XtraGrid.Columns.GridColumn colTotalPrice;
-        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotalOperationalCost;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotalPayment;
+        private DevExpress.XtraBars.BarButtonItem bbiPrintInvoice;
     }
 }

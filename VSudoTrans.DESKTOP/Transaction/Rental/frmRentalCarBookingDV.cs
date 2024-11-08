@@ -1,6 +1,4 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraSplashScreen;
 using Domain;
 using Domain.Entities.Demography;
 using Domain.Entities.Rental;
@@ -8,14 +6,13 @@ using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
 using PopUpUtils;
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using VSudoTrans.DESKTOP.Master.Travel;
 using VSudoTrans.DESKTOP.Master.Transportation;
-using Domain.Entities.Transportation;
-using Domain.Entities.Travel;
 using Domain.Entities.Vehicle;
+using Domain.Entities.HumanResource;
+using System.Linq;
+using Domain.Entities.Travel;
+using System.Collections.Generic;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace VSudoTrans.DESKTOP.Transaction.Rental
 {
@@ -42,12 +39,201 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             HelperConvert.FormatDateTimeEdit(CreatedDateDateEdit);
             HelperConvert.FormatDateTimeEdit(ModifiedDateDateEdit);
 
+            HelperConvert.FormatSpinEdit(AmountEmployeeSpinEdit, "n0", 0, 888888888888888);
+            HelperConvert.FormatSpinEdit(AmountPaymentSpinEdit, "n0", 0, 888888888888888);
             HelperConvert.FormatSpinEdit(TotalPriceSpinEdit, "n0", 0, 888888888888888);
+            HelperConvert.FormatSpinEdit(BBMSpinEdit, "n0", 0, 888888888888888);
+            HelperConvert.FormatSpinEdit(TotalPaymentSpinEdit, "n0", 0, 888888888888888);
+            HelperConvert.FormatSpinEdit(TotalOperationalCostSpinEdit, "n0", 0, 888888888888888);
 
             PickupDistrictPopUp.EditValueChanged += PickupDistrictPopUp_EditValueChanged;
             DeliveryDistrictPopUp.EditValueChanged += DeliveryDistrictPopUp_EditValueChanged;
 
             groupPassenger.CustomButtonClick += GroupPassenger_CustomButtonClick;
+
+            GridHelper.GridViewInitializeLayout(_GridViewEmployee);
+            GridHelper.GridControlInitializeEmbeddedNavigator(_GridControlEmployee, true, true, true, true, true, true, true, true, true, true, true, true);
+            GridHelper.GridColumnInitializeLayout(colAmountEmployee, typeof(decimal), "n0", fTotal: true);
+            _GridViewEmployee.OptionsView.ShowFooter = true;
+            _GridViewEmployee.ValidateRow += _GridViewEmployee_ValidateRow;
+            _GridViewEmployee.RowEditCanceled += _GridViewEmployee_RowEditCanceled;
+            _GridViewEmployee.RowUpdated += _GridViewEmployee_RowUpdated;
+
+            _GridViewEmployee.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            _GridViewEmployee.OptionsBehavior.Editable = true;
+
+
+            GridHelper.GridViewInitializeLayout(_GridViewPayment);
+            GridHelper.GridControlInitializeEmbeddedNavigator(_GridControlPayment, true, true, true, true, true, true, true, true, true, true, true, true);
+            GridHelper.GridColumnInitializeLayout(colAmountPayment, typeof(decimal), "n0", fTotal: true);
+            GridHelper.GridColumnInitializeLayout(colDate, typeof(DateTime), "dd-MMM-yyyy");
+            _GridViewPayment.OptionsView.ShowFooter = true;
+            _GridViewPayment.ValidateRow += _GridViewPayment_ValidateRow;
+            _GridViewPayment.RowUpdated += _GridViewPayment_RowUpdated;
+
+            _GridViewPayment.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            _GridViewPayment.OptionsBehavior.Editable = true;
+
+            BBMSpinEdit.EditValueChanged += BBMSpinEdit_EditValueChanged;
+        }
+
+        private void BBMSpinEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            CalculateOperationalCost();
+        }
+
+        private void CalculateOperationalCost()
+        {
+            if (BBMSpinEdit.EditValue != null)
+            {
+                List<RentalCarBookingEmployee> rentalCarBookingEmployees = _BindingSourceEmployee.DataSource as List<RentalCarBookingEmployee>;
+                TotalOperationalCostSpinEdit.EditValue = HelperConvert.Decimal(BBMSpinEdit.EditValue) + rentalCarBookingEmployees.Sum(s => s.Amount);
+            }
+        }
+
+        private void CalculatePayment()
+        {
+            List<RentalCarBookingPayment> rentalCarBookingPayment = _BindingSourcePayment.DataSource as List<RentalCarBookingPayment>;
+            TotalPaymentSpinEdit.EditValue = rentalCarBookingPayment.Sum(s => s.Amount);
+        }
+
+        private void _GridViewPayment_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        {
+            if (e.Row == null) return;
+
+            // update dulu id yang bersesuian
+            RentalCarBookingPayment row = e.Row as RentalCarBookingPayment;
+            if (row == null) return;
+            row.RentalCarBookingId = _RentalCarBooking.Id;
+            CalculatePayment();
+        }
+
+        private void _GridViewPayment_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            GridView gridView = sender as GridView;
+
+            var result = gridView.GetFocusedRow() as RentalCarBookingPayment;
+
+            if (result == null) return;
+
+            var amount = result.Amount;
+            if (amount != null)
+            {
+                if (amount <= 0)
+                {
+                    gridView.SetColumnError(colAmountPayment, $"Jumlah tidak boleh 0");
+                    e.Valid = false;
+                    return;
+                }
+            }
+            else
+            {
+                gridView.SetColumnError(colAmountPayment, $"Jumlah tidak boleh kosong");
+                e.Valid = false;
+                return;
+            }
+
+            var paymentMethod = result.PaymentMethod;
+
+            if (paymentMethod == null)
+            {
+                gridView.SetColumnError(colPaymentMethod, $"Metode Pembayaran tidak boleh kosong");
+                e.Valid = false;
+                return;
+            }
+
+            var date = result.Date;
+
+            if (date == null)
+            {
+                gridView.SetColumnError(colDate, $"Tanggal tidak boleh kosong");
+                e.Valid = false;
+                return;
+            }
+
+            if (e.Valid)
+                gridView.ClearColumnErrors();
+        }
+
+        private void _GridViewEmployee_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        {
+            if (e.Row == null) return;
+
+            // update dulu id yang bersesuian
+            RentalCarBookingEmployee row = e.Row as RentalCarBookingEmployee;
+            if (row == null) return;
+            row.EmployeeId = HelperConvert.Int(AssemblyHelper.GetValueProperty(row.Employee, "Id"));
+            row.RentalCarBookingId = _RentalCarBooking.Id;
+            CalculateOperationalCost();
+        }
+
+        private void _GridViewEmployee_RowEditCanceled(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        {
+            if (e.Row == null) return;
+            GridView view = sender as GridView;
+
+            // update dulu id yang bersesuian
+            if (!(e.Row is RentalCarBookingEmployee row)) return;
+
+            for (int i = 0; i < view.RowCount; i++)
+            {
+                if (i != view.GetDataSourceRowIndex(view.FocusedRowHandle))
+                {
+                    var tempVal = HelperConvert.Int(view.GetRowCellValue(i, "EmployeeId"));
+                    if (row.EmployeeId > 0)
+                    {
+                        if (tempVal == row.EmployeeId)
+                        {
+                            view.DeleteRow(e.RowHandle);
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void _GridViewEmployee_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            GridView gridView = sender as GridView;
+
+            var result = gridView.GetFocusedRow() as RentalCarBookingEmployee;
+
+            if (result == null) return;
+
+            var price = result.Amount;
+            if (price != null)
+            {
+                if (price <= 0)
+                {
+                    gridView.SetColumnError(colAmountEmployee, $"Jumlah tidak boleh 0");
+                    e.Valid = false;
+                    return;
+                }
+            }
+            else
+            {
+                gridView.SetColumnError(colAmountEmployee, $"Jumlah tidak boleh kosong");
+                e.Valid = false;
+                return;
+            }
+
+            var employee = result.Employee;
+
+            if (employee == null)
+            {
+                gridView.SetColumnError(colEmployee, $"Karyawan tidak boleh kosong");
+                e.Valid = false;
+                return;
+            }
+            else if (employee.Id == 0)
+            {
+                gridView.SetColumnError(colEmployee, $"Karyawan tidak boleh kosong");
+                e.Valid = false;
+                return;
+            }
+
+            if (e.Valid)
+                gridView.ClearColumnErrors();
         }
 
         private void GroupPassenger_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
@@ -113,51 +299,71 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         {
             bool result = base.InitializeAdditionalValidation();
 
-            //if (rute != null)
-            //{
-            //    string ranges = "";
-            //    foreach (var ruteSchedule in rute.RuteSchedules)
-            //    {
-            //        ranges += $"({ruteSchedule.Schedule.Start.Subtract(new TimeSpan(1, 0, 0))} - {ruteSchedule.Schedule.Start.Add(new TimeSpan(1, 0, 0))})" + Environment.NewLine;
-            //    }
+            List<RentalCarBookingEmployee> rentalCarBookingEmployees = _BindingSourceEmployee.DataSource as List<RentalCarBookingEmployee>;
+            if (rentalCarBookingEmployees != null)
+            {
+                if (rentalCarBookingEmployees.Any())
+                {
+                    foreach (var item in rentalCarBookingEmployees)
+                    {
+                        if (item.EmployeeId == 0)
+                        {
+                            MessageHelper.ShowMessageError(this, "Karyawan tidak boleh kosong!");
+                            result = false;
+                        }
+                    }
+                }
 
-            //    var schedule = rute.RuteSchedules.Where(s => HelperConvert.Date(TimeDateEdit.EditValue).TimeOfDay >= s.Schedule.Start.Subtract(new TimeSpan(1, 0, 0)) && HelperConvert.Date(TimeDateEdit.EditValue).TimeOfDay <= s.Schedule.Start.Add(new TimeSpan(1, 0, 0))).ToList();
-            //    if (!schedule.Any())
-            //    {
-            //        result = false;
-            //        MessageHelper.ShowMessageError(this, "Pastikan kamu memilih jam sesuai range jadwal yang di tetapkan rute tersebut!" + Environment.NewLine + ranges);
-            //    }
-            //}
+                if (HelperConvert.Decimal(TotalPriceSpinEdit.EditValue) < rentalCarBookingEmployees.Sum(s => s.Amount))
+                {
+                    MessageHelper.ShowMessageError(this, "Total nominal karyawan tidak boleh lebih besar dari harga!");
+                    result = false;
+                }
+            }
+
+
+
+            List<RentalCarBookingPayment> rentalCarBookingPayments = _BindingSourcePayment.DataSource as List<RentalCarBookingPayment>;
+            if (rentalCarBookingPayments != null)
+            {
+                if (HelperConvert.Decimal(TotalPriceSpinEdit.EditValue) < rentalCarBookingPayments.Sum(s => s.Amount))
+                {
+                    MessageHelper.ShowMessageError(this, "Total nominal pembayaran tidak boleh lebih besar dari harga!");
+                    result = false;
+                }
+            }
 
             return result;
         }
 
         protected override void DisplayEntity<T>()
         {
-            StatusSearchLookUpEdit.EditValue = EnumStatusBooking.New;
-            PassengerTypeSearchLookUpEdit.EditValue = EnumPassengerType.Person;
-
-            DateDateEdit.EditValue = DateTime.Today;
-            TimeDateEdit.EditValue = DateTime.Now.TimeOfDay;
-
             base.DisplayEntity<T>();
 
             _RentalCarBooking = OdataEntity as RentalCarBooking;
             if (_RentalCarBooking != null)
             {
                 this.TotalPriceSpinEdit.EditValue = _RentalCarBooking.TotalPrice;
+                this.TotalOperationalCostSpinEdit.EditValue = _RentalCarBooking.TotalOperationalCost;
+                this.TotalPaymentSpinEdit.EditValue = _RentalCarBooking.TotalPayment;
                 this.TimeDateEdit.EditValue = new DateTime(_RentalCarBooking.Time.Ticks);
+                _BindingSourceEmployee.DataSource = _RentalCarBooking.RentalCarBookingEmployees.ToList();
+                _BindingSourcePayment.DataSource = _RentalCarBooking.RentalCarBookingPayments.ToList();
             }
         }
 
         protected override void InitializeSearchLookup()
         {
+            SLUHelper.SetEnumDataSource(PaymentMethodSearchLookUpEdit, new Converter<EnumPaymentMethod, string>(EnumHelper.EnumPaymentMethodToString));
             SLUHelper.SetEnumDataSource(StatusSearchLookUpEdit, new Converter<EnumStatusBooking, string>(EnumHelper.EnumStatusBookingToString));
             SLUHelper.SetEnumDataSource(PassengerTypeSearchLookUpEdit, new Converter<EnumPassengerType, string>(EnumHelper.EnumPassengerTypeToString));
 
             PopupEditHelper.Company(CompanyPopUp);
             PopupEditHelper.Passenger(PassengerPopUp, CompanyPopUp, "CompanyId");
+            PopupEditHelper.General<Employee>("/Employees", EmployeePopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fWidthColumn: "150;150;100;200;150;150;150", fDisplaycolumn: "OrganizationStructure.Name;JobPosition.Name;Code;Name;JoinDate;ResignationDate;PhoneNumber", fCaptionColumn: "Organisasi;Posisi;Kode;Nama;Tanggal Masuk;Tanggal Keluar;Nomor Telepon", fSelect: "Id,OrganizationStructureId,JobPositionId,Code,Name,JoinDate,ResignationDate,PhoneNumber", fExpand: "OrganizationStructure($select=name),JobPosition($select=name)");
+
             PopupEditHelper.General<CategoryVehicle>("/CategoryVehicles", CategoryVehiclePopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama");
+            PopupEditHelper.General<Vehicles>("/Vehicles", VehiclePopUp, fCascade: CategoryVehiclePopUp, fCascadeMember: "CategoryVehicleId", fWidthColumn: "200;200;300;200;200", fDisplaycolumn: "Brand.Name;ModelUnit.Name;VehicleNumber;VehicleColor;Seat", fCaptionColumn: "Merek;Model;Nomor Kendaraan (Plat);Warna;Jumlah Bangku", fDisplayText: "Brand.Name;ModelUnit.Name;VehicleNumber;VehicleColor;Seat", fSelect: "Id,BrandId,ModelUnitId,CategoryVehicleId,VehicleNumber,VehicleColor,Seat", fExpand: "Brand($select=name),ModelUnit($select=name)");
 
             PopupEditHelper.General<District>(fEndPoint: "/Districts", fTitle: "Kecamatan", fControl: PickupDistrictPopUp, fWidthColumn: "150;200;300", fDisplaycolumn: "Province.Name;City.Name;Name", fCaptionColumn: "Provinsi;Kota;Kecamatan", fDisplayText: "Name", fSelect: "Id,Name,ProvinceId,CityId", fExpand: "Province($select=code,name),City($select=code,name)");
 
@@ -202,6 +408,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             _RentalCarBooking.CompanyId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CompanyPopUp.EditValue, "Id"));
             _RentalCarBooking.PassengerId = HelperConvert.Int(AssemblyHelper.GetValueProperty(PassengerPopUp.EditValue, "Id"));
             _RentalCarBooking.CategoryVehicleId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CategoryVehiclePopUp.EditValue, "Id"));
+            _RentalCarBooking.VehicleId = HelperConvert.Int(AssemblyHelper.GetValueProperty(VehiclePopUp.EditValue, "Id"));
             _RentalCarBooking.Date = HelperConvert.Date(DateDateEdit.EditValue);
             _RentalCarBooking.Time = HelperConvert.Date(TimeDateEdit.EditValue).TimeOfDay;
             _RentalCarBooking.PassengerType = (EnumPassengerType)PassengerTypeSearchLookUpEdit.EditValue;
@@ -218,8 +425,17 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             _RentalCarBooking.DeliveryAddress = HelperConvert.String(DeliveryAddressMemoEdit.EditValue);
 
             _RentalCarBooking.TotalPrice = HelperConvert.Decimal(TotalPriceSpinEdit.EditValue);
+            _RentalCarBooking.BBM = HelperConvert.Decimal(BBMSpinEdit.EditValue);
+            _RentalCarBooking.TotalOperationalCost = HelperConvert.Decimal(TotalOperationalCostSpinEdit.EditValue);
+            _RentalCarBooking.TotalPayment = HelperConvert.Decimal(TotalPaymentSpinEdit.EditValue);
 
             _RentalCarBooking.Note = HelperConvert.String(NoteMemoEdit.EditValue);
+
+            List<RentalCarBookingEmployee> rentalCarBookingEmployees = _BindingSourceEmployee.DataSource as List<RentalCarBookingEmployee>;
+            _RentalCarBooking.RentalCarBookingEmployees = rentalCarBookingEmployees;
+
+            List<RentalCarBookingPayment> rentalCarBookingPayments = _BindingSourcePayment.DataSource as List<RentalCarBookingPayment>;
+            _RentalCarBooking.RentalCarBookingPayments = rentalCarBookingPayments;
 
             OdataEntity = _RentalCarBooking;
         }

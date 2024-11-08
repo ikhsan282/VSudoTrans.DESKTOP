@@ -30,6 +30,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRentalCarBookingDV));
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -59,8 +60,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.TimeDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.ItemForDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.DateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.ItemForNote = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NoteMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.groupPassenger = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForPassenger = new DevExpress.XtraLayout.LayoutControlItem();
             this.PassengerPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
@@ -74,6 +73,39 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ItemForTotalPrice = new DevExpress.XtraLayout.LayoutControlItem();
             this.TotalPriceSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ItemForVehicle = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VehiclePopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
+            this.layoutControlGroupEmployee = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForGridEmployee = new DevExpress.XtraLayout.LayoutControlItem();
+            this._GridControlEmployee = new DevExpress.XtraGrid.GridControl();
+            this._BindingSourceEmployee = new System.Windows.Forms.BindingSource(this.components);
+            this._GridViewEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colEmployee = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.EmployeePopUp = new VSudoTrans.DESKTOP.Descendant.RepositoryItemPopupContainerEditOwn();
+            this.colEmployeeJobPositionName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmployeeOrganizationStructureName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAmountEmployee = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.AmountEmployeeSpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.ItemForBBM = new DevExpress.XtraLayout.LayoutControlItem();
+            this.BBMSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ItemForTotalOperationalCost = new DevExpress.XtraLayout.LayoutControlItem();
+            this.TotalOperationalCostSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.layoutControlGroupPayment = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForGridPayment = new DevExpress.XtraLayout.LayoutControlItem();
+            this._GridControlPayment = new DevExpress.XtraGrid.GridControl();
+            this._BindingSourcePayment = new System.Windows.Forms.BindingSource(this.components);
+            this._GridViewPayment = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colPaymentMethod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PaymentMethodSearchLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAmountPayment = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.AmountPaymentSpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.ItemForTotalPayment = new DevExpress.XtraLayout.LayoutControlItem();
+            this.TotalPaymentSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.layoutControlGroupNote = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForNote = new DevExpress.XtraLayout.LayoutControlItem();
+            this.NoteMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForCreatedUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.CreatedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -120,8 +152,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupPassenger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPassenger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PassengerPopUp.Properties)).BeginInit();
@@ -135,6 +165,32 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TotalPriceSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehiclePopUp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControlEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridViewEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeePopUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountEmployeeSpinEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBBM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BBMSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalOperationalCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalOperationalCostSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridPayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControlPayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourcePayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridViewPayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentMethodSearchLookUpEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountPaymentSpinEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalPayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalPaymentSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupNote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).BeginInit();
@@ -152,6 +208,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             // 
             // _DataLayoutControl
             // 
+            this._DataLayoutControl.Controls.Add(this.TotalPaymentSpinEdit);
+            this._DataLayoutControl.Controls.Add(this.TotalOperationalCostSpinEdit);
+            this._DataLayoutControl.Controls.Add(this.BBMSpinEdit);
+            this._DataLayoutControl.Controls.Add(this.VehiclePopUp);
+            this._DataLayoutControl.Controls.Add(this._GridControlPayment);
+            this._DataLayoutControl.Controls.Add(this._GridControlEmployee);
             this._DataLayoutControl.Controls.Add(this.TotalPriceSpinEdit);
             this._DataLayoutControl.Controls.Add(this.PassengerTypeSearchLookUpEdit);
             this._DataLayoutControl.Controls.Add(this.CategoryVehiclePopUp);
@@ -190,7 +252,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             // 
             this.lcgRoot.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
-            this.lcgRoot.Size = new System.Drawing.Size(1141, 808);
+            this.lcgRoot.Name = "Root";
+            this.lcgRoot.Size = new System.Drawing.Size(1141, 742);
             // 
             // mainRibbonControl
             // 
@@ -234,16 +297,19 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.tabbedControlGroup1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1123, 790);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1123, 724);
             // 
             // tabbedControlGroup1
             // 
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup2;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1123, 790);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1123, 724);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,
+            this.layoutControlGroupEmployee,
+            this.layoutControlGroupPayment,
+            this.layoutControlGroupNote,
             this.layoutControlGroup3});
             // 
             // layoutControlGroup2
@@ -254,15 +320,15 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.groupDelivery,
             this.ItemForTime,
             this.ItemForDate,
-            this.ItemForNote,
             this.groupPassenger,
             this.ItemForStatus,
             this.ItemForCategoryVehicle,
             this.ItemForPassengerType,
-            this.ItemForTotalPrice});
+            this.ItemForTotalPrice,
+            this.ItemForVehicle});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1099, 734);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1099, 668);
             this.layoutControlGroup2.Text = "Detail";
             // 
             // ItemForCompanyId
@@ -272,12 +338,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForCompanyId.Name = "ItemForCompanyId";
             this.ItemForCompanyId.Size = new System.Drawing.Size(1099, 38);
             this.ItemForCompanyId.Text = "Perusahaan";
-            this.ItemForCompanyId.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForCompanyId.TextSize = new System.Drawing.Size(187, 21);
             // 
             // CompanyPopUp
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
-            this.CompanyPopUp.Location = new System.Drawing.Point(144, 55);
+            this.CompanyPopUp.Location = new System.Drawing.Point(222, 55);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -311,7 +377,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.CompanyPopUp.Properties.OptionsDisplayWidth = "";
             this.CompanyPopUp.Properties.OptionsFilterColumns = "";
             this.CompanyPopUp.Properties.OptionsSortColumns = "";
-            this.CompanyPopUp.Size = new System.Drawing.Size(974, 34);
+            this.CompanyPopUp.Size = new System.Drawing.Size(896, 34);
             this.CompanyPopUp.StyleController = this._DataLayoutControl;
             this.CompanyPopUp.TabIndex = 4;
             // 
@@ -322,7 +388,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForPickupProvince,
             this.ItemForPickupCity,
             this.ItemForPickupDistrict});
-            this.groupPickup.Location = new System.Drawing.Point(0, 358);
+            this.groupPickup.Location = new System.Drawing.Point(0, 396);
             this.groupPickup.Name = "groupPickup";
             this.groupPickup.Size = new System.Drawing.Size(549, 272);
             this.groupPickup.Text = "Penjemputan";
@@ -334,16 +400,16 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForPickupAddress.Name = "ItemForPickupAddress";
             this.ItemForPickupAddress.Size = new System.Drawing.Size(525, 104);
             this.ItemForPickupAddress.Text = "Detail Alamat";
-            this.ItemForPickupAddress.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForPickupAddress.TextSize = new System.Drawing.Size(187, 21);
             // 
             // PickupAddressMemoEdit
             // 
             this.PickupAddressMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PickupAddress", true));
-            this.PickupAddressMemoEdit.Location = new System.Drawing.Point(156, 569);
+            this.PickupAddressMemoEdit.Location = new System.Drawing.Point(234, 607);
             this.PickupAddressMemoEdit.MenuManager = this.mainRibbonControl;
             this.PickupAddressMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
             this.PickupAddressMemoEdit.Name = "PickupAddressMemoEdit";
-            this.PickupAddressMemoEdit.Size = new System.Drawing.Size(400, 100);
+            this.PickupAddressMemoEdit.Size = new System.Drawing.Size(322, 100);
             this.PickupAddressMemoEdit.StyleController = this._DataLayoutControl;
             this.PickupAddressMemoEdit.TabIndex = 23;
             // 
@@ -354,17 +420,17 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForPickupProvince.Name = "ItemForPickupProvince";
             this.ItemForPickupProvince.Size = new System.Drawing.Size(525, 38);
             this.ItemForPickupProvince.Text = "Provinsi";
-            this.ItemForPickupProvince.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForPickupProvince.TextSize = new System.Drawing.Size(187, 21);
             // 
             // PickupProvinceTextEdit
             // 
-            this.PickupProvinceTextEdit.Location = new System.Drawing.Point(156, 455);
+            this.PickupProvinceTextEdit.Location = new System.Drawing.Point(234, 493);
             this.PickupProvinceTextEdit.MenuManager = this.mainRibbonControl;
             this.PickupProvinceTextEdit.Name = "PickupProvinceTextEdit";
             this.PickupProvinceTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.PickupProvinceTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.PickupProvinceTextEdit.Properties.ReadOnly = true;
-            this.PickupProvinceTextEdit.Size = new System.Drawing.Size(400, 34);
+            this.PickupProvinceTextEdit.Size = new System.Drawing.Size(322, 34);
             this.PickupProvinceTextEdit.StyleController = this._DataLayoutControl;
             this.PickupProvinceTextEdit.TabIndex = 37;
             // 
@@ -375,17 +441,17 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForPickupCity.Name = "ItemForPickupCity";
             this.ItemForPickupCity.Size = new System.Drawing.Size(525, 38);
             this.ItemForPickupCity.Text = "Kota";
-            this.ItemForPickupCity.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForPickupCity.TextSize = new System.Drawing.Size(187, 21);
             // 
             // PickupCityTextEdit
             // 
-            this.PickupCityTextEdit.Location = new System.Drawing.Point(156, 493);
+            this.PickupCityTextEdit.Location = new System.Drawing.Point(234, 531);
             this.PickupCityTextEdit.MenuManager = this.mainRibbonControl;
             this.PickupCityTextEdit.Name = "PickupCityTextEdit";
             this.PickupCityTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.PickupCityTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.PickupCityTextEdit.Properties.ReadOnly = true;
-            this.PickupCityTextEdit.Size = new System.Drawing.Size(400, 34);
+            this.PickupCityTextEdit.Size = new System.Drawing.Size(322, 34);
             this.PickupCityTextEdit.StyleController = this._DataLayoutControl;
             this.PickupCityTextEdit.TabIndex = 38;
             // 
@@ -396,12 +462,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForPickupDistrict.Name = "ItemForPickupDistrict";
             this.ItemForPickupDistrict.Size = new System.Drawing.Size(525, 38);
             this.ItemForPickupDistrict.Text = "Kecamatan";
-            this.ItemForPickupDistrict.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForPickupDistrict.TextSize = new System.Drawing.Size(187, 21);
             // 
             // PickupDistrictPopUp
             // 
             this.PickupDistrictPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PickupPointDistrict", true));
-            this.PickupDistrictPopUp.Location = new System.Drawing.Point(156, 531);
+            this.PickupDistrictPopUp.Location = new System.Drawing.Point(234, 569);
             this.PickupDistrictPopUp.MenuManager = this.mainRibbonControl;
             this.PickupDistrictPopUp.Name = "PickupDistrictPopUp";
             this.PickupDistrictPopUp.ObjectId = null;
@@ -435,7 +501,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.PickupDistrictPopUp.Properties.OptionsDisplayWidth = "";
             this.PickupDistrictPopUp.Properties.OptionsFilterColumns = "";
             this.PickupDistrictPopUp.Properties.OptionsSortColumns = "";
-            this.PickupDistrictPopUp.Size = new System.Drawing.Size(400, 34);
+            this.PickupDistrictPopUp.Size = new System.Drawing.Size(322, 34);
             this.PickupDistrictPopUp.StyleController = this._DataLayoutControl;
             this.PickupDistrictPopUp.TabIndex = 39;
             // 
@@ -446,7 +512,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForDeliveryProvince,
             this.ItemForDeliveryCity,
             this.ItemForDeliveryDistrict});
-            this.groupDelivery.Location = new System.Drawing.Point(549, 358);
+            this.groupDelivery.Location = new System.Drawing.Point(549, 396);
             this.groupDelivery.Name = "groupDelivery";
             this.groupDelivery.Size = new System.Drawing.Size(550, 272);
             this.groupDelivery.Text = "Pengantaran";
@@ -458,16 +524,16 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForDeliveryAddress.Name = "ItemForDeliveryAddress";
             this.ItemForDeliveryAddress.Size = new System.Drawing.Size(526, 104);
             this.ItemForDeliveryAddress.Text = "Detail Alamat";
-            this.ItemForDeliveryAddress.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForDeliveryAddress.TextSize = new System.Drawing.Size(187, 21);
             // 
             // DeliveryAddressMemoEdit
             // 
             this.DeliveryAddressMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DeliveryAddress", true));
-            this.DeliveryAddressMemoEdit.Location = new System.Drawing.Point(705, 569);
+            this.DeliveryAddressMemoEdit.Location = new System.Drawing.Point(783, 607);
             this.DeliveryAddressMemoEdit.MenuManager = this.mainRibbonControl;
             this.DeliveryAddressMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
             this.DeliveryAddressMemoEdit.Name = "DeliveryAddressMemoEdit";
-            this.DeliveryAddressMemoEdit.Size = new System.Drawing.Size(401, 100);
+            this.DeliveryAddressMemoEdit.Size = new System.Drawing.Size(323, 100);
             this.DeliveryAddressMemoEdit.StyleController = this._DataLayoutControl;
             this.DeliveryAddressMemoEdit.TabIndex = 24;
             // 
@@ -478,17 +544,17 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForDeliveryProvince.Name = "ItemForDeliveryProvince";
             this.ItemForDeliveryProvince.Size = new System.Drawing.Size(526, 38);
             this.ItemForDeliveryProvince.Text = "Provinsi";
-            this.ItemForDeliveryProvince.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForDeliveryProvince.TextSize = new System.Drawing.Size(187, 21);
             // 
             // DeliveryProvinceTextEdit
             // 
-            this.DeliveryProvinceTextEdit.Location = new System.Drawing.Point(705, 455);
+            this.DeliveryProvinceTextEdit.Location = new System.Drawing.Point(783, 493);
             this.DeliveryProvinceTextEdit.MenuManager = this.mainRibbonControl;
             this.DeliveryProvinceTextEdit.Name = "DeliveryProvinceTextEdit";
             this.DeliveryProvinceTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.DeliveryProvinceTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.DeliveryProvinceTextEdit.Properties.ReadOnly = true;
-            this.DeliveryProvinceTextEdit.Size = new System.Drawing.Size(401, 34);
+            this.DeliveryProvinceTextEdit.Size = new System.Drawing.Size(323, 34);
             this.DeliveryProvinceTextEdit.StyleController = this._DataLayoutControl;
             this.DeliveryProvinceTextEdit.TabIndex = 40;
             // 
@@ -499,17 +565,17 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForDeliveryCity.Name = "ItemForDeliveryCity";
             this.ItemForDeliveryCity.Size = new System.Drawing.Size(526, 38);
             this.ItemForDeliveryCity.Text = "Kota";
-            this.ItemForDeliveryCity.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForDeliveryCity.TextSize = new System.Drawing.Size(187, 21);
             // 
             // DeliveryCityTextEdit
             // 
-            this.DeliveryCityTextEdit.Location = new System.Drawing.Point(705, 493);
+            this.DeliveryCityTextEdit.Location = new System.Drawing.Point(783, 531);
             this.DeliveryCityTextEdit.MenuManager = this.mainRibbonControl;
             this.DeliveryCityTextEdit.Name = "DeliveryCityTextEdit";
             this.DeliveryCityTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.DeliveryCityTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.DeliveryCityTextEdit.Properties.ReadOnly = true;
-            this.DeliveryCityTextEdit.Size = new System.Drawing.Size(401, 34);
+            this.DeliveryCityTextEdit.Size = new System.Drawing.Size(323, 34);
             this.DeliveryCityTextEdit.StyleController = this._DataLayoutControl;
             this.DeliveryCityTextEdit.TabIndex = 41;
             // 
@@ -520,12 +586,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForDeliveryDistrict.Name = "ItemForDeliveryDistrict";
             this.ItemForDeliveryDistrict.Size = new System.Drawing.Size(526, 38);
             this.ItemForDeliveryDistrict.Text = "Kecamatan";
-            this.ItemForDeliveryDistrict.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForDeliveryDistrict.TextSize = new System.Drawing.Size(187, 21);
             // 
             // DeliveryDistrictPopUp
             // 
             this.DeliveryDistrictPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DeliveryPointDistrict", true));
-            this.DeliveryDistrictPopUp.Location = new System.Drawing.Point(705, 531);
+            this.DeliveryDistrictPopUp.Location = new System.Drawing.Point(783, 569);
             this.DeliveryDistrictPopUp.MenuManager = this.mainRibbonControl;
             this.DeliveryDistrictPopUp.Name = "DeliveryDistrictPopUp";
             this.DeliveryDistrictPopUp.ObjectId = null;
@@ -559,7 +625,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.DeliveryDistrictPopUp.Properties.OptionsDisplayWidth = "";
             this.DeliveryDistrictPopUp.Properties.OptionsFilterColumns = "";
             this.DeliveryDistrictPopUp.Properties.OptionsSortColumns = "";
-            this.DeliveryDistrictPopUp.Size = new System.Drawing.Size(401, 34);
+            this.DeliveryDistrictPopUp.Size = new System.Drawing.Size(323, 34);
             this.DeliveryDistrictPopUp.StyleController = this._DataLayoutControl;
             this.DeliveryDistrictPopUp.TabIndex = 42;
             // 
@@ -570,12 +636,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForTime.Name = "ItemForTime";
             this.ItemForTime.Size = new System.Drawing.Size(1099, 38);
             this.ItemForTime.Text = "Jam";
-            this.ItemForTime.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForTime.TextSize = new System.Drawing.Size(187, 21);
             // 
             // TimeDateEdit
             // 
             this.TimeDateEdit.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.TimeDateEdit.Location = new System.Drawing.Point(144, 131);
+            this.TimeDateEdit.Location = new System.Drawing.Point(222, 131);
             this.TimeDateEdit.MenuManager = this.mainRibbonControl;
             this.TimeDateEdit.Name = "TimeDateEdit";
             this.TimeDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -587,7 +653,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.TimeDateEdit.Properties.EditFormat.FormatString = "";
             this.TimeDateEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.TimeDateEdit.Properties.MaskSettings.Set("mask", "");
-            this.TimeDateEdit.Size = new System.Drawing.Size(974, 34);
+            this.TimeDateEdit.Size = new System.Drawing.Size(896, 34);
             this.TimeDateEdit.StyleController = this._DataLayoutControl;
             this.TimeDateEdit.TabIndex = 7;
             // 
@@ -598,42 +664,22 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForDate.Name = "ItemForDate";
             this.ItemForDate.Size = new System.Drawing.Size(1099, 38);
             this.ItemForDate.Text = "Tanggal";
-            this.ItemForDate.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForDate.TextSize = new System.Drawing.Size(187, 21);
             // 
             // DateDateEdit
             // 
             this.DateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Date", true));
             this.DateDateEdit.EditValue = null;
-            this.DateDateEdit.Location = new System.Drawing.Point(144, 93);
+            this.DateDateEdit.Location = new System.Drawing.Point(222, 93);
             this.DateDateEdit.MenuManager = this.mainRibbonControl;
             this.DateDateEdit.Name = "DateDateEdit";
             this.DateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateDateEdit.Size = new System.Drawing.Size(974, 34);
+            this.DateDateEdit.Size = new System.Drawing.Size(896, 34);
             this.DateDateEdit.StyleController = this._DataLayoutControl;
             this.DateDateEdit.TabIndex = 6;
-            // 
-            // ItemForNote
-            // 
-            this.ItemForNote.Control = this.NoteMemoEdit;
-            this.ItemForNote.Location = new System.Drawing.Point(0, 630);
-            this.ItemForNote.Name = "ItemForNote";
-            this.ItemForNote.Size = new System.Drawing.Size(1099, 104);
-            this.ItemForNote.Text = "Catatan";
-            this.ItemForNote.TextSize = new System.Drawing.Size(109, 21);
-            // 
-            // NoteMemoEdit
-            // 
-            this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
-            this.NoteMemoEdit.Location = new System.Drawing.Point(144, 685);
-            this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
-            this.NoteMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
-            this.NoteMemoEdit.Name = "NoteMemoEdit";
-            this.NoteMemoEdit.Size = new System.Drawing.Size(974, 100);
-            this.NoteMemoEdit.StyleController = this._DataLayoutControl;
-            this.NoteMemoEdit.TabIndex = 29;
             // 
             // groupPassenger
             // 
@@ -643,7 +689,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.groupPassenger.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
             this.groupPassenger.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForPassenger});
-            this.groupPassenger.Location = new System.Drawing.Point(0, 266);
+            this.groupPassenger.Location = new System.Drawing.Point(0, 304);
             this.groupPassenger.Name = "groupPassenger";
             this.groupPassenger.Size = new System.Drawing.Size(1099, 92);
             this.groupPassenger.Text = "Penumpang";
@@ -655,12 +701,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForPassenger.Name = "ItemForPassenger";
             this.ItemForPassenger.Size = new System.Drawing.Size(1075, 38);
             this.ItemForPassenger.Text = "Penumpang";
-            this.ItemForPassenger.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForPassenger.TextSize = new System.Drawing.Size(187, 21);
             // 
             // PassengerPopUp
             // 
             this.PassengerPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Passenger", true));
-            this.PassengerPopUp.Location = new System.Drawing.Point(156, 363);
+            this.PassengerPopUp.Location = new System.Drawing.Point(234, 401);
             this.PassengerPopUp.MenuManager = this.mainRibbonControl;
             this.PassengerPopUp.Name = "PassengerPopUp";
             this.PassengerPopUp.ObjectId = null;
@@ -694,23 +740,23 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.PassengerPopUp.Properties.OptionsDisplayWidth = "";
             this.PassengerPopUp.Properties.OptionsFilterColumns = "";
             this.PassengerPopUp.Properties.OptionsSortColumns = "";
-            this.PassengerPopUp.Size = new System.Drawing.Size(950, 34);
+            this.PassengerPopUp.Size = new System.Drawing.Size(872, 34);
             this.PassengerPopUp.StyleController = this._DataLayoutControl;
             this.PassengerPopUp.TabIndex = 44;
             // 
             // ItemForStatus
             // 
             this.ItemForStatus.Control = this.StatusSearchLookUpEdit;
-            this.ItemForStatus.Location = new System.Drawing.Point(0, 228);
+            this.ItemForStatus.Location = new System.Drawing.Point(0, 266);
             this.ItemForStatus.Name = "ItemForStatus";
             this.ItemForStatus.Size = new System.Drawing.Size(1099, 38);
             this.ItemForStatus.Text = "Status";
-            this.ItemForStatus.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForStatus.TextSize = new System.Drawing.Size(187, 21);
             // 
             // StatusSearchLookUpEdit
             // 
             this.StatusSearchLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Status", true));
-            this.StatusSearchLookUpEdit.Location = new System.Drawing.Point(144, 283);
+            this.StatusSearchLookUpEdit.Location = new System.Drawing.Point(222, 321);
             this.StatusSearchLookUpEdit.MenuManager = this.mainRibbonControl;
             this.StatusSearchLookUpEdit.Name = "StatusSearchLookUpEdit";
             this.StatusSearchLookUpEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -720,7 +766,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.StatusSearchLookUpEdit.Properties.NullText = "";
             this.StatusSearchLookUpEdit.Properties.PopupSizeable = false;
             this.StatusSearchLookUpEdit.Properties.PopupView = this.gridView3;
-            this.StatusSearchLookUpEdit.Size = new System.Drawing.Size(974, 34);
+            this.StatusSearchLookUpEdit.Size = new System.Drawing.Size(896, 34);
             this.StatusSearchLookUpEdit.StyleController = this._DataLayoutControl;
             this.StatusSearchLookUpEdit.TabIndex = 17;
             // 
@@ -738,12 +784,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForCategoryVehicle.Name = "ItemForCategoryVehicle";
             this.ItemForCategoryVehicle.Size = new System.Drawing.Size(1099, 38);
             this.ItemForCategoryVehicle.Text = "Kategori";
-            this.ItemForCategoryVehicle.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForCategoryVehicle.TextSize = new System.Drawing.Size(187, 21);
             // 
             // CategoryVehiclePopUp
             // 
             this.CategoryVehiclePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CategoryVehicle", true));
-            this.CategoryVehiclePopUp.Location = new System.Drawing.Point(144, 169);
+            this.CategoryVehiclePopUp.Location = new System.Drawing.Point(222, 169);
             this.CategoryVehiclePopUp.MenuManager = this.mainRibbonControl;
             this.CategoryVehiclePopUp.Name = "CategoryVehiclePopUp";
             this.CategoryVehiclePopUp.ObjectId = null;
@@ -777,30 +823,30 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.CategoryVehiclePopUp.Properties.OptionsDisplayWidth = "";
             this.CategoryVehiclePopUp.Properties.OptionsFilterColumns = "";
             this.CategoryVehiclePopUp.Properties.OptionsSortColumns = "";
-            this.CategoryVehiclePopUp.Size = new System.Drawing.Size(974, 34);
+            this.CategoryVehiclePopUp.Size = new System.Drawing.Size(896, 34);
             this.CategoryVehiclePopUp.StyleController = this._DataLayoutControl;
             this.CategoryVehiclePopUp.TabIndex = 45;
             // 
             // ItemForPassengerType
             // 
             this.ItemForPassengerType.Control = this.PassengerTypeSearchLookUpEdit;
-            this.ItemForPassengerType.Location = new System.Drawing.Point(0, 152);
+            this.ItemForPassengerType.Location = new System.Drawing.Point(0, 190);
             this.ItemForPassengerType.Name = "ItemForPassengerType";
             this.ItemForPassengerType.Size = new System.Drawing.Size(1099, 38);
             this.ItemForPassengerType.Text = "Tipe";
-            this.ItemForPassengerType.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForPassengerType.TextSize = new System.Drawing.Size(187, 21);
             // 
             // PassengerTypeSearchLookUpEdit
             // 
             this.PassengerTypeSearchLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "PassengerType", true));
-            this.PassengerTypeSearchLookUpEdit.Location = new System.Drawing.Point(144, 207);
+            this.PassengerTypeSearchLookUpEdit.Location = new System.Drawing.Point(222, 245);
             this.PassengerTypeSearchLookUpEdit.MenuManager = this.mainRibbonControl;
             this.PassengerTypeSearchLookUpEdit.Name = "PassengerTypeSearchLookUpEdit";
             this.PassengerTypeSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.PassengerTypeSearchLookUpEdit.Properties.NullText = "";
             this.PassengerTypeSearchLookUpEdit.Properties.PopupView = this.gridView1;
-            this.PassengerTypeSearchLookUpEdit.Size = new System.Drawing.Size(974, 34);
+            this.PassengerTypeSearchLookUpEdit.Size = new System.Drawing.Size(896, 34);
             this.PassengerTypeSearchLookUpEdit.StyleController = this._DataLayoutControl;
             this.PassengerTypeSearchLookUpEdit.TabIndex = 46;
             // 
@@ -814,11 +860,11 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             // ItemForTotalPrice
             // 
             this.ItemForTotalPrice.Control = this.TotalPriceSpinEdit;
-            this.ItemForTotalPrice.Location = new System.Drawing.Point(0, 190);
+            this.ItemForTotalPrice.Location = new System.Drawing.Point(0, 228);
             this.ItemForTotalPrice.Name = "ItemForTotalPrice";
             this.ItemForTotalPrice.Size = new System.Drawing.Size(1099, 38);
             this.ItemForTotalPrice.Text = "Harga";
-            this.ItemForTotalPrice.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForTotalPrice.TextSize = new System.Drawing.Size(187, 21);
             // 
             // TotalPriceSpinEdit
             // 
@@ -827,14 +873,397 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             0,
             0,
             0});
-            this.TotalPriceSpinEdit.Location = new System.Drawing.Point(144, 245);
+            this.TotalPriceSpinEdit.Location = new System.Drawing.Point(222, 283);
             this.TotalPriceSpinEdit.MenuManager = this.mainRibbonControl;
             this.TotalPriceSpinEdit.Name = "TotalPriceSpinEdit";
             this.TotalPriceSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TotalPriceSpinEdit.Size = new System.Drawing.Size(974, 34);
+            this.TotalPriceSpinEdit.Size = new System.Drawing.Size(896, 34);
             this.TotalPriceSpinEdit.StyleController = this._DataLayoutControl;
             this.TotalPriceSpinEdit.TabIndex = 47;
+            // 
+            // ItemForVehicle
+            // 
+            this.ItemForVehicle.Control = this.VehiclePopUp;
+            this.ItemForVehicle.Location = new System.Drawing.Point(0, 152);
+            this.ItemForVehicle.Name = "ItemForVehicle";
+            this.ItemForVehicle.Size = new System.Drawing.Size(1099, 38);
+            this.ItemForVehicle.Text = "Kendaraan";
+            this.ItemForVehicle.TextSize = new System.Drawing.Size(187, 21);
+            // 
+            // VehiclePopUp
+            // 
+            this.VehiclePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Vehicle", true));
+            this.VehiclePopUp.Location = new System.Drawing.Point(222, 207);
+            this.VehiclePopUp.MenuManager = this.mainRibbonControl;
+            this.VehiclePopUp.Name = "VehiclePopUp";
+            this.VehiclePopUp.ObjectId = null;
+            this.VehiclePopUp.OptionsCascadeControl = null;
+            this.VehiclePopUp.OptionsCascadeMember = null;
+            this.VehiclePopUp.OptionsChildControl = null;
+            this.VehiclePopUp.OptionsDataSource = null;
+            this.VehiclePopUp.OptionsDataType = null;
+            this.VehiclePopUp.OptionsDisplayCaption = null;
+            this.VehiclePopUp.OptionsDisplayColumns = null;
+            this.VehiclePopUp.OptionsDisplayText = null;
+            this.VehiclePopUp.OptionsDisplayTitle = null;
+            this.VehiclePopUp.OptionsDisplayWidth = null;
+            this.VehiclePopUp.OptionsFilterColumns = null;
+            this.VehiclePopUp.OptionsSortColumns = null;
+            this.VehiclePopUp.Properties.Appearance.Options.UseTextOptions = true;
+            this.VehiclePopUp.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.VehiclePopUp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VehiclePopUp.Properties.ObjectId = "";
+            this.VehiclePopUp.Properties.OptionsCascadeControl = null;
+            this.VehiclePopUp.Properties.OptionsCascadeMember = "";
+            this.VehiclePopUp.Properties.OptionsChildControl = null;
+            this.VehiclePopUp.Properties.OptionsDataSource = null;
+            this.VehiclePopUp.Properties.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
+            this.VehiclePopUp.Properties.OptionsDisplayCaption = "";
+            this.VehiclePopUp.Properties.OptionsDisplayColumns = "";
+            this.VehiclePopUp.Properties.OptionsDisplayFormat = "";
+            this.VehiclePopUp.Properties.OptionsDisplayText = "";
+            this.VehiclePopUp.Properties.OptionsDisplayTitle = "";
+            this.VehiclePopUp.Properties.OptionsDisplayWidth = "";
+            this.VehiclePopUp.Properties.OptionsFilterColumns = "";
+            this.VehiclePopUp.Properties.OptionsSortColumns = "";
+            this.VehiclePopUp.Size = new System.Drawing.Size(896, 34);
+            this.VehiclePopUp.StyleController = this._DataLayoutControl;
+            this.VehiclePopUp.TabIndex = 50;
+            // 
+            // layoutControlGroupEmployee
+            // 
+            this.layoutControlGroupEmployee.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForGridEmployee,
+            this.ItemForBBM,
+            this.ItemForTotalOperationalCost});
+            this.layoutControlGroupEmployee.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroupEmployee.Name = "layoutControlGroupEmployee";
+            this.layoutControlGroupEmployee.Size = new System.Drawing.Size(1099, 668);
+            this.layoutControlGroupEmployee.Text = "Sopir/Kernet/Montir";
+            // 
+            // ItemForGridEmployee
+            // 
+            this.ItemForGridEmployee.Control = this._GridControlEmployee;
+            this.ItemForGridEmployee.Location = new System.Drawing.Point(0, 76);
+            this.ItemForGridEmployee.Name = "ItemForGridEmployee";
+            this.ItemForGridEmployee.Size = new System.Drawing.Size(1099, 592);
+            this.ItemForGridEmployee.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForGridEmployee.TextVisible = false;
+            // 
+            // _GridControlEmployee
+            // 
+            this._GridControlEmployee.DataSource = this._BindingSourceEmployee;
+            this._GridControlEmployee.Location = new System.Drawing.Point(23, 131);
+            this._GridControlEmployee.MainView = this._GridViewEmployee;
+            this._GridControlEmployee.MenuManager = this.mainRibbonControl;
+            this._GridControlEmployee.Name = "_GridControlEmployee";
+            this._GridControlEmployee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.EmployeePopUp,
+            this.AmountEmployeeSpinEdit});
+            this._GridControlEmployee.Size = new System.Drawing.Size(1095, 588);
+            this._GridControlEmployee.TabIndex = 48;
+            this._GridControlEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this._GridViewEmployee});
+            // 
+            // _BindingSourceEmployee
+            // 
+            this._BindingSourceEmployee.DataSource = typeof(Domain.Entities.Rental.RentalCarBookingEmployee);
+            // 
+            // _GridViewEmployee
+            // 
+            this._GridViewEmployee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEmployee,
+            this.colEmployeeJobPositionName,
+            this.colEmployeeOrganizationStructureName,
+            this.colAmountEmployee});
+            this._GridViewEmployee.GridControl = this._GridControlEmployee;
+            this._GridViewEmployee.Name = "_GridViewEmployee";
+            // 
+            // colEmployee
+            // 
+            this.colEmployee.Caption = "Karyawan";
+            this.colEmployee.ColumnEdit = this.EmployeePopUp;
+            this.colEmployee.FieldName = "Employee";
+            this.colEmployee.MinWidth = 30;
+            this.colEmployee.Name = "colEmployee";
+            this.colEmployee.Visible = true;
+            this.colEmployee.VisibleIndex = 0;
+            this.colEmployee.Width = 112;
+            // 
+            // EmployeePopUp
+            // 
+            this.EmployeePopUp.Appearance.Options.UseTextOptions = true;
+            this.EmployeePopUp.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.EmployeePopUp.AutoHeight = false;
+            this.EmployeePopUp.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EmployeePopUp.Name = "EmployeePopUp";
+            this.EmployeePopUp.ObjectId = null;
+            this.EmployeePopUp.OptionsCascadeControl = null;
+            this.EmployeePopUp.OptionsCascadeMember = "";
+            this.EmployeePopUp.OptionsChildControl = null;
+            this.EmployeePopUp.OptionsDataSource = null;
+            this.EmployeePopUp.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
+            this.EmployeePopUp.OptionsDisplayCaption = "";
+            this.EmployeePopUp.OptionsDisplayColumns = "";
+            this.EmployeePopUp.OptionsDisplayFormat = "";
+            this.EmployeePopUp.OptionsDisplayText = "";
+            this.EmployeePopUp.OptionsDisplayTitle = "";
+            this.EmployeePopUp.OptionsDisplayWidth = "";
+            this.EmployeePopUp.OptionsFilterColumns = "";
+            this.EmployeePopUp.OptionsSortColumns = "";
+            // 
+            // colEmployeeJobPositionName
+            // 
+            this.colEmployeeJobPositionName.Caption = "Organisasi";
+            this.colEmployeeJobPositionName.FieldName = "Employee.JobPosition.Name";
+            this.colEmployeeJobPositionName.MinWidth = 30;
+            this.colEmployeeJobPositionName.Name = "colEmployeeJobPositionName";
+            this.colEmployeeJobPositionName.OptionsColumn.ReadOnly = true;
+            this.colEmployeeJobPositionName.Visible = true;
+            this.colEmployeeJobPositionName.VisibleIndex = 1;
+            this.colEmployeeJobPositionName.Width = 112;
+            // 
+            // colEmployeeOrganizationStructureName
+            // 
+            this.colEmployeeOrganizationStructureName.Caption = "Posisi";
+            this.colEmployeeOrganizationStructureName.FieldName = "Employee.OrganizationStructure.Name";
+            this.colEmployeeOrganizationStructureName.MinWidth = 30;
+            this.colEmployeeOrganizationStructureName.Name = "colEmployeeOrganizationStructureName";
+            this.colEmployeeOrganizationStructureName.OptionsColumn.ReadOnly = true;
+            this.colEmployeeOrganizationStructureName.Visible = true;
+            this.colEmployeeOrganizationStructureName.VisibleIndex = 2;
+            this.colEmployeeOrganizationStructureName.Width = 112;
+            // 
+            // colAmountEmployee
+            // 
+            this.colAmountEmployee.Caption = "Nominal";
+            this.colAmountEmployee.ColumnEdit = this.AmountEmployeeSpinEdit;
+            this.colAmountEmployee.FieldName = "Amount";
+            this.colAmountEmployee.MinWidth = 30;
+            this.colAmountEmployee.Name = "colAmountEmployee";
+            this.colAmountEmployee.Visible = true;
+            this.colAmountEmployee.VisibleIndex = 3;
+            this.colAmountEmployee.Width = 112;
+            // 
+            // AmountEmployeeSpinEdit
+            // 
+            this.AmountEmployeeSpinEdit.AutoHeight = false;
+            this.AmountEmployeeSpinEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.AmountEmployeeSpinEdit.Name = "AmountEmployeeSpinEdit";
+            // 
+            // ItemForBBM
+            // 
+            this.ItemForBBM.Control = this.BBMSpinEdit;
+            this.ItemForBBM.Location = new System.Drawing.Point(0, 38);
+            this.ItemForBBM.Name = "ItemForBBM";
+            this.ItemForBBM.Size = new System.Drawing.Size(1099, 38);
+            this.ItemForBBM.Text = "Bahan Bakar Minyak (BBM)";
+            this.ItemForBBM.TextSize = new System.Drawing.Size(187, 21);
+            // 
+            // BBMSpinEdit
+            // 
+            this.BBMSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "BBM", true));
+            this.BBMSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.BBMSpinEdit.Location = new System.Drawing.Point(222, 93);
+            this.BBMSpinEdit.MenuManager = this.mainRibbonControl;
+            this.BBMSpinEdit.Name = "BBMSpinEdit";
+            this.BBMSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BBMSpinEdit.Size = new System.Drawing.Size(896, 34);
+            this.BBMSpinEdit.StyleController = this._DataLayoutControl;
+            this.BBMSpinEdit.TabIndex = 51;
+            // 
+            // ItemForTotalOperationalCost
+            // 
+            this.ItemForTotalOperationalCost.Control = this.TotalOperationalCostSpinEdit;
+            this.ItemForTotalOperationalCost.Location = new System.Drawing.Point(0, 0);
+            this.ItemForTotalOperationalCost.Name = "ItemForTotalOperationalCost";
+            this.ItemForTotalOperationalCost.Size = new System.Drawing.Size(1099, 38);
+            this.ItemForTotalOperationalCost.Text = "Total Biaya Operasional";
+            this.ItemForTotalOperationalCost.TextSize = new System.Drawing.Size(187, 21);
+            // 
+            // TotalOperationalCostSpinEdit
+            // 
+            this.TotalOperationalCostSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.TotalOperationalCostSpinEdit.Location = new System.Drawing.Point(222, 55);
+            this.TotalOperationalCostSpinEdit.MenuManager = this.mainRibbonControl;
+            this.TotalOperationalCostSpinEdit.Name = "TotalOperationalCostSpinEdit";
+            this.TotalOperationalCostSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TotalOperationalCostSpinEdit.Properties.ReadOnly = true;
+            this.TotalOperationalCostSpinEdit.Size = new System.Drawing.Size(896, 34);
+            this.TotalOperationalCostSpinEdit.StyleController = this._DataLayoutControl;
+            this.TotalOperationalCostSpinEdit.TabIndex = 52;
+            // 
+            // layoutControlGroupPayment
+            // 
+            this.layoutControlGroupPayment.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForGridPayment,
+            this.ItemForTotalPayment});
+            this.layoutControlGroupPayment.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroupPayment.Name = "layoutControlGroupPayment";
+            this.layoutControlGroupPayment.Size = new System.Drawing.Size(1099, 668);
+            this.layoutControlGroupPayment.Text = "Pembayaran Sewa";
+            // 
+            // ItemForGridPayment
+            // 
+            this.ItemForGridPayment.Control = this._GridControlPayment;
+            this.ItemForGridPayment.Location = new System.Drawing.Point(0, 38);
+            this.ItemForGridPayment.Name = "ItemForGridPayment";
+            this.ItemForGridPayment.Size = new System.Drawing.Size(1099, 630);
+            this.ItemForGridPayment.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForGridPayment.TextVisible = false;
+            // 
+            // _GridControlPayment
+            // 
+            this._GridControlPayment.DataMember = null;
+            this._GridControlPayment.DataSource = this._BindingSourcePayment;
+            this._GridControlPayment.Location = new System.Drawing.Point(23, 93);
+            this._GridControlPayment.MainView = this._GridViewPayment;
+            this._GridControlPayment.MenuManager = this.mainRibbonControl;
+            this._GridControlPayment.Name = "_GridControlPayment";
+            this._GridControlPayment.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.PaymentMethodSearchLookUpEdit,
+            this.AmountPaymentSpinEdit});
+            this._GridControlPayment.Size = new System.Drawing.Size(1095, 626);
+            this._GridControlPayment.TabIndex = 49;
+            this._GridControlPayment.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this._GridViewPayment});
+            // 
+            // _BindingSourcePayment
+            // 
+            this._BindingSourcePayment.DataSource = typeof(Domain.Entities.Rental.RentalCarBookingPayment);
+            // 
+            // _GridViewPayment
+            // 
+            this._GridViewPayment.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colPaymentMethod,
+            this.colDate,
+            this.colAmountPayment});
+            this._GridViewPayment.GridControl = this._GridControlPayment;
+            this._GridViewPayment.Name = "_GridViewPayment";
+            // 
+            // colPaymentMethod
+            // 
+            this.colPaymentMethod.Caption = "Metode Pembayaran";
+            this.colPaymentMethod.ColumnEdit = this.PaymentMethodSearchLookUpEdit;
+            this.colPaymentMethod.FieldName = "PaymentMethod";
+            this.colPaymentMethod.MinWidth = 30;
+            this.colPaymentMethod.Name = "colPaymentMethod";
+            this.colPaymentMethod.Visible = true;
+            this.colPaymentMethod.VisibleIndex = 0;
+            this.colPaymentMethod.Width = 112;
+            // 
+            // PaymentMethodSearchLookUpEdit
+            // 
+            this.PaymentMethodSearchLookUpEdit.AutoHeight = false;
+            this.PaymentMethodSearchLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.PaymentMethodSearchLookUpEdit.Name = "PaymentMethodSearchLookUpEdit";
+            this.PaymentMethodSearchLookUpEdit.NullText = "";
+            this.PaymentMethodSearchLookUpEdit.PopupView = this.repositoryItemSearchLookUpEdit1View;
+            // 
+            // repositoryItemSearchLookUpEdit1View
+            // 
+            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
+            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colDate
+            // 
+            this.colDate.Caption = "Tanggal";
+            this.colDate.FieldName = "Date";
+            this.colDate.MinWidth = 30;
+            this.colDate.Name = "colDate";
+            this.colDate.Visible = true;
+            this.colDate.VisibleIndex = 1;
+            this.colDate.Width = 112;
+            // 
+            // colAmountPayment
+            // 
+            this.colAmountPayment.Caption = "Nominal";
+            this.colAmountPayment.ColumnEdit = this.AmountPaymentSpinEdit;
+            this.colAmountPayment.FieldName = "Amount";
+            this.colAmountPayment.MinWidth = 30;
+            this.colAmountPayment.Name = "colAmountPayment";
+            this.colAmountPayment.Visible = true;
+            this.colAmountPayment.VisibleIndex = 2;
+            this.colAmountPayment.Width = 112;
+            // 
+            // AmountPaymentSpinEdit
+            // 
+            this.AmountPaymentSpinEdit.AutoHeight = false;
+            this.AmountPaymentSpinEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.AmountPaymentSpinEdit.Name = "AmountPaymentSpinEdit";
+            // 
+            // ItemForTotalPayment
+            // 
+            this.ItemForTotalPayment.Control = this.TotalPaymentSpinEdit;
+            this.ItemForTotalPayment.Location = new System.Drawing.Point(0, 0);
+            this.ItemForTotalPayment.Name = "ItemForTotalPayment";
+            this.ItemForTotalPayment.Size = new System.Drawing.Size(1099, 38);
+            this.ItemForTotalPayment.Text = "Total Pembayaran";
+            this.ItemForTotalPayment.TextSize = new System.Drawing.Size(187, 21);
+            // 
+            // TotalPaymentSpinEdit
+            // 
+            this.TotalPaymentSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.TotalPaymentSpinEdit.Location = new System.Drawing.Point(222, 55);
+            this.TotalPaymentSpinEdit.MenuManager = this.mainRibbonControl;
+            this.TotalPaymentSpinEdit.Name = "TotalPaymentSpinEdit";
+            this.TotalPaymentSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TotalPaymentSpinEdit.Properties.ReadOnly = true;
+            this.TotalPaymentSpinEdit.Size = new System.Drawing.Size(896, 34);
+            this.TotalPaymentSpinEdit.StyleController = this._DataLayoutControl;
+            this.TotalPaymentSpinEdit.TabIndex = 53;
+            // 
+            // layoutControlGroupNote
+            // 
+            this.layoutControlGroupNote.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForNote});
+            this.layoutControlGroupNote.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroupNote.Name = "layoutControlGroupNote";
+            this.layoutControlGroupNote.Size = new System.Drawing.Size(1099, 668);
+            this.layoutControlGroupNote.Text = "Keterangan";
+            // 
+            // ItemForNote
+            // 
+            this.ItemForNote.Control = this.NoteMemoEdit;
+            this.ItemForNote.Location = new System.Drawing.Point(0, 0);
+            this.ItemForNote.Name = "ItemForNote";
+            this.ItemForNote.Size = new System.Drawing.Size(1099, 668);
+            this.ItemForNote.Text = "Catatan";
+            this.ItemForNote.TextSize = new System.Drawing.Size(187, 21);
+            // 
+            // NoteMemoEdit
+            // 
+            this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
+            this.NoteMemoEdit.Location = new System.Drawing.Point(222, 55);
+            this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
+            this.NoteMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
+            this.NoteMemoEdit.Name = "NoteMemoEdit";
+            this.NoteMemoEdit.Size = new System.Drawing.Size(896, 664);
+            this.NoteMemoEdit.StyleController = this._DataLayoutControl;
+            this.NoteMemoEdit.TabIndex = 29;
             // 
             // layoutControlGroup3
             // 
@@ -845,7 +1274,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForModifiedDate});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1099, 734);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1099, 668);
             this.layoutControlGroup3.Text = "Audit Trail";
             // 
             // ItemForCreatedUser
@@ -855,15 +1284,15 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForCreatedUser.Name = "ItemForCreatedUser";
             this.ItemForCreatedUser.Size = new System.Drawing.Size(1099, 38);
             this.ItemForCreatedUser.Text = "Dibuat Oleh";
-            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(187, 21);
             // 
             // CreatedUserTextEdit
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, 55);
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(222, 55);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
-            this.CreatedUserTextEdit.Size = new System.Drawing.Size(974, 34);
+            this.CreatedUserTextEdit.Size = new System.Drawing.Size(896, 34);
             this.CreatedUserTextEdit.StyleController = this._DataLayoutControl;
             this.CreatedUserTextEdit.TabIndex = 19;
             // 
@@ -874,13 +1303,13 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForCreatedDate.Name = "ItemForCreatedDate";
             this.ItemForCreatedDate.Size = new System.Drawing.Size(1099, 38);
             this.ItemForCreatedDate.Text = "Dibuat Tanggal";
-            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(187, 21);
             // 
             // CreatedDateDateEdit
             // 
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, 93);
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(222, 93);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -888,7 +1317,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CreatedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CreatedDateDateEdit.Size = new System.Drawing.Size(974, 34);
+            this.CreatedDateDateEdit.Size = new System.Drawing.Size(896, 34);
             this.CreatedDateDateEdit.StyleController = this._DataLayoutControl;
             this.CreatedDateDateEdit.TabIndex = 20;
             // 
@@ -899,15 +1328,15 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForModifiedUser.Name = "ItemForModifiedUser";
             this.ItemForModifiedUser.Size = new System.Drawing.Size(1099, 38);
             this.ItemForModifiedUser.Text = "Diubah Oleh";
-            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(187, 21);
             // 
             // ModifiedUserTextEdit
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, 131);
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(222, 131);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
-            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(974, 34);
+            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(896, 34);
             this.ModifiedUserTextEdit.StyleController = this._DataLayoutControl;
             this.ModifiedUserTextEdit.TabIndex = 21;
             // 
@@ -916,15 +1345,15 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForModifiedDate.Control = this.ModifiedDateDateEdit;
             this.ItemForModifiedDate.Location = new System.Drawing.Point(0, 114);
             this.ItemForModifiedDate.Name = "ItemForModifiedDate";
-            this.ItemForModifiedDate.Size = new System.Drawing.Size(1099, 620);
+            this.ItemForModifiedDate.Size = new System.Drawing.Size(1099, 554);
             this.ItemForModifiedDate.Text = "Diubah Tanggal";
-            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(187, 21);
             // 
             // ModifiedDateDateEdit
             // 
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, 169);
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(222, 169);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -932,7 +1361,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ModifiedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(974, 34);
+            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(896, 34);
             this.ModifiedDateDateEdit.StyleController = this._DataLayoutControl;
             this.ModifiedDateDateEdit.TabIndex = 22;
             // 
@@ -997,8 +1426,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupPassenger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPassenger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PassengerPopUp.Properties)).EndInit();
@@ -1012,6 +1439,32 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TotalPriceSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehiclePopUp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControlEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridViewEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeePopUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountEmployeeSpinEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBBM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BBMSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalOperationalCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalOperationalCostSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridPayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControlPayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourcePayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridViewPayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentMethodSearchLookUpEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountPaymentSpinEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalPayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalPaymentSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupNote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).EndInit();
@@ -1084,5 +1537,36 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         private DevExpress.XtraEditors.TextEdit DeliveryCityTextEdit;
         private DevExpress.XtraEditors.SpinEdit TotalPriceSpinEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForTotalPrice;
+        private DevExpress.XtraGrid.GridControl _GridControlPayment;
+        private DevExpress.XtraGrid.Views.Grid.GridView _GridViewPayment;
+        private DevExpress.XtraGrid.GridControl _GridControlEmployee;
+        private DevExpress.XtraGrid.Views.Grid.GridView _GridViewEmployee;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroupPayment;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForGridPayment;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroupEmployee;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForGridEmployee;
+        private System.Windows.Forms.BindingSource _BindingSourcePayment;
+        private DevExpress.XtraGrid.Columns.GridColumn colPaymentMethod;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colAmountPayment;
+        private System.Windows.Forms.BindingSource _BindingSourceEmployee;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmployee;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmployeeJobPositionName;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmployeeOrganizationStructureName;
+        private DevExpress.XtraGrid.Columns.GridColumn colAmountEmployee;
+        private PopupContainerEditOwn VehiclePopUp;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForVehicle;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit PaymentMethodSearchLookUpEdit;
+        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
+        private RepositoryItemPopupContainerEditOwn EmployeePopUp;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroupNote;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit AmountPaymentSpinEdit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit AmountEmployeeSpinEdit;
+        private DevExpress.XtraEditors.SpinEdit TotalOperationalCostSpinEdit;
+        private DevExpress.XtraEditors.SpinEdit BBMSpinEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForBBM;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForTotalOperationalCost;
+        private DevExpress.XtraEditors.SpinEdit TotalPaymentSpinEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForTotalPayment;
     }
 }
