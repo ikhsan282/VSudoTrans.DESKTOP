@@ -34,7 +34,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             FilterDate1.EditValue = new DateTime(DateTime.Today.Year, 7, 1);
             FilterDate2.EditValue = new DateTime(DateTime.Today.AddYears(1).Year, 6, 30);
 
-            GridHelper.GridColumnInitializeLayout(colTransactionDate, typeof(DateTime), "dd-MMM-yyyy");
+            GridHelper.GridColumnInitializeLayout(colDate, typeof(DateTime), "dd-MMM-yyyy");
             GridHelper.GridColumnInitializeLayout(colPenerimaan, typeof(decimal), "n0", fTotal: true);
             GridHelper.GridColumnInitializeLayout(colPengeluaran, typeof(decimal), "n0", fTotal: true);
             GridHelper.GridColumnInitializeLayout(colSaldo, typeof(decimal), "n0");

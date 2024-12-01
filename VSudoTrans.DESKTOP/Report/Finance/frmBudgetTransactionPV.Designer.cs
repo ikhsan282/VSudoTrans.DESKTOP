@@ -535,7 +535,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             // 
             this.pivotGridFieldCategoryName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
             this.pivotGridFieldCategoryName.AreaIndex = 1;
-            this.pivotGridFieldCategoryName.Caption = "Mata Anggaran";
+            this.pivotGridFieldCategoryName.Caption = "Kategori";
             dataSourceColumnBinding2.ColumnName = "CategoryName";
             this.pivotGridFieldCategoryName.DataBinding = dataSourceColumnBinding2;
             this.pivotGridFieldCategoryName.MinWidth = 19;

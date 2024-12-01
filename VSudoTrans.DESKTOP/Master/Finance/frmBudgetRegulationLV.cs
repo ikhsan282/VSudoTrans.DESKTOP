@@ -4,7 +4,7 @@ using PopUpUtils;
 using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
 
-namespace VSudoTrans.DESKTOP.Transaction.Finance
+namespace VSudoTrans.DESKTOP.Master.Finance
 {
     public partial class frmBudgetRegulationLV : frmBaseFilterLV
     {

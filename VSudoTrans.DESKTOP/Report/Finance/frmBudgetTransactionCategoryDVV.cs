@@ -76,7 +76,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                 this.OdataFilter = $"CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
 
                 if (FilterDate1.EditValue != null && FilterDate1.EditValue != null)
-                    OdataFilter += $" and TransactionDate ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} and TransactionDate le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
+                    OdataFilter += $" and Date ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} and Date le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
                 
                 if (IndicatorSearchLookUpEdit.EditValue != null)
                     OdataFilter += $" and Indicator eq '{indicator.ToString()}' ";
@@ -99,7 +99,6 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     dt.Columns.Add("DetailNo", typeof(string));
                     dt.Columns.Add("DetailDate", typeof(string));
                     dt.Columns.Add("DetailNote", typeof(string));
-                    dt.Columns.Add("DetailDocumentNumber", typeof(string));
                     dt.Columns.Add("DetailAmount", typeof(decimal));
                     dt.Columns.Add("HeaderCategoryCode", typeof(string));
                     dt.Columns.Add("HeaderCategoryName", typeof(string));
@@ -110,9 +109,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                         loop++;
                         DataRow totalRow = dt.NewRow();
                         totalRow["DetailNo"] = $"{loop}.";
-                        totalRow["DetailDate"] = budgetTransaction.TransactionDate.ToString("dd-MMM-yyyy");
+                        totalRow["DetailDate"] = budgetTransaction.Date.ToString("dd-MMM-yyyy");
                         totalRow["DetailNote"] = budgetTransaction.Note;
-                        totalRow["DetailDocumentNumber"] = budgetTransaction.DocumentNumber;
                         totalRow["DetailAmount"] = budgetTransaction.Amount;
                         totalRow["HeaderCategoryCode"] = budgetTransaction.Category.Code;
                         totalRow["HeaderCategoryName"] = budgetTransaction.Category.Name;
@@ -126,10 +124,9 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     report.GroupHeader.GroupFields.Add(groupField);
 
                     //Detail
-                    report.xrTransactionDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDate]"));
+                    report.xrDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDate]"));
                     report.xrCategory.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailNote]"));
 
-                    report.xrDocumentNumber.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDocumentNumber]"));
                     report.xrJumlah.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailAmount]"));
 
                     report.xrCategoryCode.ExpressionBindings.Add(new ExpressionBinding("Text", "[HeaderCategoryCode]"));

@@ -21,7 +21,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             EndPoint = "/BudgetTransactions";
             FormTitle = "Penerimaan";
 
-            OdataSelect = "Id,Quantity,Amount,TransactionDate,Note";
+            OdataSelect = "Id,Quantity,Amount,Date,Note";
             OdataExpand = "Company($select=name)";
             OdataExpand += ",Category($select=name)";
             OdataExpand += ",UnitMeasure($select=name)";
@@ -133,8 +133,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             PopupEditHelper.Company(FilterPopUp3);
 
             _LayoutControlItemFilter4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter4.Text = "Mata Anggaran";
-            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fFilter: $"", fTitle: "Mata Anggaran", fControl: FilterPopUp4, fCascade: FilterPopUp3, fCascadeMember: "CompanyId");
+            _LayoutControlItemFilter4.Text = "Kategori";
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fFilter: $"", fTitle: "Kategori", fControl: FilterPopUp4, fCascade: FilterPopUp3, fCascadeMember: "CompanyId");
         }
 
         protected override void ActionRefresh<T>(string endPoint = "")
@@ -150,7 +150,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
                 OdataFilter += $" and CategoryId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp4.EditValue, "Id"))} ";
 
             if (FilterDate1.EditValue != null && FilterDate1.EditValue != null)
-                OdataFilter += $" and TransactionDate ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} and TransactionDate le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
+                OdataFilter += $" and Date ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} and Date le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
 
             base.ActionRefresh<T>(endPoint);
         }

@@ -48,7 +48,7 @@
             this.xrCaptionCategoryName = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrCaptionYear = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrCaptionMonth = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrCaptionTransactionDate = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrCaptionDate = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrCaptionAmount = new DevExpress.XtraReports.UI.XRTableCell();
             this.baseControlStyle = new DevExpress.XtraReports.UI.XRControlStyle();
             this.evenDetailStyle = new DevExpress.XtraReports.UI.XRControlStyle();
@@ -72,7 +72,7 @@
             this.xrCategoryName = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrYear = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrMonth = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTransactionDate = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrDate = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrAmount = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTableHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -274,7 +274,7 @@
             this.xrCaptionCategoryName,
             this.xrCaptionYear,
             this.xrCaptionMonth,
-            this.xrCaptionTransactionDate,
+            this.xrCaptionDate,
             this.xrCaptionAmount});
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 1D;
@@ -297,7 +297,7 @@
             // 
             this.xrCaptionCategoryName.Multiline = true;
             this.xrCaptionCategoryName.Name = "xrCaptionCategoryName";
-            this.xrCaptionCategoryName.Text = "Mata Anggaran";
+            this.xrCaptionCategoryName.Text = "Kategori";
             this.xrCaptionCategoryName.Weight = 9.25029292845558D;
             // 
             // xrCaptionYear
@@ -314,12 +314,12 @@
             this.xrCaptionMonth.Text = "Bulan";
             this.xrCaptionMonth.Weight = 0.78465848363768886D;
             // 
-            // xrCaptionTransactionDate
+            // xrCaptionDate
             // 
-            this.xrCaptionTransactionDate.Multiline = true;
-            this.xrCaptionTransactionDate.Name = "xrCaptionTransactionDate";
-            this.xrCaptionTransactionDate.Text = "Tanggal";
-            this.xrCaptionTransactionDate.Weight = 1.6653623149818002D;
+            this.xrCaptionDate.Multiline = true;
+            this.xrCaptionDate.Name = "xrCaptionDate";
+            this.xrCaptionDate.Text = "Tanggal";
+            this.xrCaptionDate.Weight = 1.6653623149818002D;
             // 
             // xrCaptionAmount
             // 
@@ -626,7 +626,7 @@
             this.xrCategoryName,
             this.xrYear,
             this.xrMonth,
-            this.xrTransactionDate,
+            this.xrTrDate,
             this.xrAmount});
             this.xrTableRow2.Name = "xrTableRow2";
             this.xrTableRow2.Weight = 1D;
@@ -668,13 +668,13 @@
             this.xrMonth.Text = "3";
             this.xrMonth.Weight = 0.51251755571793334D;
             // 
-            // xrTransactionDate
+            // xrTrDate
             // 
-            this.xrTransactionDate.Multiline = true;
-            this.xrTransactionDate.Name = "xrTransactionDate";
-            this.xrTransactionDate.Text = "04/03/2024";
-            this.xrTransactionDate.TextFormatString = "{0:dd/MM/yyyy}";
-            this.xrTransactionDate.Weight = 1.0877680200187525D;
+            this.xrTrDate.Multiline = true;
+            this.xrTrDate.Name = "xrTrDate";
+            this.xrTrDate.Text = "04/03/2024";
+            this.xrTrDate.TextFormatString = "{0:dd/MM/yyyy}";
+            this.xrTrDate.Weight = 1.0877680200187525D;
             // 
             // xrAmount
             // 
@@ -736,10 +736,10 @@
         public DevExpress.XtraReports.UI.XRTableCell xrCategoryName;
         public DevExpress.XtraReports.UI.XRTableCell xrYear;
         public DevExpress.XtraReports.UI.XRTableCell xrCaptionMonth;
-        public DevExpress.XtraReports.UI.XRTableCell xrCaptionTransactionDate;
+        public DevExpress.XtraReports.UI.XRTableCell xrCaptionDate;
         public DevExpress.XtraReports.UI.XRTableCell xrCaptionAmount;
         public DevExpress.XtraReports.UI.XRTableCell xrMonth;
-        public DevExpress.XtraReports.UI.XRTableCell xrTransactionDate;
+        public DevExpress.XtraReports.UI.XRTableCell xrTrDate;
         public DevExpress.XtraReports.UI.XRTableCell xrAmount;
         private DevExpress.XtraReports.UI.XRControlStyle baseControlStyle;
         private DevExpress.XtraReports.UI.XRControlStyle evenDetailStyle;

@@ -1,6 +1,6 @@
 ﻿using VSudoTrans.DESKTOP.Descendant;
 
-namespace VSudoTrans.DESKTOP.Transaction.Finance
+namespace VSudoTrans.DESKTOP.Master.Finance
 {
     partial class frmBudgetRegulationDV
     {

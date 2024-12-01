@@ -124,7 +124,7 @@
             // 
             // colCategoryCode
             // 
-            this.colCategoryCode.Caption = "Kode Mata Anggaran";
+            this.colCategoryCode.Caption = "Kode Kategori";
             this.colCategoryCode.FieldName = "CategoryCode";
             this.colCategoryCode.MinWidth = 30;
             this.colCategoryCode.Name = "colCategoryCode";

@@ -286,7 +286,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             MyValidationHelper.SetValidation(_DxValidationProvider, this.CompanyPopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.DateDateEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.TimeDateEdit, ConditionOperator.IsNotBlank);
-            MyValidationHelper.SetValidation(_DxValidationProvider, this.StatusSearchLookUpEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.PickupDistrictPopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.DeliveryDistrictPopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.PickupAddressMemoEdit, ConditionOperator.IsNotBlank);
@@ -355,8 +354,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         protected override void InitializeSearchLookup()
         {
             SLUHelper.SetEnumDataSource(PaymentMethodSearchLookUpEdit, new Converter<EnumPaymentMethod, string>(EnumHelper.EnumPaymentMethodToString));
-            SLUHelper.SetEnumDataSource(StatusSearchLookUpEdit, new Converter<EnumStatusBooking, string>(EnumHelper.EnumStatusBookingToString));
-            SLUHelper.SetEnumDataSource(PassengerTypeSearchLookUpEdit, new Converter<EnumPassengerType, string>(EnumHelper.EnumPassengerTypeToString));
 
             PopupEditHelper.Company(CompanyPopUp);
             PopupEditHelper.Passenger(PassengerPopUp, CompanyPopUp, "CompanyId");
@@ -411,8 +408,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             _RentalCarBooking.VehicleId = HelperConvert.Int(AssemblyHelper.GetValueProperty(VehiclePopUp.EditValue, "Id"));
             _RentalCarBooking.Date = HelperConvert.Date(DateDateEdit.EditValue);
             _RentalCarBooking.Time = HelperConvert.Date(TimeDateEdit.EditValue).TimeOfDay;
-            _RentalCarBooking.PassengerType = (EnumPassengerType)PassengerTypeSearchLookUpEdit.EditValue;
-            _RentalCarBooking.Status = (EnumStatusBooking)StatusSearchLookUpEdit.EditValue;
 
             _RentalCarBooking.PickupPointProvinceId = HelperConvert.Int(AssemblyHelper.GetValueProperty(PickupDistrictPopUp.EditValue, "ProvinceId"));
             _RentalCarBooking.PickupPointCityId = HelperConvert.Int(AssemblyHelper.GetValueProperty(PickupDistrictPopUp.EditValue, "CityId"));
@@ -425,17 +420,18 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             _RentalCarBooking.DeliveryAddress = HelperConvert.String(DeliveryAddressMemoEdit.EditValue);
 
             _RentalCarBooking.TotalPrice = HelperConvert.Decimal(TotalPriceSpinEdit.EditValue);
-            _RentalCarBooking.BBM = HelperConvert.Decimal(BBMSpinEdit.EditValue);
-            _RentalCarBooking.TotalOperationalCost = HelperConvert.Decimal(TotalOperationalCostSpinEdit.EditValue);
-            _RentalCarBooking.TotalPayment = HelperConvert.Decimal(TotalPaymentSpinEdit.EditValue);
 
             _RentalCarBooking.Note = HelperConvert.String(NoteMemoEdit.EditValue);
 
             List<RentalCarBookingEmployee> rentalCarBookingEmployees = _BindingSourceEmployee.DataSource as List<RentalCarBookingEmployee>;
             _RentalCarBooking.RentalCarBookingEmployees = rentalCarBookingEmployees;
 
+            _RentalCarBooking.TotalOperationalCost = rentalCarBookingEmployees.Sum(s => s.Amount) + HelperConvert.Decimal(BBMSpinEdit.EditValue);
+
             List<RentalCarBookingPayment> rentalCarBookingPayments = _BindingSourcePayment.DataSource as List<RentalCarBookingPayment>;
             _RentalCarBooking.RentalCarBookingPayments = rentalCarBookingPayments;
+
+            _RentalCarBooking.TotalPayment = rentalCarBookingPayments.Sum(s => s.Amount);
 
             OdataEntity = _RentalCarBooking;
         }

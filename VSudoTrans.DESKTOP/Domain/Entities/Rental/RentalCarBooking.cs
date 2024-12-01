@@ -60,14 +60,12 @@ namespace Domain.Entities.Rental
         public decimal BBM { get; set; }
         public decimal TotalOperationalCost { get; set; }
         public decimal TotalPayment { get; set; }
-        public EnumStatusBooking Status { get; set; }
         public int CategoryVehicleId { get; set; }
         public virtual CategoryVehicle CategoryVehicle { get; set; }
         public int VehicleId { get; set; }
         public virtual Vehicles Vehicle { get; set; }
         public int PassengerId { get; set; }
         public virtual Passenger Passenger { get; set; }
-        public EnumPassengerType PassengerType { get; set; }
 
         [MaxLength(2000)]
         public string Note { get; set; }

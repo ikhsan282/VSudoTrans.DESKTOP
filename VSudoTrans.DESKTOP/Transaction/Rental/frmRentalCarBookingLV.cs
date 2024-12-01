@@ -20,7 +20,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.EndPoint = "/RentalCarBookings";
             this.FormTitle = "Pemesanan Sewa Mobil";
 
-            this.OdataSelect = "Id,Date,Time,Status,TotalPrice,BBM,TotalOperationalCost,TotalPayment";
+            this.OdataSelect = "Id,Date,Time,TotalPrice,BBM,TotalOperationalCost,TotalPayment";
             this.OdataExpand = "Company($select=name)";
             this.OdataExpand += ",PickupPointCity($select=name),DeliveryPointCity($select=name)";
             this.OdataExpand += ",Passenger($select=Name,PhoneNumber)";

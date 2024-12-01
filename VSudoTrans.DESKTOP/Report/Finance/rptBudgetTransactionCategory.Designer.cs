@@ -34,7 +34,7 @@
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrNo = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTransactionDate = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrDate = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrCategory = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrDocumentNumber = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrJumlah = new DevExpress.XtraReports.UI.XRTableCell();
@@ -108,7 +108,7 @@
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrNo,
-            this.xrTransactionDate,
+            this.xrDate,
             this.xrCategory,
             this.xrDocumentNumber,
             this.xrJumlah});
@@ -124,14 +124,14 @@
             this.xrNo.Text = "xrNo";
             this.xrNo.Weight = 0.65147136989148524D;
             // 
-            // xrTransactionDate
+            // xrDate
             // 
-            this.xrTransactionDate.Multiline = true;
-            this.xrTransactionDate.Name = "xrTransactionDate";
-            this.xrTransactionDate.StylePriority.UseTextAlignment = false;
-            this.xrTransactionDate.Text = "xrTransactionDate";
-            this.xrTransactionDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTransactionDate.Weight = 1.8797694758306061D;
+            this.xrDate.Multiline = true;
+            this.xrDate.Name = "xrDate";
+            this.xrDate.StylePriority.UseTextAlignment = false;
+            this.xrDate.Text = "xrDate";
+            this.xrDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrDate.Weight = 1.8797694758306061D;
             // 
             // xrCategory
             // 
@@ -830,7 +830,7 @@
         public DevExpress.XtraReports.UI.XRLabel xrLabel12;
         public DevExpress.XtraReports.UI.XRLabel xrLabel11;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
-        public DevExpress.XtraReports.UI.XRTableCell xrTransactionDate;
+        public DevExpress.XtraReports.UI.XRTableCell xrDate;
         public DevExpress.XtraReports.UI.XRTableCell xrJumlah;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         public DevExpress.XtraReports.UI.XRTableCell xrTableCell10;

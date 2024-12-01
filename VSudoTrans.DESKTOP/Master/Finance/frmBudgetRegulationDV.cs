@@ -9,7 +9,7 @@ using System.Linq;
 using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
 
-namespace VSudoTrans.DESKTOP.Transaction.Finance
+namespace VSudoTrans.DESKTOP.Master.Finance
 {
     public partial class frmBudgetRegulationDV : frmBaseDV
     {
@@ -105,7 +105,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
 
             if (Category == null)
             {
-                gridView.SetColumnError(colCategory, $"Mata Anggaran tidak boleh kosong");
+                gridView.SetColumnError(colCategory, $"Kategori tidak boleh kosong");
                 e.Valid = false;
                 return;
             }
@@ -132,7 +132,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
                     var tempVal = HelperConvert.Int(gridView.GetRowCellValue(i, "CategoryId"));
                     if (tempVal == Category.Id)
                     {
-                        gridView.SetColumnError(colCategory, "Adanya duplikasi data Mata Anggaran");
+                        gridView.SetColumnError(colCategory, "Adanya duplikasi data Kategori");
                         e.Valid = false;
                         return;
                     }
@@ -166,7 +166,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
         protected override void InitializeSearchLookup()
         {
             PopupEditHelper.Company(CompanyPopUp);
-            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fTitle: "Mata Anggaran", fControl: CategoryPopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fTitle: "Kategori", fControl: CategoryPopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
         }
 
         private void BbiSaveAndNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

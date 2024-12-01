@@ -19,7 +19,7 @@ namespace VSudoTrans.DESKTOP.Report.Rental
             InitializeComponent();
 
             this.EndPoint = "/RentalCarBookings";
-            this.FormTitle = "DETAIL INVOICE";
+            //this.FormTitle = "DETAIL INVOICE";
 
             this.bbiRefresh.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 
@@ -30,6 +30,7 @@ namespace VSudoTrans.DESKTOP.Report.Rental
             this.bbiPrintPreview.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.bbiClose.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.bbiExport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.bbiImport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.ItemForGridControl.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;//Grid
             this.layoutControlItem2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;//SearchControl
 
@@ -41,15 +42,18 @@ namespace VSudoTrans.DESKTOP.Report.Rental
             MessageHelper.WaitFormShow(this);
             try
             {
-                var rentalCarBooking = HelperRestSharp.GetById<RentalCarBooking>(id, "/RentalCarBookings");
+                string fSelect = "DocumentNumber,Date,Time,PickupAddress,DeliveryAddress,TotalPrice,BBM,TotalOperationalCost,TotalPayment";
+                string fExpand = "Company($select=Id,Code,Name,Address,PhoneNumber,Website,Logo,Watermark,WatermarkPaid,WatermarkUnpaid),Vehicle,Passenger,RentalCarBookingPayments,RentalCarBookingEmployees";
+                var rentalCarBooking = HelperRestSharp.GetOdata<RentalCarBooking>("/RentalCarBookings", fSelect: fSelect, fExpand: fExpand, fFilter: $"Id eq {id}");
 
                 if (rentalCarBooking != null)
                 {
                     var company = rentalCarBooking.Company;
 
-                    this.Text = $"DETAIL INVOICE ({rentalCarBooking.DocumentNumber})";
+                    this.Text = $"Invoice Pemesanan Sewa Kendaraan ({rentalCarBooking.DocumentNumber})";
                     // set report destination
                     rptRentalCarBookingInvoice report = new rptRentalCarBookingInvoice();
+                    report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
 
                     if (company.Logo != null)
                         report.companyLogo.ImageSource = HelperConvert.UrlToImageSource(company.LogoUrl);

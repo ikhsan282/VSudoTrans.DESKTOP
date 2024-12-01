@@ -509,7 +509,7 @@
             // 
             // colCategory
             // 
-            this.colCategory.Caption = "Mata Anggaran";
+            this.colCategory.Caption = "Kategori";
             this.colCategory.FieldName = "Category.Name";
             this.colCategory.MinWidth = 45;
             this.colCategory.Name = "colCategory";

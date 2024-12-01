@@ -65,7 +65,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                 this.OdataFilter = $"CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
 
                 if (FilterDate1.EditValue != null && FilterDate1.EditValue != null)
-                    OdataFilter += $" and TransactionDate ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} and TransactionDate le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
+                    OdataFilter += $" and Date ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} and Date le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
 
                 string expand = "";
 
@@ -87,7 +87,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     dt.Columns.Add("DetailSaldo", typeof(decimal));
 
                     OdataFilter = $"CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
-                    OdataFilter += $" and TransactionDate lt {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
+                    OdataFilter += $" and Date lt {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
                     var prevBudgetTransactions = HelperRestSharp.GetListOdata<BudgetTransaction>("/BudgetTransactions", "Id,Month,Year,Indicator,Amount", fExpand: expand, OdataFilter, fOrder: "Id");
 
                     // Set initial balance
@@ -104,7 +104,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     initialRow["DetailSaldo"] = saldoAwal;
                     dt.Rows.Add(initialRow);
 
-                    foreach (var budgetTransaction in budgetTransactions.GroupBy(s => s.TransactionDate).OrderBy(s => s.Key).ToList())
+                    foreach (var budgetTransaction in budgetTransactions.GroupBy(s => s.Date).OrderBy(s => s.Key).ToList())
                     {
                         decimal penerimaan = budgetTransaction
                             .Where(s => s.Indicator == Domain.EnumTransactionIndicator.Kredit).Sum(s => s.Amount);
@@ -141,7 +141,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     report.DataSource = dt;
 
                     //Detail
-                    report.xrTransactionDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDate]"));
+                    report.xrTrDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDate]"));
                     report.xrCategory.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailNote]"));
 
                     report.xrPenerimaan.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailPenerimaan]"));

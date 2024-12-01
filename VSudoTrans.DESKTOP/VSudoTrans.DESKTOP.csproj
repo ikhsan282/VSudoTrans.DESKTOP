@@ -1316,16 +1316,16 @@
     <Compile Include="Transaction\Attendance\frmUploadFingerprintWV.Designer.cs">
       <DependentUpon>frmUploadFingerprintWV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction\Finance\frmBudgetRegulationLV.cs">
+    <Compile Include="Master\Finance\frmBudgetRegulationLV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transaction\Finance\frmBudgetRegulationLV.Designer.cs">
+    <Compile Include="Master\Finance\frmBudgetRegulationLV.Designer.cs">
       <DependentUpon>frmBudgetRegulationLV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction\Finance\frmBudgetRegulationDV.cs">
+    <Compile Include="Master\Finance\frmBudgetRegulationDV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transaction\Finance\frmBudgetRegulationDV.Designer.cs">
+    <Compile Include="Master\Finance\frmBudgetRegulationDV.Designer.cs">
       <DependentUpon>frmBudgetRegulationDV.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction\Finance\frmDebitDV.cs">
@@ -2974,10 +2974,10 @@
     <EmbeddedResource Include="Transaction\Attendance\frmUploadFingerprintWV.resx">
       <DependentUpon>frmUploadFingerprintWV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\Finance\frmBudgetRegulationLV.resx">
+    <EmbeddedResource Include="Master\Finance\frmBudgetRegulationLV.resx">
       <DependentUpon>frmBudgetRegulationLV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\Finance\frmBudgetRegulationDV.resx">
+    <EmbeddedResource Include="Master\Finance\frmBudgetRegulationDV.resx">
       <DependentUpon>frmBudgetRegulationDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\Finance\frmDebitDV.resx">

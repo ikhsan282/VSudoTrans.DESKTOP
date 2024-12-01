@@ -21,23 +21,23 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
 
             InitializeComponent();
 
-            TransactionDateEdit.EditValue = DateTime.Today;
+            DateEdit.EditValue = DateTime.Today;
 
             InitializeComponentAfter<BudgetTransaction>();
             bbiSave.ItemClick += BbiSave_ItemClick;
             bbiSaveAndClose.ItemClick += BbiSaveAndClose_ItemClick;
             bbiSaveAndNew.ItemClick += BbiSaveAndNew_ItemClick;
-            TransactionDateEdit.EditValueChanged += TransactionDateEdit_EditValueChanged;
+            DateEdit.EditValueChanged += DateEdit_EditValueChanged;
             InitializeSearchLookup();
 
             HelperConvert.FormatDecimalTextEdit(AmountTextEdit, "n0");
 
-            HelperConvert.FormatDateEdit(TransactionDateEdit, "dd-MMM-yyyy");
+            HelperConvert.FormatDateEdit(DateEdit, "dd-MMM-yyyy");
             HelperConvert.FormatDateEdit(CreatedDateDateEdit, "dd-MMM-yyyy HH:mm:ss");
             HelperConvert.FormatDateEdit(ModifiedDateDateEdit, "dd-MMM-yyyy HH:mm:ss");
         }
 
-        private void TransactionDateEdit_EditValueChanged(object sender, EventArgs e)
+        private void DateEdit_EditValueChanged(object sender, EventArgs e)
         {
 
         }
@@ -57,8 +57,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
         protected override void InitializeDefaultValidation()
         {
             MyValidationHelper.SetValidation(_DxValidationProvider, CompanyPopUp, ConditionOperator.IsNotBlank);
-            MyValidationHelper.SetValidation(_DxValidationProvider, DocumentNumberTextEdit, ConditionOperator.IsNotBlank);
-            MyValidationHelper.SetValidation(_DxValidationProvider, TransactionDateEdit, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, DateEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, CategoryPopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, UnitMeasurePopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, QuantityTextEdit, ConditionOperator.IsNotBlank);
@@ -69,7 +68,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
         {
             PopupEditHelper.Company(CompanyPopUp);
             PopupEditHelper.General<UnitMeasure>(fEndPoint: "/UnitMeasures", fTitle: "Satuan Unit", fControl: UnitMeasurePopUp, fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
-            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fFilter: $"", fTitle: "Mata Anggaran", fControl: CategoryPopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fFilter: $"", fTitle: "Kategori", fControl: CategoryPopUp, fCascade: CompanyPopUp, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "100;400", fDisplayText: "Code;Name");
         }
 
         private void BbiSaveAndNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -112,11 +111,10 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
                 Indicator = EnumTransactionIndicator.Debit,
                 Quantity = HelperConvert.Int(QuantityTextEdit.EditValue),
                 Amount = HelperConvert.Decimal(AmountTextEdit.EditValue),
-                DocumentNumber = HelperConvert.String(DocumentNumberTextEdit.EditValue),
-                TransactionDate = HelperConvert.Date(TransactionDateEdit.EditValue),
-                Year = HelperConvert.Date(TransactionDateEdit.EditValue).Year,
-                Month = HelperConvert.Date(TransactionDateEdit.EditValue).Month,
-                Day = HelperConvert.Date(TransactionDateEdit.EditValue).Day,
+                Date = HelperConvert.Date(DateEdit.EditValue),
+                Year = HelperConvert.Date(DateEdit.EditValue).Year,
+                Month = HelperConvert.Date(DateEdit.EditValue).Month,
+                Day = HelperConvert.Date(DateEdit.EditValue).Day,
                 Note = HelperConvert.String(NoteMemoEdit.EditValue),
             };
             OdataEntity = _BudgetTransaction;

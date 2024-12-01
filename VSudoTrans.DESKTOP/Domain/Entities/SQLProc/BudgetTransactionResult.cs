@@ -4,7 +4,7 @@ namespace Domain.Entities.SQLProc
 {
     public class BudgetTransactionResult
     {
-        public DateTime TransactionDate { get; set; }
+        public DateTime Date { get; set; }
         public string Category { get; set; }
         public string Indikator { get; set; }
         public int Year { get; set; }

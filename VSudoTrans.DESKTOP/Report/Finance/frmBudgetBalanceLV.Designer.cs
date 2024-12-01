@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBudgetBalanceLV));
-            this.colTransactionDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCategory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPengeluaran = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPenerimaan = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -148,7 +148,7 @@
             // _GridView
             // 
             this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTransactionDate,
+            this.colDate,
             this.colCategory,
             this.colPenerimaan,
             this.colPengeluaran,
@@ -224,15 +224,15 @@
             // 
             this.bbiImportData.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiImportData.ImageOptions.SvgImage")));
             // 
-            // colTransactionDate
+            // colDate
             // 
-            this.colTransactionDate.Caption = "Tanggal";
-            this.colTransactionDate.FieldName = "TransactionDate";
-            this.colTransactionDate.MinWidth = 30;
-            this.colTransactionDate.Name = "colTransactionDate";
-            this.colTransactionDate.Visible = true;
-            this.colTransactionDate.VisibleIndex = 0;
-            this.colTransactionDate.Width = 162;
+            this.colDate.Caption = "Tanggal";
+            this.colDate.FieldName = "Date";
+            this.colDate.MinWidth = 30;
+            this.colDate.Name = "colDate";
+            this.colDate.Visible = true;
+            this.colDate.VisibleIndex = 0;
+            this.colDate.Width = 162;
             // 
             // colCategory
             // 
@@ -312,7 +312,7 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.Columns.GridColumn colTransactionDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate;
         private DevExpress.XtraGrid.Columns.GridColumn colCategory;
         private DevExpress.XtraGrid.Columns.GridColumn colPengeluaran;
         private DevExpress.XtraGrid.Columns.GridColumn colPenerimaan;

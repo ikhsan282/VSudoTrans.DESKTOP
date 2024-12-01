@@ -1,4 +1,4 @@
-﻿namespace VSudoTrans.DESKTOP.Transaction.Finance
+﻿namespace VSudoTrans.DESKTOP.Master.Finance
 {
     partial class frmBudgetRegulationLV
     {
@@ -275,7 +275,7 @@
             // 
             // colCategoryCode
             // 
-            this.colCategoryCode.Caption = "Kode Mata Anggaran";
+            this.colCategoryCode.Caption = "Kode Kategori";
             this.colCategoryCode.FieldName = "Category.Code";
             this.colCategoryCode.MinWidth = 30;
             this.colCategoryCode.Name = "colCategoryCode";
@@ -285,7 +285,7 @@
             // 
             // colCategoryName
             // 
-            this.colCategoryName.Caption = "Nama Mata Anggaran";
+            this.colCategoryName.Caption = "Nama Kategori";
             this.colCategoryName.FieldName = "Category.Name";
             this.colCategoryName.MinWidth = 45;
             this.colCategoryName.Name = "colCategoryName";

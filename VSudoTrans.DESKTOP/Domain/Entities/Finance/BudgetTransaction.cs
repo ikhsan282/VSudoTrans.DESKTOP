@@ -20,11 +20,10 @@ namespace Domain.Entities.Finance
         public EnumTransactionIndicator Indicator { get; set; }
         public int Quantity { get; set; }
         public decimal Amount { get; set; }
-        public DateTime TransactionDate { get; set; }
+        public DateTime Date { get; set; }
         public int Year { get; set; }
         public int Month { get; set; }
         public int Day { get; set; }
-        public string DocumentNumber { get; set; }
         public string Note { get; set; }
     }
 }

@@ -44,7 +44,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             SLUHelper.SetEnumDataSource<EnumTransactionIndicator>(FilterPopUp4, EnumHelper.EnumTransactionIndicatorToString);
 
             _LayoutControlItemFilter5.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            _LayoutControlItemFilter5.Text = "Mata Anggaran";
+            _LayoutControlItemFilter5.Text = "Kategori";
             PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fTitle: "Kategory", fControl: FilterPopUp5, fCascade: FilterPopUp3, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "250;100;400", fDisplayText: "Code;Name");
 
             _LayoutControlItemFilter6.Text = "Tahun";
@@ -87,7 +87,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     dt.Columns.Add("CategoryName", typeof(string));
                     dt.Columns.Add("Year", typeof(int));
                     dt.Columns.Add("Month", typeof(int));
-                    dt.Columns.Add("TransactionDate", typeof(string));
+                    dt.Columns.Add("Date", typeof(string));
                     dt.Columns.Add("Amount", typeof(decimal));
                     dt.Columns.Add("TotalAmountKredit", typeof(decimal));
                     dt.Columns.Add("TotalAmountDebit", typeof(decimal));
@@ -99,7 +99,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                         r["CategoryName"] = data.CategoryName;
                         r["Year"] = data.Year;
                         r["Month"] = data.Month;
-                        r["TransactionDate"] = data.TransactionDate.ToString("dd-MMM-yyyy");
+                        r["Date"] = data.Date.ToString("dd-MMM-yyyy");
                         r["Amount"] = data.Amount;
                         r["TotalAmountKredit"] = datas.Where(s => s.Indicator == EnumTransactionIndicator.Kredit).Sum(s => s.Amount);
                         r["TotalAmountDebit"] = datas.Where(s => s.Indicator == EnumTransactionIndicator.Debit).Sum(s => s.Amount);
@@ -116,7 +116,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     report.xrCategoryName.ExpressionBindings.Add(new ExpressionBinding("Text", "[CategoryName]"));
                     report.xrYear.ExpressionBindings.Add(new ExpressionBinding("Text", "[Year]"));
                     report.xrMonth.ExpressionBindings.Add(new ExpressionBinding("Text", "[Month]"));
-                    report.xrTransactionDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[TransactionDate]"));
+                    report.xrDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[Date]"));
                     report.xrAmount.ExpressionBindings.Add(new ExpressionBinding("Text", "[Amount]"));
                     report.xrTotalAmount.ExpressionBindings.Add(new ExpressionBinding("Text", "[Amount]"));
                     report.xrKredit.ExpressionBindings.Add(new ExpressionBinding("Text", "[TotalAmountKredit]"));

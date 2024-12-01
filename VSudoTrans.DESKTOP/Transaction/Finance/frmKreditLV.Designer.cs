@@ -39,7 +39,7 @@
             this._LayoutControlItemFilter7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCategory = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTransactionDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUnitMeasure = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -183,7 +183,7 @@
             this.colUnitMeasure,
             this.colQuantity,
             this.colAmount,
-            this.colTransactionDate,
+            this.colDate,
             this.colNote});
             this._GridView.DetailHeight = 565;
             this._GridView.OptionsBehavior.Editable = false;
@@ -503,7 +503,7 @@
             // 
             // colCategory
             // 
-            this.colCategory.Caption = "Mata Anggaran";
+            this.colCategory.Caption = "Kategori";
             this.colCategory.FieldName = "Category.Name";
             this.colCategory.MinWidth = 45;
             this.colCategory.Name = "colCategory";
@@ -511,17 +511,17 @@
             this.colCategory.VisibleIndex = 1;
             this.colCategory.Width = 206;
             // 
-            // colTransactionDate
+            // colDate
             // 
-            this.colTransactionDate.Caption = "Tanggal";
-            this.colTransactionDate.DisplayFormat.FormatString = "dd-MMM-yyyy";
-            this.colTransactionDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.colTransactionDate.FieldName = "TransactionDate";
-            this.colTransactionDate.MinWidth = 45;
-            this.colTransactionDate.Name = "colTransactionDate";
-            this.colTransactionDate.Visible = true;
-            this.colTransactionDate.VisibleIndex = 5;
-            this.colTransactionDate.Width = 185;
+            this.colDate.Caption = "Tanggal";
+            this.colDate.DisplayFormat.FormatString = "dd-MMM-yyyy";
+            this.colDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colDate.FieldName = "Date";
+            this.colDate.MinWidth = 45;
+            this.colDate.Name = "colDate";
+            this.colDate.Visible = true;
+            this.colDate.VisibleIndex = 5;
+            this.colDate.Width = 185;
             // 
             // colUnitMeasure
             // 
@@ -622,7 +622,7 @@
         private DevExpress.XtraLayout.LayoutControlItem _LayoutControlItemFilter7;
         private DevExpress.XtraGrid.Columns.GridColumn colCompanyName;
         private DevExpress.XtraGrid.Columns.GridColumn colCategory;
-        private DevExpress.XtraGrid.Columns.GridColumn colTransactionDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate;
         private DevExpress.XtraGrid.Columns.GridColumn colUnitMeasure;
         private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
         private DevExpress.XtraGrid.Columns.GridColumn colAmount;

@@ -38,8 +38,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.CompanyPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
             this.ItemForNote = new DevExpress.XtraLayout.LayoutControlItem();
             this.NoteMemoEdit = new DevExpress.XtraEditors.MemoEdit();
-            this.ItemForTransactionDate = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TransactionDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.ItemForDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.DateEdit = new DevExpress.XtraEditors.DateEdit();
             this.ItemForCategory = new DevExpress.XtraLayout.LayoutControlItem();
             this.CategoryPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
             this.ItemForUnitMeasure = new DevExpress.XtraLayout.LayoutControlItem();
@@ -57,8 +57,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.CreatedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForModifiedDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ModifiedDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.DocumentNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForDocumentNumber = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).BeginInit();
             this._DataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).BeginInit();
@@ -72,9 +70,9 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this.CompanyPopUp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTransactionDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransactionDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransactionDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoryPopUp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUnitMeasure)).BeginInit();
@@ -94,20 +92,17 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DocumentNumberTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForDocumentNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // _DataLayoutControl
             // 
-            this._DataLayoutControl.Controls.Add(this.DocumentNumberTextEdit);
             this._DataLayoutControl.Controls.Add(this.CreatedUserTextEdit);
             this._DataLayoutControl.Controls.Add(this.CreatedDateDateEdit);
             this._DataLayoutControl.Controls.Add(this.ModifiedUserTextEdit);
             this._DataLayoutControl.Controls.Add(this.ModifiedDateDateEdit);
             this._DataLayoutControl.Controls.Add(this.CompanyPopUp);
             this._DataLayoutControl.Controls.Add(this.NoteMemoEdit);
-            this._DataLayoutControl.Controls.Add(this.TransactionDateEdit);
+            this._DataLayoutControl.Controls.Add(this.DateEdit);
             this._DataLayoutControl.Controls.Add(this.CategoryPopUp);
             this._DataLayoutControl.Controls.Add(this.UnitMeasurePopUp);
             this._DataLayoutControl.Controls.Add(this.QuantityTextEdit);
@@ -128,7 +123,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.lcgRoot.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
             this.lcgRoot.Name = "Root";
-            this.lcgRoot.Size = new System.Drawing.Size(1278, 378);
+            this.lcgRoot.Size = new System.Drawing.Size(1304, 347);
             // 
             // mainRibbonControl
             // 
@@ -178,14 +173,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.tabbedControlGroup1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1260, 360);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1286, 329);
             // 
             // tabbedControlGroup1
             // 
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup2;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1260, 360);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1286, 329);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,
             this.layoutControlGroup3});
@@ -195,15 +190,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForCompanyId,
             this.ItemForNote,
-            this.ItemForTransactionDate,
+            this.ItemForDate,
             this.ItemForCategory,
             this.ItemForUnitMeasure,
             this.ItemForQuantity,
-            this.ItemForAmount,
-            this.ItemForDocumentNumber});
+            this.ItemForAmount});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1236, 304);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1262, 273);
             this.layoutControlGroup2.Text = "Detail";
             // 
             // ItemForCompanyId
@@ -211,14 +205,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ItemForCompanyId.Control = this.CompanyPopUp;
             this.ItemForCompanyId.Location = new System.Drawing.Point(0, 0);
             this.ItemForCompanyId.Name = "ItemForCompanyId";
-            this.ItemForCompanyId.Size = new System.Drawing.Size(1236, 38);
+            this.ItemForCompanyId.Size = new System.Drawing.Size(1262, 38);
             this.ItemForCompanyId.Text = "Perusahaan";
-            this.ItemForCompanyId.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForCompanyId.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CompanyPopUp
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
-            this.CompanyPopUp.Location = new System.Drawing.Point(192, 55);
+            this.CompanyPopUp.Location = new System.Drawing.Point(144, 55);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -252,68 +246,68 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.CompanyPopUp.Properties.OptionsDisplayWidth = "";
             this.CompanyPopUp.Properties.OptionsFilterColumns = "";
             this.CompanyPopUp.Properties.OptionsSortColumns = "";
-            this.CompanyPopUp.Size = new System.Drawing.Size(1063, 34);
+            this.CompanyPopUp.Size = new System.Drawing.Size(1137, 34);
             this.CompanyPopUp.StyleController = this._DataLayoutControl;
             this.CompanyPopUp.TabIndex = 15;
             // 
             // ItemForNote
             // 
             this.ItemForNote.Control = this.NoteMemoEdit;
-            this.ItemForNote.Location = new System.Drawing.Point(0, 266);
+            this.ItemForNote.Location = new System.Drawing.Point(0, 228);
             this.ItemForNote.Name = "ItemForNote";
-            this.ItemForNote.Size = new System.Drawing.Size(1236, 38);
+            this.ItemForNote.Size = new System.Drawing.Size(1262, 45);
             this.ItemForNote.Text = "Note";
-            this.ItemForNote.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForNote.TextSize = new System.Drawing.Size(109, 21);
             // 
             // NoteMemoEdit
             // 
             this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
-            this.NoteMemoEdit.Location = new System.Drawing.Point(192, 321);
+            this.NoteMemoEdit.Location = new System.Drawing.Point(144, 283);
             this.NoteMemoEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
             this.NoteMemoEdit.Name = "NoteMemoEdit";
-            this.NoteMemoEdit.Size = new System.Drawing.Size(1063, 34);
+            this.NoteMemoEdit.Size = new System.Drawing.Size(1137, 41);
             this.NoteMemoEdit.StyleController = this._DataLayoutControl;
             this.NoteMemoEdit.TabIndex = 19;
             // 
-            // ItemForTransactionDate
+            // ItemForDate
             // 
-            this.ItemForTransactionDate.Control = this.TransactionDateEdit;
-            this.ItemForTransactionDate.Location = new System.Drawing.Point(0, 76);
-            this.ItemForTransactionDate.Name = "ItemForTransactionDate";
-            this.ItemForTransactionDate.Size = new System.Drawing.Size(1236, 38);
-            this.ItemForTransactionDate.Text = "Tanggal";
-            this.ItemForTransactionDate.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForDate.Control = this.DateEdit;
+            this.ItemForDate.Location = new System.Drawing.Point(0, 38);
+            this.ItemForDate.Name = "ItemForDate";
+            this.ItemForDate.Size = new System.Drawing.Size(1262, 38);
+            this.ItemForDate.Text = "Tanggal";
+            this.ItemForDate.TextSize = new System.Drawing.Size(109, 21);
             // 
-            // TransactionDateEdit
+            // DateEdit
             // 
-            this.TransactionDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "TransactionDate", true));
-            this.TransactionDateEdit.EditValue = null;
-            this.TransactionDateEdit.Location = new System.Drawing.Point(192, 131);
-            this.TransactionDateEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TransactionDateEdit.MenuManager = this.mainRibbonControl;
-            this.TransactionDateEdit.Name = "TransactionDateEdit";
-            this.TransactionDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Date", true));
+            this.DateEdit.EditValue = null;
+            this.DateEdit.Location = new System.Drawing.Point(144, 93);
+            this.DateEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DateEdit.MenuManager = this.mainRibbonControl;
+            this.DateEdit.Name = "DateEdit";
+            this.DateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TransactionDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TransactionDateEdit.Size = new System.Drawing.Size(1063, 34);
-            this.TransactionDateEdit.StyleController = this._DataLayoutControl;
-            this.TransactionDateEdit.TabIndex = 20;
+            this.DateEdit.Size = new System.Drawing.Size(1137, 34);
+            this.DateEdit.StyleController = this._DataLayoutControl;
+            this.DateEdit.TabIndex = 20;
             // 
             // ItemForCategory
             // 
             this.ItemForCategory.Control = this.CategoryPopUp;
-            this.ItemForCategory.Location = new System.Drawing.Point(0, 114);
+            this.ItemForCategory.Location = new System.Drawing.Point(0, 76);
             this.ItemForCategory.Name = "ItemForCategory";
-            this.ItemForCategory.Size = new System.Drawing.Size(1236, 38);
-            this.ItemForCategory.Text = "Mata Anggaran";
-            this.ItemForCategory.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForCategory.Size = new System.Drawing.Size(1262, 38);
+            this.ItemForCategory.Text = "Kategori";
+            this.ItemForCategory.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CategoryPopUp
             // 
             this.CategoryPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Category", true));
-            this.CategoryPopUp.Location = new System.Drawing.Point(192, 169);
+            this.CategoryPopUp.Location = new System.Drawing.Point(144, 131);
             this.CategoryPopUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CategoryPopUp.MenuManager = this.mainRibbonControl;
             this.CategoryPopUp.Name = "CategoryPopUp";
@@ -348,23 +342,23 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.CategoryPopUp.Properties.OptionsDisplayWidth = "";
             this.CategoryPopUp.Properties.OptionsFilterColumns = "";
             this.CategoryPopUp.Properties.OptionsSortColumns = "";
-            this.CategoryPopUp.Size = new System.Drawing.Size(1063, 34);
+            this.CategoryPopUp.Size = new System.Drawing.Size(1137, 34);
             this.CategoryPopUp.StyleController = this._DataLayoutControl;
             this.CategoryPopUp.TabIndex = 22;
             // 
             // ItemForUnitMeasure
             // 
             this.ItemForUnitMeasure.Control = this.UnitMeasurePopUp;
-            this.ItemForUnitMeasure.Location = new System.Drawing.Point(0, 152);
+            this.ItemForUnitMeasure.Location = new System.Drawing.Point(0, 114);
             this.ItemForUnitMeasure.Name = "ItemForUnitMeasure";
-            this.ItemForUnitMeasure.Size = new System.Drawing.Size(1236, 38);
+            this.ItemForUnitMeasure.Size = new System.Drawing.Size(1262, 38);
             this.ItemForUnitMeasure.Text = "Satuan Unit";
-            this.ItemForUnitMeasure.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForUnitMeasure.TextSize = new System.Drawing.Size(109, 21);
             // 
             // UnitMeasurePopUp
             // 
             this.UnitMeasurePopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "UnitMeasure", true));
-            this.UnitMeasurePopUp.Location = new System.Drawing.Point(192, 207);
+            this.UnitMeasurePopUp.Location = new System.Drawing.Point(144, 169);
             this.UnitMeasurePopUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UnitMeasurePopUp.MenuManager = this.mainRibbonControl;
             this.UnitMeasurePopUp.Name = "UnitMeasurePopUp";
@@ -399,23 +393,23 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.UnitMeasurePopUp.Properties.OptionsDisplayWidth = "";
             this.UnitMeasurePopUp.Properties.OptionsFilterColumns = "";
             this.UnitMeasurePopUp.Properties.OptionsSortColumns = "";
-            this.UnitMeasurePopUp.Size = new System.Drawing.Size(1063, 34);
+            this.UnitMeasurePopUp.Size = new System.Drawing.Size(1137, 34);
             this.UnitMeasurePopUp.StyleController = this._DataLayoutControl;
             this.UnitMeasurePopUp.TabIndex = 23;
             // 
             // ItemForQuantity
             // 
             this.ItemForQuantity.Control = this.QuantityTextEdit;
-            this.ItemForQuantity.Location = new System.Drawing.Point(0, 190);
+            this.ItemForQuantity.Location = new System.Drawing.Point(0, 152);
             this.ItemForQuantity.Name = "ItemForQuantity";
-            this.ItemForQuantity.Size = new System.Drawing.Size(1236, 38);
+            this.ItemForQuantity.Size = new System.Drawing.Size(1262, 38);
             this.ItemForQuantity.Text = "Jumlah";
-            this.ItemForQuantity.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForQuantity.TextSize = new System.Drawing.Size(109, 21);
             // 
             // QuantityTextEdit
             // 
             this.QuantityTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Quantity", true));
-            this.QuantityTextEdit.Location = new System.Drawing.Point(192, 245);
+            this.QuantityTextEdit.Location = new System.Drawing.Point(144, 207);
             this.QuantityTextEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.QuantityTextEdit.MenuManager = this.mainRibbonControl;
             this.QuantityTextEdit.Name = "QuantityTextEdit";
@@ -424,23 +418,23 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.QuantityTextEdit.Properties.Mask.EditMask = "N0";
             this.QuantityTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.QuantityTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.QuantityTextEdit.Size = new System.Drawing.Size(1063, 34);
+            this.QuantityTextEdit.Size = new System.Drawing.Size(1137, 34);
             this.QuantityTextEdit.StyleController = this._DataLayoutControl;
             this.QuantityTextEdit.TabIndex = 24;
             // 
             // ItemForAmount
             // 
             this.ItemForAmount.Control = this.AmountTextEdit;
-            this.ItemForAmount.Location = new System.Drawing.Point(0, 228);
+            this.ItemForAmount.Location = new System.Drawing.Point(0, 190);
             this.ItemForAmount.Name = "ItemForAmount";
-            this.ItemForAmount.Size = new System.Drawing.Size(1236, 38);
+            this.ItemForAmount.Size = new System.Drawing.Size(1262, 38);
             this.ItemForAmount.Text = "Nominal";
-            this.ItemForAmount.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForAmount.TextSize = new System.Drawing.Size(109, 21);
             // 
             // AmountTextEdit
             // 
             this.AmountTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Amount", true));
-            this.AmountTextEdit.Location = new System.Drawing.Point(192, 283);
+            this.AmountTextEdit.Location = new System.Drawing.Point(144, 245);
             this.AmountTextEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AmountTextEdit.MenuManager = this.mainRibbonControl;
             this.AmountTextEdit.Name = "AmountTextEdit";
@@ -449,7 +443,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.AmountTextEdit.Properties.Mask.EditMask = "G";
             this.AmountTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.AmountTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.AmountTextEdit.Size = new System.Drawing.Size(1063, 34);
+            this.AmountTextEdit.Size = new System.Drawing.Size(1137, 34);
             this.AmountTextEdit.StyleController = this._DataLayoutControl;
             this.AmountTextEdit.TabIndex = 25;
             // 
@@ -462,7 +456,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ItemForModifiedDate});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1236, 304);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1262, 273);
             this.layoutControlGroup3.Text = "Audit Trail";
             // 
             // ItemForCreatedDate
@@ -470,15 +464,15 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ItemForCreatedDate.Control = this.CreatedDateDateEdit;
             this.ItemForCreatedDate.Location = new System.Drawing.Point(0, 0);
             this.ItemForCreatedDate.Name = "ItemForCreatedDate";
-            this.ItemForCreatedDate.Size = new System.Drawing.Size(1236, 38);
+            this.ItemForCreatedDate.Size = new System.Drawing.Size(1262, 38);
             this.ItemForCreatedDate.Text = "Dibuat Tanggal";
-            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForCreatedDate.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CreatedDateDateEdit
             // 
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(192, 55);
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, 55);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -486,7 +480,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CreatedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CreatedDateDateEdit.Size = new System.Drawing.Size(1063, 34);
+            this.CreatedDateDateEdit.Size = new System.Drawing.Size(1137, 34);
             this.CreatedDateDateEdit.StyleController = this._DataLayoutControl;
             this.CreatedDateDateEdit.TabIndex = 11;
             // 
@@ -495,17 +489,17 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ItemForModifiedUser.Control = this.ModifiedUserTextEdit;
             this.ItemForModifiedUser.Location = new System.Drawing.Point(0, 114);
             this.ItemForModifiedUser.Name = "ItemForModifiedUser";
-            this.ItemForModifiedUser.Size = new System.Drawing.Size(1236, 190);
+            this.ItemForModifiedUser.Size = new System.Drawing.Size(1262, 159);
             this.ItemForModifiedUser.Text = "Diubah Oleh";
-            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForModifiedUser.TextSize = new System.Drawing.Size(109, 21);
             // 
             // ModifiedUserTextEdit
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(192, 169);
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, 169);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
-            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(1063, 34);
+            this.ModifiedUserTextEdit.Size = new System.Drawing.Size(1137, 34);
             this.ModifiedUserTextEdit.StyleController = this._DataLayoutControl;
             this.ModifiedUserTextEdit.TabIndex = 12;
             // 
@@ -514,17 +508,17 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ItemForCreatedUser.Control = this.CreatedUserTextEdit;
             this.ItemForCreatedUser.Location = new System.Drawing.Point(0, 38);
             this.ItemForCreatedUser.Name = "ItemForCreatedUser";
-            this.ItemForCreatedUser.Size = new System.Drawing.Size(1236, 38);
+            this.ItemForCreatedUser.Size = new System.Drawing.Size(1262, 38);
             this.ItemForCreatedUser.Text = "Dibuat Oleh";
-            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForCreatedUser.TextSize = new System.Drawing.Size(109, 21);
             // 
             // CreatedUserTextEdit
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(192, 93);
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, 93);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
-            this.CreatedUserTextEdit.Size = new System.Drawing.Size(1063, 34);
+            this.CreatedUserTextEdit.Size = new System.Drawing.Size(1137, 34);
             this.CreatedUserTextEdit.StyleController = this._DataLayoutControl;
             this.CreatedUserTextEdit.TabIndex = 10;
             // 
@@ -533,15 +527,15 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             this.ItemForModifiedDate.Control = this.ModifiedDateDateEdit;
             this.ItemForModifiedDate.Location = new System.Drawing.Point(0, 76);
             this.ItemForModifiedDate.Name = "ItemForModifiedDate";
-            this.ItemForModifiedDate.Size = new System.Drawing.Size(1236, 38);
+            this.ItemForModifiedDate.Size = new System.Drawing.Size(1262, 38);
             this.ItemForModifiedDate.Text = "Diubah Tanggal";
-            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(157, 21);
+            this.ItemForModifiedDate.TextSize = new System.Drawing.Size(109, 21);
             // 
             // ModifiedDateDateEdit
             // 
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(192, 131);
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, 131);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -549,28 +543,9 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ModifiedDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(1063, 34);
+            this.ModifiedDateDateEdit.Size = new System.Drawing.Size(1137, 34);
             this.ModifiedDateDateEdit.StyleController = this._DataLayoutControl;
             this.ModifiedDateDateEdit.TabIndex = 13;
-            // 
-            // DocumentNumberTextEdit
-            // 
-            this.DocumentNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "DocumentNumber", true));
-            this.DocumentNumberTextEdit.Location = new System.Drawing.Point(192, 93);
-            this.DocumentNumberTextEdit.MenuManager = this.mainRibbonControl;
-            this.DocumentNumberTextEdit.Name = "DocumentNumberTextEdit";
-            this.DocumentNumberTextEdit.Size = new System.Drawing.Size(1063, 34);
-            this.DocumentNumberTextEdit.StyleController = this._DataLayoutControl;
-            this.DocumentNumberTextEdit.TabIndex = 26;
-            // 
-            // ItemForDocumentNumber
-            // 
-            this.ItemForDocumentNumber.Control = this.DocumentNumberTextEdit;
-            this.ItemForDocumentNumber.Location = new System.Drawing.Point(0, 38);
-            this.ItemForDocumentNumber.Name = "ItemForDocumentNumber";
-            this.ItemForDocumentNumber.Size = new System.Drawing.Size(1236, 38);
-            this.ItemForDocumentNumber.Text = "Nomor Dokumen";
-            this.ItemForDocumentNumber.TextSize = new System.Drawing.Size(157, 21);
             // 
             // frmKreditDV
             // 
@@ -593,9 +568,9 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this.CompanyPopUp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForNote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoteMemoEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTransactionDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransactionDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransactionDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoryPopUp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUnitMeasure)).EndInit();
@@ -615,8 +590,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DocumentNumberTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForDocumentNumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,8 +613,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
         private PopupContainerEditOwn CompanyPopUp;
         private DevExpress.XtraEditors.MemoEdit NoteMemoEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForNote;
-        private DevExpress.XtraEditors.DateEdit TransactionDateEdit;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForTransactionDate;
+        private DevExpress.XtraEditors.DateEdit DateEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForDate;
         private DevExpress.XtraLayout.LayoutControlItem ItemForCategory;
         private PopupContainerEditOwn CategoryPopUp;
         private DevExpress.XtraLayout.LayoutControlItem ItemForUnitMeasure;
@@ -650,7 +623,5 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
         private DevExpress.XtraLayout.LayoutControlItem ItemForQuantity;
         private DevExpress.XtraEditors.TextEdit AmountTextEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForAmount;
-        private DevExpress.XtraEditors.TextEdit DocumentNumberTextEdit;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForDocumentNumber;
     }
 }

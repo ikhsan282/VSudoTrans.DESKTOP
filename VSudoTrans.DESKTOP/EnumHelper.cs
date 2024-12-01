@@ -364,6 +364,8 @@ namespace VSudoTrans.DESKTOP
                     return "Dibatalkan";
                 case EnumStatusBooking.FailedPickup:
                     return "Penjemputan Gagal";
+                case EnumStatusBooking.Success:
+                    return "Sukses";
                 default:
                     return string.Format("{0} Description", value);
             }
