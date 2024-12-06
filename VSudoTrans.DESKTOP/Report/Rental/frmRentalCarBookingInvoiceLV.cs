@@ -9,6 +9,7 @@ using System.Globalization;
 using System.Drawing;
 using System.Data;
 using System.Linq;
+using Domain.Entities.Vehicle;
 
 namespace VSudoTrans.DESKTOP.Report.Rental
 {
@@ -42,24 +43,26 @@ namespace VSudoTrans.DESKTOP.Report.Rental
             MessageHelper.WaitFormShow(this);
             try
             {
-                string fSelect = "DocumentNumber,Date,Time,PickupAddress,DeliveryAddress,TotalPrice,BBM,TotalOperationalCost,TotalPayment";
-                string fExpand = "Company($select=Id,Code,Name,Address,PhoneNumber,Website,Logo,Watermark,WatermarkPaid,WatermarkUnpaid),Vehicle,Passenger,RentalCarBookingPayments,RentalCarBookingEmployees";
+                string fSelect = "DocumentNumber,Date,Time,PickupAddress,DeliveryAddress,TotalPrice,BBM,TotalOperationalCost,TotalPayment,VehicleId";
+                string fExpand = "Company($select=Id,Code,Name,Address,PhoneNumber,Website,Logo,Watermark,WatermarkPaid,WatermarkUnpaid),Passenger,RentalCarBookingPayments,RentalCarBookingEmployees";
                 var rentalCarBooking = HelperRestSharp.GetOdata<RentalCarBooking>("/RentalCarBookings", fSelect: fSelect, fExpand: fExpand, fFilter: $"Id eq {id}");
 
                 if (rentalCarBooking != null)
                 {
                     var company = rentalCarBooking.Company;
 
+                    var vehicle = HelperRestSharp.GetOdata<Vehicles>("Vehicles", fSelect = "Id,VehicleNumber,VehicleColor,Seat", fExpand = "Brand($select=Name),ModelUnit($select=Name)", fFilter: $"Id eq {rentalCarBooking.VehicleId}");
+
                     this.Text = $"Invoice Pemesanan Sewa Kendaraan ({rentalCarBooking.DocumentNumber})";
                     // set report destination
                     rptRentalCarBookingInvoice report = new rptRentalCarBookingInvoice();
                     report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
 
-                    if (company.Logo != null)
-                        report.companyLogo.ImageSource = HelperConvert.UrlToImageSource(company.LogoUrl);
+                    //if (company.Logo != null)
+                    //    report.companyLogo.ImageSource = HelperConvert.UrlToImageSource(company.LogoUrl);
 
-                    if (company.Watermark != null)
-                        report.companyLogo.ImageSource = HelperConvert.UrlToImageSource(company.LogoUrl);
+                    //if (company.Watermark != null)
+                    //    report.companyLogo.ImageSource = HelperConvert.UrlToImageSource(company.LogoUrl);
 
                     if (rentalCarBooking.TotalPrice == rentalCarBooking.TotalPayment)
                     {
@@ -72,22 +75,20 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                             SetPictureWatermark(report, HelperConvert.UrlToImageSource(company.WatermarkUnpaidUrl));
                     }
 
-                    report.xrCompanyNameHeader.Text = company.Name;
-                    report.xrCompanyAddressHeader.Text = company.Address;
-                    report.xrCompanyAddressHeader2.Text = $"Telepon {company.PhoneNumber} | Web {company.Website} ";
+                    //report.xrCompanyNameHeader.Text = company.Name;
+                    //report.xrCompanyAddressHeader.Text = company.Address;
+                    //report.xrCompanyAddressHeader2.Text = $"Telepon {company.PhoneNumber} | Web {company.Website} ";
                     CultureInfo indonesianCulture = CultureInfo.GetCultureInfo("id-ID");
                     string totalPrice = string.Format(indonesianCulture, "{0:N0}", rentalCarBooking.TotalPrice);
                     report.xrTerbilangHeader.Text = $"{HelperConvert.Terbilang(Convert.ToInt64(rentalCarBooking.RentalCarBookingPayments.Sum(s => s.Amount)))} Rupiah";
 
                     report.xrDocumentNumberHeader.Text = rentalCarBooking.DocumentNumber.ToString();
-                    report.xrPrintDate.Text = DateTime.Now.ToString("dd MMMM yyyy");
-                    report.xrPrintTime.Text = DateTime.Now.ToString("HH:mm:ss");
+                    report.xrPrintDate.Text = DateTime.Now.ToString("dd MMMM yyyy HH:mm:ss");
 
                     report.xrPassengerPhoneNumberHeader.Text = rentalCarBooking.Passenger.PhoneNumber;
                     report.xrPassengerNameHeader.Text = rentalCarBooking.Passenger.Name;
 
-                    report.xrDateHeader.Text = rentalCarBooking.Date.ToString("dd MMMM yyyy");
-                    report.xrTimeHeader.Text = rentalCarBooking.Time.ToString(@"hh\:mm");
+                    report.xrDateHeader.Text = $"{rentalCarBooking.Date.ToString("dd MMMM yyyy")} {rentalCarBooking.Time.ToString(@"hh\:mm")}";
                     report.xrTotalPriceHeader.Text = totalPrice;
 
                     report.xrPickupAddress.Text = rentalCarBooking.PickupAddress;
@@ -110,6 +111,13 @@ namespace VSudoTrans.DESKTOP.Report.Rental
 
                     report.DataSource = dt;
 
+                    report.xrTableKekurangan.Visible = false;
+                    if (rentalCarBooking.TotalPayment < rentalCarBooking.TotalPrice)
+                    {
+                        report.xrTableKekurangan.Visible = true;
+                        report.xrArrear.Text = string.Format(indonesianCulture, "{0:N0}", (rentalCarBooking.TotalPrice - rentalCarBooking.TotalPayment));
+                    }
+
                     //Detail
                     report.xrPaymentMethodDetail.ExpressionBindings.Add(new ExpressionBinding("Text", "[PaymentMethodDetail]"));
                     report.xrDateDetail.ExpressionBindings.Add(new ExpressionBinding("Text", "[DateDetail]"));
@@ -117,6 +125,11 @@ namespace VSudoTrans.DESKTOP.Report.Rental
 
                     report.xrUsernameFooter.Text = $"{ApplicationSettings.Instance.ApplicationUser.FirstName} {ApplicationSettings.Instance.ApplicationUser.LastName}";
                     report.xrDateFooter.Text = $"Kota Tangerang, {DateTime.Today.ToString("dd MMMM yyyy")}";
+
+                    report.xrVehicleBrandModelFooter.Text = $"{vehicle.Brand.Name} {vehicle.ModelUnit.Name}";
+                    report.xrVehicleNumber.Text = vehicle.VehicleNumber;
+                    report.xrVehicleSeat.Text = vehicle.Seat.ToString();
+                    report.xrVehicleColor.Text = vehicle.VehicleColor;
 
                     report.DisplayName = this.Text;
                     report.PrinterName = this.Text;
