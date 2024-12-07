@@ -524,6 +524,7 @@
     <Compile Include="Domain\Entities\HumanResource\JobPosition.cs" />
     <Compile Include="Domain\Entities\Organization\OrganizationStructure.cs" />
     <Compile Include="Domain\Entities\Rental\RentalCarBooking.cs" />
+    <Compile Include="Domain\Entities\Rental\RentalCarRegulationEmployee.cs" />
     <Compile Include="Domain\Entities\Shared\UnitMeasure.cs" />
     <Compile Include="Domain\Entities\SQLProc\BudgetTransactionResult.cs" />
     <Compile Include="Domain\Entities\SQLProc\ComparationBudgetRealizationResult.cs" />
@@ -948,6 +949,18 @@
     </Compile>
     <Compile Include="Master\Organization\frmOrganizationStructureTLV.Designer.cs">
       <DependentUpon>frmOrganizationStructureTLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Rental\frmRentalCarRegulationEmployeeDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Rental\frmRentalCarRegulationEmployeeDV.Designer.cs">
+      <DependentUpon>frmRentalCarRegulationEmployeeDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Rental\frmRentalCarRegulationEmployeeLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Rental\frmRentalCarRegulationEmployeeLV.Designer.cs">
+      <DependentUpon>frmRentalCarRegulationEmployeeLV.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\Shared\frmImportUnitMeasureWV.cs">
       <SubType>Form</SubType>
@@ -2799,6 +2812,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Organization\frmOrganizationStructureTLV.resx">
       <DependentUpon>frmOrganizationStructureTLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Rental\frmRentalCarRegulationEmployeeDV.resx">
+      <DependentUpon>frmRentalCarRegulationEmployeeDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Rental\frmRentalCarRegulationEmployeeLV.resx">
+      <DependentUpon>frmRentalCarRegulationEmployeeLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Shared\frmImportUnitMeasureWV.resx">
       <DependentUpon>frmImportUnitMeasureWV.cs</DependentUpon>

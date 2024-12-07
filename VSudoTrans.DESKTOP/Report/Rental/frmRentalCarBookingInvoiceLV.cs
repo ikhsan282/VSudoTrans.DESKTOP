@@ -51,7 +51,7 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                 {
                     var company = rentalCarBooking.Company;
 
-                    var vehicle = HelperRestSharp.GetOdata<Vehicles>("Vehicles", fSelect = "Id,VehicleNumber,VehicleColor,Seat", fExpand = "Brand($select=Name),ModelUnit($select=Name)", fFilter: $"Id eq {rentalCarBooking.VehicleId}");
+                    var vehicle = HelperRestSharp.GetOdata<Vehicles>("Vehicles", fSelect: "Id,VehicleNumber,VehicleColor,Seat", fExpand: "Brand($select=Name),ModelUnit($select=Name)", fFilter: $"Id eq {rentalCarBooking.VehicleId}");
 
                     this.Text = $"Invoice Pemesanan Sewa Kendaraan ({rentalCarBooking.DocumentNumber})";
                     // set report destination

@@ -32,9 +32,26 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRentalCarBookingDV));
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions2 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroupEmployee = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForBBM = new DevExpress.XtraLayout.LayoutControlItem();
+            this.BBMSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.ItemForTotalOperationalCost = new DevExpress.XtraLayout.LayoutControlItem();
+            this.TotalOperationalCostSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.groupEmployee = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForGridEmployee = new DevExpress.XtraLayout.LayoutControlItem();
+            this._GridControlEmployee = new DevExpress.XtraGrid.GridControl();
+            this._BindingSourceEmployee = new System.Windows.Forms.BindingSource(this.components);
+            this._GridViewEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colEmployee = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.EmployeePopUp = new VSudoTrans.DESKTOP.Descendant.RepositoryItemPopupContainerEditOwn();
+            this.colEmployeeJobPositionName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmployeeOrganizationStructureName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAmountEmployee = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.AmountEmployeeSpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForCompanyId = new DevExpress.XtraLayout.LayoutControlItem();
             this.CompanyPopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
@@ -69,21 +86,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.TotalPriceSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.ItemForVehicle = new DevExpress.XtraLayout.LayoutControlItem();
             this.VehiclePopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
-            this.layoutControlGroupEmployee = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.ItemForGridEmployee = new DevExpress.XtraLayout.LayoutControlItem();
-            this._GridControlEmployee = new DevExpress.XtraGrid.GridControl();
-            this._BindingSourceEmployee = new System.Windows.Forms.BindingSource(this.components);
-            this._GridViewEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colEmployee = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.EmployeePopUp = new VSudoTrans.DESKTOP.Descendant.RepositoryItemPopupContainerEditOwn();
-            this.colEmployeeJobPositionName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEmployeeOrganizationStructureName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAmountEmployee = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.AmountEmployeeSpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
-            this.ItemForBBM = new DevExpress.XtraLayout.LayoutControlItem();
-            this.BBMSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.ItemForTotalOperationalCost = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TotalOperationalCostSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.layoutControlGroupPayment = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForGridPayment = new DevExpress.XtraLayout.LayoutControlItem();
             this._GridControlPayment = new DevExpress.XtraGrid.GridControl();
@@ -119,6 +121,18 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBBM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BBMSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalOperationalCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalOperationalCostSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControlEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridViewEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeePopUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountEmployeeSpinEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCompanyId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyPopUp.Properties)).BeginInit();
@@ -155,17 +169,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this.TotalPriceSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehiclePopUp.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridControlEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridViewEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeePopUp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AmountEmployeeSpinEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBBM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BBMSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalOperationalCost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TotalOperationalCostSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGridPayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridControlPayment)).BeginInit();
@@ -297,6 +300,193 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.layoutControlGroupPayment,
             this.layoutControlGroupNote,
             this.layoutControlGroup3});
+            // 
+            // layoutControlGroupEmployee
+            // 
+            this.layoutControlGroupEmployee.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForBBM,
+            this.ItemForTotalOperationalCost,
+            this.groupEmployee});
+            this.layoutControlGroupEmployee.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroupEmployee.Name = "layoutControlGroupEmployee";
+            this.layoutControlGroupEmployee.Size = new System.Drawing.Size(1099, 592);
+            this.layoutControlGroupEmployee.Text = "Sopir/Kernet/Montir";
+            // 
+            // ItemForBBM
+            // 
+            this.ItemForBBM.Control = this.BBMSpinEdit;
+            this.ItemForBBM.Location = new System.Drawing.Point(0, 38);
+            this.ItemForBBM.Name = "ItemForBBM";
+            this.ItemForBBM.Size = new System.Drawing.Size(1099, 38);
+            this.ItemForBBM.Text = "Bahan Bakar Minyak (BBM)";
+            this.ItemForBBM.TextSize = new System.Drawing.Size(187, 21);
+            // 
+            // BBMSpinEdit
+            // 
+            this.BBMSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "BBM", true));
+            this.BBMSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.BBMSpinEdit.Location = new System.Drawing.Point(222, 93);
+            this.BBMSpinEdit.MenuManager = this.mainRibbonControl;
+            this.BBMSpinEdit.Name = "BBMSpinEdit";
+            this.BBMSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BBMSpinEdit.Size = new System.Drawing.Size(896, 34);
+            this.BBMSpinEdit.StyleController = this._DataLayoutControl;
+            this.BBMSpinEdit.TabIndex = 51;
+            // 
+            // ItemForTotalOperationalCost
+            // 
+            this.ItemForTotalOperationalCost.Control = this.TotalOperationalCostSpinEdit;
+            this.ItemForTotalOperationalCost.Location = new System.Drawing.Point(0, 0);
+            this.ItemForTotalOperationalCost.Name = "ItemForTotalOperationalCost";
+            this.ItemForTotalOperationalCost.Size = new System.Drawing.Size(1099, 38);
+            this.ItemForTotalOperationalCost.Text = "Total Biaya Operasional";
+            this.ItemForTotalOperationalCost.TextSize = new System.Drawing.Size(187, 21);
+            // 
+            // TotalOperationalCostSpinEdit
+            // 
+            this.TotalOperationalCostSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.TotalOperationalCostSpinEdit.Location = new System.Drawing.Point(222, 55);
+            this.TotalOperationalCostSpinEdit.MenuManager = this.mainRibbonControl;
+            this.TotalOperationalCostSpinEdit.Name = "TotalOperationalCostSpinEdit";
+            this.TotalOperationalCostSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TotalOperationalCostSpinEdit.Properties.ReadOnly = true;
+            this.TotalOperationalCostSpinEdit.Size = new System.Drawing.Size(896, 34);
+            this.TotalOperationalCostSpinEdit.StyleController = this._DataLayoutControl;
+            this.TotalOperationalCostSpinEdit.TabIndex = 52;
+            // 
+            // groupEmployee
+            // 
+            this.groupEmployee.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Hitung Pembagian Hasil Karyawan", true, buttonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
+            this.groupEmployee.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+            this.groupEmployee.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForGridEmployee});
+            this.groupEmployee.Location = new System.Drawing.Point(0, 76);
+            this.groupEmployee.Name = "groupEmployee";
+            this.groupEmployee.Size = new System.Drawing.Size(1099, 516);
+            this.groupEmployee.Text = "Karyawan";
+            // 
+            // ItemForGridEmployee
+            // 
+            this.ItemForGridEmployee.Control = this._GridControlEmployee;
+            this.ItemForGridEmployee.Location = new System.Drawing.Point(0, 0);
+            this.ItemForGridEmployee.Name = "ItemForGridEmployee";
+            this.ItemForGridEmployee.Size = new System.Drawing.Size(1075, 462);
+            this.ItemForGridEmployee.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForGridEmployee.TextVisible = false;
+            // 
+            // _GridControlEmployee
+            // 
+            this._GridControlEmployee.DataSource = this._BindingSourceEmployee;
+            this._GridControlEmployee.Location = new System.Drawing.Point(35, 173);
+            this._GridControlEmployee.MainView = this._GridViewEmployee;
+            this._GridControlEmployee.MenuManager = this.mainRibbonControl;
+            this._GridControlEmployee.Name = "_GridControlEmployee";
+            this._GridControlEmployee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.EmployeePopUp,
+            this.AmountEmployeeSpinEdit});
+            this._GridControlEmployee.Size = new System.Drawing.Size(1071, 458);
+            this._GridControlEmployee.TabIndex = 48;
+            this._GridControlEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this._GridViewEmployee});
+            // 
+            // _BindingSourceEmployee
+            // 
+            this._BindingSourceEmployee.DataSource = typeof(Domain.Entities.Rental.RentalCarBookingEmployee);
+            // 
+            // _GridViewEmployee
+            // 
+            this._GridViewEmployee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEmployee,
+            this.colEmployeeJobPositionName,
+            this.colEmployeeOrganizationStructureName,
+            this.colAmountEmployee});
+            this._GridViewEmployee.GridControl = this._GridControlEmployee;
+            this._GridViewEmployee.Name = "_GridViewEmployee";
+            // 
+            // colEmployee
+            // 
+            this.colEmployee.Caption = "Karyawan";
+            this.colEmployee.ColumnEdit = this.EmployeePopUp;
+            this.colEmployee.FieldName = "Employee";
+            this.colEmployee.MinWidth = 30;
+            this.colEmployee.Name = "colEmployee";
+            this.colEmployee.Visible = true;
+            this.colEmployee.VisibleIndex = 0;
+            this.colEmployee.Width = 112;
+            // 
+            // EmployeePopUp
+            // 
+            this.EmployeePopUp.Appearance.Options.UseTextOptions = true;
+            this.EmployeePopUp.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.EmployeePopUp.AutoHeight = false;
+            this.EmployeePopUp.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EmployeePopUp.Name = "EmployeePopUp";
+            this.EmployeePopUp.ObjectId = null;
+            this.EmployeePopUp.OptionsCascadeControl = null;
+            this.EmployeePopUp.OptionsCascadeMember = "";
+            this.EmployeePopUp.OptionsChildControl = null;
+            this.EmployeePopUp.OptionsDataSource = null;
+            this.EmployeePopUp.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
+            this.EmployeePopUp.OptionsDisplayCaption = "";
+            this.EmployeePopUp.OptionsDisplayColumns = "";
+            this.EmployeePopUp.OptionsDisplayFormat = "";
+            this.EmployeePopUp.OptionsDisplayText = "";
+            this.EmployeePopUp.OptionsDisplayTitle = "";
+            this.EmployeePopUp.OptionsDisplayWidth = "";
+            this.EmployeePopUp.OptionsFilterColumns = "";
+            this.EmployeePopUp.OptionsSortColumns = "";
+            // 
+            // colEmployeeJobPositionName
+            // 
+            this.colEmployeeJobPositionName.Caption = "Organisasi";
+            this.colEmployeeJobPositionName.FieldName = "Employee.JobPosition.Name";
+            this.colEmployeeJobPositionName.MinWidth = 30;
+            this.colEmployeeJobPositionName.Name = "colEmployeeJobPositionName";
+            this.colEmployeeJobPositionName.OptionsColumn.ReadOnly = true;
+            this.colEmployeeJobPositionName.Visible = true;
+            this.colEmployeeJobPositionName.VisibleIndex = 1;
+            this.colEmployeeJobPositionName.Width = 112;
+            // 
+            // colEmployeeOrganizationStructureName
+            // 
+            this.colEmployeeOrganizationStructureName.Caption = "Posisi";
+            this.colEmployeeOrganizationStructureName.FieldName = "Employee.OrganizationStructure.Name";
+            this.colEmployeeOrganizationStructureName.MinWidth = 30;
+            this.colEmployeeOrganizationStructureName.Name = "colEmployeeOrganizationStructureName";
+            this.colEmployeeOrganizationStructureName.OptionsColumn.ReadOnly = true;
+            this.colEmployeeOrganizationStructureName.Visible = true;
+            this.colEmployeeOrganizationStructureName.VisibleIndex = 2;
+            this.colEmployeeOrganizationStructureName.Width = 112;
+            // 
+            // colAmountEmployee
+            // 
+            this.colAmountEmployee.Caption = "Nominal";
+            this.colAmountEmployee.ColumnEdit = this.AmountEmployeeSpinEdit;
+            this.colAmountEmployee.FieldName = "Amount";
+            this.colAmountEmployee.MinWidth = 30;
+            this.colAmountEmployee.Name = "colAmountEmployee";
+            this.colAmountEmployee.Visible = true;
+            this.colAmountEmployee.VisibleIndex = 3;
+            this.colAmountEmployee.Width = 112;
+            // 
+            // AmountEmployeeSpinEdit
+            // 
+            this.AmountEmployeeSpinEdit.AutoHeight = false;
+            this.AmountEmployeeSpinEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.AmountEmployeeSpinEdit.Name = "AmountEmployeeSpinEdit";
             // 
             // layoutControlGroup2
             // 
@@ -853,181 +1043,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.VehiclePopUp.StyleController = this._DataLayoutControl;
             this.VehiclePopUp.TabIndex = 50;
             // 
-            // layoutControlGroupEmployee
-            // 
-            this.layoutControlGroupEmployee.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForGridEmployee,
-            this.ItemForBBM,
-            this.ItemForTotalOperationalCost});
-            this.layoutControlGroupEmployee.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroupEmployee.Name = "layoutControlGroupEmployee";
-            this.layoutControlGroupEmployee.Size = new System.Drawing.Size(1099, 592);
-            this.layoutControlGroupEmployee.Text = "Sopir/Kernet/Montir";
-            // 
-            // ItemForGridEmployee
-            // 
-            this.ItemForGridEmployee.Control = this._GridControlEmployee;
-            this.ItemForGridEmployee.Location = new System.Drawing.Point(0, 76);
-            this.ItemForGridEmployee.Name = "ItemForGridEmployee";
-            this.ItemForGridEmployee.Size = new System.Drawing.Size(1099, 516);
-            this.ItemForGridEmployee.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForGridEmployee.TextVisible = false;
-            // 
-            // _GridControlEmployee
-            // 
-            this._GridControlEmployee.DataSource = this._BindingSourceEmployee;
-            this._GridControlEmployee.Location = new System.Drawing.Point(23, 131);
-            this._GridControlEmployee.MainView = this._GridViewEmployee;
-            this._GridControlEmployee.MenuManager = this.mainRibbonControl;
-            this._GridControlEmployee.Name = "_GridControlEmployee";
-            this._GridControlEmployee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.EmployeePopUp,
-            this.AmountEmployeeSpinEdit});
-            this._GridControlEmployee.Size = new System.Drawing.Size(1095, 512);
-            this._GridControlEmployee.TabIndex = 48;
-            this._GridControlEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this._GridViewEmployee});
-            // 
-            // _BindingSourceEmployee
-            // 
-            this._BindingSourceEmployee.DataSource = typeof(Domain.Entities.Rental.RentalCarBookingEmployee);
-            // 
-            // _GridViewEmployee
-            // 
-            this._GridViewEmployee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colEmployee,
-            this.colEmployeeJobPositionName,
-            this.colEmployeeOrganizationStructureName,
-            this.colAmountEmployee});
-            this._GridViewEmployee.GridControl = this._GridControlEmployee;
-            this._GridViewEmployee.Name = "_GridViewEmployee";
-            // 
-            // colEmployee
-            // 
-            this.colEmployee.Caption = "Karyawan";
-            this.colEmployee.ColumnEdit = this.EmployeePopUp;
-            this.colEmployee.FieldName = "Employee";
-            this.colEmployee.MinWidth = 30;
-            this.colEmployee.Name = "colEmployee";
-            this.colEmployee.Visible = true;
-            this.colEmployee.VisibleIndex = 0;
-            this.colEmployee.Width = 112;
-            // 
-            // EmployeePopUp
-            // 
-            this.EmployeePopUp.Appearance.Options.UseTextOptions = true;
-            this.EmployeePopUp.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.EmployeePopUp.AutoHeight = false;
-            this.EmployeePopUp.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EmployeePopUp.Name = "EmployeePopUp";
-            this.EmployeePopUp.ObjectId = null;
-            this.EmployeePopUp.OptionsCascadeControl = null;
-            this.EmployeePopUp.OptionsCascadeMember = "";
-            this.EmployeePopUp.OptionsChildControl = null;
-            this.EmployeePopUp.OptionsDataSource = null;
-            this.EmployeePopUp.OptionsDataType = VSudoTrans.DESKTOP.Descendant.EnumDataSource.VirtualMode;
-            this.EmployeePopUp.OptionsDisplayCaption = "";
-            this.EmployeePopUp.OptionsDisplayColumns = "";
-            this.EmployeePopUp.OptionsDisplayFormat = "";
-            this.EmployeePopUp.OptionsDisplayText = "";
-            this.EmployeePopUp.OptionsDisplayTitle = "";
-            this.EmployeePopUp.OptionsDisplayWidth = "";
-            this.EmployeePopUp.OptionsFilterColumns = "";
-            this.EmployeePopUp.OptionsSortColumns = "";
-            // 
-            // colEmployeeJobPositionName
-            // 
-            this.colEmployeeJobPositionName.Caption = "Organisasi";
-            this.colEmployeeJobPositionName.FieldName = "Employee.JobPosition.Name";
-            this.colEmployeeJobPositionName.MinWidth = 30;
-            this.colEmployeeJobPositionName.Name = "colEmployeeJobPositionName";
-            this.colEmployeeJobPositionName.OptionsColumn.ReadOnly = true;
-            this.colEmployeeJobPositionName.Visible = true;
-            this.colEmployeeJobPositionName.VisibleIndex = 1;
-            this.colEmployeeJobPositionName.Width = 112;
-            // 
-            // colEmployeeOrganizationStructureName
-            // 
-            this.colEmployeeOrganizationStructureName.Caption = "Posisi";
-            this.colEmployeeOrganizationStructureName.FieldName = "Employee.OrganizationStructure.Name";
-            this.colEmployeeOrganizationStructureName.MinWidth = 30;
-            this.colEmployeeOrganizationStructureName.Name = "colEmployeeOrganizationStructureName";
-            this.colEmployeeOrganizationStructureName.OptionsColumn.ReadOnly = true;
-            this.colEmployeeOrganizationStructureName.Visible = true;
-            this.colEmployeeOrganizationStructureName.VisibleIndex = 2;
-            this.colEmployeeOrganizationStructureName.Width = 112;
-            // 
-            // colAmountEmployee
-            // 
-            this.colAmountEmployee.Caption = "Nominal";
-            this.colAmountEmployee.ColumnEdit = this.AmountEmployeeSpinEdit;
-            this.colAmountEmployee.FieldName = "Amount";
-            this.colAmountEmployee.MinWidth = 30;
-            this.colAmountEmployee.Name = "colAmountEmployee";
-            this.colAmountEmployee.Visible = true;
-            this.colAmountEmployee.VisibleIndex = 3;
-            this.colAmountEmployee.Width = 112;
-            // 
-            // AmountEmployeeSpinEdit
-            // 
-            this.AmountEmployeeSpinEdit.AutoHeight = false;
-            this.AmountEmployeeSpinEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.AmountEmployeeSpinEdit.Name = "AmountEmployeeSpinEdit";
-            // 
-            // ItemForBBM
-            // 
-            this.ItemForBBM.Control = this.BBMSpinEdit;
-            this.ItemForBBM.Location = new System.Drawing.Point(0, 38);
-            this.ItemForBBM.Name = "ItemForBBM";
-            this.ItemForBBM.Size = new System.Drawing.Size(1099, 38);
-            this.ItemForBBM.Text = "Bahan Bakar Minyak (BBM)";
-            this.ItemForBBM.TextSize = new System.Drawing.Size(187, 21);
-            // 
-            // BBMSpinEdit
-            // 
-            this.BBMSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "BBM", true));
-            this.BBMSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.BBMSpinEdit.Location = new System.Drawing.Point(222, 93);
-            this.BBMSpinEdit.MenuManager = this.mainRibbonControl;
-            this.BBMSpinEdit.Name = "BBMSpinEdit";
-            this.BBMSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.BBMSpinEdit.Size = new System.Drawing.Size(896, 34);
-            this.BBMSpinEdit.StyleController = this._DataLayoutControl;
-            this.BBMSpinEdit.TabIndex = 51;
-            // 
-            // ItemForTotalOperationalCost
-            // 
-            this.ItemForTotalOperationalCost.Control = this.TotalOperationalCostSpinEdit;
-            this.ItemForTotalOperationalCost.Location = new System.Drawing.Point(0, 0);
-            this.ItemForTotalOperationalCost.Name = "ItemForTotalOperationalCost";
-            this.ItemForTotalOperationalCost.Size = new System.Drawing.Size(1099, 38);
-            this.ItemForTotalOperationalCost.Text = "Total Biaya Operasional";
-            this.ItemForTotalOperationalCost.TextSize = new System.Drawing.Size(187, 21);
-            // 
-            // TotalOperationalCostSpinEdit
-            // 
-            this.TotalOperationalCostSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.TotalOperationalCostSpinEdit.Location = new System.Drawing.Point(222, 55);
-            this.TotalOperationalCostSpinEdit.MenuManager = this.mainRibbonControl;
-            this.TotalOperationalCostSpinEdit.Name = "TotalOperationalCostSpinEdit";
-            this.TotalOperationalCostSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TotalOperationalCostSpinEdit.Properties.ReadOnly = true;
-            this.TotalOperationalCostSpinEdit.Size = new System.Drawing.Size(896, 34);
-            this.TotalOperationalCostSpinEdit.StyleController = this._DataLayoutControl;
-            this.TotalOperationalCostSpinEdit.TabIndex = 52;
-            // 
             // layoutControlGroupPayment
             // 
             this.layoutControlGroupPayment.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -1320,6 +1335,18 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBBM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BBMSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalOperationalCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalOperationalCostSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControlEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridViewEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeePopUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountEmployeeSpinEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCompanyId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyPopUp.Properties)).EndInit();
@@ -1356,17 +1383,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this.TotalPriceSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehiclePopUp.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridControlEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._BindingSourceEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GridViewEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeePopUp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AmountEmployeeSpinEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBBM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BBMSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTotalOperationalCost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TotalOperationalCostSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGridPayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridControlPayment)).EndInit();
@@ -1477,5 +1493,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         private DevExpress.XtraLayout.LayoutControlItem ItemForTotalOperationalCost;
         private DevExpress.XtraEditors.SpinEdit TotalPaymentSpinEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForTotalPayment;
+        private DevExpress.XtraLayout.LayoutControlGroup groupEmployee;
     }
 }

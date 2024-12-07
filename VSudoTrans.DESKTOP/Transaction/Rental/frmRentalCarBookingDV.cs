@@ -13,6 +13,9 @@ using System.Linq;
 using Domain.Entities.Travel;
 using System.Collections.Generic;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.DataProcessing.InMemoryDataProcessor;
+using System.Runtime.InteropServices.Expando;
+using Domain.Entities.Organization;
 
 namespace VSudoTrans.DESKTOP.Transaction.Rental
 {
@@ -51,6 +54,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
 
             groupPassenger.CustomButtonClick += GroupPassenger_CustomButtonClick;
 
+            groupEmployee.CustomButtonClick += GroupEmployee_CustomButtonClick;
+
             GridHelper.GridViewInitializeLayout(_GridViewEmployee);
             GridHelper.GridControlInitializeEmbeddedNavigator(_GridControlEmployee, true, true, true, true, true, true, true, true, true, true, true, true);
             GridHelper.GridColumnInitializeLayout(colAmountEmployee, typeof(decimal), "n0", fTotal: true);
@@ -75,6 +80,37 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             _GridViewPayment.OptionsBehavior.Editable = true;
 
             BBMSpinEdit.EditValueChanged += BBMSpinEdit_EditValueChanged;
+        }
+
+        private void GroupEmployee_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
+        {
+            //LayoutControlGroup layoutGroup = sender as LayoutControlGroup;
+            if (e.Button.Properties.Caption.Contains("Hitung Pembagian Hasil Karyawan"))
+            {
+                var company = CompanyPopUp.EditValue as Company;
+                var totalPrice = HelperConvert.Decimal(TotalPriceSpinEdit.EditValue);
+                if (company != null && DateDateEdit.EditValue != null && totalPrice > 0)
+                {
+                    int iDate = HelperConvert.Int(HelperConvert.Date(DateDateEdit.EditValue).ToString("yyyyMMdd"));
+                    string fFilter = $"CompanyId eq {company.Id} and IStartDate le {iDate} and IEndDate ge {iDate}";
+                    var rentalCarRegulationEmployee = HelperRestSharp.GetOdata<RentalCarRegulationEmployee>("RentalCarRegulationEmployees", fSelect: "Id,CompanyId,StartDate,EndDate", fExpand: "RentalCarRegulationEmployeeDetails($select=Id,Type,Amount)", fFilter: fFilter);
+
+                    _BindingSourceEmployee.Clear();
+                    var rentalCarBookingEmployees = new List<RentalCarBookingEmployee>();
+                    foreach (var rentalCarRegulationEmployeeDetail in rentalCarRegulationEmployee.RentalCarRegulationEmployeeDetails)
+                    {
+                        var rentalCarBookingEmployee = new RentalCarBookingEmployee()
+                        {
+                            EmployeeId = 0,
+                            Amount = rentalCarRegulationEmployeeDetail.Type == EnumRentalCarEmployeeRegulationType.Fix ? rentalCarRegulationEmployeeDetail.Amount : rentalCarRegulationEmployeeDetail.Type == EnumRentalCarEmployeeRegulationType.Percentage ? totalPrice * (rentalCarRegulationEmployeeDetail.Amount / 100) : 0
+                        };
+
+                        rentalCarBookingEmployees.Add(rentalCarBookingEmployee);
+                    }
+                    _BindingSourceEmployee.DataSource = rentalCarBookingEmployees;
+                    CalculateOperationalCost();
+                }
+            }
         }
 
         private void BBMSpinEdit_EditValueChanged(object sender, EventArgs e)
