@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.XtraReports.UI;
 using Domain.Entities.Finance;
+using Domain.Entities.Organization;
 using Domain.Entities.SQLView.EducationPayment;
 using PopUpUtils;
 using System;
@@ -62,7 +63,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             MessageHelper.WaitFormShow(this);
             try
             {
-                this.OdataFilter = $"CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
+                var company = FilterPopUp3.EditValue as Company;
+                this.OdataFilter = $"CompanyId eq {company.Id} ";
 
                 if (FilterDate1.EditValue != null && FilterDate1.EditValue != null)
                     OdataFilter += $" and Date ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} and Date le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
@@ -117,7 +119,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                             DataRow totalRow = dt.NewRow();
                             totalRow["DetailNo"] = $"{loop++}.";
                             totalRow["DetailDate"] = budgetTransaction.Key.ToString("dd-MMM-yyyy");
-                            totalRow["DetailNote"] = "PENERIMAAN KAS";
+                            totalRow["DetailNote"] = "PEMASUKAN KAS";
                             totalRow["DetailPenerimaan"] = penerimaan;
                             totalRow["DetailPengeluaran"] = DBNull.Value;
                             totalRow["DetailSaldo"] = saldoAwal;
@@ -141,6 +143,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     report.DataSource = dt;
 
                     //Detail
+                    report.xrCompanyName.Text = company.Name;
                     report.xrTrDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDate]"));
                     report.xrCategory.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailNote]"));
 

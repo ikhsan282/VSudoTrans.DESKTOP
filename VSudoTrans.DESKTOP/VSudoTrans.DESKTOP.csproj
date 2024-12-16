@@ -1058,11 +1058,23 @@
     <Compile Include="Master\Vehicle\frmCategoryVehicleLV.Designer.cs">
       <DependentUpon>frmCategoryVehicleLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Rental\frmRentalCarBookingScheduleDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Rental\frmRentalCarBookingScheduleDVV.Designer.cs">
+      <DependentUpon>frmRentalCarBookingScheduleDVV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Rental\frmRentalCarBookingInvoiceLV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report\Rental\frmRentalCarBookingInvoiceLV.Designer.cs">
       <DependentUpon>frmRentalCarBookingInvoiceLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rental\rptRentalCarBookingSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rental\rptRentalCarBookingSchedule.Designer.cs">
+      <DependentUpon>rptRentalCarBookingSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Rental\rptRentalCarBookingInvoice.cs">
       <SubType>Component</SubType>
@@ -2936,8 +2948,14 @@
     <EmbeddedResource Include="Report\Finance\rptComparationBudgetRealization.resx">
       <DependentUpon>rptComparationBudgetRealization.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rental\frmRentalCarBookingScheduleDVV.resx">
+      <DependentUpon>frmRentalCarBookingScheduleDVV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Rental\frmRentalCarBookingInvoiceLV.resx">
       <DependentUpon>frmRentalCarBookingInvoiceLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rental\rptRentalCarBookingSchedule.resx">
+      <DependentUpon>rptRentalCarBookingSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Rental\rptRentalCarBookingInvoice.resx">
       <DependentUpon>rptRentalCarBookingInvoice.cs</DependentUpon>

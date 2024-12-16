@@ -37,6 +37,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             bbiSaveAndNew.ItemClick += BbiSaveAndNew_ItemClick;
 
             HelperConvert.FormatDateEdit(DateDateEdit);
+            HelperConvert.FormatDateEdit(EndDateDateEdit);
             HelperConvert.FormatDateTimeEdit(TimeDateEdit, "HH:mm");
 
             HelperConvert.FormatDateTimeEdit(CreatedDateDateEdit);
@@ -275,7 +276,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         private void GroupPassenger_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
         {
             //LayoutControlGroup layoutGroup = sender as LayoutControlGroup;
-            if (e.Button.Properties.Caption.Contains("Tambah Penumpang"))
+            if (e.Button.Properties.Caption.Contains("Tambah Pelanggan"))
             {
                 using (var form = new frmPassengerDV(0, "/Passengers"))
                 {
@@ -390,6 +391,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         protected override void InitializeSearchLookup()
         {
             SLUHelper.SetEnumDataSource(PaymentMethodSearchLookUpEdit, new Converter<EnumPaymentMethod, string>(EnumHelper.EnumPaymentMethodToString));
+            SLUHelper.SetEnumDataSource(EmployeeRoleSearchLookUpEdit, new Converter<EnumEmployeeRole, string>(EnumHelper.EnumEmployeeRoleToString));
 
             PopupEditHelper.Company(CompanyPopUp);
             PopupEditHelper.Passenger(PassengerPopUp, CompanyPopUp, "CompanyId");
@@ -443,6 +445,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             _RentalCarBooking.CategoryVehicleId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CategoryVehiclePopUp.EditValue, "Id"));
             _RentalCarBooking.VehicleId = HelperConvert.Int(AssemblyHelper.GetValueProperty(VehiclePopUp.EditValue, "Id"));
             _RentalCarBooking.Date = HelperConvert.Date(DateDateEdit.EditValue);
+            _RentalCarBooking.StartDate = HelperConvert.Date(DateDateEdit.EditValue);
+            _RentalCarBooking.EndDate = HelperConvert.Date(EndDateDateEdit.EditValue);
             _RentalCarBooking.Time = HelperConvert.Date(TimeDateEdit.EditValue).TimeOfDay;
 
             _RentalCarBooking.PickupPointProvinceId = HelperConvert.Int(AssemblyHelper.GetValueProperty(PickupDistrictPopUp.EditValue, "ProvinceId"));

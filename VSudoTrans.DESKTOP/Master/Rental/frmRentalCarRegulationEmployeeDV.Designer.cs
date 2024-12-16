@@ -504,7 +504,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             this.ClientSize = new System.Drawing.Size(902, 635);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmRentalCarRegulationEmployeeDV";
-            this.Text = "RAPBS";
+            this.Text = "Peraturan Pembagian Karyawan";
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).EndInit();
             this._DataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).EndInit();

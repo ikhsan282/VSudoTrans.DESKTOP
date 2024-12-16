@@ -4,6 +4,21 @@ namespace VSudoTrans.DESKTOP
 {
     public static class EnumHelper
     {
+        public static string EnumEmployeeRoleToString(EnumEmployeeRole value)
+        {
+            switch (value)
+            {
+                case EnumEmployeeRole.Driver:
+                    return "Sopir";
+                case EnumEmployeeRole.Conductor:
+                    return "Kernet";
+                case EnumEmployeeRole.Mechanic:
+                    return "Montir";
+                default:
+                    return string.Format("{0} Description", value);
+            }
+        }
+
         public static string EnumRentalCarEmployeeRegulationTypeToString(EnumRentalCarEmployeeRegulationType value)
         {
             switch (value)

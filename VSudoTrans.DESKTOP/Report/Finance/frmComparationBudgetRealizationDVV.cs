@@ -112,6 +112,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     report.DataSource = dt;
 
                     //Detail
+                    report.xrCompanyName.Text = company.Name;
                     report.xrCategoryCode.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryCode]"));
                     report.xrCategoryName.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryName]"));
 

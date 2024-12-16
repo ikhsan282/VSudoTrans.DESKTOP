@@ -237,7 +237,7 @@
             this.xrPrintTime.BorderWidth = 1F;
             this.xrPrintTime.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrPrintTime.ForeColor = System.Drawing.Color.Black;
-            this.xrPrintTime.LocationFloat = new DevExpress.Utils.PointFloat(123.708F, 125.941F);
+            this.xrPrintTime.LocationFloat = new DevExpress.Utils.PointFloat(123.708F, 136.3577F);
             this.xrPrintTime.Name = "xrPrintTime";
             this.xrPrintTime.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPrintTime.SizeF = new System.Drawing.SizeF(136.297F, 19.99998F);
@@ -262,7 +262,7 @@
             this.xrPrintDate.BorderWidth = 1F;
             this.xrPrintDate.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrPrintDate.ForeColor = System.Drawing.Color.Black;
-            this.xrPrintDate.LocationFloat = new DevExpress.Utils.PointFloat(123.7079F, 105.9411F);
+            this.xrPrintDate.LocationFloat = new DevExpress.Utils.PointFloat(123.7079F, 116.3578F);
             this.xrPrintDate.Name = "xrPrintDate";
             this.xrPrintDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPrintDate.SizeF = new System.Drawing.SizeF(136.297F, 19.99998F);
@@ -287,7 +287,7 @@
             this.xrLabel15.BorderWidth = 1F;
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Arial", 7F);
             this.xrLabel15.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(110F, 125.941F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(110F, 136.3577F);
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 2, 100F);
             this.xrLabel15.SizeF = new System.Drawing.SizeF(13.70787F, 19.99998F);
@@ -312,7 +312,7 @@
             this.xrLabel14.BorderWidth = 1F;
             this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Arial", 7F);
             this.xrLabel14.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(110F, 105.941F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(110F, 116.3577F);
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 2, 100F);
             this.xrLabel14.SizeF = new System.Drawing.SizeF(13.70787F, 19.99998F);
@@ -337,7 +337,7 @@
             this.xrLabel12.BorderWidth = 1F;
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Arial", 7F);
             this.xrLabel12.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 125.9409F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(10.00002F, 136.3576F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 2, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(99.99996F, 20F);
@@ -362,7 +362,7 @@
             this.xrLabel11.BorderWidth = 1F;
             this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Arial", 7F);
             this.xrLabel11.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(9.999999F, 105.941F);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(10.00002F, 116.3577F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 2, 100F);
             this.xrLabel11.SizeF = new System.Drawing.SizeF(99.99999F, 20.00001F);
@@ -406,7 +406,7 @@
             // 
             // xrTable4
             // 
-            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 70.00001F);
+            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 80.94101F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {

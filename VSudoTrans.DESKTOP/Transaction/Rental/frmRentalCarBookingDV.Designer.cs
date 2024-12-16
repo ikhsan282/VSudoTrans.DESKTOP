@@ -46,6 +46,9 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this._GridControlEmployee = new DevExpress.XtraGrid.GridControl();
             this._BindingSourceEmployee = new System.Windows.Forms.BindingSource(this.components);
             this._GridViewEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colEmployeeRole = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.EmployeeRoleSearchLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colEmployee = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmployeePopUp = new VSudoTrans.DESKTOP.Descendant.RepositoryItemPopupContainerEditOwn();
             this.colEmployeeJobPositionName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -86,6 +89,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.TotalPriceSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.ItemForVehicle = new DevExpress.XtraLayout.LayoutControlItem();
             this.VehiclePopUp = new VSudoTrans.DESKTOP.Descendant.PopupContainerEditOwn();
+            this.ItemForEndDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.EndDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlGroupPayment = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForGridPayment = new DevExpress.XtraLayout.LayoutControlItem();
             this._GridControlPayment = new DevExpress.XtraGrid.GridControl();
@@ -131,6 +136,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this._GridControlEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._BindingSourceEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeRoleSearchLookUpEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeePopUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmountEmployeeSpinEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
@@ -169,6 +176,9 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this.TotalPriceSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehiclePopUp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEndDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGridPayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridControlPayment)).BeginInit();
@@ -199,6 +209,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             // 
             // _DataLayoutControl
             // 
+            this._DataLayoutControl.Controls.Add(this.EndDateDateEdit);
             this._DataLayoutControl.Controls.Add(this.TotalPaymentSpinEdit);
             this._DataLayoutControl.Controls.Add(this.TotalOperationalCostSpinEdit);
             this._DataLayoutControl.Controls.Add(this.BBMSpinEdit);
@@ -394,7 +405,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this._GridControlEmployee.Name = "_GridControlEmployee";
             this._GridControlEmployee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.EmployeePopUp,
-            this.AmountEmployeeSpinEdit});
+            this.AmountEmployeeSpinEdit,
+            this.EmployeeRoleSearchLookUpEdit});
             this._GridControlEmployee.Size = new System.Drawing.Size(1071, 458);
             this._GridControlEmployee.TabIndex = 48;
             this._GridControlEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -407,12 +419,39 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             // _GridViewEmployee
             // 
             this._GridViewEmployee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEmployeeRole,
             this.colEmployee,
             this.colEmployeeJobPositionName,
             this.colEmployeeOrganizationStructureName,
             this.colAmountEmployee});
             this._GridViewEmployee.GridControl = this._GridControlEmployee;
             this._GridViewEmployee.Name = "_GridViewEmployee";
+            // 
+            // colEmployeeRole
+            // 
+            this.colEmployeeRole.Caption = "Tipe";
+            this.colEmployeeRole.ColumnEdit = this.EmployeeRoleSearchLookUpEdit;
+            this.colEmployeeRole.FieldName = "EmployeeRole";
+            this.colEmployeeRole.MinWidth = 30;
+            this.colEmployeeRole.Name = "colEmployeeRole";
+            this.colEmployeeRole.Visible = true;
+            this.colEmployeeRole.VisibleIndex = 0;
+            this.colEmployeeRole.Width = 112;
+            // 
+            // EmployeeRoleSearchLookUpEdit
+            // 
+            this.EmployeeRoleSearchLookUpEdit.AutoHeight = false;
+            this.EmployeeRoleSearchLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EmployeeRoleSearchLookUpEdit.Name = "EmployeeRoleSearchLookUpEdit";
+            this.EmployeeRoleSearchLookUpEdit.PopupView = this.gridView1;
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colEmployee
             // 
@@ -422,7 +461,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.colEmployee.MinWidth = 30;
             this.colEmployee.Name = "colEmployee";
             this.colEmployee.Visible = true;
-            this.colEmployee.VisibleIndex = 0;
+            this.colEmployee.VisibleIndex = 1;
             this.colEmployee.Width = 112;
             // 
             // EmployeePopUp
@@ -456,7 +495,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.colEmployeeJobPositionName.Name = "colEmployeeJobPositionName";
             this.colEmployeeJobPositionName.OptionsColumn.ReadOnly = true;
             this.colEmployeeJobPositionName.Visible = true;
-            this.colEmployeeJobPositionName.VisibleIndex = 1;
+            this.colEmployeeJobPositionName.VisibleIndex = 2;
             this.colEmployeeJobPositionName.Width = 112;
             // 
             // colEmployeeOrganizationStructureName
@@ -467,7 +506,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.colEmployeeOrganizationStructureName.Name = "colEmployeeOrganizationStructureName";
             this.colEmployeeOrganizationStructureName.OptionsColumn.ReadOnly = true;
             this.colEmployeeOrganizationStructureName.Visible = true;
-            this.colEmployeeOrganizationStructureName.VisibleIndex = 2;
+            this.colEmployeeOrganizationStructureName.VisibleIndex = 3;
             this.colEmployeeOrganizationStructureName.Width = 112;
             // 
             // colAmountEmployee
@@ -478,7 +517,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.colAmountEmployee.MinWidth = 30;
             this.colAmountEmployee.Name = "colAmountEmployee";
             this.colAmountEmployee.Visible = true;
-            this.colAmountEmployee.VisibleIndex = 3;
+            this.colAmountEmployee.VisibleIndex = 4;
             this.colAmountEmployee.Width = 112;
             // 
             // AmountEmployeeSpinEdit
@@ -499,7 +538,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.groupPassenger,
             this.ItemForCategoryVehicle,
             this.ItemForTotalPrice,
-            this.ItemForVehicle});
+            this.ItemForVehicle,
+            this.ItemForEndDate});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(1099, 592);
@@ -836,8 +876,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForDate.Control = this.DateDateEdit;
             this.ItemForDate.Location = new System.Drawing.Point(0, 38);
             this.ItemForDate.Name = "ItemForDate";
-            this.ItemForDate.Size = new System.Drawing.Size(1099, 38);
-            this.ItemForDate.Text = "Tanggal";
+            this.ItemForDate.Size = new System.Drawing.Size(549, 38);
+            this.ItemForDate.Text = "Tanggal Keberangkatan";
             this.ItemForDate.TextSize = new System.Drawing.Size(187, 21);
             // 
             // DateDateEdit
@@ -851,7 +891,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateDateEdit.Size = new System.Drawing.Size(896, 34);
+            this.DateDateEdit.Size = new System.Drawing.Size(346, 34);
             this.DateDateEdit.StyleController = this._DataLayoutControl;
             this.DateDateEdit.TabIndex = 6;
             // 
@@ -859,14 +899,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             // 
             buttonImageOptions1.SvgImageSize = new System.Drawing.Size(12, 12);
             this.groupPassenger.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton(" Tambah Penumpang Baru", true, buttonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton(" Tambah Pelanggan Baru", true, buttonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
             this.groupPassenger.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
             this.groupPassenger.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForPassenger});
             this.groupPassenger.Location = new System.Drawing.Point(0, 228);
             this.groupPassenger.Name = "groupPassenger";
             this.groupPassenger.Size = new System.Drawing.Size(1099, 92);
-            this.groupPassenger.Text = "Penumpang";
+            this.groupPassenger.Text = "Pelanggan";
             // 
             // ItemForPassenger
             // 
@@ -874,7 +914,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.ItemForPassenger.Location = new System.Drawing.Point(0, 0);
             this.ItemForPassenger.Name = "ItemForPassenger";
             this.ItemForPassenger.Size = new System.Drawing.Size(1075, 38);
-            this.ItemForPassenger.Text = "Penumpang";
+            this.ItemForPassenger.Text = "Pelanggan";
             this.ItemForPassenger.TextSize = new System.Drawing.Size(187, 21);
             // 
             // PassengerPopUp
@@ -1042,6 +1082,30 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             this.VehiclePopUp.Size = new System.Drawing.Size(896, 34);
             this.VehiclePopUp.StyleController = this._DataLayoutControl;
             this.VehiclePopUp.TabIndex = 50;
+            // 
+            // ItemForEndDate
+            // 
+            this.ItemForEndDate.Control = this.EndDateDateEdit;
+            this.ItemForEndDate.Location = new System.Drawing.Point(549, 38);
+            this.ItemForEndDate.Name = "ItemForEndDate";
+            this.ItemForEndDate.Size = new System.Drawing.Size(550, 38);
+            this.ItemForEndDate.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForEndDate.TextVisible = false;
+            // 
+            // EndDateDateEdit
+            // 
+            this.EndDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "EndDate", true));
+            this.EndDateDateEdit.EditValue = null;
+            this.EndDateDateEdit.Location = new System.Drawing.Point(572, 93);
+            this.EndDateDateEdit.MenuManager = this.mainRibbonControl;
+            this.EndDateDateEdit.Name = "EndDateDateEdit";
+            this.EndDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndDateDateEdit.Size = new System.Drawing.Size(546, 34);
+            this.EndDateDateEdit.StyleController = this._DataLayoutControl;
+            this.EndDateDateEdit.TabIndex = 55;
             // 
             // layoutControlGroupPayment
             // 
@@ -1345,6 +1409,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this._GridControlEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._BindingSourceEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeRoleSearchLookUpEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeePopUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmountEmployeeSpinEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
@@ -1383,6 +1449,9 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             ((System.ComponentModel.ISupportInitialize)(this.TotalPriceSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehiclePopUp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEndDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGridPayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridControlPayment)).EndInit();
@@ -1494,5 +1563,10 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         private DevExpress.XtraEditors.SpinEdit TotalPaymentSpinEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForTotalPayment;
         private DevExpress.XtraLayout.LayoutControlGroup groupEmployee;
+        private DevExpress.XtraEditors.DateEdit EndDateDateEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmployeeRole;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit EmployeeRoleSearchLookUpEdit;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

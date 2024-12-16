@@ -4,6 +4,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
+    public enum EnumEmployeeRole : short
+    {
+        [Display(Name = "Sopir")]
+        Driver = 0,
+        [Display(Name = "Kernet")]
+        Conductor = 1,
+        [Display(Name = "Montir")]
+        Mechanic = 2
+    }
     public enum EnumRentalCarEmployeeRegulationType : short
     {
         [Display(Name = "Tetap")]

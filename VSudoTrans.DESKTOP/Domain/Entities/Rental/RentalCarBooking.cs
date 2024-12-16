@@ -26,6 +26,9 @@ namespace Domain.Entities.Rental
         [MaxLength(40)]
         public string DocumentNumber { get; set; }
         public DateTime Date { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public double Trip { get; set; }
         public TimeSpan Time { get; set; }
         [MaxLength(2000)]
         public string PickupAddress { get; set; }
@@ -82,6 +85,7 @@ namespace Domain.Entities.Rental
         public int EmployeeId { get; set; }
         public virtual Employee Employee { get; set; }
         public decimal Amount { get; set; }
+        public EnumEmployeeRole EmployeeRole { get; set; }
     }
 
     [Table("RentalCarBookingPayment")]
