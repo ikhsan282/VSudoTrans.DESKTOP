@@ -322,7 +322,7 @@
             this.ClientSize = new System.Drawing.Size(891, 638);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRentalCarRegulationEmployeeLV";
-            this.Text = "Peraturan Pembagian Karyawan";
+            this.Text = "Peraturan Komisi Karyawan";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);

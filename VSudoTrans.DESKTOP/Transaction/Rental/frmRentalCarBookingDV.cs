@@ -86,7 +86,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         private void GroupEmployee_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
         {
             //LayoutControlGroup layoutGroup = sender as LayoutControlGroup;
-            if (e.Button.Properties.Caption.Contains("Hitung Pembagian Hasil Karyawan"))
+            if (e.Button.Properties.Caption.Contains("Hitung Komisi Karyawan"))
             {
                 var company = CompanyPopUp.EditValue as Company;
                 var totalPrice = HelperConvert.Decimal(TotalPriceSpinEdit.EditValue);

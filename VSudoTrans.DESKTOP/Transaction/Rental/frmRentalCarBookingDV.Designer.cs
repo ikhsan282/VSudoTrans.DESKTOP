@@ -378,7 +378,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             // groupEmployee
             // 
             this.groupEmployee.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Hitung Pembagian Hasil Karyawan", true, buttonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Hitung Komisi Karyawan", true, buttonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
             this.groupEmployee.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
             this.groupEmployee.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForGridEmployee});

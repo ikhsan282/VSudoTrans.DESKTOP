@@ -34,6 +34,7 @@ namespace Domain.Entities.Rental
     {
         public int RentalCarRegulationEmployeeId { get; set; }
         public virtual RentalCarRegulationEmployee RentalCarRegulationEmployee { get; set; }
+        public EnumEmployeeRole EmployeeRole { get; set; }
         public EnumRentalCarEmployeeRegulationType Type { get; set; }
         public decimal Amount { get; set; }
     }

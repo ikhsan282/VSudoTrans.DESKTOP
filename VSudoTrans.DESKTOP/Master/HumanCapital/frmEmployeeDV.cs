@@ -368,7 +368,6 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
 
                 AccountNumber = HelperConvert.String(AccountNumberTextEdit.EditValue),
                 AccountName = HelperConvert.String(AccountNameTextEdit.EditValue),
-                BankId = HelperConvert.Int(AssemblyHelper.GetValueProperty(BankPopUp.EditValue, "Id")),
             };
 
             var resignationDate = HelperConvert.Date(ResignationDateDateEdit.EditValue);
@@ -376,6 +375,12 @@ namespace VSudoTrans.DESKTOP.Master.HumanCapital
                 _Employee.ResignationDate = resignationDate;
             else
                 _Employee.ResignationDate = null;
+
+            var bank = BankPopUp.EditValue as Bank;
+            if (bank != null)
+                _Employee.BankId = bank.Id;
+            else
+                _Employee.BankId = null;
 
             _EmployeePersonalData.AlternateCountryCode = HelperConvert.String(AlternateCountryCodeSearchLookUpEdit.EditValue);
             _EmployeePersonalData.AlternatePhoneNumber = HelperConvert.String(AlternatePhoneNumberTextEdit.EditValue);

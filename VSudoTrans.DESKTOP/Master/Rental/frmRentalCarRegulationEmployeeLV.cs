@@ -14,7 +14,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             InitializeComponent();
 
             EndPoint = "/RentalCarRegulationEmployees";
-            FormTitle = "Peraturan Pembagian Karyawan";
+            FormTitle = "Peraturan Komisi Karyawan";
 
             OdataSelect = "Id,StartDate,EndDate";
             OdataExpand = "Company($select=name)";

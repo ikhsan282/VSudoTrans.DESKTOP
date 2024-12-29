@@ -30,6 +30,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
         /// </summary>
         public void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPassengerDV));
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -107,7 +108,6 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             this._DataLayoutControl.Controls.Add(this.ModifiedDateDateEdit);
             this._DataLayoutControl.Controls.Add(this.NoteMemoEdit);
             this._DataLayoutControl.Controls.Add(this.CompanyPopUp);
-            this._DataLayoutControl.Location = new System.Drawing.Point(0, 254);
             this._DataLayoutControl.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(945, 213, 975, 600);
             this._DataLayoutControl.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
             this._DataLayoutControl.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
@@ -134,14 +134,17 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // bbiSave
             // 
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
+            this.bbiSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSave.ImageOptions.SvgImage")));
             // 
             // bbiSaveAndClose
             // 
             this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
+            this.bbiSaveAndClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSaveAndClose.ImageOptions.SvgImage")));
             // 
             // bbiSaveAndNew
             // 
             this.bbiSaveAndNew.ImageOptions.ImageUri.Uri = "SaveAndNew";
+            this.bbiSaveAndNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSaveAndNew.ImageOptions.SvgImage")));
             // 
             // bbiReset
             // 
@@ -150,6 +153,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // bbiClose
             // 
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
+            this.bbiClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiClose.ImageOptions.SvgImage")));
             // 
             // _BindingSource
             // 
@@ -203,7 +207,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
             this.CompanyPopUp.Location = new System.Drawing.Point(144, 55);
-            this.CompanyPopUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CompanyPopUp.Margin = new System.Windows.Forms.Padding(4);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -254,7 +258,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // 
             this.EmailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Email", true));
             this.EmailTextEdit.Location = new System.Drawing.Point(144, 131);
-            this.EmailTextEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmailTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.EmailTextEdit.MenuManager = this.mainRibbonControl;
             this.EmailTextEdit.Name = "EmailTextEdit";
             this.EmailTextEdit.Size = new System.Drawing.Size(985, 34);
@@ -274,7 +278,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // 
             this.CodeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Code", true));
             this.CodeTextEdit.Location = new System.Drawing.Point(144, 169);
-            this.CodeTextEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CodeTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.CodeTextEdit.MenuManager = this.mainRibbonControl;
             this.CodeTextEdit.Name = "CodeTextEdit";
             this.CodeTextEdit.Properties.ReadOnly = true;
@@ -295,7 +299,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // 
             this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Name", true));
             this.NameTextEdit.Location = new System.Drawing.Point(144, 207);
-            this.NameTextEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.NameTextEdit.MenuManager = this.mainRibbonControl;
             this.NameTextEdit.Name = "NameTextEdit";
             this.NameTextEdit.Size = new System.Drawing.Size(985, 34);
@@ -315,7 +319,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // 
             this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
             this.NoteMemoEdit.Location = new System.Drawing.Point(144, 245);
-            this.NoteMemoEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NoteMemoEdit.Margin = new System.Windows.Forms.Padding(4);
             this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
             this.NoteMemoEdit.Name = "NoteMemoEdit";
             this.NoteMemoEdit.Size = new System.Drawing.Size(985, 112);
@@ -334,7 +338,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // CountryCodeSearchLookUpEdit
             // 
             this.CountryCodeSearchLookUpEdit.Location = new System.Drawing.Point(144, 93);
-            this.CountryCodeSearchLookUpEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CountryCodeSearchLookUpEdit.Margin = new System.Windows.Forms.Padding(4);
             this.CountryCodeSearchLookUpEdit.MenuManager = this.mainRibbonControl;
             this.CountryCodeSearchLookUpEdit.Name = "CountryCodeSearchLookUpEdit";
             this.CountryCodeSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -367,7 +371,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // PhoneNumberTextEdit
             // 
             this.PhoneNumberTextEdit.Location = new System.Drawing.Point(281, 93);
-            this.PhoneNumberTextEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PhoneNumberTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.PhoneNumberTextEdit.MenuManager = this.mainRibbonControl;
             this.PhoneNumberTextEdit.Name = "PhoneNumberTextEdit";
             this.PhoneNumberTextEdit.Size = new System.Drawing.Size(848, 34);
@@ -399,7 +403,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
             this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, 55);
-            this.CreatedUserTextEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CreatedUserTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
             this.CreatedUserTextEdit.Size = new System.Drawing.Size(985, 34);
@@ -420,7 +424,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
             this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, 93);
-            this.CreatedDateDateEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CreatedDateDateEdit.Margin = new System.Windows.Forms.Padding(4);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -445,7 +449,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
             this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, 131);
-            this.ModifiedUserTextEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModifiedUserTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
             this.ModifiedUserTextEdit.Size = new System.Drawing.Size(985, 34);
@@ -466,7 +470,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
             this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, 169);
-            this.ModifiedDateDateEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModifiedDateDateEdit.Margin = new System.Windows.Forms.Padding(4);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -484,7 +488,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 634);
             this.Name = "frmPassengerDV";
-            this.Text = "Penumpang";
+            this.Text = "Pelanggan";
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).EndInit();
             this._DataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).EndInit();

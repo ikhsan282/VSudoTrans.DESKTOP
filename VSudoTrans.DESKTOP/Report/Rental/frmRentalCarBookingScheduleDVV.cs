@@ -19,7 +19,7 @@ namespace VSudoTrans.DESKTOP.Report.Rental
             InitializeComponent();
 
             this.EndPoint = "/RentalCarBookings";
-            this.FormTitle = "Buku KAS (Dokumen)";
+            this.FormTitle = "Jadwal Rental Kendaraan (Dokumen)";
 
             HelperConvert.FormatDateEdit(FilterDate1);
             HelperConvert.FormatDateEdit(FilterDate2);
@@ -69,9 +69,10 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                 if (FilterDate1.EditValue != null && FilterDate1.EditValue != null)
                     OdataFilter += $" and Date ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} and Date le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-ddTHH:mm:ssZ")} ";
 
+                string select = "Id,Time,StartDate,EndDate,Trip,TotalPrice,PickupAddress,DeliveryAddress";
                 string expand = "Passenger,Vehicle($expand=Brand,ModelUnit),RentalCarBookingEmployees($expand=Employee)";
 
-                var rentalCarBookings = HelperRestSharp.GetListOdata<RentalCarBooking>("/RentalCarBookings", "*", fExpand: expand, OdataFilter, fOrder: "Id");
+                var rentalCarBookings = HelperRestSharp.GetListOdata<RentalCarBooking>("/RentalCarBookings", fSelect: select, fExpand: expand, OdataFilter, fOrder: "Id");
 
                 if (rentalCarBookings.Any())
                 {
@@ -79,11 +80,15 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                     rptRentalCarBookingSchedule report = new rptRentalCarBookingSchedule();
                     report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
 
+                    if (company.WatermarkUrl != null)
+                        SetPictureWatermark(report, HelperConvert.UrlToImageSource(company.WatermarkUrl));
+
                     DataTable dt = new DataTable();
                     dt.TableName = "Table1";
                     dt.Columns.Add("DetailNo", typeof(string));
                     dt.Columns.Add("DetailPassengerName", typeof(string));
                     dt.Columns.Add("DetailPassengerPhoneNumber", typeof(string));
+                    dt.Columns.Add("DetailTime", typeof(string));
                     dt.Columns.Add("DetailRangeDate", typeof(string));
                     dt.Columns.Add("DetailTrip", typeof(decimal));
                     dt.Columns.Add("DetailTotalPrice", typeof(decimal));
@@ -106,7 +111,8 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                         totalRow["DetailPassengerName"] = rentalCarBooking.Passenger.Name;
                         totalRow["DetailPassengerPhoneNumber"] = rentalCarBooking.Passenger.PhoneNumber;
 
-                        totalRow["DetailRangeDate"] = $"{rentalCarBooking.StartDate.ToString("dd MMM yyyy")} - {rentalCarBooking.EndDate.ToString("dd MMM yyyy")}";
+                        totalRow["DetailTime"] = rentalCarBooking.Time.ToString(@"hh\:mm");
+                        totalRow["DetailRangeDate"] = $"{rentalCarBooking.StartDate.ToString("dd-MMM-yyyy")} - {rentalCarBooking.EndDate.ToString("dd-MMM-yyyy")}";
                         totalRow["DetailTrip"] = rentalCarBooking.Trip;
                         totalRow["DetailTotalPrice"] = rentalCarBooking.TotalPrice;
 
@@ -121,13 +127,13 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                         totalRow["DetailVehicleNumber"] = rentalCarBooking.Vehicle.VehicleNumber;
 
                         var driverNames = rentalCarBooking.RentalCarBookingEmployees.Where(s => s.EmployeeRole == Domain.EnumEmployeeRole.Driver).Select(s => s.Employee.Name).ToList();
-                        totalRow["DetailDriver"] = string.Join(",", driverNames);
+                        totalRow["DetailDriver"] = string.Join("\r\n", driverNames);
 
                         var conductorNames = rentalCarBooking.RentalCarBookingEmployees.Where(s => s.EmployeeRole == Domain.EnumEmployeeRole.Conductor).Select(s => s.Employee.Name).ToList();
-                        totalRow["DetailConductor"] = string.Join(",", conductorNames);
+                        totalRow["DetailConductor"] = string.Join("\r\n", conductorNames);
 
                         var mechanicNames = rentalCarBooking.RentalCarBookingEmployees.Where(s => s.EmployeeRole == Domain.EnumEmployeeRole.Mechanic).Select(s => s.Employee.Name).ToList();
-                        totalRow["DetailMechanic"] = string.Join(",", mechanicNames);
+                        totalRow["DetailMechanic"] = string.Join("\r\n", mechanicNames);
 
                         dt.Rows.Add(totalRow);
                     }
@@ -137,11 +143,6 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                     //Detail
                     report.xrDetailPassengerName.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailPassengerName]"));
                     report.xrDetailPassengerPhoneNumber.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailPassengerPhoneNumber]"));
-
-                    report.xrDetailRangeDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailRangeDate]"));
-                    report.xrDetailRangeDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailRangeDate]"));
-                    report.xrDetailTrip.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTrip]"));
-
 
                     report.xrDetailPickupAddress.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailPickupAddress]"));
                     report.xrDetailDeliveryAddress.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDeliveryAddress]"));
@@ -157,6 +158,16 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                     report.xrDetailConductor.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailConductor]"));
                     report.xrDetailMechanic.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailMechanic]"));
 
+                    report.xrDetailTime.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTime]"));
+                    report.xrDetailRangeDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailRangeDate]"));
+                    report.xrDetailTrip.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTrip]"));
+                    report.xrDetailTotalPrice.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTotalPrice]"));
+
+                    report.xrPrintDate.Text = DateTime.Now.ToString("dd MMMM yyyy HH:mm:ss");
+                    report.xrPeriodeDate.Text = $"{HelperConvert.Date(FilterDate1.EditValue).ToString("dd MMMM yyyy")} - {HelperConvert.Date(FilterDate2.EditValue).ToString("dd MMMM yyyy")}";
+
+                    report.xrUsernameFooter.Text = $"{ApplicationSettings.Instance.ApplicationUser.FirstName} {ApplicationSettings.Instance.ApplicationUser.LastName}";
+                    report.xrDateFooter.Text = $"Kota Tangerang, {DateTime.Today.ToString("dd MMMM yyyy")}";
 
                     report.Name = $"JadwalRentalKendaraan_{HelperConvert.String(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Code"))}_{DateTime.Now.ToString("yyyyMMddHHmmss")}";
                     string path = System.Environment.ExpandEnvironmentVariables("%userprofile%/downloads/") + $"{report.Name}.pdf";

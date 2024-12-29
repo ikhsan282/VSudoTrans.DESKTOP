@@ -48,8 +48,6 @@ namespace VSudoTrans.DESKTOP.Master.Rental
 
             HelperConvert.FormatDateTimeEdit(CreatedDateDateEdit);
             HelperConvert.FormatDateTimeEdit(ModifiedDateDateEdit);
-
-            SLUHelper.SetEnumDataSource(TypeSearchLookUpEdit, new Converter<EnumRentalCarEmployeeRegulationType, string>(EnumHelper.EnumRentalCarEmployeeRegulationTypeToString));
         }
 
         private void _GridViewDetail_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
@@ -76,6 +74,15 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             GridView gridView = sender as GridView;
 
             if (!(gridView.GetFocusedRow() is RentalCarRegulationEmployeeDetail result)) return;
+
+            var employeeRole = result.EmployeeRole;
+
+            if (employeeRole == null)
+            {
+                gridView.SetColumnError(colEmployeeRole, $"Tipe Karyawan tidak boleh kosong");
+                e.Valid = false;
+                return;
+            }
 
             var Type = result.Type;
 
@@ -127,6 +134,9 @@ namespace VSudoTrans.DESKTOP.Master.Rental
         protected override void InitializeSearchLookup()
         {
             PopupEditHelper.Company(CompanyPopUp);
+
+            SLUHelper.SetEnumDataSource(TypeSearchLookUpEdit, new Converter<EnumRentalCarEmployeeRegulationType, string>(EnumHelper.EnumRentalCarEmployeeRegulationTypeToString));
+            SLUHelper.SetEnumDataSource(EmployeeRoleSearchLookUpEdit, new Converter<EnumEmployeeRole, string>(EnumHelper.EnumEmployeeRoleToString));
         }
 
         private void BbiSaveAndNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

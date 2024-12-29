@@ -13,7 +13,7 @@ namespace VSudoTrans.DESKTOP.Master.Transportation
             InitializeComponent();
 
             this.EndPoint = "/Passengers";
-            this.FormTitle = "Penumpang";
+            this.FormTitle = "Pelanggan";
 
             this.OdataSelect = "Id,PhoneNumber,Email,Code,Name";
             this.OdataExpand = "Company($select=code,name)";

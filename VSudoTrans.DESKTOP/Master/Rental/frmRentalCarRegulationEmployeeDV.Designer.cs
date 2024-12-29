@@ -43,8 +43,15 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             this._GridControlDetail = new DevExpress.XtraGrid.GridControl();
             this._BindingSourceDetail = new System.Windows.Forms.BindingSource(this.components);
             this._GridViewDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TypeSearchLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AmountSpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.ItemForStartDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.StartDateDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.ItemForEndDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.EndDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForCreatedUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.CreatedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -54,13 +61,9 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             this.ModifiedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForModifiedDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ModifiedDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.StartDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.ItemForStartDate = new DevExpress.XtraLayout.LayoutControlItem();
-            this.EndDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.ItemForEndDate = new DevExpress.XtraLayout.LayoutControlItem();
-            this.colType = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TypeSearchLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colEmployeeRole = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.EmployeeRoleSearchLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).BeginInit();
             this._DataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).BeginInit();
@@ -78,7 +81,15 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             ((System.ComponentModel.ISupportInitialize)(this._GridControlDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._BindingSourceDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypeSearchLookUpEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmountSpinEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStartDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartDateDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEndDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).BeginInit();
@@ -90,14 +101,8 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StartDateDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StartDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForStartDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForEndDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypeSearchLookUpEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeRoleSearchLookUpEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // _DataLayoutControl
@@ -209,7 +214,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             // CompanyPopUp
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
-            this.CompanyPopUp.Location = new System.Drawing.Point(144, 55);
+            this.CompanyPopUp.Location = new System.Drawing.Point(144, -326);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -258,7 +263,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             // NoteMemoEdit
             // 
             this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
-            this.NoteMemoEdit.Location = new System.Drawing.Point(144, 169);
+            this.NoteMemoEdit.Location = new System.Drawing.Point(144, -212);
             this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
             this.NoteMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
             this.NoteMemoEdit.Name = "NoteMemoEdit";
@@ -278,14 +283,15 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             // _GridControlDetail
             // 
             this._GridControlDetail.DataSource = this._BindingSourceDetail;
-            this._GridControlDetail.Location = new System.Drawing.Point(23, 273);
+            this._GridControlDetail.Location = new System.Drawing.Point(23, -108);
             this._GridControlDetail.MainView = this._GridViewDetail;
             this._GridControlDetail.MenuManager = this.mainRibbonControl;
             this._GridControlDetail.MinimumSize = new System.Drawing.Size(0, 501);
             this._GridControlDetail.Name = "_GridControlDetail";
             this._GridControlDetail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.AmountSpinEdit,
-            this.TypeSearchLookUpEdit});
+            this.TypeSearchLookUpEdit,
+            this.EmployeeRoleSearchLookUpEdit});
             this._GridControlDetail.Size = new System.Drawing.Size(830, 501);
             this._GridControlDetail.TabIndex = 12;
             this._GridControlDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -298,12 +304,39 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             // _GridViewDetail
             // 
             this._GridViewDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEmployeeRole,
             this.colType,
             this.colAmount});
             this._GridViewDetail.DetailHeight = 351;
             this._GridViewDetail.GridControl = this._GridControlDetail;
             this._GridViewDetail.Name = "_GridViewDetail";
             this._GridViewDetail.OptionsEditForm.PopupEditFormWidth = 799;
+            // 
+            // colType
+            // 
+            this.colType.Caption = "Tipe";
+            this.colType.ColumnEdit = this.TypeSearchLookUpEdit;
+            this.colType.FieldName = "Type";
+            this.colType.MinWidth = 30;
+            this.colType.Name = "colType";
+            this.colType.Visible = true;
+            this.colType.VisibleIndex = 1;
+            this.colType.Width = 334;
+            // 
+            // TypeSearchLookUpEdit
+            // 
+            this.TypeSearchLookUpEdit.AutoHeight = false;
+            this.TypeSearchLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TypeSearchLookUpEdit.Name = "TypeSearchLookUpEdit";
+            this.TypeSearchLookUpEdit.PopupView = this.repositoryItemSearchLookUpEdit1View;
+            // 
+            // repositoryItemSearchLookUpEdit1View
+            // 
+            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
+            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // colAmount
             // 
@@ -313,8 +346,8 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             this.colAmount.MinWidth = 30;
             this.colAmount.Name = "colAmount";
             this.colAmount.Visible = true;
-            this.colAmount.VisibleIndex = 1;
-            this.colAmount.Width = 1101;
+            this.colAmount.VisibleIndex = 2;
+            this.colAmount.Width = 983;
             // 
             // AmountSpinEdit
             // 
@@ -322,6 +355,54 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             this.AmountSpinEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.AmountSpinEdit.Name = "AmountSpinEdit";
+            // 
+            // ItemForStartDate
+            // 
+            this.ItemForStartDate.Control = this.StartDateDateEdit;
+            this.ItemForStartDate.Location = new System.Drawing.Point(0, 38);
+            this.ItemForStartDate.Name = "ItemForStartDate";
+            this.ItemForStartDate.Size = new System.Drawing.Size(834, 38);
+            this.ItemForStartDate.Text = "Tanggal Mulai";
+            this.ItemForStartDate.TextSize = new System.Drawing.Size(109, 21);
+            // 
+            // StartDateDateEdit
+            // 
+            this.StartDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "StartDate", true));
+            this.StartDateDateEdit.EditValue = null;
+            this.StartDateDateEdit.Location = new System.Drawing.Point(144, -288);
+            this.StartDateDateEdit.MenuManager = this.mainRibbonControl;
+            this.StartDateDateEdit.Name = "StartDateDateEdit";
+            this.StartDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.StartDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.StartDateDateEdit.Size = new System.Drawing.Size(709, 34);
+            this.StartDateDateEdit.StyleController = this._DataLayoutControl;
+            this.StartDateDateEdit.TabIndex = 13;
+            // 
+            // ItemForEndDate
+            // 
+            this.ItemForEndDate.Control = this.EndDateDateEdit;
+            this.ItemForEndDate.Location = new System.Drawing.Point(0, 76);
+            this.ItemForEndDate.Name = "ItemForEndDate";
+            this.ItemForEndDate.Size = new System.Drawing.Size(834, 38);
+            this.ItemForEndDate.Text = "Tanggal Selesai";
+            this.ItemForEndDate.TextSize = new System.Drawing.Size(109, 21);
+            // 
+            // EndDateDateEdit
+            // 
+            this.EndDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "EndDate", true));
+            this.EndDateDateEdit.EditValue = null;
+            this.EndDateDateEdit.Location = new System.Drawing.Point(144, -250);
+            this.EndDateDateEdit.MenuManager = this.mainRibbonControl;
+            this.EndDateDateEdit.Name = "EndDateDateEdit";
+            this.EndDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndDateDateEdit.Size = new System.Drawing.Size(709, 34);
+            this.EndDateDateEdit.StyleController = this._DataLayoutControl;
+            this.EndDateDateEdit.TabIndex = 14;
             // 
             // layoutControlGroup3
             // 
@@ -347,7 +428,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             // CreatedUserTextEdit
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, 55);
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, -326);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
             this.CreatedUserTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -367,7 +448,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             // 
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, 93);
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, -288);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -391,7 +472,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             // ModifiedUserTextEdit
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, 131);
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, -250);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
             this.ModifiedUserTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -411,7 +492,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             // 
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, 169);
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, -212);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -423,79 +504,31 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             this.ModifiedDateDateEdit.StyleController = this._DataLayoutControl;
             this.ModifiedDateDateEdit.TabIndex = 11;
             // 
-            // StartDateDateEdit
+            // colEmployeeRole
             // 
-            this.StartDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "StartDate", true));
-            this.StartDateDateEdit.EditValue = null;
-            this.StartDateDateEdit.Location = new System.Drawing.Point(144, 93);
-            this.StartDateDateEdit.MenuManager = this.mainRibbonControl;
-            this.StartDateDateEdit.Name = "StartDateDateEdit";
-            this.StartDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.colEmployeeRole.Caption = "Tipe Karyawan";
+            this.colEmployeeRole.ColumnEdit = this.EmployeeRoleSearchLookUpEdit;
+            this.colEmployeeRole.FieldName = "EmployeeRole";
+            this.colEmployeeRole.MinWidth = 30;
+            this.colEmployeeRole.Name = "colEmployeeRole";
+            this.colEmployeeRole.Visible = true;
+            this.colEmployeeRole.VisibleIndex = 0;
+            this.colEmployeeRole.Width = 159;
+            // 
+            // EmployeeRoleSearchLookUpEdit
+            // 
+            this.EmployeeRoleSearchLookUpEdit.AutoHeight = false;
+            this.EmployeeRoleSearchLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StartDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StartDateDateEdit.Size = new System.Drawing.Size(709, 34);
-            this.StartDateDateEdit.StyleController = this._DataLayoutControl;
-            this.StartDateDateEdit.TabIndex = 13;
+            this.EmployeeRoleSearchLookUpEdit.Name = "EmployeeRoleSearchLookUpEdit";
+            this.EmployeeRoleSearchLookUpEdit.PopupView = this.gridView1;
             // 
-            // ItemForStartDate
+            // gridView1
             // 
-            this.ItemForStartDate.Control = this.StartDateDateEdit;
-            this.ItemForStartDate.Location = new System.Drawing.Point(0, 38);
-            this.ItemForStartDate.Name = "ItemForStartDate";
-            this.ItemForStartDate.Size = new System.Drawing.Size(834, 38);
-            this.ItemForStartDate.Text = "Tanggal Mulai";
-            this.ItemForStartDate.TextSize = new System.Drawing.Size(109, 21);
-            // 
-            // EndDateDateEdit
-            // 
-            this.EndDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "EndDate", true));
-            this.EndDateDateEdit.EditValue = null;
-            this.EndDateDateEdit.Location = new System.Drawing.Point(144, 131);
-            this.EndDateDateEdit.MenuManager = this.mainRibbonControl;
-            this.EndDateDateEdit.Name = "EndDateDateEdit";
-            this.EndDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EndDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EndDateDateEdit.Size = new System.Drawing.Size(709, 34);
-            this.EndDateDateEdit.StyleController = this._DataLayoutControl;
-            this.EndDateDateEdit.TabIndex = 14;
-            // 
-            // ItemForEndDate
-            // 
-            this.ItemForEndDate.Control = this.EndDateDateEdit;
-            this.ItemForEndDate.Location = new System.Drawing.Point(0, 76);
-            this.ItemForEndDate.Name = "ItemForEndDate";
-            this.ItemForEndDate.Size = new System.Drawing.Size(834, 38);
-            this.ItemForEndDate.Text = "Tanggal Selesai";
-            this.ItemForEndDate.TextSize = new System.Drawing.Size(109, 21);
-            // 
-            // colType
-            // 
-            this.colType.Caption = "Tipe";
-            this.colType.ColumnEdit = this.TypeSearchLookUpEdit;
-            this.colType.FieldName = "Type";
-            this.colType.MinWidth = 30;
-            this.colType.Name = "colType";
-            this.colType.Visible = true;
-            this.colType.VisibleIndex = 0;
-            this.colType.Width = 375;
-            // 
-            // TypeSearchLookUpEdit
-            // 
-            this.TypeSearchLookUpEdit.AutoHeight = false;
-            this.TypeSearchLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TypeSearchLookUpEdit.Name = "TypeSearchLookUpEdit";
-            this.TypeSearchLookUpEdit.PopupView = this.repositoryItemSearchLookUpEdit1View;
-            // 
-            // repositoryItemSearchLookUpEdit1View
-            // 
-            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
-            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // frmRentalCarRegulationEmployeeDV
             // 
@@ -504,7 +537,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             this.ClientSize = new System.Drawing.Size(902, 635);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmRentalCarRegulationEmployeeDV";
-            this.Text = "Peraturan Pembagian Karyawan";
+            this.Text = "Peraturan Komisi Karyawan";
             ((System.ComponentModel.ISupportInitialize)(this._DataLayoutControl)).EndInit();
             this._DataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lcgRoot)).EndInit();
@@ -522,7 +555,15 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             ((System.ComponentModel.ISupportInitialize)(this._GridControlDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._BindingSourceDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._GridViewDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypeSearchLookUpEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmountSpinEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStartDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartDateDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEndDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).EndInit();
@@ -534,14 +575,8 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             ((System.ComponentModel.ISupportInitialize)(this.ItemForModifiedDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModifiedDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StartDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StartDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForStartDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EndDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForEndDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypeSearchLookUpEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeRoleSearchLookUpEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -578,5 +613,8 @@ namespace VSudoTrans.DESKTOP.Master.Rental
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
         private DevExpress.XtraLayout.LayoutControlItem ItemForStartDate;
         private DevExpress.XtraLayout.LayoutControlItem ItemForEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmployeeRole;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit EmployeeRoleSearchLookUpEdit;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
