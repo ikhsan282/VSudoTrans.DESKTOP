@@ -1059,6 +1059,18 @@
     <Compile Include="Master\Vehicle\frmCategoryVehicleLV.Designer.cs">
       <DependentUpon>frmCategoryVehicleLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Finance\frmProfitLossWeeklyDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmProfitLossWeeklyDVV.Designer.cs">
+      <DependentUpon>frmProfitLossWeeklyDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\rptProfitLossWeekly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\rptProfitLossWeekly.Designer.cs">
+      <DependentUpon>rptProfitLossWeekly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Rental\frmRentalCarBookingDetailDVV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2946,6 +2958,9 @@
     <EmbeddedResource Include="Report\Finance\frmComparationBudgetRealizationDVV.resx">
       <DependentUpon>frmComparationBudgetRealizationDVV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmProfitLossWeeklyDVV.resx">
+      <DependentUpon>frmProfitLossWeeklyDVV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\rptBudgetTransactionCategory.resx">
       <DependentUpon>rptBudgetTransactionCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -2960,6 +2975,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\rptComparationBudgetRealization.resx">
       <DependentUpon>rptComparationBudgetRealization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\rptProfitLossWeekly.resx">
+      <DependentUpon>rptProfitLossWeekly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Rental\frmRentalCarBookingDetailDVV.resx">
       <DependentUpon>frmRentalCarBookingDetailDVV.cs</DependentUpon>
