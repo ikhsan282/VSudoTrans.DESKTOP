@@ -147,21 +147,33 @@ namespace VSudoTrans.DESKTOP
         {
             try
             {
-                var results = HelperRestSharp.Get<ApplicationUser>("/Users/Me");
+                var user = HelperRestSharp.Get<ApplicationUser>("/Users/Me");
 
-                if (results != null)
+                if (user != null)
                 {
-                    ApplicationSettings.Instance.ApplicationUser = results;
+                    ApplicationSettings.Instance.ApplicationUser = user;
                     ApplicationSettings.Instance.UserCompanys = new List<Company>();
                     ApplicationSettings.Instance.NavigationRoles = new List<NavigationRole>();
                     ApplicationSettings.Instance.UserRoleClaims = new List<ApplicationRoleClaim>();
-                    foreach (var item in results.Companys)
+                    foreach (var item in user.Companys)
                     {
-                        ApplicationSettings.Instance.UserCompanys.Add(new Company() { Id = item.CompanyId, Code = item.Company.Code, PhoneNumber = item.Company.PhoneNumber, Name = item.Company.Name, Group = item.Company.Group });
+                        var company = new Company() 
+                        {
+                            Id = item.CompanyId,
+                            Group = item.Company.Group,
+                            Code = item.Company.Code,
+                            Name = item.Company.Name,
+                            PhoneNumber = item.Company.PhoneNumber,
+                            Watermark = item.Company.Watermark,
+                            WatermarkPaid = item.Company.WatermarkPaid,
+                            WatermarkUnpaid = item.Company.WatermarkUnpaid
+                        };
+
+                        ApplicationSettings.Instance.UserCompanys.Add(company);
                     }
 
                     ApplicationSettings.Instance.UserRoles = new List<ApplicationRole>();
-                    foreach (var item in results.Roles)
+                    foreach (var item in user.Roles)
                     {
                         ApplicationSettings.Instance.UserRoles.Add(new ApplicationRole() { Id = item.RoleId, Name = item.Role.Name });
                         ApplicationSettings.Instance.NavigationRoles.AddRange(HelperRestSharp.GetListOdata<NavigationRole>("/NavigationRoles", "id,navigationId,roleid", "navigation($select=id,code,name,controllerid)", $"roleid eq {item.RoleId}", msgLoading: $"Memuat Navigasi {item.Role.Name} ..."));

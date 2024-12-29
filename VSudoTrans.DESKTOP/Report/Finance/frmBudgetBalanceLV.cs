@@ -31,8 +31,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
 
             bbiRefresh.ItemClick += BbiRefresh_ItemClick;
 
-            FilterDate1.EditValue = new DateTime(DateTime.Today.Year, 7, 1);
-            FilterDate2.EditValue = new DateTime(DateTime.Today.AddYears(1).Year, 6, 30);
+            FilterDate1.EditValue = new DateTime(DateTime.Today.Year, 1, 1);
+            FilterDate2.EditValue = new DateTime(DateTime.Today.Year, 12, 31);
 
             GridHelper.GridColumnInitializeLayout(colDate, typeof(DateTime), "dd-MMM-yyyy");
             GridHelper.GridColumnInitializeLayout(colPenerimaan, typeof(decimal), "n0", fTotal: true);

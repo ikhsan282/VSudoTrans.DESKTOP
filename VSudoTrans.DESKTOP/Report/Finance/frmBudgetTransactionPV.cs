@@ -26,8 +26,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             HelperConvert.FormatDateTextEdit(YearTextEdit, "yyyy");
             HelperConvert.FormatDateTextEdit(MonthTextEdit, "MMMM");
 
-            FilterDate1.EditValue = DateTime.Today.AddMonths(-1);
-            FilterDate2.EditValue = DateTime.Today;
+            FilterDate1.EditValue = new DateTime(DateTime.Today.Year, 1, 1);
+            FilterDate2.EditValue = new DateTime(DateTime.Today.Year, 12, 31);
 
             InitializeComponentAfter<BudgetTransactionView>();
             bbiRefresh.ItemClick += BbiRefresh_ItemClick;

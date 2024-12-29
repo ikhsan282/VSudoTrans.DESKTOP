@@ -736,7 +736,7 @@ namespace VSudoTrans.DESKTOP
             switch (value)
             {
                 case EnumTransactionIndicator.Kredit:
-                    return "Penerimaan";
+                    return "Pemasukan";
                 case EnumTransactionIndicator.Debit:
                     return "Pengeluaran";
                 default:

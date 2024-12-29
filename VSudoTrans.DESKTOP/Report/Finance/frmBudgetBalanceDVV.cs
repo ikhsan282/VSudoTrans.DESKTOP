@@ -24,8 +24,8 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             HelperConvert.FormatDateEdit(FilterDate1);
             HelperConvert.FormatDateEdit(FilterDate2);
 
-            FilterDate1.EditValue = new DateTime(DateTime.Today.Year, 7, 1);
-            FilterDate2.EditValue = new DateTime(DateTime.Today.AddYears(1).Year, 6, 30);
+            FilterDate1.EditValue = new DateTime(DateTime.Today.Year, 1, 1);
+            FilterDate2.EditValue = new DateTime(DateTime.Today.Year, 12, 31);
 
             InitializeComponentAfter<StudentPaymentControlBookView>();
 

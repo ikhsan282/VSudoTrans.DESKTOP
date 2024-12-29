@@ -441,7 +441,7 @@ namespace Domain
 
     public enum EnumTransactionIndicator : short
     {
-        [Display(Name = "Penerimaan")]
+        [Display(Name = "Pemasukan")]
         Kredit = 0,
         [Display(Name = "Pengeluaran")]
         Debit = 1

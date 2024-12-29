@@ -442,33 +442,17 @@ namespace VSudoTrans.DESKTOP.Utils
         //        return result;
         //}
 
-        public static T Get<T>(string endPoint = "")
+        public static T Get<T>(string fEndPoint = "", Method fMethod = Method.Get)
         {
-            if (!string.IsNullOrEmpty(endPoint))
-                endPoint = endPoint.TrimStart('/');
-
-            try
+            var response = ExecuteGet(fEndPoint, fMethod: fMethod);
+            if (response.IsSuccessStatusCode)
             {
-                var response = ExecuteGet(endPoint);
+                var result = JsonConvert.DeserializeObject<T>(response.Content, jsonSerializerSettings);
 
-                if (response.IsSuccessful)
-                {
-                    var responseBody = response.Content;
-                    var responseObject = JsonConvert.DeserializeObject<ResponseHttpClientList<T>>(responseBody, jsonSerializerSettings);
-                    var result = responseObject.data.FirstOrDefault();
-                    return result;
-                }
-                else
-                {
-                    Console.WriteLine($"An error occurred: {response.ErrorMessage}");
-                    return default(T);
-                }
+                return result;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
+            else
                 return default(T);
-            }
         }
 
         public static async Task<T> GetByIdAsync<T>(dynamic id, string endPoint = "")
