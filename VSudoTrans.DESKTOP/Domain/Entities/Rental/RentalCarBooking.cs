@@ -26,8 +26,11 @@ namespace Domain.Entities.Rental
         [MaxLength(40)]
         public string DocumentNumber { get; set; }
         public DateTime Date { get; set; }
+        public int IDate { get; set; }
         public DateTime StartDate { get; set; }
+        public int IStartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public int IEndDate { get; set; }
         public double Trip { get; set; }
         public TimeSpan Time { get; set; }
         [MaxLength(2000)]
@@ -96,6 +99,7 @@ namespace Domain.Entities.Rental
         public virtual RentalCarBooking RentalCarBooking { get; set; }
         public EnumPaymentMethod PaymentMethod { get; set; }
         public DateTime Date { get; set; }
+        public int IDate { get; set; }
         public decimal Amount { get; set; }
     }
 }

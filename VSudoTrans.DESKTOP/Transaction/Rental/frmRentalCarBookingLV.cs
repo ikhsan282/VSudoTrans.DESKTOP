@@ -8,6 +8,7 @@ using PopUpUtils;
 using System;
 using System.Drawing;
 using VSudoTrans.DESKTOP.Report.Rental;
+using Domain.Entities.Organization;
 
 namespace VSudoTrans.DESKTOP.Transaction.Rental
 {
@@ -118,10 +119,15 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             if (!ActionValidate())
                 return;
 
-            this.OdataFilter = $"Date ge {HelperConvert.Date(FilterDate1.EditValue).ToString("yyyy-MM-dd")} and Date le {HelperConvert.Date(FilterDate2.EditValue).ToString("yyyy-MM-dd")}";
+            Company company = FilterPopUp3.EditValue as Company;
+            int iStartDate = HelperConvert.Int(HelperConvert.Date(FilterDate1.EditValue).ToString("yyyyMMdd"));
+            int iEndDate = HelperConvert.Int(HelperConvert.Date(FilterDate2.EditValue).ToString("yyyyMMdd"));
 
-            if (FilterPopUp3.EditValue != null)
-                OdataFilter += $" and CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
+            if (company != null && iStartDate > 0 && iEndDate > 0)
+            {
+                this.OdataFilter = $"CompanyId eq {company.Id} ";
+                this.OdataFilter += $"and IDate ge {iStartDate} and IDate le {iEndDate}";
+            }
 
             base.ActionRefresh<T>(endPoint);
         }

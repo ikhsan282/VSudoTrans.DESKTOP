@@ -94,7 +94,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
                 {
                     int iDate = HelperConvert.Int(HelperConvert.Date(DateDateEdit.EditValue).ToString("yyyyMMdd"));
                     string fFilter = $"CompanyId eq {company.Id} and IStartDate le {iDate} and IEndDate ge {iDate}";
-                    var rentalCarRegulationEmployee = HelperRestSharp.GetOdata<RentalCarRegulationEmployee>("RentalCarRegulationEmployees", fSelect: "Id,CompanyId,StartDate,EndDate", fExpand: "RentalCarRegulationEmployeeDetails($select=Id,Type,Amount)", fFilter: fFilter);
+                    var rentalCarRegulationEmployee = HelperRestSharp.GetOdata<RentalCarRegulationEmployee>("RentalCarRegulationEmployees", fSelect: "Id,CompanyId,StartDate,EndDate", fExpand: "RentalCarRegulationEmployeeDetails($select=Id,EmployeeRole,Type,Amount)", fFilter: fFilter);
 
                     _BindingSourceEmployee.Clear();
                     var rentalCarBookingEmployees = new List<RentalCarBookingEmployee>();
@@ -102,6 +102,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
                     {
                         var rentalCarBookingEmployee = new RentalCarBookingEmployee()
                         {
+                            EmployeeRole = rentalCarRegulationEmployeeDetail.EmployeeRole,
                             EmployeeId = 0,
                             Amount = rentalCarRegulationEmployeeDetail.Type == EnumRentalCarEmployeeRegulationType.Fix ? rentalCarRegulationEmployeeDetail.Amount : rentalCarRegulationEmployeeDetail.Type == EnumRentalCarEmployeeRegulationType.Percentage ? totalPrice * (rentalCarRegulationEmployeeDetail.Amount / 100) : 0
                         };

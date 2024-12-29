@@ -21,6 +21,7 @@ namespace Domain.Entities.Finance
         public int Quantity { get; set; }
         public decimal Amount { get; set; }
         public DateTime Date { get; set; }
+        public int IDate { get; set; }
         public int Year { get; set; }
         public int Month { get; set; }
         public int Day { get; set; }
