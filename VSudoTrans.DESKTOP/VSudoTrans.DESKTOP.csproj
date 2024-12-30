@@ -1059,11 +1059,35 @@
     <Compile Include="Master\Vehicle\frmCategoryVehicleLV.Designer.cs">
       <DependentUpon>frmCategoryVehicleLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Finance\frmProfitLossYearlyDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmProfitLossYearlyDVV.Designer.cs">
+      <DependentUpon>frmProfitLossYearlyDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\frmProfitLossMonthlyDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmProfitLossMonthlyDVV.Designer.cs">
+      <DependentUpon>frmProfitLossMonthlyDVV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Finance\frmProfitLossWeeklyDVV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report\Finance\frmProfitLossWeeklyDVV.Designer.cs">
       <DependentUpon>frmProfitLossWeeklyDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\rptProfitLossYearly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\rptProfitLossYearly.Designer.cs">
+      <DependentUpon>rptProfitLossYearly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\rptProfitLossMonthly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\rptProfitLossMonthly.Designer.cs">
+      <DependentUpon>rptProfitLossMonthly.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\rptProfitLossWeekly.cs">
       <SubType>Component</SubType>
@@ -2958,6 +2982,12 @@
     <EmbeddedResource Include="Report\Finance\frmComparationBudgetRealizationDVV.resx">
       <DependentUpon>frmComparationBudgetRealizationDVV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmProfitLossYearlyDVV.resx">
+      <DependentUpon>frmProfitLossYearlyDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmProfitLossMonthlyDVV.resx">
+      <DependentUpon>frmProfitLossMonthlyDVV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\frmProfitLossWeeklyDVV.resx">
       <DependentUpon>frmProfitLossWeeklyDVV.cs</DependentUpon>
     </EmbeddedResource>
@@ -2975,6 +3005,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\rptComparationBudgetRealization.resx">
       <DependentUpon>rptComparationBudgetRealization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\rptProfitLossYearly.resx">
+      <DependentUpon>rptProfitLossYearly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\rptProfitLossMonthly.resx">
+      <DependentUpon>rptProfitLossMonthly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\rptProfitLossWeekly.resx">
       <DependentUpon>rptProfitLossWeekly.cs</DependentUpon>

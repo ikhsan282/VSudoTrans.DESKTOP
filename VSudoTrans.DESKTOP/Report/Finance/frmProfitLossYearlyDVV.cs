@@ -1,32 +1,35 @@
 ﻿using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraRichEdit.Model;
 using Domain.Entities.Finance;
 using Domain.Entities.Organization;
 using PopUpUtils;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using VSudoTrans.DESKTOP.BaseForm;
 using VSudoTrans.DESKTOP.Utils;
 
 namespace VSudoTrans.DESKTOP.Report.Finance
 {
-    public partial class frmProfitLossWeeklyDVV : frmBaseFilterDVV
+    public partial class frmProfitLossYearlyDVV : frmBaseFilterDVV
     {
-        public frmProfitLossWeeklyDVV()
+        public frmProfitLossYearlyDVV()
         {
             InitializeComponent();
 
             this.EndPoint = "/BudgetTransactions";
-            this.FormTitle = "Keuangan Mingguan (Dokumen)";
+            this.FormTitle = "Keuangan Tahunan (Dokumen)";
 
-            HelperConvert.FormatDateTextEdit(YearTextEdit, "yyyy");
-            HelperConvert.FormatDateTextEdit(MonthTextEdit, "MMMM");
+            HelperConvert.FormatDateTextEdit(Year1TextEdit, "yyyy");
+            HelperConvert.FormatDateTextEdit(Year2TextEdit, "yyyy");
 
-            YearTextEdit.EditValue = new DateTime(DateTime.Today.Year, 1, 1);
-            MonthTextEdit.EditValue = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+            Year1TextEdit.EditValue = new DateTime(DateTime.Today.AddYears(-5).Year, 1, 1);
+            Year2TextEdit.EditValue = new DateTime(DateTime.Today.Year, 1, 1);
 
             InitializeComponentAfter<BudgetTransaction>();
 
@@ -45,12 +48,12 @@ namespace VSudoTrans.DESKTOP.Report.Finance
 
         protected override void InitializeDefaultValidation()
         {
-            MyValidationHelper.SetValidation(_DxValidationProvider, this.YearTextEdit, ConditionOperator.IsNotBlank);
-            MyValidationHelper.SetValidation(_DxValidationProvider, this.MonthTextEdit, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, this.Year1TextEdit, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, this.Year2TextEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.FilterPopUp3, ConditionOperator.IsNotBlank);
         }
 
-        public class WeekNum
+        public class YearNum
         {
             public int Number { get; set; }
             public DateTime StartDate { get; set; }
@@ -67,16 +70,12 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             try
             {
                 Company company = FilterPopUp3.EditValue as Company;
-                int year = HelperConvert.Date(YearTextEdit.EditValue).Year;
-                int month = HelperConvert.Date(MonthTextEdit.EditValue).Month;
-                if (company != null && year > 0 && month > 0)
+                int year1 = HelperConvert.Date(Year1TextEdit.EditValue).Year;
+                int year2 = HelperConvert.Date(Year2TextEdit.EditValue).Year;
+                if (company != null && year1 > 0 && year2 > 0)
                 {
-                    DateTime startDate = new DateTime(year, month, 1);
-                    int daysInMonth = DateTime.DaysInMonth(year, month);
-                    DateTime endDate = new DateTime(year, month, daysInMonth);
-
                     this.OdataFilter = $"CompanyId eq {company.Id} ";
-                    this.OdataFilter += $" and Year eq {year} and Month eq {month} ";
+                    this.OdataFilter += $" and Year ge {year1} and Year le {year2}";
 
                     string select = "Id,CategoryId,Indicator,Amount,Date";
                     string expand = "";
@@ -86,7 +85,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     if (budgetTransactions.Any())
                     {
                         // set report destination
-                        rptProfitLossWeekly report = new rptProfitLossWeekly();
+                        rptProfitLossYearly report = new rptProfitLossYearly();
                         report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
 
                         if (company.WatermarkUrl != null)
@@ -95,7 +94,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                         DataTable dt = new DataTable();
                         dt.TableName = "Table1";
                         dt.Columns.Add("DetailNo", typeof(string));
-                        dt.Columns.Add("DetailWeekName", typeof(string));
+                        dt.Columns.Add("DetailYearName", typeof(string));
 
                         dt.Columns.Add("DetailKredit", typeof(decimal));
                         dt.Columns.Add("DetailDebit", typeof(decimal));
@@ -103,46 +102,30 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                         dt.Columns.Add("DetailTotal", typeof(decimal));
 
                         CultureInfo cul = new CultureInfo("id-ID");
-                        List<WeekNum> weekNumbers = new List<WeekNum>();
+                        List<YearNum> yearNumbers = new List<YearNum>();
 
-                        for (var day = startDate.Date; day.Date <= endDate.Date; day = day.AddDays(1))
+                        for (int year = year1; year <= year2; year++)
                         {
-                            int weekNum = cul.Calendar.GetWeekOfYear(day, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
-
-                            var weekNumber = weekNumbers.Where(s => s.Number == weekNum).FirstOrDefault();
-                            if (weekNumber != null)
+                            yearNumbers.Add(new YearNum
                             {
-                                if (day < weekNumber.StartDate)
-                                    weekNumber.StartDate = day;
-
-                                if (day > weekNumber.EndDate)
-                                    weekNumber.EndDate = day;
-                            }
-                            else
-                            {
-                                weekNumber = new WeekNum()
-                                {
-                                    Number = weekNum,
-                                    StartDate = day,
-                                    EndDate = day,
-                                };
-
-                                weekNumbers.Add(weekNumber);
-                            }
+                                Number = year,
+                                StartDate = new DateTime(year, 1, 1),
+                                EndDate = new DateTime(year, 12, 31)
+                            });
                         }
 
                         int loop = 0;
-                        foreach (var weekNumber in weekNumbers)
+                        foreach (var yearNumber in yearNumbers)
                         {
                             DataRow totalRow = dt.NewRow();
                             totalRow["DetailNo"] = $"{loop++}.";
 
-                            totalRow["DetailWeekName"] = $"{weekNumber.Number} ({weekNumber.StartDate.ToString("dd-MMM-yyyy")} - {weekNumber.EndDate.ToString("dd-MMM-yyyy")})";
+                            totalRow["DetailYearName"] = $"{yearNumber.Number} ({yearNumber.StartDate.ToString("dd-MMM-yyyy")} - {yearNumber.EndDate.ToString("dd-MMM-yyyy")})";
 
-                            var kredit = budgetTransactions.Where(s => s.Date.Date >= weekNumber.StartDate.Date && s.Date.Date <= weekNumber.EndDate.Date && s.Indicator == Domain.EnumTransactionIndicator.Kredit).Sum(s => s.Amount);
+                            var kredit = budgetTransactions.Where(s => s.Date.Date >= yearNumber.StartDate.Date && s.Date.Date <= yearNumber.EndDate.Date && s.Indicator == Domain.EnumTransactionIndicator.Kredit).Sum(s => s.Amount);
                             totalRow["DetailKredit"] = kredit;
 
-                            var debit = budgetTransactions.Where(s => s.Date.Date >= weekNumber.StartDate.Date && s.Date.Date <= weekNumber.EndDate.Date && s.Indicator == Domain.EnumTransactionIndicator.Debit).Sum(s => s.Amount);
+                            var debit = budgetTransactions.Where(s => s.Date.Date >= yearNumber.StartDate.Date && s.Date.Date <= yearNumber.EndDate.Date && s.Indicator == Domain.EnumTransactionIndicator.Debit).Sum(s => s.Amount);
                             totalRow["DetailDebit"] = debit;
 
                             totalRow["DetailTotal"] = kredit - debit;
@@ -153,7 +136,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                         report.DataSource = dt;
 
                         //Detail
-                        report.xrDetailWeekName.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailWeekName]"));
+                        report.xrDetailYearName.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailYearName]"));
 
                         report.xrDetailKredit.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailKredit]"));
                         report.xrDetailDebit.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDebit]"));
@@ -161,7 +144,7 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                         report.xrDetailTotal.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailTotal]"));
 
                         report.xrPrintDate.Text = DateTime.Now.ToString("dd MMMM yyyy HH:mm:ss");
-                        report.xrPeriodeDate.Text = $"{startDate.ToString("dd MMMM yyyy")} - {endDate.ToString("dd MMMM yyyy")}";
+                        report.xrPeriodeDate.Text = $"{new DateTime(year1, 1, 1).ToString("dd MMMM yyyy")} - {new DateTime(year2, 12, 31).ToString("dd MMMM yyyy")}";
 
                         report.xrUsernameFooter.Text = $"{ApplicationSettings.Instance.ApplicationUser.FirstName} {ApplicationSettings.Instance.ApplicationUser.LastName}";
                         report.xrDateFooter.Text = $"Kota Tangerang, {DateTime.Today.ToString("dd MMMM yyyy")}";

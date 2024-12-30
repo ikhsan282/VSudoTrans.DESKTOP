@@ -1,6 +1,6 @@
 ﻿namespace VSudoTrans.DESKTOP.Report.Finance
 {
-    partial class frmProfitLossWeeklyDVV
+    partial class frmProfitLossMonthlyDVV
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProfitLossWeeklyDVV));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProfitLossMonthlyDVV));
             this.YearTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForYear = new DevExpress.XtraLayout.LayoutControlItem();
-            this.MonthTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForMonth = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -60,8 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this._DxValidationProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YearTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForYear)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MonthTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForMonth)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -148,7 +144,6 @@
             // 
             // layoutControlFilter
             // 
-            this.layoutControlFilter.Controls.Add(this.MonthTextEdit);
             this.layoutControlFilter.Controls.Add(this.YearTextEdit);
             this.layoutControlFilter.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
             this.layoutControlFilter.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
@@ -162,52 +157,36 @@
             this.layoutControlFilter.Controls.SetChildIndex(this.FilterDate2, 0);
             this.layoutControlFilter.Controls.SetChildIndex(this.FilterPopUp3, 0);
             this.layoutControlFilter.Controls.SetChildIndex(this.YearTextEdit, 0);
-            this.layoutControlFilter.Controls.SetChildIndex(this.MonthTextEdit, 0);
             // 
             // FilterDate2
             // 
             this.FilterDate2.EditValue = null;
-            this.FilterDate2.Location = new System.Drawing.Point(11, 41);
-            this.FilterDate2.Size = new System.Drawing.Size(263, 34);
             // 
             // FilterDate1
             // 
             this.FilterDate1.EditValue = null;
-            this.FilterDate1.Location = new System.Drawing.Point(11, -23);
-            this.FilterDate1.Size = new System.Drawing.Size(263, 34);
             // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForYear,
-            this.ItemForMonth});
-            this.layoutControlGroup1.Size = new System.Drawing.Size(285, 338);
-            // 
-            // _LayoutControlItemFilter1
-            // 
-            this._LayoutControlItemFilter1.Size = new System.Drawing.Size(267, 64);
-            // 
-            // _LayoutControlItemFilter2
-            // 
-            this._LayoutControlItemFilter2.Size = new System.Drawing.Size(267, 64);
+            this.ItemForYear});
+            this.layoutControlGroup1.Size = new System.Drawing.Size(311, 278);
             // 
             // FilterPopUp3
             // 
-            this.FilterPopUp3.Location = new System.Drawing.Point(11, 105);
             this.FilterPopUp3.Properties.Appearance.Options.UseTextOptions = true;
             this.FilterPopUp3.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.FilterPopUp3.Size = new System.Drawing.Size(263, 34);
             // 
             // _LayoutControlItemFilter3
             // 
-            this._LayoutControlItemFilter3.Size = new System.Drawing.Size(267, 64);
+            this._LayoutControlItemFilter3.Size = new System.Drawing.Size(293, 64);
             // 
             // YearTextEdit
             // 
-            this.YearTextEdit.Location = new System.Drawing.Point(11, 169);
+            this.YearTextEdit.Location = new System.Drawing.Point(11, 229);
             this.YearTextEdit.MenuManager = this.ribbonControl;
             this.YearTextEdit.Name = "YearTextEdit";
-            this.YearTextEdit.Size = new System.Drawing.Size(263, 34);
+            this.YearTextEdit.Size = new System.Drawing.Size(289, 34);
             this.YearTextEdit.StyleController = this.layoutControlFilter;
             this.YearTextEdit.TabIndex = 7;
             // 
@@ -216,37 +195,18 @@
             this.ItemForYear.Control = this.YearTextEdit;
             this.ItemForYear.Location = new System.Drawing.Point(0, 192);
             this.ItemForYear.Name = "ItemForYear";
-            this.ItemForYear.Size = new System.Drawing.Size(267, 64);
+            this.ItemForYear.Size = new System.Drawing.Size(293, 68);
             this.ItemForYear.Text = "Tahun";
             this.ItemForYear.TextLocation = DevExpress.Utils.Locations.Top;
             this.ItemForYear.TextSize = new System.Drawing.Size(181, 21);
             // 
-            // MonthTextEdit
-            // 
-            this.MonthTextEdit.Location = new System.Drawing.Point(11, 233);
-            this.MonthTextEdit.MenuManager = this.ribbonControl;
-            this.MonthTextEdit.Name = "MonthTextEdit";
-            this.MonthTextEdit.Size = new System.Drawing.Size(263, 34);
-            this.MonthTextEdit.StyleController = this.layoutControlFilter;
-            this.MonthTextEdit.TabIndex = 8;
-            // 
-            // ItemForMonth
-            // 
-            this.ItemForMonth.Control = this.MonthTextEdit;
-            this.ItemForMonth.Location = new System.Drawing.Point(0, 256);
-            this.ItemForMonth.Name = "ItemForMonth";
-            this.ItemForMonth.Size = new System.Drawing.Size(267, 64);
-            this.ItemForMonth.Text = "Bulan";
-            this.ItemForMonth.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForMonth.TextSize = new System.Drawing.Size(181, 21);
-            // 
-            // frmProfitLossWeeklyDVV
+            // frmProfitLossMonthlyDVV
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 656);
-            this.Name = "frmProfitLossWeeklyDVV";
+            this.Name = "frmProfitLossMonthlyDVV";
             this.Text = "frmComparationBudgetRealizationDVV";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
@@ -275,8 +235,6 @@
             ((System.ComponentModel.ISupportInitialize)(this._DxValidationProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YearTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForYear)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MonthTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForMonth)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,9 +242,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit MonthTextEdit;
         private DevExpress.XtraEditors.TextEdit YearTextEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForYear;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForMonth;
     }
 }
