@@ -12,8 +12,7 @@ namespace Domain.Entities.Finance
     {
         public int CompanyId { get; set; }
         public Company Company { get; set; }
-        public int FromYear { get; set; }
-        public int ToYear { get; set; }
+        public int Year { get; set; }
         public EnumTransactionIndicator Indicator { get; set; }
         public virtual List<BudgetRegulationDetail> BudgetRegulationDetails { get; set; }
     }

@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComparationBudgetRealizationDVV));
             this.IndicatorSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this._LayoutControlItemFilter4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this._LayoutControlItemFilter4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.YearTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForYear = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -58,8 +60,10 @@
             ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._DxValidationProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IndicatorSearchLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YearTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForYear)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -138,6 +142,7 @@
             // 
             // dockPanel1_Container
             // 
+            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 47);
             this.dockPanel1_Container.Size = new System.Drawing.Size(311, 278);
             // 
             // bbiRefresh
@@ -146,6 +151,7 @@
             // 
             // layoutControlFilter
             // 
+            this.layoutControlFilter.Controls.Add(this.YearTextEdit);
             this.layoutControlFilter.Controls.Add(this.IndicatorSearchLookUpEdit);
             this.layoutControlFilter.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
             this.layoutControlFilter.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
@@ -159,51 +165,58 @@
             this.layoutControlFilter.Controls.SetChildIndex(this.FilterDate2, 0);
             this.layoutControlFilter.Controls.SetChildIndex(this.FilterPopUp3, 0);
             this.layoutControlFilter.Controls.SetChildIndex(this.IndicatorSearchLookUpEdit, 0);
+            this.layoutControlFilter.Controls.SetChildIndex(this.YearTextEdit, 0);
             // 
             // FilterDate2
             // 
             this.FilterDate2.EditValue = null;
+            this.FilterDate2.Location = new System.Drawing.Point(11, 41);
+            this.FilterDate2.Size = new System.Drawing.Size(263, 34);
             // 
             // FilterDate1
             // 
             this.FilterDate1.EditValue = null;
+            this.FilterDate1.Location = new System.Drawing.Point(11, -23);
+            this.FilterDate1.Size = new System.Drawing.Size(263, 34);
             // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this._LayoutControlItemFilter4});
-            this.layoutControlGroup1.Size = new System.Drawing.Size(311, 278);
+            this._LayoutControlItemFilter4,
+            this.ItemForYear});
+            this.layoutControlGroup1.Size = new System.Drawing.Size(285, 338);
+            // 
+            // _LayoutControlItemFilter1
+            // 
+            this._LayoutControlItemFilter1.Size = new System.Drawing.Size(267, 64);
+            // 
+            // _LayoutControlItemFilter2
+            // 
+            this._LayoutControlItemFilter2.Size = new System.Drawing.Size(267, 64);
             // 
             // FilterPopUp3
             // 
+            this.FilterPopUp3.Location = new System.Drawing.Point(11, 105);
             this.FilterPopUp3.Properties.Appearance.Options.UseTextOptions = true;
             this.FilterPopUp3.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.FilterPopUp3.Size = new System.Drawing.Size(263, 34);
             // 
             // _LayoutControlItemFilter3
             // 
-            this._LayoutControlItemFilter3.Size = new System.Drawing.Size(293, 64);
+            this._LayoutControlItemFilter3.Size = new System.Drawing.Size(267, 64);
             // 
             // IndicatorSearchLookUpEdit
             // 
-            this.IndicatorSearchLookUpEdit.Location = new System.Drawing.Point(11, 229);
+            this.IndicatorSearchLookUpEdit.Location = new System.Drawing.Point(11, 233);
             this.IndicatorSearchLookUpEdit.MenuManager = this.ribbonControl;
             this.IndicatorSearchLookUpEdit.Name = "IndicatorSearchLookUpEdit";
             this.IndicatorSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.IndicatorSearchLookUpEdit.Properties.NullText = "";
             this.IndicatorSearchLookUpEdit.Properties.PopupView = this.searchLookUpEdit1View;
-            this.IndicatorSearchLookUpEdit.Size = new System.Drawing.Size(289, 34);
+            this.IndicatorSearchLookUpEdit.Size = new System.Drawing.Size(263, 34);
             this.IndicatorSearchLookUpEdit.StyleController = this.layoutControlFilter;
             this.IndicatorSearchLookUpEdit.TabIndex = 12;
-            // 
-            // _LayoutControlItemFilter4
-            // 
-            this._LayoutControlItemFilter4.Control = this.IndicatorSearchLookUpEdit;
-            this._LayoutControlItemFilter4.Location = new System.Drawing.Point(0, 192);
-            this._LayoutControlItemFilter4.Name = "_LayoutControlItemFilter4";
-            this._LayoutControlItemFilter4.Size = new System.Drawing.Size(293, 68);
-            this._LayoutControlItemFilter4.TextLocation = DevExpress.Utils.Locations.Top;
-            this._LayoutControlItemFilter4.TextSize = new System.Drawing.Size(181, 21);
             // 
             // searchLookUpEdit1View
             // 
@@ -211,6 +224,34 @@
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // _LayoutControlItemFilter4
+            // 
+            this._LayoutControlItemFilter4.Control = this.IndicatorSearchLookUpEdit;
+            this._LayoutControlItemFilter4.Location = new System.Drawing.Point(0, 256);
+            this._LayoutControlItemFilter4.Name = "_LayoutControlItemFilter4";
+            this._LayoutControlItemFilter4.Size = new System.Drawing.Size(267, 64);
+            this._LayoutControlItemFilter4.TextLocation = DevExpress.Utils.Locations.Top;
+            this._LayoutControlItemFilter4.TextSize = new System.Drawing.Size(181, 21);
+            // 
+            // YearTextEdit
+            // 
+            this.YearTextEdit.Location = new System.Drawing.Point(11, 169);
+            this.YearTextEdit.MenuManager = this.ribbonControl;
+            this.YearTextEdit.Name = "YearTextEdit";
+            this.YearTextEdit.Size = new System.Drawing.Size(263, 34);
+            this.YearTextEdit.StyleController = this.layoutControlFilter;
+            this.YearTextEdit.TabIndex = 13;
+            // 
+            // ItemForYear
+            // 
+            this.ItemForYear.Control = this.YearTextEdit;
+            this.ItemForYear.Location = new System.Drawing.Point(0, 192);
+            this.ItemForYear.Name = "ItemForYear";
+            this.ItemForYear.Size = new System.Drawing.Size(267, 64);
+            this.ItemForYear.Text = "Tahun";
+            this.ItemForYear.TextLocation = DevExpress.Utils.Locations.Top;
+            this.ItemForYear.TextSize = new System.Drawing.Size(181, 21);
             // 
             // frmComparationBudgetRealizationDVV
             // 
@@ -246,8 +287,10 @@
             ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._DxValidationProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IndicatorSearchLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YearTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForYear)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +300,7 @@
         private DevExpress.XtraEditors.SearchLookUpEdit IndicatorSearchLookUpEdit;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraLayout.LayoutControlItem _LayoutControlItemFilter4;
+        private DevExpress.XtraEditors.TextEdit YearTextEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForYear;
     }
 }

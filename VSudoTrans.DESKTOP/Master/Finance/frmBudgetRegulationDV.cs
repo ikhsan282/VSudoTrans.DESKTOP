@@ -34,8 +34,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             _GridViewDetail.RowEditCanceled += _GridViewDetail_RowEditCanceled;
             _GridViewDetail.RowUpdated += _GridViewDetail_RowUpdated;
 
-            FromYearTextEdit.KeyPress += YearTextEdit_KeyPress;
-            ToYearTextEdit.KeyPress += YearTextEdit_KeyPress;
+            YearTextEdit.KeyPress += YearTextEdit_KeyPress;
 
             HelperConvert.FormatSpinEdit(AmountSpinEdit, "n0", 0, 9999999999);
 
@@ -147,7 +146,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
         {
             MyValidationHelper.SetValidation(_DxValidationProvider, CodeTextEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, NameTextEdit, ConditionOperator.IsNotBlank);
-            MyValidationHelper.SetValidation(_DxValidationProvider, FromYearTextEdit, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, YearTextEdit, ConditionOperator.IsNotBlank);
         }
 
         protected override void DisplayEntity<T>()
@@ -207,8 +206,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
                 Code = HelperConvert.String(CodeTextEdit.EditValue),
                 Name = HelperConvert.String(NameTextEdit.EditValue),
                 Note = HelperConvert.String(NoteMemoEdit.EditValue),
-                FromYear = HelperConvert.Int(FromYearTextEdit.EditValue),
-                ToYear = HelperConvert.Int(ToYearTextEdit.EditValue),
+                Year = HelperConvert.Int(YearTextEdit.EditValue),
                 BudgetRegulationDetails = _BudgetRegulationDetail
             };
 

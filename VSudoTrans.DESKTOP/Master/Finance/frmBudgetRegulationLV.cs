@@ -15,7 +15,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             EndPoint = "/BudgetRegulations";
             FormTitle = "Rencana Anggaran Pendapatan Dan Belanja Perusahaan (RAPBS)";
 
-            OdataSelect = "Id,FromYear,ToYear,Indicator,Code,Name";
+            OdataSelect = "Id,Year,Indicator,Code,Name";
             OdataExpand = "Company($select=name)";
             OdataExpand += ",BudgetRegulationDetails($select=Amount;$expand=Category($select=code,name))";
 

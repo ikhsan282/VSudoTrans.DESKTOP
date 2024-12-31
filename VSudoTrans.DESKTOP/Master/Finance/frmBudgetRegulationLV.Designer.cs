@@ -37,9 +37,8 @@
             this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFromYear = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIndicator = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colToYear = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colYear = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -175,10 +174,9 @@
             // 
             this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCompanyName,
+            this.colYear,
             this.colCode,
             this.colName,
-            this.colFromYear,
-            this.colToYear,
             this.colIndicator});
             this._GridView.DetailHeight = 565;
             this._GridView.OptionsBehavior.Editable = false;
@@ -208,7 +206,6 @@
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 47);
             this.dockPanel1_Container.Size = new System.Drawing.Size(311, 333);
             // 
             // dataLayoutControl2
@@ -320,7 +317,7 @@
             this.colCode.MinWidth = 45;
             this.colCode.Name = "colCode";
             this.colCode.Visible = true;
-            this.colCode.VisibleIndex = 2;
+            this.colCode.VisibleIndex = 3;
             this.colCode.Width = 79;
             // 
             // colName
@@ -330,18 +327,8 @@
             this.colName.MinWidth = 45;
             this.colName.Name = "colName";
             this.colName.Visible = true;
-            this.colName.VisibleIndex = 3;
+            this.colName.VisibleIndex = 4;
             this.colName.Width = 259;
-            // 
-            // colFromYear
-            // 
-            this.colFromYear.Caption = "Tahun1";
-            this.colFromYear.FieldName = "FromYear";
-            this.colFromYear.MinWidth = 30;
-            this.colFromYear.Name = "colFromYear";
-            this.colFromYear.Visible = true;
-            this.colFromYear.VisibleIndex = 4;
-            this.colFromYear.Width = 172;
             // 
             // colIndicator
             // 
@@ -350,18 +337,18 @@
             this.colIndicator.MinWidth = 30;
             this.colIndicator.Name = "colIndicator";
             this.colIndicator.Visible = true;
-            this.colIndicator.VisibleIndex = 1;
+            this.colIndicator.VisibleIndex = 2;
             this.colIndicator.Width = 112;
             // 
-            // colToYear
+            // colYear
             // 
-            this.colToYear.Caption = "Tahun2";
-            this.colToYear.FieldName = "ToYear";
-            this.colToYear.MinWidth = 30;
-            this.colToYear.Name = "colToYear";
-            this.colToYear.Visible = true;
-            this.colToYear.VisibleIndex = 5;
-            this.colToYear.Width = 112;
+            this.colYear.Caption = "Tahun";
+            this.colYear.FieldName = "Year";
+            this.colYear.MinWidth = 30;
+            this.colYear.Name = "colYear";
+            this.colYear.Visible = true;
+            this.colYear.VisibleIndex = 1;
+            this.colYear.Width = 112;
             // 
             // frmBudgetRegulationLV
             // 
@@ -412,9 +399,8 @@
         private DevExpress.XtraGrid.Views.Grid.GridView _GridViewDetail;
         private DevExpress.XtraGrid.Columns.GridColumn colCategoryName;
         private DevExpress.XtraGrid.Columns.GridColumn colAmount;
-        private DevExpress.XtraGrid.Columns.GridColumn colFromYear;
         private DevExpress.XtraGrid.Columns.GridColumn colIndicator;
         private DevExpress.XtraGrid.Columns.GridColumn colCategoryCode;
-        private DevExpress.XtraGrid.Columns.GridColumn colToYear;
+        private DevExpress.XtraGrid.Columns.GridColumn colYear;
     }
 }

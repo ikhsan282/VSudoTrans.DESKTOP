@@ -51,13 +51,11 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             this.CategoryPopUp = new VSudoTrans.DESKTOP.Descendant.RepositoryItemPopupContainerEditOwn();
             this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AmountSpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
-            this.ItemForFromYear = new DevExpress.XtraLayout.LayoutControlItem();
-            this.FromYearTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ItemForYear = new DevExpress.XtraLayout.LayoutControlItem();
+            this.YearTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForIndicator = new DevExpress.XtraLayout.LayoutControlItem();
             this.IndicatorSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ItemForToYear = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ToYearTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForCreatedUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.CreatedUserTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -90,13 +88,11 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             ((System.ComponentModel.ISupportInitialize)(this._GridViewDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoryPopUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmountSpinEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForFromYear)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FromYearTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YearTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IndicatorSearchLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForToYear)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ToYearTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).BeginInit();
@@ -112,7 +108,6 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // 
             // _DataLayoutControl
             // 
-            this._DataLayoutControl.Controls.Add(this.ToYearTextEdit);
             this._DataLayoutControl.Controls.Add(this.IndicatorSearchLookUpEdit);
             this._DataLayoutControl.Controls.Add(this._GridControlDetail);
             this._DataLayoutControl.Controls.Add(this.CompanyPopUp);
@@ -123,8 +118,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             this._DataLayoutControl.Controls.Add(this.CreatedDateDateEdit);
             this._DataLayoutControl.Controls.Add(this.ModifiedUserTextEdit);
             this._DataLayoutControl.Controls.Add(this.ModifiedDateDateEdit);
-            this._DataLayoutControl.Controls.Add(this.FromYearTextEdit);
-            this._DataLayoutControl.Location = new System.Drawing.Point(0, 254);
+            this._DataLayoutControl.Controls.Add(this.YearTextEdit);
             this._DataLayoutControl.Margin = new System.Windows.Forms.Padding(3);
             this._DataLayoutControl.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(945, 213, 975, 600);
             this._DataLayoutControl.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
@@ -206,9 +200,8 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             this.ItemForName,
             this.ItemForNote,
             this.layoutControlItem1,
-            this.ItemForFromYear,
-            this.ItemForIndicator,
-            this.ItemForToYear});
+            this.ItemForYear,
+            this.ItemForIndicator});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(834, 799);
@@ -226,7 +219,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // CompanyPopUp
             // 
             this.CompanyPopUp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Company", true));
-            this.CompanyPopUp.Location = new System.Drawing.Point(144, -437);
+            this.CompanyPopUp.Location = new System.Drawing.Point(144, 55);
             this.CompanyPopUp.MenuManager = this.mainRibbonControl;
             this.CompanyPopUp.Name = "CompanyPopUp";
             this.CompanyPopUp.ObjectId = null;
@@ -274,7 +267,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // CodeTextEdit
             // 
             this.CodeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Code", true));
-            this.CodeTextEdit.Location = new System.Drawing.Point(144, -361);
+            this.CodeTextEdit.Location = new System.Drawing.Point(144, 131);
             this.CodeTextEdit.MenuManager = this.mainRibbonControl;
             this.CodeTextEdit.Name = "CodeTextEdit";
             this.CodeTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -293,7 +286,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // NameTextEdit
             // 
             this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Name", true));
-            this.NameTextEdit.Location = new System.Drawing.Point(144, -323);
+            this.NameTextEdit.Location = new System.Drawing.Point(144, 169);
             this.NameTextEdit.MenuManager = this.mainRibbonControl;
             this.NameTextEdit.Name = "NameTextEdit";
             this.NameTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -313,7 +306,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // NoteMemoEdit
             // 
             this.NoteMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Note", true));
-            this.NoteMemoEdit.Location = new System.Drawing.Point(144, -247);
+            this.NoteMemoEdit.Location = new System.Drawing.Point(144, 245);
             this.NoteMemoEdit.MenuManager = this.mainRibbonControl;
             this.NoteMemoEdit.MinimumSize = new System.Drawing.Size(0, 100);
             this.NoteMemoEdit.Name = "NoteMemoEdit";
@@ -333,7 +326,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // _GridControlDetail
             // 
             this._GridControlDetail.DataSource = this._BindingSourceDetail;
-            this._GridControlDetail.Location = new System.Drawing.Point(23, -143);
+            this._GridControlDetail.Location = new System.Drawing.Point(23, 349);
             this._GridControlDetail.MainView = this._GridViewDetail;
             this._GridControlDetail.MenuManager = this.mainRibbonControl;
             this._GridControlDetail.MinimumSize = new System.Drawing.Size(0, 501);
@@ -412,26 +405,26 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.AmountSpinEdit.Name = "AmountSpinEdit";
             // 
-            // ItemForFromYear
+            // ItemForYear
             // 
-            this.ItemForFromYear.Control = this.FromYearTextEdit;
-            this.ItemForFromYear.Location = new System.Drawing.Point(0, 152);
-            this.ItemForFromYear.Name = "ItemForFromYear";
-            this.ItemForFromYear.Size = new System.Drawing.Size(417, 38);
-            this.ItemForFromYear.Text = "Tahun Ajaran";
-            this.ItemForFromYear.TextSize = new System.Drawing.Size(109, 21);
+            this.ItemForYear.Control = this.YearTextEdit;
+            this.ItemForYear.Location = new System.Drawing.Point(0, 152);
+            this.ItemForYear.Name = "ItemForYear";
+            this.ItemForYear.Size = new System.Drawing.Size(834, 38);
+            this.ItemForYear.Text = "Tahun";
+            this.ItemForYear.TextSize = new System.Drawing.Size(109, 21);
             // 
-            // FromYearTextEdit
+            // YearTextEdit
             // 
-            this.FromYearTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "FromYear", true));
-            this.FromYearTextEdit.Location = new System.Drawing.Point(144, -285);
-            this.FromYearTextEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.FromYearTextEdit.MenuManager = this.mainRibbonControl;
-            this.FromYearTextEdit.Name = "FromYearTextEdit";
-            this.FromYearTextEdit.Properties.MaxLength = 4;
-            this.FromYearTextEdit.Size = new System.Drawing.Size(292, 34);
-            this.FromYearTextEdit.StyleController = this._DataLayoutControl;
-            this.FromYearTextEdit.TabIndex = 13;
+            this.YearTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Year", true));
+            this.YearTextEdit.Location = new System.Drawing.Point(144, 207);
+            this.YearTextEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.YearTextEdit.MenuManager = this.mainRibbonControl;
+            this.YearTextEdit.Name = "YearTextEdit";
+            this.YearTextEdit.Properties.MaxLength = 4;
+            this.YearTextEdit.Size = new System.Drawing.Size(709, 34);
+            this.YearTextEdit.StyleController = this._DataLayoutControl;
+            this.YearTextEdit.TabIndex = 13;
             // 
             // ItemForIndicator
             // 
@@ -445,7 +438,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // IndicatorSearchLookUpEdit
             // 
             this.IndicatorSearchLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "Indicator", true));
-            this.IndicatorSearchLookUpEdit.Location = new System.Drawing.Point(144, -399);
+            this.IndicatorSearchLookUpEdit.Location = new System.Drawing.Point(144, 93);
             this.IndicatorSearchLookUpEdit.MenuManager = this.mainRibbonControl;
             this.IndicatorSearchLookUpEdit.Name = "IndicatorSearchLookUpEdit";
             this.IndicatorSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -462,25 +455,6 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // ItemForToYear
-            // 
-            this.ItemForToYear.Control = this.ToYearTextEdit;
-            this.ItemForToYear.Location = new System.Drawing.Point(417, 152);
-            this.ItemForToYear.Name = "ItemForToYear";
-            this.ItemForToYear.Size = new System.Drawing.Size(417, 38);
-            this.ItemForToYear.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForToYear.TextVisible = false;
-            // 
-            // ToYearTextEdit
-            // 
-            this.ToYearTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ToYear", true));
-            this.ToYearTextEdit.Location = new System.Drawing.Point(440, -285);
-            this.ToYearTextEdit.MenuManager = this.mainRibbonControl;
-            this.ToYearTextEdit.Name = "ToYearTextEdit";
-            this.ToYearTextEdit.Size = new System.Drawing.Size(413, 34);
-            this.ToYearTextEdit.StyleController = this._DataLayoutControl;
-            this.ToYearTextEdit.TabIndex = 15;
             // 
             // layoutControlGroup3
             // 
@@ -506,7 +480,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // CreatedUserTextEdit
             // 
             this.CreatedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedUser", true));
-            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, -437);
+            this.CreatedUserTextEdit.Location = new System.Drawing.Point(144, 55);
             this.CreatedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.CreatedUserTextEdit.Name = "CreatedUserTextEdit";
             this.CreatedUserTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -526,7 +500,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // 
             this.CreatedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "CreatedDate", true));
             this.CreatedDateDateEdit.EditValue = null;
-            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, -399);
+            this.CreatedDateDateEdit.Location = new System.Drawing.Point(144, 93);
             this.CreatedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.CreatedDateDateEdit.Name = "CreatedDateDateEdit";
             this.CreatedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -550,7 +524,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // ModifiedUserTextEdit
             // 
             this.ModifiedUserTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedUser", true));
-            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, -361);
+            this.ModifiedUserTextEdit.Location = new System.Drawing.Point(144, 131);
             this.ModifiedUserTextEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedUserTextEdit.Name = "ModifiedUserTextEdit";
             this.ModifiedUserTextEdit.Size = new System.Drawing.Size(709, 34);
@@ -570,7 +544,7 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             // 
             this.ModifiedDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this._BindingSource, "ModifiedDate", true));
             this.ModifiedDateDateEdit.EditValue = null;
-            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, -323);
+            this.ModifiedDateDateEdit.Location = new System.Drawing.Point(144, 169);
             this.ModifiedDateDateEdit.MenuManager = this.mainRibbonControl;
             this.ModifiedDateDateEdit.Name = "ModifiedDateDateEdit";
             this.ModifiedDateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -613,13 +587,11 @@ namespace VSudoTrans.DESKTOP.Master.Finance
             ((System.ComponentModel.ISupportInitialize)(this._GridViewDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoryPopUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmountSpinEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForFromYear)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FromYearTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YearTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIndicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IndicatorSearchLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForToYear)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ToYearTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCreatedUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreatedUserTextEdit.Properties)).EndInit();
@@ -665,13 +637,11 @@ namespace VSudoTrans.DESKTOP.Master.Finance
         private DevExpress.XtraGrid.Columns.GridColumn colAmount;
         private RepositoryItemPopupContainerEditOwn CategoryPopUp;
         private System.Windows.Forms.BindingSource _BindingSourceDetail;
-        private DevExpress.XtraEditors.TextEdit FromYearTextEdit;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForFromYear;
+        private DevExpress.XtraEditors.TextEdit YearTextEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForYear;
         private DevExpress.XtraEditors.SearchLookUpEdit IndicatorSearchLookUpEdit;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraLayout.LayoutControlItem ItemForIndicator;
-        private DevExpress.XtraEditors.TextEdit ToYearTextEdit;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForToYear;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit AmountSpinEdit;
     }
 }
