@@ -337,52 +337,100 @@ namespace VSudoTrans.DESKTOP.Utils
 
                 if (fGridView.GridControl.DataMember != null && fGridView.GridControl.DataMember != "")
                 {
-                    // belum support untuk mencari sub leveling dari binding source
                     return;
                 }
 
-                foreach (GridColumn column in fGridView.Columns)
+                if (binding.GetType() == typeof(System.Data.DataTable))
                 {
-                    if (string.IsNullOrEmpty(column.FieldName) == false)
+                    var dt = binding as System.Data.DataTable;
+
+                    if (fGridView != null)
                     {
-                        if (column.FieldName.Contains("."))
+                        foreach (System.Data.DataColumn column in dt.Columns)
                         {
-                            //var fields = column.FieldName.Split('.');                            
-                            //propertyinfo = properties.Where(x => x.Name == fields[0]).FirstOrDefault();
-                            //if (propertyinfo != null) 
-                            //{
-                            //    ResolveTypeAndValue(propertyinfo.PropertyType, fields[fields.Count() - 1]);
-                            //}                            
-                        }
-                        else
-                        {
-                            propertyinfo = properties.Where(x => x.Name == column.FieldName).FirstOrDefault();
-                            if (propertyinfo != null)
+                            var gridColumn = fGridView.Columns[column.ColumnName];
+
+                            if (gridColumn != null)
                             {
-                                if (propertyinfo.PropertyType == typeof(DateTimeOffset) || propertyinfo.PropertyType == typeof(DateTimeOffset?) || propertyinfo.PropertyType == typeof(DateTime) || propertyinfo.PropertyType == typeof(DateTime?))
+                                if (column.DataType == typeof(DateTime) || column.DataType == typeof(DateTime?) ||
+                                    column.DataType == typeof(DateTimeOffset) || column.DataType == typeof(DateTimeOffset?))
                                 {
-                                    column.DisplayFormat.FormatType = FormatType.Custom;
-                                    column.DisplayFormat.FormatString = "dd-MMM-yyyy";
-                                    column.AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Center;
-                                    column.AppearanceHeader.TextOptions.VAlignment = VertAlignment.Center;
-                                    column.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Center;
-                                    column.AppearanceCell.TextOptions.VAlignment = VertAlignment.Center;
+                                    // Format tanggal
+                                    gridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+                                    gridColumn.DisplayFormat.FormatString = "dd-MMM-yyyy";
+                                    gridColumn.AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Center;
+                                    gridColumn.AppearanceHeader.TextOptions.VAlignment = VertAlignment.Center;
+                                    gridColumn.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Center;
+                                    gridColumn.AppearanceCell.TextOptions.VAlignment = VertAlignment.Center;
                                 }
-                                if (propertyinfo.PropertyType == typeof(decimal) || propertyinfo.PropertyType == typeof(decimal?))
+                                else if (column.DataType == typeof(decimal) || column.DataType == typeof(decimal?))
                                 {
-                                    column.DisplayFormat.FormatType = FormatType.Custom;
-                                    column.DisplayFormat.FormatString = "n2";
-                                    column.AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Far;
-                                    column.AppearanceHeader.TextOptions.VAlignment = VertAlignment.Center;
-                                    column.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Far;
-                                    column.AppearanceCell.TextOptions.VAlignment = VertAlignment.Center;
+                                    // Format angka desimal
+                                    gridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                                    gridColumn.DisplayFormat.FormatString = "n2";
+                                    gridColumn.AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Far;
+                                    gridColumn.AppearanceHeader.TextOptions.VAlignment = VertAlignment.Center;
+                                    gridColumn.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Far;
+                                    gridColumn.AppearanceCell.TextOptions.VAlignment = VertAlignment.Center;
+                                    gridColumn.Summary.Clear();
+                                    gridColumn.Summary.AddRange(new GridSummaryItem[] { new GridColumnSummaryItem(SummaryItemType.Sum, column.ColumnName, "∑ = {0:" + "n2" + "}") }); //∑={0:0.##}
                                 }
-                                if (propertyinfo.PropertyType == typeof(bool) || propertyinfo.PropertyType == typeof(bool?))
+                                else if (column.DataType == typeof(bool) || column.DataType == typeof(bool?))
                                 {
-                                    column.AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Center;
-                                    column.AppearanceHeader.TextOptions.VAlignment = VertAlignment.Center;
-                                    column.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Far;
-                                    column.AppearanceCell.TextOptions.VAlignment = VertAlignment.Center;
+                                    gridColumn.AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Center;
+                                    gridColumn.AppearanceHeader.TextOptions.VAlignment = VertAlignment.Center;
+                                    gridColumn.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Far;
+                                    gridColumn.AppearanceCell.TextOptions.VAlignment = VertAlignment.Center;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (GridColumn column in fGridView.Columns)
+                    {
+                        if (string.IsNullOrEmpty(column.FieldName) == false)
+                        {
+                            if (column.FieldName.Contains("."))
+                            {
+                                //var fields = column.FieldName.Split('.');                            
+                                //propertyinfo = properties.Where(x => x.Name == fields[0]).FirstOrDefault();
+                                //if (propertyinfo != null) 
+                                //{
+                                //    ResolveTypeAndValue(propertyinfo.PropertyType, fields[fields.Count() - 1]);
+                                //}                            
+                            }
+                            else
+                            {
+                                propertyinfo = properties.Where(x => x.Name == column.FieldName).FirstOrDefault();
+                                if (propertyinfo != null)
+                                {
+                                    if (propertyinfo.PropertyType == typeof(DateTimeOffset) || propertyinfo.PropertyType == typeof(DateTimeOffset?) || propertyinfo.PropertyType == typeof(DateTime) || propertyinfo.PropertyType == typeof(DateTime?))
+                                    {
+                                        column.DisplayFormat.FormatType = FormatType.Custom;
+                                        column.DisplayFormat.FormatString = "dd-MMM-yyyy";
+                                        column.AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Center;
+                                        column.AppearanceHeader.TextOptions.VAlignment = VertAlignment.Center;
+                                        column.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Center;
+                                        column.AppearanceCell.TextOptions.VAlignment = VertAlignment.Center;
+                                    }
+                                    if (propertyinfo.PropertyType == typeof(decimal) || propertyinfo.PropertyType == typeof(decimal?))
+                                    {
+                                        column.DisplayFormat.FormatType = FormatType.Custom;
+                                        column.DisplayFormat.FormatString = "n2";
+                                        column.AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Far;
+                                        column.AppearanceHeader.TextOptions.VAlignment = VertAlignment.Center;
+                                        column.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Far;
+                                        column.AppearanceCell.TextOptions.VAlignment = VertAlignment.Center;
+                                    }
+                                    if (propertyinfo.PropertyType == typeof(bool) || propertyinfo.PropertyType == typeof(bool?))
+                                    {
+                                        column.AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Center;
+                                        column.AppearanceHeader.TextOptions.VAlignment = VertAlignment.Center;
+                                        column.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Far;
+                                        column.AppearanceCell.TextOptions.VAlignment = VertAlignment.Center;
+                                    }
                                 }
                             }
                         }

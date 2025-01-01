@@ -11,6 +11,8 @@ using System.IO;
 using DevExpress.XtraPivotGrid;
 using Domain.Entities.Identity;
 using DevExpress.XtraEditors.DXErrorProvider;
+using DevExpress.Utils;
+using DevExpress.XtraGrid;
 
 namespace VSudoTrans.DESKTOP.BaseForm
 {
@@ -195,47 +197,87 @@ namespace VSudoTrans.DESKTOP.BaseForm
         }
         protected virtual void ActionExport(ExportType exportType)
         {
-            string name = this.FormTitle + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            string path = System.Environment.ExpandEnvironmentVariables("%userprofile%/downloads/") + $"{name}." + exportType;
-            switch (exportType)
+            if (tabbedControlGroup.SelectedTabPage == layoutControlGroupPivot)
             {
-                case ExportType.Csv:
-                    _pivotGridControl.OptionsPrint.MergeRowFieldValues = false;
-                    _pivotGridControl.ExportToCsv(path);
-                    break;
-                case ExportType.Pdf:
-                    _pivotGridControl.ExportToPdf(path);
-                    break;
-                case ExportType.Html:
-                    _pivotGridControl.ExportToHtml(path);
-                    break;
-                case ExportType.Xls:
-                    PivotXlsExportOptions optionsXls = new DevExpress.XtraPivotGrid.PivotXlsExportOptions();
-                    optionsXls.ExportType = DevExpress.Export.ExportType.WYSIWYG;
-                    _pivotGridControl.OptionsPrint.MergeRowFieldValues = false;
-                    _pivotGridControl.ExportToXls(path, optionsXls);
-                    break;
-                case ExportType.Xlsx:
-                    PivotXlsxExportOptions optionsXlsx = new DevExpress.XtraPivotGrid.PivotXlsxExportOptions();
-                    optionsXlsx.ExportType = DevExpress.Export.ExportType.WYSIWYG;
-                    _pivotGridControl.OptionsPrint.MergeRowFieldValues = false;
-                    _pivotGridControl.ExportToXlsx(path, optionsXlsx);
-                    break;
-                case ExportType.Doc:
-                    _pivotGridControl.ExportToDocx(path);
-                    break;
-                case ExportType.Docx:
-                    _pivotGridControl.ExportToDocx(path);
-                    break;
-                default:
-                    break;
-            }
+                string name = this.FormTitle + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                string path = System.Environment.ExpandEnvironmentVariables("%userprofile%/downloads/") + $"{name}." + exportType;
+                switch (exportType)
+                {
+                    case ExportType.Csv:
+                        _pivotGridControl.OptionsPrint.MergeRowFieldValues = false;
+                        _pivotGridControl.ExportToCsv(path);
+                        break;
+                    case ExportType.Pdf:
+                        _pivotGridControl.ExportToPdf(path);
+                        break;
+                    case ExportType.Html:
+                        _pivotGridControl.ExportToHtml(path);
+                        break;
+                    case ExportType.Xls:
+                        PivotXlsExportOptions optionsXls = new DevExpress.XtraPivotGrid.PivotXlsExportOptions();
+                        optionsXls.ExportType = DevExpress.Export.ExportType.WYSIWYG;
+                        _pivotGridControl.OptionsPrint.MergeRowFieldValues = false;
+                        _pivotGridControl.ExportToXls(path, optionsXls);
+                        break;
+                    case ExportType.Xlsx:
+                        PivotXlsxExportOptions optionsXlsx = new DevExpress.XtraPivotGrid.PivotXlsxExportOptions();
+                        optionsXlsx.ExportType = DevExpress.Export.ExportType.WYSIWYG;
+                        _pivotGridControl.OptionsPrint.MergeRowFieldValues = false;
+                        _pivotGridControl.ExportToXlsx(path, optionsXlsx);
+                        break;
+                    case ExportType.Doc:
+                        _pivotGridControl.ExportToDocx(path);
+                        break;
+                    case ExportType.Docx:
+                        _pivotGridControl.ExportToDocx(path);
+                        break;
+                    default:
+                        break;
+                }
 
-            Process.Start(new ProcessStartInfo
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = path,
+                    UseShellExecute = true
+                });
+            }
+            else
             {
-                FileName = path,
-                UseShellExecute = true
-            });
+                string name = this.FormTitle + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                string path = System.Environment.ExpandEnvironmentVariables("%userprofile%/downloads/") + $"{name}." + exportType;
+                switch (exportType)
+                {
+                    case ExportType.Csv:
+                        _GridControl.ExportToCsv(path);
+                        break;
+                    case ExportType.Pdf:
+                        _GridControl.ExportToPdf(path);
+                        break;
+                    case ExportType.Html:
+                        _GridControl.ExportToHtml(path);
+                        break;
+                    case ExportType.Xls:
+                        _GridControl.ExportToXls(path);
+                        break;
+                    case ExportType.Xlsx:
+                        _GridControl.ExportToXlsx(path);
+                        break;
+                    case ExportType.Doc:
+                        _GridControl.ExportToDocx(path);
+                        break;
+                    case ExportType.Docx:
+                        _GridControl.ExportToDocx(path);
+                        break;
+                    default:
+                        break;
+                }
+
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = path,
+                    UseShellExecute = true
+                });
+            }
         }
 
         protected virtual void ActionPrintPreview()
@@ -299,6 +341,23 @@ namespace VSudoTrans.DESKTOP.BaseForm
         protected virtual bool InitializeAdditionalValidation()
         {
             return true;
+        }
+
+        public void SetGridField(string fieldName, string caption, PivotArea area, FormatType formatType = FormatType.None, string formatString = "")
+        {
+            PivotGridField field = new PivotGridField(fieldName, area);
+            field.Caption = caption;
+            field.ValueFormat.FormatType = formatType;
+            field.ValueFormat.FormatString = formatString;
+            field.CellFormat.FormatType = formatType;
+            field.CellFormat.FormatString = formatString;
+            _pivotGridControl.Fields.Add(field);
+
+            var gridColumn = _GridView.Columns[fieldName];
+            if (gridColumn != null)
+            {
+                gridColumn.Caption = caption;
+            }
         }
     }
 }

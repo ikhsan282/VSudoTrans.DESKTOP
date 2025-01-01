@@ -48,7 +48,18 @@ namespace VSudoTrans.DESKTOP.BaseForm
             this.rpgTasks = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgClose = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this._SearchControl = new DevExpress.XtraEditors.SearchControl();
+            this._GridControl = new DevExpress.XtraGrid.GridControl();
+            this._GridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this._pivotGridControl = new DevExpress.XtraPivotGrid.PivotGridControl();
+            this._BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.tabbedControlGroup = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroupRawData = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForGridRawData = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForSearchControl = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroupPivot = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForGridPivot = new DevExpress.XtraLayout.LayoutControlItem();
             this._DockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this._DockPanelRight = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -61,14 +72,22 @@ namespace VSudoTrans.DESKTOP.BaseForm
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this._LayoutControlItemFilter2 = new DevExpress.XtraLayout.LayoutControlItem();
             this._LayoutControlItemFilter3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this._BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._DxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this._pivotGridControl = new DevExpress.XtraPivotGrid.PivotGridControl();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._SearchControl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pivotGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupRawData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridRawData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForSearchControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPivot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridPivot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._DockManager)).BeginInit();
             this._DockPanelRight.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -84,10 +103,7 @@ namespace VSudoTrans.DESKTOP.BaseForm
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._DxValidationProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._pivotGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -95,7 +111,6 @@ namespace VSudoTrans.DESKTOP.BaseForm
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
-            this.ribbonControl.SearchEditItem,
             this.bbiRefresh,
             this.bbiNew,
             this.bbiEdit,
@@ -272,6 +287,8 @@ namespace VSudoTrans.DESKTOP.BaseForm
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.Controls.Add(this._SearchControl);
+            this.dataLayoutControl1.Controls.Add(this._GridControl);
             this.dataLayoutControl1.Controls.Add(this._pivotGridControl);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 254);
@@ -281,15 +298,113 @@ namespace VSudoTrans.DESKTOP.BaseForm
             this.dataLayoutControl1.TabIndex = 1;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
+            // _SearchControl
+            // 
+            this._SearchControl.Client = this._GridControl;
+            this._SearchControl.Location = new System.Drawing.Point(103, 55);
+            this._SearchControl.MenuManager = this.ribbonControl;
+            this._SearchControl.Name = "_SearchControl";
+            this._SearchControl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this._SearchControl.Properties.Client = this._GridControl;
+            this._SearchControl.Size = new System.Drawing.Size(764, 34);
+            this._SearchControl.StyleController = this.dataLayoutControl1;
+            this._SearchControl.TabIndex = 8;
+            // 
+            // _GridControl
+            // 
+            this._GridControl.Location = new System.Drawing.Point(23, 93);
+            this._GridControl.MainView = this._GridView;
+            this._GridControl.MenuManager = this.ribbonControl;
+            this._GridControl.Name = "_GridControl";
+            this._GridControl.Size = new System.Drawing.Size(844, 278);
+            this._GridControl.TabIndex = 7;
+            this._GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this._GridView});
+            // 
+            // _GridView
+            // 
+            this._GridView.GridControl = this._GridControl;
+            this._GridView.Name = "_GridView";
+            // 
+            // _pivotGridControl
+            // 
+            this._pivotGridControl.DataSource = this._BindingSource;
+            this._pivotGridControl.Location = new System.Drawing.Point(23, 55);
+            this._pivotGridControl.Margin = new System.Windows.Forms.Padding(5);
+            this._pivotGridControl.MenuManager = this.ribbonControl;
+            this._pivotGridControl.Name = "_pivotGridControl";
+            this._pivotGridControl.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized;
+            this._pivotGridControl.OptionsDataField.RowHeaderWidth = 150;
+            this._pivotGridControl.Size = new System.Drawing.Size(844, 316);
+            this._pivotGridControl.TabIndex = 6;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.tabbedControlGroup});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(890, 394);
             this.Root.TextVisible = false;
+            // 
+            // tabbedControlGroup
+            // 
+            this.tabbedControlGroup.Location = new System.Drawing.Point(0, 0);
+            this.tabbedControlGroup.Name = "tabbedControlGroup";
+            this.tabbedControlGroup.SelectedTabPage = this.layoutControlGroupPivot;
+            this.tabbedControlGroup.Size = new System.Drawing.Size(872, 376);
+            this.tabbedControlGroup.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroupPivot,
+            this.layoutControlGroupRawData});
+            // 
+            // layoutControlGroupRawData
+            // 
+            this.layoutControlGroupRawData.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForGridRawData,
+            this.ItemForSearchControl});
+            this.layoutControlGroupRawData.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroupRawData.Name = "layoutControlGroupRawData";
+            this.layoutControlGroupRawData.Size = new System.Drawing.Size(848, 320);
+            this.layoutControlGroupRawData.Text = "Raw Data";
+            // 
+            // ItemForGridRawData
+            // 
+            this.ItemForGridRawData.Control = this._GridControl;
+            this.ItemForGridRawData.Location = new System.Drawing.Point(0, 38);
+            this.ItemForGridRawData.Name = "ItemForGridRawData";
+            this.ItemForGridRawData.Size = new System.Drawing.Size(848, 282);
+            this.ItemForGridRawData.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForGridRawData.TextVisible = false;
+            // 
+            // ItemForSearchControl
+            // 
+            this.ItemForSearchControl.Control = this._SearchControl;
+            this.ItemForSearchControl.Location = new System.Drawing.Point(0, 0);
+            this.ItemForSearchControl.Name = "ItemForSearchControl";
+            this.ItemForSearchControl.Size = new System.Drawing.Size(848, 38);
+            this.ItemForSearchControl.Text = "Pencarian";
+            this.ItemForSearchControl.TextSize = new System.Drawing.Size(68, 21);
+            // 
+            // layoutControlGroupPivot
+            // 
+            this.layoutControlGroupPivot.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForGridPivot});
+            this.layoutControlGroupPivot.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroupPivot.Name = "layoutControlGroupPivot";
+            this.layoutControlGroupPivot.Size = new System.Drawing.Size(848, 320);
+            this.layoutControlGroupPivot.Text = "Pivot";
+            // 
+            // ItemForGridPivot
+            // 
+            this.ItemForGridPivot.Control = this._pivotGridControl;
+            this.ItemForGridPivot.Location = new System.Drawing.Point(0, 0);
+            this.ItemForGridPivot.Name = "ItemForGridPivot";
+            this.ItemForGridPivot.Size = new System.Drawing.Size(848, 320);
+            this.ItemForGridPivot.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForGridPivot.TextVisible = false;
             // 
             // _DockManager
             // 
@@ -457,27 +572,6 @@ namespace VSudoTrans.DESKTOP.BaseForm
             this._LayoutControlItemFilter3.TextLocation = DevExpress.Utils.Locations.Top;
             this._LayoutControlItemFilter3.TextSize = new System.Drawing.Size(181, 21);
             // 
-            // _pivotGridControl
-            // 
-            this._pivotGridControl.DataSource = this._BindingSource;
-            this._pivotGridControl.Location = new System.Drawing.Point(11, 11);
-            this._pivotGridControl.Margin = new System.Windows.Forms.Padding(5);
-            this._pivotGridControl.MenuManager = this.ribbonControl;
-            this._pivotGridControl.Name = "_pivotGridControl";
-            this._pivotGridControl.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized;
-            this._pivotGridControl.OptionsDataField.RowHeaderWidth = 150;
-            this._pivotGridControl.Size = new System.Drawing.Size(868, 372);
-            this._pivotGridControl.TabIndex = 6;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this._pivotGridControl;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(872, 376);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
             // frmBasePV
             // 
             this.Appearance.Options.UseFont = true;
@@ -492,7 +586,18 @@ namespace VSudoTrans.DESKTOP.BaseForm
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._SearchControl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pivotGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupRawData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridRawData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForSearchControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupPivot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForGridPivot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._DockManager)).EndInit();
             this._DockPanelRight.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
@@ -508,10 +613,7 @@ namespace VSudoTrans.DESKTOP.BaseForm
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._LayoutControlItemFilter3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._DxValidationProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._pivotGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,8 +656,16 @@ namespace VSudoTrans.DESKTOP.BaseForm
         public System.Windows.Forms.BindingSource _BindingSource;
         public PopupContainerEditOwn FilterPopUp3;
         public DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider _DxValidationProvider;
-        private System.ComponentModel.IContainer components;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         public DevExpress.XtraPivotGrid.PivotGridControl _pivotGridControl;
+        public DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup;
+        public DevExpress.XtraLayout.LayoutControlGroup layoutControlGroupPivot;
+        public DevExpress.XtraLayout.LayoutControlItem ItemForGridPivot;
+        public DevExpress.XtraEditors.SearchControl _SearchControl;
+        public DevExpress.XtraGrid.GridControl _GridControl;
+        public DevExpress.XtraGrid.Views.Grid.GridView _GridView;
+        public DevExpress.XtraLayout.LayoutControlGroup layoutControlGroupRawData;
+        public DevExpress.XtraLayout.LayoutControlItem ItemForGridRawData;
+        public DevExpress.XtraLayout.LayoutControlItem ItemForSearchControl;
+        private System.ComponentModel.IContainer components;
     }
 }

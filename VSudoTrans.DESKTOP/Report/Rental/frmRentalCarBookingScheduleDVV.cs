@@ -123,7 +123,6 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                             totalRow["DetailPickupAddress"] = rentalCarBooking.PickupAddress;
                             totalRow["DetailDeliveryAddress"] = rentalCarBooking.DeliveryAddress;
 
-
                             totalRow["DetailVehicleBrand"] = rentalCarBooking.Vehicle.Brand.Name;
                             totalRow["DetailVehicleModel"] = rentalCarBooking.Vehicle.ModelUnit.Name;
                             totalRow["DetailVehicleColor"] = rentalCarBooking.Vehicle.VehicleColor;

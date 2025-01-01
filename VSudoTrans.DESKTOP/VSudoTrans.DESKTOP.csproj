@@ -1101,6 +1101,12 @@
     <Compile Include="Report\Rental\frmRentalCarBookingDetailDVV.Designer.cs">
       <DependentUpon>frmRentalCarBookingDetailDVV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Rental\frmRentalCarBookingDetailPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Rental\frmRentalCarBookingDetailPV.Designer.cs">
+      <DependentUpon>frmRentalCarBookingDetailPV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Rental\frmRentalCarBookingScheduleDVV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3017,6 +3023,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Rental\frmRentalCarBookingDetailDVV.resx">
       <DependentUpon>frmRentalCarBookingDetailDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rental\frmRentalCarBookingDetailPV.resx">
+      <DependentUpon>frmRentalCarBookingDetailPV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Rental\frmRentalCarBookingScheduleDVV.resx">
       <DependentUpon>frmRentalCarBookingScheduleDVV.cs</DependentUpon>
