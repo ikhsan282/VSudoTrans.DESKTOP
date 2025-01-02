@@ -24,7 +24,6 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://vsudotrans.vsudotech.com/</InstallUrl>
     <UpdateUrl>https://vsudotrans.vsudotech.com/DESKTOP/</UpdateUrl>
     <SupportUrl>https://vsudotrans.vsudotech.com/#contact-section</SupportUrl>
     <PublisherName>Vsudo Technology</PublisherName>
@@ -33,7 +32,7 @@
     <WebPage>Install.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <DisallowUrlActivation>true</DisallowUrlActivation>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -41,9 +40,9 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DEV|AnyCPU' ">
-    <AssemblyName>VsudoTechnologySchoolDEV</AssemblyName>
-    <InstallUrl>https://VSudoTrans.vsudotech.com/</InstallUrl>
-    <ProductName>Vsudo Technology School %28QAS%29</ProductName>
+    <AssemblyName>VsudoTransportationSystemDEV</AssemblyName>
+    <InstallUrl>https://vsudotrans.vsudotech.com/</InstallUrl>
+    <ProductName>Vsudo Transportation System %28DEV%29</ProductName>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
@@ -52,10 +51,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QAS VSudoTrans|AnyCPU' ">
-    <AssemblyName>VsudoTechnologySchoolQAS</AssemblyName>
-    <InstallUrl>https://VSudoTrans.vsudotech.com/</InstallUrl>
-    <ProductName>Vsudo Technology School %28QAS%29</ProductName>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QAS|AnyCPU' ">
+    <AssemblyName>VsudoTransportationSystemQAS</AssemblyName>
+    <InstallUrl>https://vsudotrans.vsudotech.com/</InstallUrl>
+    <ProductName>Vsudo Transportation System %28QAS%29</ProductName>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
@@ -64,34 +63,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PRD VSudoTrans|AnyCPU' ">
-    <AssemblyName>VsudoTechnologySchool</AssemblyName>
-    <InstallUrl>https://VSudoTrans.vsudotech.com/</InstallUrl>
-    <ProductName>Vsudo Technology School</ProductName>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QAS SKP|AnyCPU' ">
-    <AssemblyName>SistemKeuanganPancakaryaQAS</AssemblyName>
-    <InstallUrl>https://pnc.vsudotech.com/</InstallUrl>
-    <ProductName>Sistem Keuangan Pancakarya %28QAS%29</ProductName>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PRD SKP|AnyCPU' ">
-    <AssemblyName>SistemKeuanganPancakarya</AssemblyName>
-    <InstallUrl>https://pnc.vsudotech.com/</InstallUrl>
-    <ProductName>Sistem Keuangan Pancakarya</ProductName>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PRD|AnyCPU' ">
+    <AssemblyName>VsudoTransportationSystem</AssemblyName>
+    <InstallUrl>https://vsudotrans.vsudotech.com/</InstallUrl>
+    <ProductName>Vsudo Transportation System</ProductName>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
