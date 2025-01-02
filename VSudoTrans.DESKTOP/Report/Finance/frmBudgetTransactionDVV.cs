@@ -2,7 +2,8 @@
 using DevExpress.XtraReports.UI;
 using Domain;
 using Domain.Entities.Finance;
-using Domain.Entities.SQLView.Finance;
+using Domain.Entities.Organization;
+using Domain.Entities.SQLView.EducationPayment;
 using PopUpUtils;
 using System;
 using System.Data;
@@ -18,42 +19,51 @@ namespace VSudoTrans.DESKTOP.Report.Finance
         {
             InitializeComponent();
 
-            EndPoint = "/SQLViews/BudgetTransactionViews";
-            FormTitle = "Keuangan (Dokumen)";
+            this.EndPoint = "/BudgetTransactions";
+            this.FormTitle = "Keuangan (Dokumen)";
 
             HelperConvert.FormatDateEdit(FilterDate1);
             HelperConvert.FormatDateEdit(FilterDate2);
 
-            HelperConvert.FormatDateTextEdit(YearTextEdit, "yyyy");
-            HelperConvert.FormatDateTextEdit(MonthTextEdit, "MMMM");
-
             FilterDate1.EditValue = new DateTime(DateTime.Today.Year, 1, 1);
             FilterDate2.EditValue = new DateTime(DateTime.Today.Year, 12, 31);
 
-            InitializeComponentAfter<BudgetTransactionView>();
+            IndicatorSearchLookUpEdit.EditValue = EnumTransactionIndicator.Kredit;
+
+            InitializeComponentAfter<BudgetTransaction>();
 
             bbiRefresh.ItemClick += BbiRefresh_ItemClick;
         }
 
         protected override void InitializeParameter()
         {
-            base.InitializeParameter();
+            _LayoutControlItemFilter1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            _LayoutControlItemFilter1.Text = "Tanggal Mulai";
+            HelperConvert.FormatDateEdit(FilterDate1);
+
+            _LayoutControlItemFilter2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            _LayoutControlItemFilter2.Text = "Tanggal Selesai";
+            HelperConvert.FormatDateEdit(FilterDate2);
+
+            _LayoutControlItemFilter3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            _LayoutControlItemFilter3.Text = "Perusahaan";
+            PopupEditHelper.Company(FilterPopUp3);
 
             _LayoutControlItemFilter4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             _LayoutControlItemFilter4.Text = "Indikator";
-            SLUHelper.SetEnumDataSource<EnumTransactionIndicator>(FilterPopUp4, EnumHelper.EnumTransactionIndicatorToString);
+            SLUHelper.SetEnumDataSource<EnumTransactionIndicator>(IndicatorSearchLookUpEdit, EnumHelper.EnumTransactionIndicatorToString);
 
             _LayoutControlItemFilter5.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             _LayoutControlItemFilter5.Text = "Kategori";
-            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fTitle: "Kategory", fControl: FilterPopUp5, fCascade: FilterPopUp3, fCascadeMember: "CompanyId", fDisplaycolumn: "Code;Name", fCaptionColumn: "Kode;Nama", fWidthColumn: "250;100;400", fDisplayText: "Code;Name");
-
-            _LayoutControlItemFilter6.Text = "Tahun";
-            _LayoutControlItemFilter7.Text = "Bulan";
+            PopupEditHelper.General<Category>(fEndPoint: "/Categorys", fTitle: "Kategori", fControl: FilterPopUp4, fCascade: FilterPopUp3, fCascadeMember: "CompanyId");
         }
 
         protected override void InitializeDefaultValidation()
         {
-            MyValidationHelper.SetValidation(_DxValidationProvider, FilterPopUp3, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, this.FilterDate1, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, this.FilterDate2, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, this.FilterPopUp3, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, this.IndicatorSearchLookUpEdit, ConditionOperator.IsNotBlank);
         }
 
         protected override void ActionRefresh()
@@ -65,69 +75,66 @@ namespace VSudoTrans.DESKTOP.Report.Finance
             MessageHelper.WaitFormShow(this);
             try
             {
-                OdataFilter = $"CompanyId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Id"))} ";
+                var company = FilterPopUp3.EditValue as Company;
+                DateTime startDate = HelperConvert.Date(FilterDate1.EditValue);
+                DateTime endDate = HelperConvert.Date(FilterDate2.EditValue);
+                var indicator = (EnumTransactionIndicator)IndicatorSearchLookUpEdit.EditValue;
+                var category = FilterPopUp4.EditValue as Category;
 
-                if (FilterPopUp4.EditValue != null)
-                    OdataFilter += $"and Indicator eq '{FilterPopUp4.EditValue}' ";
+                this.OdataFilter = $"CompanyId eq {company.Id} ";
+                this.OdataFilter += $" and IDate ge {startDate.ToString("yyyyMMdd")} and IDate le {endDate.ToString("yyyyMMdd")} ";
+                this.OdataFilter += $" and Indicator eq '{indicator.ToString()}' ";
+                
+                if (category != null)
+                    this.OdataFilter = $"CategoryId eq {category.Id} ";
 
-                if (FilterPopUp5.EditValue != null)
-                    OdataFilter += $"and CategoryId eq {HelperConvert.Int(AssemblyHelper.GetValueProperty(FilterPopUp5.EditValue, "Id"))} ";
+                string expand = "Category($select=Id,Code,Name)";
+                var budgetTransactions = HelperRestSharp.GetListOdata<BudgetTransaction>("/BudgetTransactions", "*", fExpand: expand, OdataFilter, fOrder: "Id");
 
-                if (YearTextEdit.EditValue != null)
-                    OdataFilter += $"and Year eq {HelperConvert.Date(YearTextEdit.EditValue).Year} ";
-
-                if (MonthTextEdit.EditValue != null)
-                    OdataFilter += $"and Month eq {HelperConvert.Date(MonthTextEdit.EditValue).Month} ";
-
-                var datas = HelperRestSharp.GetListOdata<BudgetTransactionView>("/SQLViews/BudgetTransactionViews", "*", "", OdataFilter, fOrder: "Id");
-                if (datas.Any())
+                if (budgetTransactions.Any())
                 {
+                    // set report destination
+                    rptBudgetTransaction report = new rptBudgetTransaction();
+                    report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
+
                     DataTable dt = new DataTable();
-                    dt.Columns.Add("Indicator", typeof(string));
-                    dt.Columns.Add("CategoryName", typeof(string));
-                    dt.Columns.Add("Year", typeof(int));
-                    dt.Columns.Add("Month", typeof(int));
-                    dt.Columns.Add("Date", typeof(string));
-                    dt.Columns.Add("Amount", typeof(decimal));
-                    dt.Columns.Add("TotalAmountKredit", typeof(decimal));
-                    dt.Columns.Add("TotalAmountDebit", typeof(decimal));
+                    dt.TableName = "Table1";
+                    dt.Columns.Add("DetailNo", typeof(string));
+                    dt.Columns.Add("DetailDate", typeof(string));
+                    dt.Columns.Add("DetailCategoryCode", typeof(string));
+                    dt.Columns.Add("DetailCategoryName", typeof(string));
+                    dt.Columns.Add("DetailAmount", typeof(decimal));
 
-                    foreach (var data in datas)
+                    int loop = 0;
+                    foreach (var budgetTransaction in budgetTransactions.OrderBy(s => s.Date).GroupBy(s => new { s.Date.Date, s.Category.Code, s.Category.Name }).ToList())
                     {
-                        DataRow r = dt.NewRow();
-                        r["Indicator"] = EnumHelper.EnumTransactionIndicatorToString(data.Indicator);
-                        r["CategoryName"] = data.CategoryName;
-                        r["Year"] = data.Year;
-                        r["Month"] = data.Month;
-                        r["Date"] = data.Date.ToString("dd-MMM-yyyy");
-                        r["Amount"] = data.Amount;
-                        r["TotalAmountKredit"] = datas.Where(s => s.Indicator == EnumTransactionIndicator.Kredit).Sum(s => s.Amount);
-                        r["TotalAmountDebit"] = datas.Where(s => s.Indicator == EnumTransactionIndicator.Debit).Sum(s => s.Amount);
-
-                        dt.Rows.Add(r);
+                        loop++;
+                        DataRow totalRow = dt.NewRow();
+                        totalRow["DetailNo"] = $"{loop}.";
+                        totalRow["DetailDate"] = budgetTransaction.Key.Date.ToString("dd-MMM-yyyy");
+                        totalRow["DetailCategoryCode"] = budgetTransaction.Key.Code;
+                        totalRow["DetailCategoryName"] = budgetTransaction.Key.Name;
+                        totalRow["DetailAmount"] = budgetTransaction.Sum(s => s.Amount);
+                        dt.Rows.Add(totalRow);
                     }
-                    rptBudgetTransaction report = new rptBudgetTransaction
-                    {
-                        DataSource = dt
-                    };
+
+                    report.DataSource = dt;
 
                     //Detail
-                    report.xrIndicator.ExpressionBindings.Add(new ExpressionBinding("Text", "[Indicator]"));
-                    report.xrCategoryName.ExpressionBindings.Add(new ExpressionBinding("Text", "[CategoryName]"));
-                    report.xrYear.ExpressionBindings.Add(new ExpressionBinding("Text", "[Year]"));
-                    report.xrMonth.ExpressionBindings.Add(new ExpressionBinding("Text", "[Month]"));
-                    report.xrDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[Date]"));
-                    report.xrAmount.ExpressionBindings.Add(new ExpressionBinding("Text", "[Amount]"));
-                    report.xrTotalAmount.ExpressionBindings.Add(new ExpressionBinding("Text", "[Amount]"));
-                    report.xrKredit.ExpressionBindings.Add(new ExpressionBinding("Text", "[TotalAmountKredit]"));
-                    report.xrDebit.ExpressionBindings.Add(new ExpressionBinding("Text", "[TotalAmountDebit]"));
-                    report.xrGrandTotal.ExpressionBindings.Add(new ExpressionBinding("Text", "[Amount]"));
+                    report.xrDetailDate.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailDate]"));
+                    report.xrDetailCategoryCode.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryCode]"));
+                    report.xrDetailCategoryName.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailCategoryName]"));
+                    report.xrDetailAmount.ExpressionBindings.Add(new ExpressionBinding("Text", "[DetailAmount]"));
 
-                    report.xrUsername.Text = $"{ApplicationSettings.Instance.ApplicationUser.FirstName} {ApplicationSettings.Instance.ApplicationUser.LastName}";
-                    report.xrDate.Text = DateTime.Today.ToString("dd MMMM yyyy");
 
-                    report.Name = $"Keuangan_{HelperConvert.String(AssemblyHelper.GetValueProperty(FilterPopUp3.EditValue, "Code"))}_{DateTime.Now:yyyyMMddHHmmss}";
-                    string path = Environment.ExpandEnvironmentVariables("%userprofile%/downloads/") + $"{report.Name}.pdf";
+                    report.xrPrintDate.Text = DateTime.Now.ToString("dd MMMM yyyy HH:mm:ss");
+                    report.xrPeriodeDate.Text = $"{startDate.ToString("dd MMMM yyyy")} - {endDate.ToString("dd MMMM yyyy")}";
+
+                    report.xrUsernameFooter.Text = $"{ApplicationSettings.Instance.ApplicationUser.FirstName} {ApplicationSettings.Instance.ApplicationUser.LastName}";
+                    report.xrDateFooter.Text = $"Kota Tangerang, {DateTime.Today.ToString("dd MMMM yyyy")}";
+
+                    report.Name = $"Keuangan_{company.Code}_{DateTime.Now.ToString("yyyyMMddHHmmss")}";
+                    string path = System.Environment.ExpandEnvironmentVariables("%userprofile%/downloads/") + $"{report.Name}.pdf";
                     report.DisplayName = report.Name;
                     report.PrinterName = report.Name;
 
@@ -141,7 +148,10 @@ namespace VSudoTrans.DESKTOP.Report.Finance
                     MessageHelper.ShowMessageError(this, "Data tidak ditemukan.");
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+
+            }
             finally
             {
                 MessageHelper.WaitFormClose(this);

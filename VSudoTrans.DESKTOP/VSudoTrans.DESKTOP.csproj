@@ -1059,6 +1059,12 @@
     <Compile Include="Master\Vehicle\frmCategoryVehicleLV.Designer.cs">
       <DependentUpon>frmCategoryVehicleLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Finance\frmBudgetTransactionDetailDVV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\frmBudgetTransactionDetailDVV.Designer.cs">
+      <DependentUpon>frmBudgetTransactionDetailDVV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Finance\frmProfitLossYearlyDVV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1076,6 +1082,12 @@
     </Compile>
     <Compile Include="Report\Finance\frmProfitLossWeeklyDVV.Designer.cs">
       <DependentUpon>frmProfitLossWeeklyDVV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\rptBudgetTransactionDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\rptBudgetTransactionDetail.Designer.cs">
+      <DependentUpon>rptBudgetTransactionDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\rptProfitLossYearly.cs">
       <SubType>Component</SubType>
@@ -1227,11 +1239,11 @@
     <Compile Include="Report\Attendance\frmEmployeeRecognitionPV.Designer.cs">
       <DependentUpon>frmEmployeeRecognitionPV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\Finance\frmBudgetTransactionCategoryDVV.cs">
+    <Compile Include="Report\Finance\frmBudgetTransactionDVV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report\Finance\frmBudgetTransactionCategoryDVV.Designer.cs">
-      <DependentUpon>frmBudgetTransactionCategoryDVV.cs</DependentUpon>
+    <Compile Include="Report\Finance\frmBudgetTransactionDVV.Designer.cs">
+      <DependentUpon>frmBudgetTransactionDVV.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\frmBudgetBalanceLV.cs">
       <SubType>Form</SubType>
@@ -1244,12 +1256,6 @@
     </Compile>
     <Compile Include="Report\Finance\frmBudgetTransactionPV.Designer.cs">
       <DependentUpon>frmBudgetTransactionPV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\Finance\frmBudgetTransactionDVV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\Finance\frmBudgetTransactionDVV.Designer.cs">
-      <DependentUpon>frmBudgetTransactionDVV.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\frmBudgetBalanceDVV.cs">
       <SubType>Form</SubType>
@@ -1268,12 +1274,6 @@
     </Compile>
     <Compile Include="Report\Finance\frmComparationBudgetRealizationDVV.Designer.cs">
       <DependentUpon>frmComparationBudgetRealizationDVV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\Finance\rptBudgetTransactionCategory.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Finance\rptBudgetTransactionCategory.Designer.cs">
-      <DependentUpon>rptBudgetTransactionCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\rptBudgetTransaction.cs">
       <SubType>Component</SubType>
@@ -2967,17 +2967,17 @@
     <EmbeddedResource Include="Report\Attendance\frmEmployeeRecognitionPV.resx">
       <DependentUpon>frmEmployeeRecognitionPV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Finance\frmBudgetTransactionCategoryDVV.resx">
-      <DependentUpon>frmBudgetTransactionCategoryDVV.cs</DependentUpon>
+    <EmbeddedResource Include="Report\Finance\frmBudgetTransactionDetailDVV.resx">
+      <DependentUpon>frmBudgetTransactionDetailDVV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\frmBudgetTransactionDVV.resx">
+      <DependentUpon>frmBudgetTransactionDVV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\frmBudgetBalanceLV.resx">
       <DependentUpon>frmBudgetBalanceLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\frmBudgetTransactionPV.resx">
       <DependentUpon>frmBudgetTransactionPV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\Finance\frmBudgetTransactionDVV.resx">
-      <DependentUpon>frmBudgetTransactionDVV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\frmBudgetBalanceDVV.resx">
       <DependentUpon>frmBudgetBalanceDVV.cs</DependentUpon>
@@ -2997,8 +2997,8 @@
     <EmbeddedResource Include="Report\Finance\frmProfitLossWeeklyDVV.resx">
       <DependentUpon>frmProfitLossWeeklyDVV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Finance\rptBudgetTransactionCategory.resx">
-      <DependentUpon>rptBudgetTransactionCategory.cs</DependentUpon>
+    <EmbeddedResource Include="Report\Finance\rptBudgetTransactionDetail.resx">
+      <DependentUpon>rptBudgetTransactionDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\rptBudgetTransaction.resx">
       <DependentUpon>rptBudgetTransaction.cs</DependentUpon>

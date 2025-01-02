@@ -30,8 +30,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
 
             InitializeSearchLookup();
 
-            FilterDate1.EditValue = new DateTime(DateTime.Today.Year, 7, 1);
-            FilterDate2.EditValue = new DateTime(DateTime.Today.AddYears(1).Year, 6, 30);
+            FilterDate1.EditValue = new DateTime(DateTime.Today.Year, 1, 1);
+            FilterDate2.EditValue = new DateTime(DateTime.Today.Year, 12, 31);
 
             _GridView.OptionsView.ShowFooter = true;
             GridHelper.GridColumnInitializeLayout(colAmount, typeof(decimal), "n2", fTotal: true);

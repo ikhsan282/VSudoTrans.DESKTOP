@@ -2,9 +2,9 @@
 
 namespace VSudoTrans.DESKTOP.Report.Finance
 {
-    public partial class rptBudgetTransactionCategory : XtraReport
+    public partial class rptBudgetTransactionDetail : XtraReport
     {
-        public rptBudgetTransactionCategory()
+        public rptBudgetTransactionDetail()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace VSudoTrans.DESKTOP.Report.Finance
 {
-    partial class frmBudgetTransactionCategoryDVV
+    partial class frmBudgetTransactionDetailDVV
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBudgetTransactionCategoryDVV));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBudgetTransactionDetailDVV));
             this.IndicatorSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this._LayoutControlItemFilter4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -143,7 +143,6 @@
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 47);
             this.dockPanel1_Container.Size = new System.Drawing.Size(311, 278);
             // 
             // bbiRefresh
@@ -171,13 +170,13 @@
             // FilterDate2
             // 
             this.FilterDate2.EditValue = null;
-            this.FilterDate2.Location = new System.Drawing.Point(11, 41);
+            this.FilterDate2.Location = new System.Drawing.Point(11, 165);
             this.FilterDate2.Size = new System.Drawing.Size(263, 34);
             // 
             // FilterDate1
             // 
             this.FilterDate1.EditValue = null;
-            this.FilterDate1.Location = new System.Drawing.Point(11, -23);
+            this.FilterDate1.Location = new System.Drawing.Point(11, 101);
             this.FilterDate1.Size = new System.Drawing.Size(263, 34);
             // 
             // layoutControlGroup1
@@ -189,26 +188,29 @@
             // 
             // _LayoutControlItemFilter1
             // 
+            this._LayoutControlItemFilter1.Location = new System.Drawing.Point(0, 64);
             this._LayoutControlItemFilter1.Size = new System.Drawing.Size(267, 64);
             // 
             // _LayoutControlItemFilter2
             // 
+            this._LayoutControlItemFilter2.Location = new System.Drawing.Point(0, 128);
             this._LayoutControlItemFilter2.Size = new System.Drawing.Size(267, 64);
             // 
             // FilterPopUp3
             // 
-            this.FilterPopUp3.Location = new System.Drawing.Point(11, 105);
+            this.FilterPopUp3.Location = new System.Drawing.Point(11, 37);
             this.FilterPopUp3.Properties.Appearance.Options.UseTextOptions = true;
             this.FilterPopUp3.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.FilterPopUp3.Size = new System.Drawing.Size(263, 34);
             // 
             // _LayoutControlItemFilter3
             // 
+            this._LayoutControlItemFilter3.Location = new System.Drawing.Point(0, 0);
             this._LayoutControlItemFilter3.Size = new System.Drawing.Size(267, 64);
             // 
             // IndicatorSearchLookUpEdit
             // 
-            this.IndicatorSearchLookUpEdit.Location = new System.Drawing.Point(11, 169);
+            this.IndicatorSearchLookUpEdit.Location = new System.Drawing.Point(11, 229);
             this.IndicatorSearchLookUpEdit.MenuManager = this.ribbonControl;
             this.IndicatorSearchLookUpEdit.Name = "IndicatorSearchLookUpEdit";
             this.IndicatorSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -237,7 +239,7 @@
             // 
             // FilterPopUp4
             // 
-            this.FilterPopUp4.Location = new System.Drawing.Point(11, 233);
+            this.FilterPopUp4.Location = new System.Drawing.Point(11, 293);
             this.FilterPopUp4.MenuManager = this.ribbonControl;
             this.FilterPopUp4.Name = "FilterPopUp4";
             this.FilterPopUp4.ObjectId = null;
@@ -284,13 +286,13 @@
             this._LayoutControlItemFilter5.TextLocation = DevExpress.Utils.Locations.Top;
             this._LayoutControlItemFilter5.TextSize = new System.Drawing.Size(181, 21);
             // 
-            // frmBudgetTransactionCategoryDVV
+            // frmBudgetTransactionDetailDVV
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 656);
-            this.Name = "frmBudgetTransactionCategoryDVV";
+            this.Name = "frmBudgetTransactionDetailDVV";
             this.Text = "frmComparationBudgetRealizationDVV";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
