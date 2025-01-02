@@ -105,7 +105,7 @@
             this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrTable1.BorderWidth = 1F;
-            this.xrTable1.Font = new DevExpress.Drawing.DXFont("Arial", 7F);
+            this.xrTable1.Font = new DevExpress.Drawing.DXFont("Arial", 6F);
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -155,7 +155,7 @@
             this.xrCategoryName.Name = "xrCategoryName";
             this.xrCategoryName.StylePriority.UseTextAlignment = false;
             this.xrCategoryName.Text = "xrCategoryName";
-            this.xrCategoryName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrCategoryName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrCategoryName.Weight = 6.2584957826730987D;
             // 
             // xrTotalBudgetAmount
@@ -194,7 +194,7 @@
             this.xrRealizationPercentage.Name = "xrRealizationPercentage";
             this.xrRealizationPercentage.StylePriority.UseTextAlignment = false;
             this.xrRealizationPercentage.Text = "xrRealizationPercentage";
-            this.xrRealizationPercentage.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrRealizationPercentage.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrRealizationPercentage.TextFormatString = "{0:N2}%";
             this.xrRealizationPercentage.Weight = 2.2504432470871616D;
             // 
@@ -424,7 +424,7 @@
             this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrTable2.BorderWidth = 1F;
-            this.xrTable2.Font = new DevExpress.Drawing.DXFont("Arial", 7F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTable2.Font = new DevExpress.Drawing.DXFont("Arial", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0.0001483493F, 66.97221F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -613,7 +613,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable3.BorderWidth = 1F;
-            this.xrTable3.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTable3.Font = new DevExpress.Drawing.DXFont("Arial", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
@@ -694,7 +694,7 @@
             xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrTotalPayment5.Summary = xrSummary4;
             this.xrTotalPayment5.Text = "xrTotalPayment5";
-            this.xrTotalPayment5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrTotalPayment5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTotalPayment5.TextFormatString = "{0:N2}%";
             this.xrTotalPayment5.Weight = 0.44335092639993179D;
             // 

@@ -112,6 +112,11 @@ namespace VSudoTrans.DESKTOP.Master.Rental
                 gridView.ClearColumnErrors();
         }
 
+        protected override void InitializeFomTitle(string fieldNames = "Code")
+        {
+            base.InitializeFomTitle("Company.Code;Note");
+        }
+
         protected override void InitializeDefaultValidation()
         {
             MyValidationHelper.SetValidation(_DxValidationProvider, StartDateDateEdit, ConditionOperator.IsNotBlank);

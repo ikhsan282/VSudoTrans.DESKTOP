@@ -1263,12 +1263,6 @@
     <Compile Include="Report\Finance\frmBudgetBalanceDVV.Designer.cs">
       <DependentUpon>frmBudgetBalanceDVV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\Finance\frmComparationBudgetRealizationBalanceDVV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\Finance\frmComparationBudgetRealizationBalanceDVV.Designer.cs">
-      <DependentUpon>frmComparationBudgetRealizationBalanceDVV.cs</DependentUpon>
-    </Compile>
     <Compile Include="Report\Finance\frmComparationBudgetRealizationDVV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1286,12 +1280,6 @@
     </Compile>
     <Compile Include="Report\Finance\rptBudgetBalance.Designer.cs">
       <DependentUpon>rptBudgetBalance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\Finance\rptComparationBudgetRealizationBalance.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Finance\rptComparationBudgetRealizationBalance.Designer.cs">
-      <DependentUpon>rptComparationBudgetRealizationBalance.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\rptComparationBudgetRealization.cs">
       <SubType>Component</SubType>
@@ -2982,9 +2970,6 @@
     <EmbeddedResource Include="Report\Finance\frmBudgetBalanceDVV.resx">
       <DependentUpon>frmBudgetBalanceDVV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Finance\frmComparationBudgetRealizationBalanceDVV.resx">
-      <DependentUpon>frmComparationBudgetRealizationBalanceDVV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\frmComparationBudgetRealizationDVV.resx">
       <DependentUpon>frmComparationBudgetRealizationDVV.cs</DependentUpon>
     </EmbeddedResource>
@@ -3005,9 +2990,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\rptBudgetBalance.resx">
       <DependentUpon>rptBudgetBalance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\Finance\rptComparationBudgetRealizationBalance.resx">
-      <DependentUpon>rptComparationBudgetRealizationBalance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Finance\rptComparationBudgetRealization.resx">
       <DependentUpon>rptComparationBudgetRealization.cs</DependentUpon>

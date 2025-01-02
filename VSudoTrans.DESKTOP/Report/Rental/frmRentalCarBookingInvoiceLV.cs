@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using Domain.Entities.Vehicle;
+using DevExpress.XtraGrid.Views.Base;
 
 namespace VSudoTrans.DESKTOP.Report.Rental
 {
@@ -131,15 +132,14 @@ namespace VSudoTrans.DESKTOP.Report.Rental
                     report.xrVehicleSeat.Text = vehicle.Seat.ToString();
                     report.xrVehicleColor.Text = vehicle.VehicleColor;
 
-                    report.DisplayName = this.Text;
-                    report.PrinterName = this.Text;
-                    report.Name = this.Text;
+                    report.Name = $"BuktiPembayaran_{rentalCarBooking.Passenger.Name}_{rentalCarBooking.Date.ToString("ddMMyyyy")}_{company.Code}_{DateTime.Now.ToString("yyyyMMddHHmmss")}";
+                    string path = System.Environment.ExpandEnvironmentVariables("%userprofile%/downloads/") + $"{report.Name}.pdf";
+                    report.DisplayName = report.Name;
+                    report.PrinterName = report.Name;
 
-                    string path = System.Environment.ExpandEnvironmentVariables("%userprofile%/downloads/") + $"{this.Text}.pdf";
+                    //set document source
                     _DocumentViewer.DocumentSource = report;
                     _DocumentViewer.InitiateDocumentCreation();
-
-                    //documentViewer1.PrintingSystem.ExportOptions.PrintPreview.ShowOptionsBeforeExport = true;
                 }
             }
             catch (Exception ex)

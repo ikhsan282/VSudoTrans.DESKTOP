@@ -44,7 +44,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
 
         protected override void InitializeFomTitle(string fieldNames = "Code")
         {
-            base.InitializeFomTitle("Category.Name;UnitMeasure.Name");
+            base.InitializeFomTitle("Category.Name;UnitMeasure.Name;Day;Month;Year");
         }
 
         protected override void DisplayEntity<T>()
@@ -52,6 +52,12 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             base.DisplayEntity<T>();
 
             _BudgetTransaction = OdataEntity as BudgetTransaction;
+
+            if (_BudgetTransaction.RentalCarBookingId != null)
+            {
+                bbiHeaderEnabled(false);
+                InializeDataReadOnly();
+            }
         }
 
         protected override void InitializeDefaultValidation()

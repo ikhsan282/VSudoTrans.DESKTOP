@@ -19,7 +19,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Finance
             InitializeComponent();
 
             EndPoint = "/BudgetTransactions";
-            FormTitle = "Penerimaan";
+            FormTitle = "Pemasukan";
 
             OdataSelect = "Id,Quantity,Amount,Date,Note";
             OdataExpand = "Company($select=name)";

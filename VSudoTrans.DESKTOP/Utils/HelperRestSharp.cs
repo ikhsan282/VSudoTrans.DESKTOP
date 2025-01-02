@@ -568,7 +568,7 @@ namespace VSudoTrans.DESKTOP.Utils
             }
         }
         
-        public static string Delete(dynamic id, string endPoint = "")
+        public static void Delete(dynamic id, string endPoint = "")
         {
             var restClient = new RestClient(ApplicationSettings.Instance.UriHelper.UrlApiDefault + "api");
 
@@ -590,22 +590,20 @@ namespace VSudoTrans.DESKTOP.Utils
                 if (response.IsSuccessful)
                 {
                     var responseBody = response.Content;
-                    return responseBody;
                 }
                 else
                 {
-                    Console.WriteLine($"An error occurred: {response.ErrorMessage}");
-                    return null;
+                    var err = GetRestResponseErrorMessage(response);
+                    throw new Exception(err);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                return null;
+                throw ex;
             }
         }
 
-        public static string DeleteRange(string endPoint = "", string jsonBody = "")
+        public static void DeleteRange(string endPoint = "", string jsonBody = "")
         {
             var restClient = new RestClient(ApplicationSettings.Instance.UriHelper.UrlApiDefault + "api");
 
@@ -633,7 +631,6 @@ namespace VSudoTrans.DESKTOP.Utils
                 if (response.IsSuccessful)
                 {
                     var responseBody = response.Content;
-                    return responseBody;
                 }
                 else
                 {
@@ -644,8 +641,7 @@ namespace VSudoTrans.DESKTOP.Utils
             catch (Exception ex)
             {
                 MessageHelper.WaitFormClose();
-                DevExpress.XtraEditors.XtraMessageBox.Show(ex.Message, MessageHelper.MessageAppTitle, System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-                return null;
+                throw ex;
             }
         }
 
@@ -825,6 +821,10 @@ namespace VSudoTrans.DESKTOP.Utils
                 if (restResponse.Request.Method == Method.Get)
                 {
                     errMessage = "Gagal untuk mendapatkan data, ";
+                }
+                else if (restResponse.Request.Method == Method.Delete)
+                {
+                    errMessage = "Gagal untuk menghapus data, ";
                 }
                 else
                 {

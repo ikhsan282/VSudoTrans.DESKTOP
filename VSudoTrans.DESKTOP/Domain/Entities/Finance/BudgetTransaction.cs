@@ -4,6 +4,7 @@ using Domain.Base;
 using Domain.Entities.Organization;
 using Domain.Entities.Shared;
 using System;
+using Domain.Entities.Rental;
 
 namespace Domain.Entities.Finance
 {
@@ -17,6 +18,8 @@ namespace Domain.Entities.Finance
         public Category Category { get; set; }
         public int UnitMeasureId { get; set; }
         public UnitMeasure UnitMeasure { get; set; }
+        public int? RentalCarBookingId { get; set; }
+        public virtual RentalCarBooking RentalCarBooking { get; set; }
         public EnumTransactionIndicator Indicator { get; set; }
         public int Quantity { get; set; }
         public decimal Amount { get; set; }

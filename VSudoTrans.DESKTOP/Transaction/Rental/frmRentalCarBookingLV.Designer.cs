@@ -80,7 +80,7 @@
             // 
             // rpgTasks
             // 
-            this.rpgTasks.ItemLinks.Add(this.bbiPrintInvoice);
+            this.rpgTasks.ItemLinks.Add(this.bbiPrintInvoice, true);
             // 
             // bbiRefresh
             // 
@@ -207,7 +207,6 @@
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 47);
             this.dockPanel1_Container.Size = new System.Drawing.Size(311, 361);
             // 
             // dataLayoutControl2

@@ -230,10 +230,17 @@ namespace VSudoTrans.DESKTOP.BaseForm
             }
             if (MessageHelper.ShowMessageQuestion(MessageHelper.MessageDelete) == System.Windows.Forms.DialogResult.No) return;
 
-            HelperRestSharp.Delete(AssemblyHelper.GetValueProperty(delete, "Id"), this.EndPoint);
+            try
+            {
+                HelperRestSharp.Delete(AssemblyHelper.GetValueProperty(delete, "Id"), this.EndPoint);
 
-            //notif 
-            MessageHelper.ShowMessageInformation(this, $"Data Berhasil Di Delete ");
+                //notif 
+                MessageHelper.ShowMessageInformation(this, $"Data berhasil di hapus!");
+            }
+            catch (Exception ex)
+            {
+                MessageHelper.ShowMessageError(this, ex.Message);
+            }
 
             ActionRefresh<T>();
         }

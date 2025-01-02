@@ -39,7 +39,7 @@
             this._LayoutControlItemFilter7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCategory = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTransactionDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUnitMeasure = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -86,7 +86,6 @@
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(2);
             this.ribbonControl.OptionsMenuMinWidth = 220;
-            this.ribbonControl.Size = new System.Drawing.Size(1212, 254);
             // 
             // bbiRefresh
             // 
@@ -184,7 +183,7 @@
             this.colUnitMeasure,
             this.colQuantity,
             this.colAmount,
-            this.colTransactionDate,
+            this.colDate,
             this.colNote});
             this._GridView.DetailHeight = 565;
             this._GridView.OptionsBehavior.Editable = false;
@@ -210,11 +209,6 @@
             // _DockPanelRight
             // 
             this._DockPanelRight.Margin = new System.Windows.Forms.Padding(2);
-            this._DockPanelRight.Size = new System.Drawing.Size(322, 394);
-            // 
-            // dockPanel1_Container
-            // 
-            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 47);
             // 
             // dataLayoutControl2
             // 
@@ -241,6 +235,7 @@
             // FilterDate1
             // 
             this.FilterDate1.EditValue = null;
+            this.FilterDate1.Location = new System.Drawing.Point(11, 101);
             this.FilterDate1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FilterDate1.Size = new System.Drawing.Size(263, 34);
             // 
@@ -255,6 +250,7 @@
             // 
             // _LayoutControlItemFilter1
             // 
+            this._LayoutControlItemFilter1.Location = new System.Drawing.Point(0, 64);
             this._LayoutControlItemFilter1.Size = new System.Drawing.Size(267, 64);
             // 
             // emptySpaceItem1
@@ -265,16 +261,18 @@
             // FilterDate2
             // 
             this.FilterDate2.EditValue = null;
+            this.FilterDate2.Location = new System.Drawing.Point(11, 165);
             this.FilterDate2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FilterDate2.Size = new System.Drawing.Size(263, 34);
             // 
             // _LayoutControlItemFilter2
             // 
+            this._LayoutControlItemFilter2.Location = new System.Drawing.Point(0, 128);
             this._LayoutControlItemFilter2.Size = new System.Drawing.Size(267, 64);
             // 
             // _LayoutControlItemFilter3
             // 
-            this._LayoutControlItemFilter3.Location = new System.Drawing.Point(0, 192);
+            this._LayoutControlItemFilter3.Location = new System.Drawing.Point(0, 0);
             this._LayoutControlItemFilter3.Size = new System.Drawing.Size(267, 64);
             // 
             // _BindingSource
@@ -283,7 +281,7 @@
             // 
             // FilterPopUp3
             // 
-            this.FilterPopUp3.Location = new System.Drawing.Point(11, 229);
+            this.FilterPopUp3.Location = new System.Drawing.Point(11, 37);
             this.FilterPopUp3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FilterPopUp3.Properties.Appearance.Options.UseTextOptions = true;
             this.FilterPopUp3.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
@@ -303,7 +301,7 @@
             // 
             // FilterPopUp4
             // 
-            this.FilterPopUp4.Location = new System.Drawing.Point(11, 165);
+            this.FilterPopUp4.Location = new System.Drawing.Point(11, 229);
             this.FilterPopUp4.MenuManager = this.ribbonControl;
             this.FilterPopUp4.Name = "FilterPopUp4";
             this.FilterPopUp4.ObjectId = null;
@@ -344,7 +342,7 @@
             // _LayoutControlItemFilter4
             // 
             this._LayoutControlItemFilter4.Control = this.FilterPopUp4;
-            this._LayoutControlItemFilter4.Location = new System.Drawing.Point(0, 128);
+            this._LayoutControlItemFilter4.Location = new System.Drawing.Point(0, 192);
             this._LayoutControlItemFilter4.Name = "_LayoutControlItemFilter4";
             this._LayoutControlItemFilter4.Size = new System.Drawing.Size(267, 64);
             this._LayoutControlItemFilter4.TextLocation = DevExpress.Utils.Locations.Top;
@@ -505,7 +503,7 @@
             this.colCompanyName.Name = "colCompanyName";
             this.colCompanyName.Visible = true;
             this.colCompanyName.VisibleIndex = 0;
-            this.colCompanyName.Width = 206;
+            this.colCompanyName.Width = 240;
             // 
             // colCategory
             // 
@@ -515,19 +513,19 @@
             this.colCategory.Name = "colCategory";
             this.colCategory.Visible = true;
             this.colCategory.VisibleIndex = 1;
-            this.colCategory.Width = 206;
+            this.colCategory.Width = 315;
             // 
-            // colTransactionDate
+            // colDate
             // 
-            this.colTransactionDate.Caption = "Tanggal";
-            this.colTransactionDate.DisplayFormat.FormatString = "dd-MMM-yyyy";
-            this.colTransactionDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.colTransactionDate.FieldName = "TransactionDate";
-            this.colTransactionDate.MinWidth = 45;
-            this.colTransactionDate.Name = "colTransactionDate";
-            this.colTransactionDate.Visible = true;
-            this.colTransactionDate.VisibleIndex = 5;
-            this.colTransactionDate.Width = 184;
+            this.colDate.Caption = "Tanggal";
+            this.colDate.DisplayFormat.FormatString = "dd-MMM-yyyy";
+            this.colDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colDate.FieldName = "Date";
+            this.colDate.MinWidth = 45;
+            this.colDate.Name = "colDate";
+            this.colDate.Visible = true;
+            this.colDate.VisibleIndex = 5;
+            this.colDate.Width = 155;
             // 
             // colUnitMeasure
             // 
@@ -537,7 +535,7 @@
             this.colUnitMeasure.Name = "colUnitMeasure";
             this.colUnitMeasure.Visible = true;
             this.colUnitMeasure.VisibleIndex = 2;
-            this.colUnitMeasure.Width = 191;
+            this.colUnitMeasure.Width = 128;
             // 
             // colQuantity
             // 
@@ -548,7 +546,7 @@
             this.colQuantity.Name = "colQuantity";
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 3;
-            this.colQuantity.Width = 133;
+            this.colQuantity.Width = 128;
             // 
             // colAmount
             // 
@@ -559,7 +557,7 @@
             this.colAmount.Name = "colAmount";
             this.colAmount.Visible = true;
             this.colAmount.VisibleIndex = 4;
-            this.colAmount.Width = 273;
+            this.colAmount.Width = 235;
             // 
             // colNote
             // 
@@ -569,7 +567,7 @@
             this.colNote.Name = "colNote";
             this.colNote.Visible = true;
             this.colNote.VisibleIndex = 6;
-            this.colNote.Width = 283;
+            this.colNote.Width = 275;
             // 
             // frmDebitLV
             // 
@@ -628,7 +626,7 @@
         private DevExpress.XtraLayout.LayoutControlItem _LayoutControlItemFilter7;
         private DevExpress.XtraGrid.Columns.GridColumn colCompanyName;
         private DevExpress.XtraGrid.Columns.GridColumn colCategory;
-        private DevExpress.XtraGrid.Columns.GridColumn colTransactionDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate;
         private DevExpress.XtraGrid.Columns.GridColumn colUnitMeasure;
         private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
         private DevExpress.XtraGrid.Columns.GridColumn colAmount;
