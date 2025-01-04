@@ -16,9 +16,9 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             EndPoint = "/RentalCarRegulationEmployees";
             FormTitle = "Peraturan Komisi Karyawan";
 
-            OdataSelect = "Id,StartDate,EndDate";
-            OdataExpand = "Company($select=name)";
-            OdataExpand += ",RentalCarRegulationEmployeeDetails($select=Type,Amount)";
+            OdataSelect = "Id,Trip,StartDate,EndDate";
+            OdataExpand = "Company($select=name),";
+            OdataExpand += "RentalCarRegulationEmployeeDetails($select=EmployeeRole,Type,Amount)";
 
             InitializeComponentAfter<RentalCarRegulationEmployee>();
 
@@ -27,8 +27,6 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             bbiRefresh.ItemClick += BbiRefresh_ItemClick;
             bbiDelete.ItemClick += BbiDelete_ItemClick;
 
-            _GridView.OptionsView.ShowDetailButtons = true;
-            _GridView.OptionsDetail.EnableMasterViewMode = true;
             GridHelper.GridViewInitializeLayout(_GridViewDetail);
             _GridViewDetail.OptionsView.ShowFooter = true;
             _GridViewDetail.ViewCaption = "Detail";

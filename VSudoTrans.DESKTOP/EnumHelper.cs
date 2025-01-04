@@ -14,6 +14,8 @@ namespace VSudoTrans.DESKTOP
                     return "Kernet";
                 case EnumEmployeeRole.Mechanic:
                     return "Montir";
+                case EnumEmployeeRole.BBM:
+                    return "BBM";
                 default:
                     return string.Format("{0} Description", value);
             }

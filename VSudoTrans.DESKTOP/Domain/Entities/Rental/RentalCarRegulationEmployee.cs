@@ -14,6 +14,7 @@ namespace Domain.Entities.Rental
     {
         public int CompanyId { get; set; }
         public virtual Company Company { get; set; }
+        public int Trip { get; set; } // Trip Digunakan untuk peraturan trip ke berapa
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int IStartDate { get; set; }
@@ -23,9 +24,9 @@ namespace Domain.Entities.Rental
 
         public RentalCarRegulationEmployee()
         {
-            RentalCarRegulationEmployeeDetails = new HashSet<RentalCarRegulationEmployeeDetail>();
+            RentalCarRegulationEmployeeDetails = new List<RentalCarRegulationEmployeeDetail>();
         }
-        public virtual ICollection<RentalCarRegulationEmployeeDetail> RentalCarRegulationEmployeeDetails { get; set; }
+        public virtual List<RentalCarRegulationEmployeeDetail> RentalCarRegulationEmployeeDetails { get; set; }
     }
 
     [Table("RentalCarPaymentRegulationEmployee")]

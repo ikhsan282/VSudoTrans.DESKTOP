@@ -36,13 +36,14 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             bbiSaveAndClose.ItemClick += BbiSaveAndClose_ItemClick;
             bbiSaveAndNew.ItemClick += BbiSaveAndNew_ItemClick;
 
-            HelperConvert.FormatDateEdit(DateDateEdit);
+            HelperConvert.FormatDateEdit(StartDateDateEdit);
             HelperConvert.FormatDateEdit(EndDateDateEdit);
             HelperConvert.FormatDateTimeEdit(TimeDateEdit, "HH:mm");
 
             HelperConvert.FormatDateTimeEdit(CreatedDateDateEdit);
             HelperConvert.FormatDateTimeEdit(ModifiedDateDateEdit);
 
+            HelperConvert.FormatSpinEdit(TripSpinEdit, "n0", 0, 10000);
             HelperConvert.FormatSpinEdit(AmountEmployeeSpinEdit, "n0", 0, 888888888888888);
             HelperConvert.FormatSpinEdit(AmountPaymentSpinEdit, "n0", 0, 888888888888888);
             HelperConvert.FormatSpinEdit(TotalPriceSpinEdit, "n0", 0, 888888888888888);
@@ -54,8 +55,6 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             DeliveryDistrictPopUp.EditValueChanged += DeliveryDistrictPopUp_EditValueChanged;
 
             groupPassenger.CustomButtonClick += GroupPassenger_CustomButtonClick;
-
-            groupEmployee.CustomButtonClick += GroupEmployee_CustomButtonClick;
 
             GridHelper.GridViewInitializeLayout(_GridViewEmployee);
             GridHelper.GridControlInitializeEmbeddedNavigator(_GridControlEmployee, true, true, true, true, true, true, true, true, true, true, true, true);
@@ -81,38 +80,70 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             _GridViewPayment.OptionsBehavior.Editable = true;
 
             BBMSpinEdit.EditValueChanged += BBMSpinEdit_EditValueChanged;
+
+            tabbedControlGroup.SelectedPageChanged += TabbedControlGroup_SelectedPageChanged;
+
+            StartDateDateEdit.EditValueChanged += StartDateDateEdit_EditValueChanged;
+            EndDateDateEdit.EditValueChanged += EndDateDateEdit_EditValueChanged;
+
+            bbiCalculateFeeEmployee.ItemClick += BbiCalculateFeeEmployee_ItemClick;
         }
 
-        private void GroupEmployee_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
+        private void BbiCalculateFeeEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //LayoutControlGroup layoutGroup = sender as LayoutControlGroup;
-            if (e.Button.Properties.Caption.Contains("Hitung Komisi Karyawan"))
+            var company = CompanyPopUp.EditValue as Company;
+            var totalPrice = HelperConvert.Decimal(TotalPriceSpinEdit.EditValue);
+            if (company != null && StartDateDateEdit.EditValue != null && totalPrice > 0)
             {
-                var company = CompanyPopUp.EditValue as Company;
-                var totalPrice = HelperConvert.Decimal(TotalPriceSpinEdit.EditValue);
-                if (company != null && DateDateEdit.EditValue != null && totalPrice > 0)
+                int iDate = HelperConvert.Int(HelperConvert.Date(StartDateDateEdit.EditValue).ToString("yyyyMMdd"));
+                string fFilter = $"CompanyId eq {company.Id} and IStartDate le {iDate} and IEndDate ge {iDate}";
+                var rentalCarRegulationEmployee = HelperRestSharp.GetOdata<RentalCarRegulationEmployee>("RentalCarRegulationEmployees", fSelect: "Id,CompanyId,Trip,StartDate,EndDate", fExpand: "RentalCarRegulationEmployeeDetails($select=Id,EmployeeRole,Type,Amount)", fFilter: fFilter);
+
+                _BindingSourceEmployee.Clear();
+                var rentalCarBookingEmployees = new List<RentalCarBookingEmployee>();
+                foreach (var rentalCarRegulationEmployeeDetail in rentalCarRegulationEmployee.RentalCarRegulationEmployeeDetails.Where(s => s.EmployeeRole != EnumEmployeeRole.BBM).ToList())
                 {
-                    int iDate = HelperConvert.Int(HelperConvert.Date(DateDateEdit.EditValue).ToString("yyyyMMdd"));
-                    string fFilter = $"CompanyId eq {company.Id} and IStartDate le {iDate} and IEndDate ge {iDate}";
-                    var rentalCarRegulationEmployee = HelperRestSharp.GetOdata<RentalCarRegulationEmployee>("RentalCarRegulationEmployees", fSelect: "Id,CompanyId,StartDate,EndDate", fExpand: "RentalCarRegulationEmployeeDetails($select=Id,EmployeeRole,Type,Amount)", fFilter: fFilter);
-
-                    _BindingSourceEmployee.Clear();
-                    var rentalCarBookingEmployees = new List<RentalCarBookingEmployee>();
-                    foreach (var rentalCarRegulationEmployeeDetail in rentalCarRegulationEmployee.RentalCarRegulationEmployeeDetails)
+                    var rentalCarBookingEmployee = new RentalCarBookingEmployee()
                     {
-                        var rentalCarBookingEmployee = new RentalCarBookingEmployee()
-                        {
-                            EmployeeRole = rentalCarRegulationEmployeeDetail.EmployeeRole,
-                            EmployeeId = 0,
-                            Amount = rentalCarRegulationEmployeeDetail.Type == EnumRentalCarEmployeeRegulationType.Fix ? rentalCarRegulationEmployeeDetail.Amount : rentalCarRegulationEmployeeDetail.Type == EnumRentalCarEmployeeRegulationType.Percentage ? totalPrice * (rentalCarRegulationEmployeeDetail.Amount / 100) : 0
-                        };
+                        EmployeeRole = rentalCarRegulationEmployeeDetail.EmployeeRole,
+                        EmployeeId = 0,
+                        Amount = rentalCarRegulationEmployeeDetail.Type == EnumRentalCarEmployeeRegulationType.Fix ? rentalCarRegulationEmployeeDetail.Amount : rentalCarRegulationEmployeeDetail.Type == EnumRentalCarEmployeeRegulationType.Percentage ? totalPrice * (rentalCarRegulationEmployeeDetail.Amount / 100) : 0
+                    };
 
-                        rentalCarBookingEmployees.Add(rentalCarBookingEmployee);
-                    }
-                    _BindingSourceEmployee.DataSource = rentalCarBookingEmployees;
-                    CalculateOperationalCost();
+                    rentalCarBookingEmployees.Add(rentalCarBookingEmployee);
                 }
+                _BindingSourceEmployee.DataSource = rentalCarBookingEmployees;
+
+                var rentalCarRegulationEmployeeDetailBBM = rentalCarRegulationEmployee.RentalCarRegulationEmployeeDetails.Where(s => s.EmployeeRole == EnumEmployeeRole.BBM).FirstOrDefault();
+                if (rentalCarRegulationEmployeeDetailBBM != null)
+                    BBMSpinEdit.EditValue = rentalCarRegulationEmployeeDetailBBM.Type == EnumRentalCarEmployeeRegulationType.Fix ? rentalCarRegulationEmployeeDetailBBM.Amount : rentalCarRegulationEmployeeDetailBBM.Type == EnumRentalCarEmployeeRegulationType.Percentage ? totalPrice * (rentalCarRegulationEmployeeDetailBBM.Amount / 100) : 0;
+                CalculateOperationalCost();
             }
+        }
+
+        private void CalculateTrip()
+        {
+            if (StartDateDateEdit.EditValue != null && EndDateDateEdit.EditValue != null)
+            {
+                TripSpinEdit.EditValue = (HelperConvert.Date(EndDateDateEdit.EditValue).Date - HelperConvert.Date(StartDateDateEdit.EditValue).Date).TotalDays + 1;
+            }
+        }
+
+        private void EndDateDateEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            CalculateTrip();
+        }
+
+        private void StartDateDateEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            CalculateTrip();
+        }
+
+        private void TabbedControlGroup_SelectedPageChanged(object sender, DevExpress.XtraLayout.LayoutTabPageChangedEventArgs e)
+        {
+            bbiCalculateFeeEmployee.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            if (tabbedControlGroup.SelectedTabPage == layoutControlGroupEmployee)
+                bbiCalculateFeeEmployee.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
         }
 
         private void BBMSpinEdit_EditValueChanged(object sender, EventArgs e)
@@ -322,7 +353,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
         protected override void InitializeDefaultValidation()
         {
             MyValidationHelper.SetValidation(_DxValidationProvider, this.CompanyPopUp, ConditionOperator.IsNotBlank);
-            MyValidationHelper.SetValidation(_DxValidationProvider, this.DateDateEdit, ConditionOperator.IsNotBlank);
+            MyValidationHelper.SetValidation(_DxValidationProvider, this.StartDateDateEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.TimeDateEdit, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.PickupDistrictPopUp, ConditionOperator.IsNotBlank);
             MyValidationHelper.SetValidation(_DxValidationProvider, this.DeliveryDistrictPopUp, ConditionOperator.IsNotBlank);
@@ -445,8 +476,8 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             _RentalCarBooking.PassengerId = HelperConvert.Int(AssemblyHelper.GetValueProperty(PassengerPopUp.EditValue, "Id"));
             _RentalCarBooking.CategoryVehicleId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CategoryVehiclePopUp.EditValue, "Id"));
             _RentalCarBooking.VehicleId = HelperConvert.Int(AssemblyHelper.GetValueProperty(VehiclePopUp.EditValue, "Id"));
-            _RentalCarBooking.Date = HelperConvert.Date(DateDateEdit.EditValue);
-            _RentalCarBooking.StartDate = HelperConvert.Date(DateDateEdit.EditValue);
+            _RentalCarBooking.Date = HelperConvert.Date(StartDateDateEdit.EditValue);
+            _RentalCarBooking.StartDate = HelperConvert.Date(StartDateDateEdit.EditValue);
             _RentalCarBooking.EndDate = HelperConvert.Date(EndDateDateEdit.EditValue);
             _RentalCarBooking.Time = HelperConvert.Date(TimeDateEdit.EditValue).TimeOfDay;
 

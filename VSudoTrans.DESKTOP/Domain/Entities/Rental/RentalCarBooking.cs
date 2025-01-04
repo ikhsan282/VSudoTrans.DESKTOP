@@ -13,13 +13,13 @@ using System.Collections.Generic;
 namespace Domain.Entities.Rental
 {
     [Table("RentalCarBooking")]
-    [DisplayName("Pemesanan Sewa Mobil")]
+    [DisplayName("Pemesanan Sewa Kendaraan")]
     public class RentalCarBooking : BaseDomainDetail
     {
         public RentalCarBooking()
         {
-            RentalCarBookingEmployees = new HashSet<RentalCarBookingEmployee>();
-            RentalCarBookingPayments = new HashSet<RentalCarBookingPayment>();
+            RentalCarBookingEmployees = new List<RentalCarBookingEmployee>();
+            RentalCarBookingPayments = new List<RentalCarBookingPayment>();
         }
         public int CompanyId { get; set; }
         public virtual Company Company { get; set; }
@@ -75,12 +75,12 @@ namespace Domain.Entities.Rental
 
         [MaxLength(2000)]
         public string Note { get; set; }
-        public virtual ICollection<RentalCarBookingEmployee> RentalCarBookingEmployees { get; set; }
-        public virtual ICollection<RentalCarBookingPayment> RentalCarBookingPayments { get; set; }
+        public virtual List<RentalCarBookingEmployee> RentalCarBookingEmployees { get; set; }
+        public virtual List<RentalCarBookingPayment> RentalCarBookingPayments { get; set; }
     }
 
     [Table("RentalCarBookingEmployee")]
-    [DisplayName("Pemesanan Sewa Mobil Karyawan")]
+    [DisplayName("Pemesanan Sewa Kendaraan Karyawan")]
     public class RentalCarBookingEmployee : BaseDomainDetail
     {
         public int RentalCarBookingId { get; set; }
@@ -92,7 +92,7 @@ namespace Domain.Entities.Rental
     }
 
     [Table("RentalCarBookingPayment")]
-    [DisplayName("Pemesanan Sewa Mobil Payment")]
+    [DisplayName("Pemesanan Sewa Kendaraan Payment")]
     public class RentalCarBookingPayment : BaseDomainDetail
     {
         public int RentalCarBookingId { get; set; }

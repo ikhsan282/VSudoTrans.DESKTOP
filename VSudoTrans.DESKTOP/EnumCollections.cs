@@ -11,7 +11,9 @@ namespace Domain
         [Display(Name = "Kernet")]
         Conductor = 1,
         [Display(Name = "Montir")]
-        Mechanic = 2
+        Mechanic = 2,
+        [Display(Name = "BBM")]
+        BBM = 3
     }
     public enum EnumRentalCarEmployeeRegulationType : short
     {

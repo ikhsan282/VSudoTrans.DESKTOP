@@ -19,7 +19,7 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
             InitializeComponent();
 
             this.EndPoint = "/RentalCarBookings";
-            this.FormTitle = "Pemesanan Sewa Mobil";
+            this.FormTitle = "Pemesanan Sewa Kendaraan";
 
             this.OdataSelect = "Id,Date,Time,TotalPrice,BBM,TotalOperationalCost,TotalPayment";
             this.OdataExpand = "Company($select=name)";
@@ -42,11 +42,24 @@ namespace VSudoTrans.DESKTOP.Transaction.Rental
 
             GridHelper.GridColumnInitializeLayout(colDate, typeof(DateTime));
             GridHelper.GridColumnInitializeLayout(colTime, typeof(TimeSpan), "hh:mm");
+            GridHelper.GridColumnInitializeLayout(colBBM, typeof(decimal), "n0", fTotal: true);
             GridHelper.GridColumnInitializeLayout(colTotalOperationalCost, typeof(decimal), "n0", fTotal: true);
             GridHelper.GridColumnInitializeLayout(colTotalPayment, typeof(decimal), "n0", fTotal: true);
             GridHelper.GridColumnInitializeLayout(colTotalPrice, typeof(decimal), "n0", fTotal: true);
             _GridView.OptionsView.ShowFooter = true;
             _GridView.OptionsView.ColumnAutoWidth = false;
+
+
+            GridHelper.GridViewInitializeLayout(_GridViewEmployee);
+            _GridViewEmployee.OptionsView.ShowFooter = true;
+            _GridViewEmployee.ViewCaption = "Sopir/Kernet/Montir";
+            GridHelper.GridColumnInitializeLayout(colAmount, typeof(decimal), "n2", fTotal: true);
+
+            GridHelper.GridViewInitializeLayout(_GridViewPayment);
+            _GridViewPayment.OptionsView.ShowFooter = true;
+            _GridViewPayment.ViewCaption = "Pembayaran";
+            GridHelper.GridColumnInitializeLayout(colDatePayment, typeof(DateTime));
+            GridHelper.GridColumnInitializeLayout(colAmountPayment, typeof(decimal), "n2", fTotal: true);
 
             _GridView.CustomDrawCell += _GridView_CustomDrawCell;
             _GridView.RowCellStyle += _GridView_RowCellStyle;

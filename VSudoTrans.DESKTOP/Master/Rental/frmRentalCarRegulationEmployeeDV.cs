@@ -32,7 +32,8 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             _GridViewDetail.RowEditCanceled += _GridViewDetail_RowEditCanceled;
             _GridViewDetail.RowUpdated += _GridViewDetail_RowUpdated;
 
-            HelperConvert.FormatSpinEdit(AmountSpinEdit, "n0", 0, 9999999999);
+            HelperConvert.FormatSpinEdit(TripSpinEdit, "n0", 0, 10000);
+            HelperConvert.FormatSpinEdit(AmountSpinEdit, "n2", 0, 9999999999);
             HelperConvert.FormatDateEdit(StartDateDateEdit);
             HelperConvert.FormatDateEdit(EndDateDateEdit);
 
@@ -179,6 +180,7 @@ namespace VSudoTrans.DESKTOP.Master.Rental
             {
                 Id = _RentalCarRegulationEmployee.Id,
                 CompanyId = HelperConvert.Int(AssemblyHelper.GetValueProperty(CompanyPopUp.EditValue, "Id")),
+                Trip = HelperConvert.Int(TripSpinEdit.EditValue),
                 StartDate = HelperConvert.Date(StartDateDateEdit.EditValue),
                 EndDate = HelperConvert.Date(EndDateDateEdit.EditValue),
                 Note = HelperConvert.String(NoteMemoEdit.EditValue),

@@ -36,6 +36,9 @@
             this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEndDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTrip = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmployeeRole = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -71,7 +74,7 @@
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(2);
             this.ribbonControl.OptionsMenuMinWidth = 220;
-            this.ribbonControl.Size = new System.Drawing.Size(891, 254);
+            this.ribbonControl.Size = new System.Drawing.Size(1032, 254);
             // 
             // bbiRefresh
             // 
@@ -143,7 +146,7 @@
             this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
             this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.dataLayoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(569, 384);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(710, 424);
             this.dataLayoutControl1.Controls.SetChildIndex(this._GridControl, 0);
             this.dataLayoutControl1.Controls.SetChildIndex(this._SearchControl, 0);
             // 
@@ -163,7 +166,7 @@
             this._GridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
             this._GridControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this._GridControl.Size = new System.Drawing.Size(547, 298);
+            this._GridControl.Size = new System.Drawing.Size(688, 338);
             this._GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this._GridViewDetail});
             // 
@@ -171,37 +174,39 @@
             // 
             this._GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCompanyName,
+            this.colTrip,
             this.colStartDate,
-            this.colEndDate});
+            this.colEndDate,
+            this.colNote});
             this._GridView.DetailHeight = 565;
             this._GridView.OptionsBehavior.Editable = false;
             this._GridView.OptionsEditForm.PopupEditFormWidth = 799;
             // 
             // Root
             // 
-            this.Root.Size = new System.Drawing.Size(569, 384);
+            this.Root.Size = new System.Drawing.Size(710, 424);
             // 
             // ItemForGridControl
             // 
-            this.ItemForGridControl.Size = new System.Drawing.Size(551, 302);
+            this.ItemForGridControl.Size = new System.Drawing.Size(692, 342);
             // 
             // _SearchControl
             // 
             this._SearchControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this._SearchControl.Size = new System.Drawing.Size(547, 34);
+            this._SearchControl.Size = new System.Drawing.Size(688, 34);
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Size = new System.Drawing.Size(551, 64);
+            this.layoutControlItem2.Size = new System.Drawing.Size(692, 64);
             // 
             // _DockPanelRight
             // 
-            this._DockPanelRight.Location = new System.Drawing.Point(569, 254);
-            this._DockPanelRight.Size = new System.Drawing.Size(322, 384);
+            this._DockPanelRight.Location = new System.Drawing.Point(710, 254);
+            this._DockPanelRight.Size = new System.Drawing.Size(322, 424);
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Size = new System.Drawing.Size(311, 333);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(311, 373);
             // 
             // dataLayoutControl2
             // 
@@ -212,7 +217,7 @@
             this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
             this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.dataLayoutControl2.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.dataLayoutControl2.Size = new System.Drawing.Size(311, 333);
+            this.dataLayoutControl2.Size = new System.Drawing.Size(311, 373);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterPopUp3, 0);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterDate1, 0);
             this.dataLayoutControl2.Controls.SetChildIndex(this.FilterDate2, 0);
@@ -223,11 +228,11 @@
             // 
             // layoutControlGroup1
             // 
-            this.layoutControlGroup1.Size = new System.Drawing.Size(311, 333);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(311, 373);
             // 
             // emptySpaceItem1
             // 
-            this.emptySpaceItem1.Size = new System.Drawing.Size(293, 123);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(293, 163);
             // 
             // FilterDate2
             // 
@@ -257,6 +262,7 @@
             // _GridViewDetail
             // 
             this._GridViewDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEmployeeRole,
             this.colType,
             this.colAmount});
             this._GridViewDetail.DetailHeight = 565;
@@ -271,8 +277,8 @@
             this.colType.MinWidth = 30;
             this.colType.Name = "colType";
             this.colType.Visible = true;
-            this.colType.VisibleIndex = 0;
-            this.colType.Width = 214;
+            this.colType.VisibleIndex = 1;
+            this.colType.Width = 288;
             // 
             // colAmount
             // 
@@ -281,8 +287,8 @@
             this.colAmount.MinWidth = 45;
             this.colAmount.Name = "colAmount";
             this.colAmount.Visible = true;
-            this.colAmount.VisibleIndex = 1;
-            this.colAmount.Width = 713;
+            this.colAmount.VisibleIndex = 2;
+            this.colAmount.Width = 963;
             // 
             // colCompanyName
             // 
@@ -292,7 +298,7 @@
             this.colCompanyName.Name = "colCompanyName";
             this.colCompanyName.Visible = true;
             this.colCompanyName.VisibleIndex = 0;
-            this.colCompanyName.Width = 172;
+            this.colCompanyName.Width = 322;
             // 
             // colStartDate
             // 
@@ -301,8 +307,8 @@
             this.colStartDate.MinWidth = 30;
             this.colStartDate.Name = "colStartDate";
             this.colStartDate.Visible = true;
-            this.colStartDate.VisibleIndex = 1;
-            this.colStartDate.Width = 112;
+            this.colStartDate.VisibleIndex = 2;
+            this.colStartDate.Width = 278;
             // 
             // colEndDate
             // 
@@ -311,15 +317,44 @@
             this.colEndDate.MinWidth = 30;
             this.colEndDate.Name = "colEndDate";
             this.colEndDate.Visible = true;
-            this.colEndDate.VisibleIndex = 2;
-            this.colEndDate.Width = 112;
+            this.colEndDate.VisibleIndex = 3;
+            this.colEndDate.Width = 322;
+            // 
+            // colTrip
+            // 
+            this.colTrip.FieldName = "Trip";
+            this.colTrip.MinWidth = 30;
+            this.colTrip.Name = "colTrip";
+            this.colTrip.Visible = true;
+            this.colTrip.VisibleIndex = 1;
+            this.colTrip.Width = 108;
+            // 
+            // colNote
+            // 
+            this.colNote.Caption = "Catatan";
+            this.colNote.FieldName = "Note";
+            this.colNote.MinWidth = 30;
+            this.colNote.Name = "colNote";
+            this.colNote.Visible = true;
+            this.colNote.VisibleIndex = 4;
+            this.colNote.Width = 446;
+            // 
+            // colEmployeeRole
+            // 
+            this.colEmployeeRole.Caption = "Tipe Karyawan";
+            this.colEmployeeRole.FieldName = "EmployeeRole";
+            this.colEmployeeRole.MinWidth = 30;
+            this.colEmployeeRole.Name = "colEmployeeRole";
+            this.colEmployeeRole.Visible = true;
+            this.colEmployeeRole.VisibleIndex = 0;
+            this.colEmployeeRole.Width = 225;
             // 
             // frmRentalCarRegulationEmployeeLV
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 638);
+            this.ClientSize = new System.Drawing.Size(1032, 678);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRentalCarRegulationEmployeeLV";
             this.Text = "Peraturan Komisi Karyawan";
@@ -363,5 +398,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colType;
         private DevExpress.XtraGrid.Columns.GridColumn colStartDate;
         private DevExpress.XtraGrid.Columns.GridColumn colEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colTrip;
+        private DevExpress.XtraGrid.Columns.GridColumn colNote;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmployeeRole;
     }
 }

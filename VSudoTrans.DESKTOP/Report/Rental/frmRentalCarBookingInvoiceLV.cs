@@ -21,7 +21,6 @@ namespace VSudoTrans.DESKTOP.Report.Rental
             InitializeComponent();
 
             this.EndPoint = "/RentalCarBookings";
-            //this.FormTitle = "DETAIL INVOICE";
 
             this.bbiRefresh.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 
